@@ -1,27 +1,11 @@
-import { useEffect, useState } from 'react'; 
-import axios from 'axios'; // library for making HTTP requests
-
-function EventCard() {
-  const [events, setEvents] = useState([]); // Current list of tech events, function to update, initializes as an empty array
-
-  // Runs once when component first loads
-  useEffect(() => {
-    axios.get("http://localhost:3001/events") // GET request to backend /events route
-    .then(res => setEvents(res.data)) // success, update eventss state
-    .catch(err => console.error(err)); // failure, log error
-  }, []);
-
+function EventCard({ title, date, location, url, tags }) {
   return (
-    <div className='p-6 grid grid-cols-2'>
-      {events.map((event, idx) => (
-        <div key={idx} className='mb-4 p-4 border rounded shadow'>
-          <h2 className='text-xl font-semibold'>{event.title}</h2>
-          <p>{new Date(event.date).toLocaleString()}</p>
-          <p>{event.location}</p>
-          <a href={event.url} target='_blank' className='text-blue-500'>View Event</a>
-          <div className='mt-1 text-sm text-gray-600'>Tags: {event.tags.join(", ")}</div>
-        </div>
-      ))}
+    <div className='bg-white rounded-lg shadow p-4 m-4'>
+        <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
+        <p className="text-gray-600">{date}</p>
+        <p className="text-gray-600">{location}</p>
+        <p className="text-gray-600">{url}</p>
+        <p className="text-gray-600">{tags}</p>
     </div>
   )
 }
