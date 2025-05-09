@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'; 
+import { useEffect, useState } from 'react';
 import axios from 'axios'; // library for making HTTP requests
 import './App.css'
 import EventCard from './components/EventCard';
@@ -13,25 +13,30 @@ function App() {
   // Runs once when component first loads
   useEffect(() => {
     axios.get("http://localhost:3001/events") // GET request to backend /events route
-    .then(res => setEvents(res.data)) // success, update eventss state
-    .catch(err => console.error(err)); // failure, log error
+      .then(res => setEvents(res.data)) // success, update eventss state
+      .catch(err => console.error(err)); // failure, log error
   }, []);
 
   return (
     <div className='p-6'>
-      <h1 className='text-3x1 font-bold mb-4'>London Tech Events</h1>
+
+      <div id='banner' className='flex itens-center justify-between mb-4'>      
+        <h1 className='text-3xl font-bold mb-4'>London Tech Events</h1>
         <FilterButton />
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6'>
-          {events.map((event, idx) => (
-            <EventCard 
-              key={idx}
-              title={event.title}
-              date={event.date}
-              location={event.location}
-              tags={event.tags.join(", ")}
-            />
-          ))}
-        </div>
+      </div>
+
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6'>
+        {events.map((event, idx) => (
+          <EventCard
+            key={idx}
+            title={event.title}
+            date={event.date}
+            location={event.location}
+            tags={event.tags.join(", ")}
+          />
+        ))}
+      </div>
+
     </div>
   )
 }
