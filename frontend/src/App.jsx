@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import axios from 'axios'; // library for making HTTP requests
 import './App.css'
 import EventCard from './components/EventCard';
+import FilterButton from './components/FilterButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilter } from '@fortawesome/free-solid-svg-icons';
+
 
 function App() {
   const [events, setEvents] = useState([]); // Current list of tech events, function to update, initializes as an empty array
@@ -16,6 +20,7 @@ function App() {
   return (
     <div className='p-6'>
       <h1 className='text-3x1 font-bold mb-4'>London Tech Events</h1>
+        <FilterButton />
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6'>
           {events.map((event, idx) => (
             <EventCard 
