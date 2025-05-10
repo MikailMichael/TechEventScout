@@ -3,13 +3,11 @@ import axios from 'axios'; // library for making HTTP requests
 import './App.css'
 import EventCard from './components/EventCard';
 import FilterButton from './components/FilterButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFilter } from '@fortawesome/free-solid-svg-icons';
 import SearchBar from './components/SearchBar';
 
 
 function App() {
-  const [allEvents, setAllEvents] = useState([]); // All events
+  const [allEvents, setAllEvents] = useState([]); // All events, needed for when text gets deleted, or events won't reappear
   const [events, setEvents] = useState([]); // Current list of tech events, function to update, initializes as an empty array
 
   // Runs once when component first loads
