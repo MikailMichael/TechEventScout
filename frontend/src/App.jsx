@@ -44,7 +44,8 @@ function App() {
       </div>
 
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6'>
-        {events.map((event, idx) => (
+        {events.length > 0 ? (
+          events.map((event, idx) => (
           <EventCard
             key={idx}
             title={event.title}
@@ -52,7 +53,12 @@ function App() {
             location={event.location}
             tags={event.tags.join(", ")}
           />
-        ))}
+        ))
+        ) : (
+          <div className='col-span-full text-center text-2xl font-bold text-gray-600'>
+            No events found.
+          </div>
+        )}
       </div>
 
     </div>
