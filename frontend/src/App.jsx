@@ -8,14 +8,22 @@ import { faFilter } from '@fortawesome/free-solid-svg-icons';
 
 
 function App() {
+  const [allEvents, setAllEvents] = useState([]); // All events
   const [events, setEvents] = useState([]); // Current list of tech events, function to update, initializes as an empty array
 
   // Runs once when component first loads
   useEffect(() => {
     axios.get("http://localhost:3001/events") // GET request to backend /events route
-      .then(res => setEvents(res.data)) // success, update eventss state
+      .then(res => {
+        setEvents(res.data);
+        setAllEvents(res.data);
+      }) // success, update eventss state
       .catch(err => console.error(err)); // failure, log error
   }, []);
+
+  const handleSearch = (text) => {
+
+  }
 
   return (
     <div className='p-6'>
