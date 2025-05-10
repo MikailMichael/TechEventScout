@@ -5,6 +5,7 @@ import EventCard from './components/EventCard';
 import FilterButton from './components/FilterButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter } from '@fortawesome/free-solid-svg-icons';
+import SearchBar from './components/SearchBar';
 
 
 function App() {
@@ -17,12 +18,22 @@ function App() {
       .then(res => {
         setEvents(res.data);
         setAllEvents(res.data);
-      }) // success, update eventss state
+      }) // success, update events state
       .catch(err => console.error(err)); // failure, log error
   }, []);
 
   const handleSearch = (text) => {
-
+    if(!text) {
+      setEvents(allEvents);
+    } else {
+      const lower = text.toLowerCase();
+      const filtered = allEvents.filter(event => 
+        event.title.toLowerCase().includes(lower) ||
+        event.location.toLowerCase().includes(lower) || 
+        event.tags.some(tag => tag.toLowerCase().includes(lower))
+      );
+      setEvents(filtered);
+    }
   }
 
   return (
@@ -30,6 +41,7 @@ function App() {
 
       <div id='banner' className='flex itens-center justify-between mb-4'>      
         <h1 className='text-3xl font-bold mb-4'>London Tech Events</h1>
+        <SearchBar onSearch={handleSearch} />
         <FilterButton />
       </div>
 
