@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter } from '@fortawesome/free-solid-svg-icons';
 
-function FilterButton({ }) {
+function FilterButton({ onClick }) {
   return (
-    <button type="button" className="btn text-white font-bold py-2 px-4 rounded">
+    <button onClick={onClick} type="button" className="btn text-white font-bold py-2 px-4 rounded">
       <FontAwesomeIcon icon={faFilter} />
     </button>
   )

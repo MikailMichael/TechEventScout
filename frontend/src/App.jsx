@@ -6,12 +6,14 @@ import FilterButton from './components/FilterButton';
 import SearchBar from './components/SearchBar';
 import useHighlight from './hooks/useHighlight';
 import FavoritesButton from './components/FavoritesButton';
+import FilterModal from './components/FilterModal';
 
 
 function App() {
-  const [allEvents, setAllEvents] = useState([]); // All events, needed for when text gets deleted, or events won't reappear
+  const [allEvents, setAllEvents] = useState([]); // All events, caches all the events, prevents excessive backend calls
   const [events, setEvents] = useState([]); // Current list of tech events, function to update, initializes as an empty array
   const [searchTerm, setSearchTerm] = useState(""); // Tracks user input
+  const [showModal, setShowModal] = useState(false);
 
   useHighlight(searchTerm, '.grid'); // Only highlights inside cards
 
@@ -40,13 +42,33 @@ function App() {
     }
   }
 
+  const handleFilter = ({ location, tag }) => {
+    let filtered = [...allEvents];
+    
+    if(location) {
+      filtered = filtered.filter(event => 
+        event.locations.toLowerCase() === location.toLowerCase()
+      );
+    }
+
+    if(tag) {
+      filtered = filtered.filter(event =>
+        event.tags.map(t => t.toLowerCase()).includes(tag.toLowerCase())
+      );
+    }
+    setEvents(filtered);
+  }
+
+  const allLocations = [...new Set(allEvents.map(e => e.location))];
+  const allTags = [...new Set(allEvents.flatMap(e => e.tags))];
+
   return (
     <div className='p-6'>
       <div id='banner' className='flex flex-col h-auto mb-4 border-b border-gray-300 py-4 lg:py-0 lg:h-[100px] lg:flex-row lg:items-center lg:justify-between lg:gap-4'>      
         <h1 className='text-3xl font-bold mb-4 truncate'>London Tech Events</h1>
         <div className="flex items-center gap-4 justify-center">
           <SearchBar onSearch={handleSearch} />
-          <FilterButton />
+          <FilterButton onClick={() => setShowModal(true)} />
           <FavoritesButton />
         </div>
       </div>
@@ -68,6 +90,15 @@ function App() {
           </div>
         )}
       </div>
+
+      {/* Filter Modal */}
+      <FilterModal 
+        show={showModal}
+        onClose={() => setShowModal(false)}
+        locations={allLocations}
+        tags={allTags}
+        onFilter={handleFilter}
+      />
 
     </div>
   )
