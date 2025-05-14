@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+.highlight {
+  background-color: orange;
+  padding: 0 2px;
+  border-radius: 2px;
+}

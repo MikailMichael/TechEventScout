@@ -4,11 +4,15 @@ import './App.css'
 import EventCard from './components/EventCard';
 import FilterButton from './components/FilterButton';
 import SearchBar from './components/SearchBar';
+import useHighlight from './hooks/useHighlight';
 
 
 function App() {
   const [allEvents, setAllEvents] = useState([]); // All events, needed for when text gets deleted, or events won't reappear
   const [events, setEvents] = useState([]); // Current list of tech events, function to update, initializes as an empty array
+  const [searchTerm, setSearchTerm] = useState(""); // Tracks user input
+
+  useHighlight(searchTerm, '.grid'); // Only highlights inside cards
 
   // Runs once when component first loads
   useEffect(() => {
@@ -21,6 +25,7 @@ function App() {
   }, []);
 
   const handleSearch = (text) => {
+    setSearchTerm(text); 
     if(!text) {
       setEvents(allEvents);
     } else {
