@@ -5,6 +5,7 @@ import EventCard from './components/EventCard';
 import FilterButton from './components/FilterButton';
 import SearchBar from './components/SearchBar';
 import useHighlight from './hooks/useHighlight';
+import FavoritesButton from './components/FavoritesButton';
 
 
 function App() {
@@ -41,11 +42,13 @@ function App() {
 
   return (
     <div className='p-6'>
-
-      <div id='banner' className='flex itens-center justify-between mb-4'>      
+      <div id='banner' className='h-[100px] flex items-center justify-between mb-4 border-b border-gray-300'>      
         <h1 className='text-3xl font-bold mb-4'>London Tech Events</h1>
-        <SearchBar onSearch={handleSearch} />
-        <FilterButton />
+        <div className="flex items-center gap-4">
+          <SearchBar onSearch={handleSearch} />
+          <FilterButton />
+          <FavoritesButton />
+        </div>
       </div>
 
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6'>
