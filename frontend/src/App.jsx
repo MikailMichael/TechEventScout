@@ -42,9 +42,9 @@ function App() {
 
   return (
     <div className='p-6'>
-      <div id='banner' className='h-[100px] flex items-center justify-between mb-4 border-b border-gray-300'>      
-        <h1 className='text-3xl font-bold mb-4'>London Tech Events</h1>
-        <div className="flex items-center gap-4">
+      <div id='banner' className='flex flex-col h-auto mb-4 border-b border-gray-300 py-4 lg:py-0 lg:h-[100px] lg:flex-row lg:items-center lg:justify-between lg:gap-4'>      
+        <h1 className='text-3xl font-bold mb-4 truncate'>London Tech Events</h1>
+        <div className="flex items-center gap-4 justify-center">
           <SearchBar onSearch={handleSearch} />
           <FilterButton />
           <FavoritesButton />
