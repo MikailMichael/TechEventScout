@@ -82,5 +82,12 @@
       "location": "Online",
       "url": "https://www.meetup.com/jsmonthly/events/67890/",
       "tags": ["JavaScript", "Hackathon"]
+    },
+    {
+      "title": "Test Event",
+      "date": "2025-05-25T19:02:00Z",
+      "location": "Space",
+      "url": "https://www.meetup.com/jsmonthly/events/67890/",
+      "tags": ["JavaScript", "Hackathon", "Frontend"]
     }
   ]
