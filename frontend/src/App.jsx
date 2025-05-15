@@ -44,10 +44,10 @@ function App() {
 
   const handleFilter = ({ location, tag }) => {
     let filtered = [...allEvents];
-    
+
     if(location) {
       filtered = filtered.filter(event => 
-        event.locations.toLowerCase() === location.toLowerCase()
+        event.location.toLowerCase() === location.toLowerCase()
       );
     }
 
