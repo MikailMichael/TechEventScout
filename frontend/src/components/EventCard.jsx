@@ -4,8 +4,8 @@ function EventCard({ title, date, location, url, tags }) {
         <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
         <p className="text-gray-600">{date}</p>
         <p className="text-gray-600">{location}</p>
-        <p className="text-gray-600">{url}</p>
         <p className="text-gray-600">{tags}</p>
+        <p className="text-gray=600"><a href={url} target="_blank">Link to event</a></p>
     </div>
   )
 }
