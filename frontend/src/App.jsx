@@ -81,6 +81,7 @@ function App() {
             title={event.title}
             date={event.date}
             location={event.location}
+            url={event.url}
             tags={event.tags.join(", ")}
           />
         ))
