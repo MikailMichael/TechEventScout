@@ -2,6 +2,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 function EventCard({ title, date, location, url, tags }) {
+const tagColors = {
+  JavaScript: 'bg-yellow-700 text-yellow-100',
+  React: 'bg-blue-700 text-blue-100',
+  Node: 'bg-green-700 text-green-100',
+  TypeScript: 'bg-indigo-700 text-indigo-100',
+  CSS: 'bg-pink-700 text-pink-100',
+  HTML: 'bg-red-700 text-red-100',
+  Hackathon: 'bg-purple-700 text-purple-100',
+  Networking: 'bg-teal-700 text-teal-100'
+};
+
   return (
     <div className='bg-[#2f2f2f] rounded-xl p-6 space-y-4 border border-gray-100 hover:ring-1'>
         <h2 className="text-xl font-bold text-gray-100 mb-1">{title}</h2>
@@ -14,11 +25,14 @@ function EventCard({ title, date, location, url, tags }) {
             minute: '2-digit'
           })}
         </p>
-        <p className="text-gray-100 text-sm">{location}</p>
-        <div className="flex flex-wrap gap-2">
-          {tags.split(',').map((tag, i) => (
-            <span key={i} className="bg-blue-800/30 text-gray-100 text-xs font-medium px-3 py-1 rounded-full">{tag.trim()}</span>
-          ))}
+        <p className="text-gray-100 text-sm mb-2">{location}</p>
+        <div className="flex flex-wrap gap-2 mb-2">
+          {tags.split(',').map((tag, i) => {
+            const colorClass = tagColors[tag.trim()] || 'bg-gray-700 text-gray-200';
+            return (
+              <span key={i} className={`text-sm font-medium px-3 py-1 rounded-full ${colorClass}`}>{tag.trim()}</span>
+            );
+          })}
         </div>
 
         <a
