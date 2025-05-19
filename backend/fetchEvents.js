@@ -5,6 +5,7 @@ const path = require('path');
 
 // Eventbrite page to scrape
 const URL = "https://www.eventbrite.com/d/united-kingdom--london/tech-conferences/";
+const MEETUPURL = "https://www.meetup.com/find/?location=gb--17--London&source=EVENTS&keywords=tech%20networking";
 
 async function scrapeEventbrite() {
   const browser = await chromium.launch({ headless: true });
