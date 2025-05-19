@@ -1,6 +1,6 @@
 const express = require("express"); // imports express library
 const cors = require("cors"); // imports CORS middleware
-const events = require("./data/events2.json"); // loads sample events from json file
+const events = require("./data/events.json"); // loads sample events from json file
 
 const app = express(); // creates express app instance
 app.use(cors()); // enables CORS so frontend can talk to backend
