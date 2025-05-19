@@ -38,8 +38,6 @@ async function scrapeEventbrite() {
   }
 
   console.log(`Found ${eventIds.length} event IDs.`);
-  console.log(`Event IDs: ${eventIds}`);
-
   
   // Prepare Eventbrite JSON API URL
   const eventbriteAPI = `https://www.eventbrite.co.uk/api/v3/destination/events/?event_ids=${eventIds.join(",")}&expand=event_sales_status,image,primary_venue,saves,ticket_availability,primary_organizer,public_collections`;
