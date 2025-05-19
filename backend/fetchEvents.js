@@ -25,14 +25,12 @@ async function scrapeEventbrite() {
   await browser.close();
 
   // Extract event IDs from URLs
-  const eventIds = eventLinks
+  const eventIds = Array.from(new Set(eventLinks // remove duplicates, converts back into an array
     .map(link => {
-      console.log(link);
-      const match = link.match(/tickets-(\d+)/); // after the litleral string tickets- captures one or more digits
-      console.log(match);
+      const match = link.match(/tickets-(\d+)/); // after the litleral string tickets- captures one or more digitsd
       return match ? match[1] : null; 
     })
-    .filter(Boolean);
+    .filter(Boolean))); // remove nulls
 
   if (eventIds.length === 0) {
     console.error("❌ No event IDs found.");
@@ -41,6 +39,7 @@ async function scrapeEventbrite() {
 
   console.log(`Found ${eventIds.length} event IDs.`);
 
+  /*
   // Prepare Eventbrite JSON API URL
   const eventbriteAPI = `https://www.eventbrite.co.uk/api/v3/destination/events/?event_ids=${eventIds.join(",")}&expand=event_sales_status,image,primary_venue,saves,ticket_availability,primary_organizer,public_collections`;
 
@@ -73,7 +72,7 @@ async function scrapeEventbrite() {
     console.log(`✅ Saved ${formatted.length} events to events2.json`);
   } catch (err) {
     console.error("❌ Failed to fetch event details:", err.message);
-  }
+  }*/
 }
 
 scrapeEventbrite();
