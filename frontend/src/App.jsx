@@ -80,8 +80,9 @@ function App() {
             key={idx}
             title={event.title}
             date={event.date}
+            time={event.time}
             location={event.location}
-            url={event.url}
+            link={event.link}
             tags={event.tags.join(", ")}
           />
         ))
