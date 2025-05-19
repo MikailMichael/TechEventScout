@@ -76,9 +76,9 @@ async function scrapeEventbrite() {
     link: evt.url
   }));
 
-  const filePath = path.join(__dirname, "data", "events2.json");
+  const filePath = path.join(__dirname, "data", "events.json");
   fs.writeFileSync(filePath, JSON.stringify(formatted, null, 2));
-  console.log(`✅ Saved ${formatted.length} events to events2.json`);
+  console.log(`✅ Saved ${formatted.length} events to events.json`);
 }
 
 scrapeEventbrite();
