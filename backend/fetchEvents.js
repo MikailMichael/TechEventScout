@@ -90,7 +90,7 @@ async function scrapeMeetupEvents() {
 
   console.log("Waiting for event links...");
   await page.waitForTimeout(5000);
-  await page.waitForSelector('a[data-event-label="Revamped Event Card"]');
+  //await page.waitForSelector('a[data-event-label="Revamped Event Card"]');
 
   console.log("Extracting Meetup events...");
   const eventLinks = await page.$$eval('a[data-event-label="Revamped Event Card"]', links => {
@@ -107,10 +107,10 @@ async function scrapeMeetupEvents() {
 
   const events = [];
 
-  for (const url of eventLinks.slice(0,10)) { // Limit for testing
+  for (const url of eventLinks) { // Limit for testing
     const eventPage = await browser.newPage();
     await eventPage.goto(url, { waitUntil: 'domcontentloaded'});
-    await eventPage.waitForTimeout(3000);
+    //await eventPage.waitForTimeout(3000);
 
     const title = await eventPage.$eval('h1', el => el.innerText).catch(() => null);
     const time = await eventPage.$eval('time', el => el.dateTime || el.innerText).catch(() => null);
