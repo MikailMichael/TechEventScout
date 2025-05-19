@@ -109,7 +109,7 @@ async function scrapeMeetupEvents() {
 
   const events = [];
 
-  for (const url of eventLinks.slice(0,5)) { 
+  for (const url of eventLinks.slice(0,10)) { 
     const eventPage = await browser.newPage();
     await eventPage.goto(url, { waitUntil: 'domcontentloaded'});
 
@@ -149,7 +149,10 @@ async function scrapeMeetupEvents() {
 
     const tags = await eventPage.$$eval('.tag--topic', el =>
       el.map(tag => tag.innerText.trim())
-    ).catch(() => ["Tech"]);
+      .filter(tag =>
+        tag &&                                      //not empty
+        !tag.toLowerCase().startsWith("events in") // exclude "Events in...", case-insensitive
+      )).catch(() => ["Tech"]);
 
     events.push({
       title: title || "Untitled",
