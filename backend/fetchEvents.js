@@ -89,8 +89,10 @@ async function scrapeMeetupEvents() {
   await page.goto(MEETUPURL, { waitUntil: "domcontentloaded" });
 
   console.log("Waiting for event links...");
-  await page.waitForTimeout(5000);
-  await page.waitForSelector('a[data-event-label="Revamped Event Card"]');
+  await page.waitForSelector('a[data-event-label="Revamped Event Card"]', {
+    timeout: 15000,
+    state: 'visible'
+  });
 
   console.log("Extracting Meetup events...");
   const eventLinks = await page.$$eval('a[data-event-label="Revamped Event Card"]', links => {
