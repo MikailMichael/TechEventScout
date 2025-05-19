@@ -38,8 +38,9 @@ async function scrapeEventbrite() {
   }
 
   console.log(`Found ${eventIds.length} event IDs.`);
+  console.log(`Event IDs: ${eventIds}`);
 
-  /*
+  
   // Prepare Eventbrite JSON API URL
   const eventbriteAPI = `https://www.eventbrite.co.uk/api/v3/destination/events/?event_ids=${eventIds.join(",")}&expand=event_sales_status,image,primary_venue,saves,ticket_availability,primary_organizer,public_collections`;
 
@@ -56,23 +57,24 @@ async function scrapeEventbrite() {
     const events = res.data.events || [];
 
     console.log(`Fetched events: ${events}`);
-
-    const formatted = events.map(evt ({
-      title: evt.name?.text,
-      date: evt.start?.local,
+    
+    const formatted = events.map(evt => ({
+      title: evt.name,
+      date: evt.start_date,
+      time: evt.start_time,
       location: evt.primary_venue?.address?.localized_address_display || "London",
-      tags: ["Tech"],
-      link: `https://www.eventbrite.co.uk/e/${evt.id}`
+      tags: evt.tags.map(tag => tag.display_name),
+      link: evt.url
     }));
 
     console.log(`Formatted events: ${formatted}`);
 
     const filePath = path.join(__dirname, "data", "events2.json");
-    fs.writeFileSync(filePath, JSON.stringify(path.format, null, 2));
+    fs.writeFileSync(filePath, JSON.stringify(formatted, null, 2));
     console.log(`✅ Saved ${formatted.length} events to events2.json`);
   } catch (err) {
     console.error("❌ Failed to fetch event details:", err.message);
-  }*/
+  }
 }
 
 scrapeEventbrite();
