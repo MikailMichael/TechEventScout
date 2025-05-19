@@ -81,4 +81,59 @@ async function scrapeEventbrite() {
   console.log(`✅ Saved ${formatted.length} events to events.json`);
 }
 
-scrapeEventbrite();
+async function scrapeMeetupEvents() {
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage();
+
+  console.log("Navigating to Meetup...");
+  await page.goto(MEETUPURL, { waitUntil: "domcontentloaded" });
+
+  console.log("Waiting for event links...");
+  await page.waitForTimeout(5000);
+  await page.waitForSelector('a[data-event-label="Revamped Event Card"]');
+
+  console.log("Extracting Meetup events...");
+  const eventLinks = await page.$$eval('a[data-event-label="Revamped Event Card"]', links => {
+    const seen = new Set();
+    return links.map(link => {
+      const href = link.href;
+      if(seen.has(href)) return null;
+      seen.add(href);
+      return href;
+    }).filter(Boolean);
+  });
+
+  console.log(`Found ${eventLinks.length} unique event links.`);
+
+  const events = [];
+
+  for (const url of eventLinks.slice(0,10)) { // Limit for testing
+    const eventPage = await browser.newPage();
+    await eventPage.goto(url, { waitUntil: 'domcontentloaded'});
+    await eventPage.waitForTimeout(3000);
+
+    const title = await eventPage.$eval('h1', el => el.innerText).catch(() => null);
+    const time = await eventPage.$eval('time', el => el.dateTime || el.innerText).catch(() => null);
+    const location = await eventPage.$eval('[data-testid="location-info"]', el => el.innerText).catch(() => "London");
+
+    events.push({
+      title: title || "Untitled",
+      date: time || null,
+      time: null,
+      location,
+      tags: ["Tech"],
+      link: url
+    });
+
+    await eventPage.close();
+  }
+
+  const filePath = path.join(__dirname, "data", "eventsMeetup.json");
+  fs.writeFileSync(filePath, JSON.stringify(events, null, 2));
+  console.log(`✅ Saved ${events.length} Meetup events.`);
+
+  await browser.close();
+}
+
+// scrapeEventbrite();
+scrapeMeetupEvents();
