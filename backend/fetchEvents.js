@@ -128,7 +128,15 @@ async function scrapeMeetupEvents() {
       }
     }
 
-    const location = await eventPage.$eval('[data-testid="location-info"]', el => el.innerText).catch(() => "London");
+    const location = await eventPage.evaluate(() => {
+      const venue = document.querySelector('[data-testid="venue-name-value"]');
+      const venueText = venue?.innerText.trim().toLowerCase();
+
+      if(venueText && venueText.includes("online event")) return "Online";
+
+      const locationInfo = document.querySelector('[data-testid="location-info"]');
+      return locationInfo?.innerText.trim() || "London";
+    });
 
     events.push({
       title: title || "Untitled",
