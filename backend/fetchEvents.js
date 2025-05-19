@@ -112,7 +112,6 @@ async function scrapeMeetupEvents() {
   for (const url of eventLinks.slice(0,5)) { 
     const eventPage = await browser.newPage();
     await eventPage.goto(url, { waitUntil: 'domcontentloaded'});
-    //await eventPage.waitForTimeout(3000);
 
     const title = await eventPage.$eval('h1', el => el.innerText).catch(() => null);
     const rawDateTime = await eventPage.$eval('time', el => el.dateTime || el.innerText).catch(() => null);
@@ -138,12 +137,16 @@ async function scrapeMeetupEvents() {
       return locationInfo?.innerText.trim() || "London";
     });
 
+    const tags = await eventPage.$$eval('.tag--topic', el =>
+      el.map(tag => tag.innerText.trim())
+    ).catch(() => ["Tech"]);
+
     events.push({
       title: title || "Untitled",
       date: date || null,
       time: time || null,
       location,
-      tags: ["Tech"],
+      tags,
       link: url
     });
 
