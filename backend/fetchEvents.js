@@ -90,7 +90,7 @@ async function scrapeMeetupEvents() {
 
   console.log("Waiting for event links...");
   await page.waitForTimeout(5000);
-  //await page.waitForSelector('a[data-event-label="Revamped Event Card"]');
+  await page.waitForSelector('a[data-event-label="Revamped Event Card"]');
 
   console.log("Extracting Meetup events...");
   const eventLinks = await page.$$eval('a[data-event-label="Revamped Event Card"]', links => {
@@ -107,19 +107,31 @@ async function scrapeMeetupEvents() {
 
   const events = [];
 
-  for (const url of eventLinks) { // Limit for testing
+  for (const url of eventLinks.slice(0,5)) { 
     const eventPage = await browser.newPage();
     await eventPage.goto(url, { waitUntil: 'domcontentloaded'});
     //await eventPage.waitForTimeout(3000);
 
     const title = await eventPage.$eval('h1', el => el.innerText).catch(() => null);
-    const time = await eventPage.$eval('time', el => el.dateTime || el.innerText).catch(() => null);
+    const rawDateTime = await eventPage.$eval('time', el => el.dateTime || el.innerText).catch(() => null);
+
+    let date = null;
+    let time = null;
+
+    if(rawDateTime) {
+      const iso = new Date(rawDateTime);
+      if(!isNaN(iso)) {
+        date = iso.toISOString().split('T')[0]; // Gets "YYYY-MM-DD"
+        time = iso.toTimeString().slice(0, 5); // Gets "HH:MM"
+      }
+    }
+
     const location = await eventPage.$eval('[data-testid="location-info"]', el => el.innerText).catch(() => "London");
 
     events.push({
       title: title || "Untitled",
-      date: time || null,
-      time: null,
+      date: date || null,
+      time: time || null,
       location,
       tags: ["Tech"],
       link: url
