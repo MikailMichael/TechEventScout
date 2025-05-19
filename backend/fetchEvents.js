@@ -113,6 +113,16 @@ async function scrapeMeetupEvents() {
     const eventPage = await browser.newPage();
     await eventPage.goto(url, { waitUntil: 'domcontentloaded'});
 
+    const isPrivate = await eventPage.$eval('span.capitalize', el =>
+      el.innerText.trim().toLowerCase() === "private"
+    ).catch(() => false);
+
+    if (isPrivate) {
+      console.log("❌ Skipping private group event.");
+      await eventPage.close();
+      continue;
+    }
+
     const title = await eventPage.$eval('h1', el => el.innerText).catch(() => null);
     const rawDateTime = await eventPage.$eval('time', el => el.dateTime || el.innerText).catch(() => null);
 
