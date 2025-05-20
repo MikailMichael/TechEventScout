@@ -1,6 +1,9 @@
 // utils.js
 // Utility functions shared across the project: logging, retries, formatting, and file saving.
 
+// tagMap maps normalized tags to canonical names.
+// Example: "Artificial Intelligence" → "AI", "startup_event" → "Startups"
+// Tags not in this map will fall back to capitalized form.
 const tagMap = require('../data/tagMap.json');
 const fs = require("fs");
 
