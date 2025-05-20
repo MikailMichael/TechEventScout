@@ -1,14 +1,26 @@
-const { chromium } = require('playwright');
-const axios = require('axios');
+// meetup.js
+// Scraper module for fetching tech-related networking events from Meetup in London.
 
+const { chromium } = require('playwright');
 const { retry, log, formatDateTime } = require("./utils");
 
 const MEETUPURL = "https://www.meetup.com/find/?location=gb--17--London&source=EVENTS&keywords=tech%20networking";
 
+/**
+ * Public entry point to scrape Meetup events with retry support.
+ * 
+ * @returns {Promise<Object[]>} List of parsed event objects.
+ */
 module.exports = async function scrapeMeetupEvents() {
-  return await retry(scrapeCore, 3, 3000); // Retry entire browser logic
+  return await retry(scrapeCore, 3, 3000);
 }
 
+/**
+ * Opens a browser, navigates to the Meetup listings page,
+ * scrapes event URLs, and extracts individual event details.
+ * 
+ * @returns {Promise<Object[]>} List of event objects.
+ */
 async function scrapeCore() {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
@@ -28,7 +40,7 @@ async function scrapeCore() {
         if (seen.has(href)) return null;
         seen.add(href);
         return href;
-      }).filter(Boolean);
+      }).filter(Boolean); // Deduplicate and clean
     });
 
     log(`Found ${eventLinks.length} unique event links.`, "success");
@@ -39,6 +51,7 @@ async function scrapeCore() {
       const eventPage = await browser.newPage();
       await eventPage.goto(url, { waitUntil: 'domcontentloaded' });
 
+      // Skip private events
       const isPrivate = await eventPage.$eval('span.capitalize', el =>
         el.innerText.trim().toLowerCase() === "private"
       ).catch(() => false);
@@ -49,11 +62,12 @@ async function scrapeCore() {
         continue;
       }
 
+      // Extract core event info
       const title = await eventPage.$eval('h1', el => el.innerText).catch(() => null);
       const rawDateTime = await eventPage.$eval('time', el => el.dateTime || el.innerText).catch(() => null);
-
       const { date, time } = formatDateTime(rawDateTime);
 
+      // Determine location
       const location = await eventPage.evaluate(() => {
         const venue = document.querySelector('[data-testid="venue-name-value"]');
         const venueText = venue?.innerText.trim().toLowerCase();
@@ -64,6 +78,7 @@ async function scrapeCore() {
         return locationInfo?.innerText.trim() || "London";
       });
 
+      // Extract tags, filtering out generic categories
       const tags = await eventPage.$$eval('.tag--topic', el =>
         el.map(tag => tag.innerText.trim())
           .filter(tag =>
@@ -85,6 +100,6 @@ async function scrapeCore() {
     return events;
 
   } finally {
-    await browser.close();  // Ensures browser is closed on both success and failure
+    await browser.close();  // Ensure browser cleanup regardless of success or error
   }
 }
