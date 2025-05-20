@@ -12,7 +12,6 @@ const fs = require("fs");
  * @param {number} delay - Delay in milliseconds between retries.
  * @returns {Promise<any>} - The result of the async function.
  */
-
 async function retry(fn, retries = 3, delay = 3000) {
   for (let i = 0; i < retries; i++) {
     try {
@@ -31,7 +30,6 @@ async function retry(fn, retries = 3, delay = 3000) {
  * @param {string} message - Message to log.
  * @param {string} type - Log type: "info", "success", or "error".
  */
-
 function log(message, type = "info") {
   const timestamp = new Date().toLocaleString("en-GB");
   const color = type === "error"
@@ -50,7 +48,6 @@ function log(message, type = "info") {
  * @param {string} isoString - The ISO date string.
  * @returns {Object} - An object with 'date' and 'time' strings, or null if invalid.
  */
-
 function formatDateTime(isoString) {
   const dateObj = new Date(isoString);
   if (isNaN(dateObj)) return { date: null, time: null };
@@ -67,7 +64,6 @@ function formatDateTime(isoString) {
  * @param {Object[]} data - Data to save.
  * @param {boolean} append - Whether to append to existing file content.
  */
-
 async function saveJSON(filepath, data, append = false) {
   let output = data;
 
@@ -79,14 +75,33 @@ async function saveJSON(filepath, data, append = false) {
   fs.writeFileSync(filepath, JSON.stringify(output, null, 2));
 }
 
+/**
+ * Normalize a tag string by converting to lowercase, replacing underscores and dashes
+ * with spaces, collapsing multiple spaces, and trimming whitespace.
+ * 
+ * @param {string} tag - The tag to normalize.
+ * @returns {string} Normalized tag.
+ */
 function normalizeTag(tag) {
   return tag.toLowerCase().replace(/[_-]/g, " ").replace(/\s+/g, " ").trim();
 }
 
+/**
+ * Capitalize the first letter of each word in a tag string.
+ * 
+ * @param {string} tag - The tag to capitalize.
+ * @returns {string} Capitalized tag (e.g. "machine learning" → "Machine Learning").
+ */
 function capitalizeTag(tag) {
   return tag.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 }
 
+/**
+ * Deduplicate a list of tags after normalization, preserving the first occurrence.
+ * 
+ * @param {string[]} tags - An array of raw tag strings.
+ * @returns {string[]} Array of unique, normalized tags.
+ */
 function deDuplicateTags(tags) {
   const seen = new Set();
   return tags.map(normalizeTag).filter(tag => {
@@ -96,6 +111,13 @@ function deDuplicateTags(tags) {
   });
 }
 
+/**
+ * Normalize, deduplicate, and canonicalize tags using a predefined tag map.
+ * Filters out tags mapped to "Other" and ensures capitalization.
+ * 
+ * @param {string[]} rawTags - Array of raw tag strings from event sources.
+ * @returns {string[]} Array of cleaned and canonicalized tags.
+ */
 function processTags(rawTags) {
   const normalized = deDuplicateTags(rawTags);
   const canonicalized = normalized.map(tag =>
