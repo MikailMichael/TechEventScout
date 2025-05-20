@@ -1,7 +1,7 @@
 const { chromium } = require('playwright');
 const axios = require('axios');
 
-const { retry, log } = require("./utils");
+const { retry, log, formatDateTime } = require("./utils");
 
 const MEETUPURL = "https://www.meetup.com/find/?location=gb--17--London&source=EVENTS&keywords=tech%20networking";
 
@@ -52,15 +52,7 @@ async function scrapeCore() {
       const title = await eventPage.$eval('h1', el => el.innerText).catch(() => null);
       const rawDateTime = await eventPage.$eval('time', el => el.dateTime || el.innerText).catch(() => null);
 
-      let date = null, time = null;
-
-      if (rawDateTime) {
-        const iso = new Date(rawDateTime);
-        if (!isNaN(iso)) {
-          date = iso.toISOString().split('T')[0]; // Gets "YYYY-MM-DD"
-          time = iso.toTimeString().slice(0, 5); // Gets "HH:MM"
-        }
-      }
+      const { date, time } = formatDateTime(rawDateTime);
 
       const location = await eventPage.evaluate(() => {
         const venue = document.querySelector('[data-testid="venue-name-value"]');

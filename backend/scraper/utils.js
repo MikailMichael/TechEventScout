@@ -20,4 +20,13 @@ function log(message, type = "info") {
     console.log(`${color}[${timestamp}] [${type.toUpperCase()}] ${message}\x1b[0m`);
 }
 
-module.exports = { retry, log };
+function formatDateTime(isoString) {
+    const dateObj = new Date(isoString);
+    if(isNaN(dateObj)) return {date: null, time: null };
+
+    const date = dateObj.toISOString().split("T")[0]; // YYYY-MM-DD
+    const time = dateObj.toTimeString().slice(0, 5); // HH:MM
+    return { date, time };
+}
+
+module.exports = { retry, log, formatDateTime };
