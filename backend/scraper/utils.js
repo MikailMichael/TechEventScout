@@ -1,5 +1,16 @@
+// utils.js
+// Utility functions shared across the project: logging, retries, formatting, and file saving.
+
 const fs = require("fs");
-const path = require("path");
+
+/**
+ * Retries a given async function multiple times before failing.
+ * 
+ * @param {Function} fn - Async function to retry.
+ * @param {number} retries - Number of retry attempts.
+ * @param {number} delay - Delay in milliseconds between retries.
+ * @returns {Promise<any>} - The result of the async function.
+ */
 
 async function retry(fn, retries = 3, delay = 3000) {
   for (let i = 0; i < retries; i++) {
@@ -13,15 +24,29 @@ async function retry(fn, retries = 3, delay = 3000) {
   }
 }
 
+/**
+ * Logs a message to the console with a timestamp and optional type coloring.
+ * 
+ * @param {string} message - Message to log.
+ * @param {string} type - Log type: "info", "success", or "error".
+ */
+
 function log(message, type = "info") {
   const timestamp = new Date().toLocaleString("en-GB");
   const color = type === "error"
-    ? "\x1b[31m" // red 
+    ? "\x1b[31m" // Red 
     : type === "success"
-      ? "\x1b[32m"  // green
-      : "\x1b[36m"; // cyan 
+      ? "\x1b[32m"  // Green
+      : "\x1b[36m"; // Cyan 
   console.log(`${color}[${timestamp}] [${type.toUpperCase()}] ${message}\x1b[0m`);
 }
+
+/**
+ * Formats an ISO date/time string into separate date and time values.
+ * 
+ * @param {string} isoString - The ISO date string.
+ * @returns {Object} - An object with 'date' and 'time' strings, or null if invalid.
+ */
 
 function formatDateTime(isoString) {
   const dateObj = new Date(isoString);
@@ -31,6 +56,14 @@ function formatDateTime(isoString) {
   const time = dateObj.toTimeString().slice(0, 5); // HH:MM
   return { date, time };
 }
+
+/**
+ * Saves data to a JSON file, with optional append mode.
+ * 
+ * @param {string} filepath - Path to the JSON file.
+ * @param {Object[]} data - Data to save.
+ * @param {boolean} append - Whether to append to existing file content.
+ */
 
 async function saveJSON(filepath, data, append = false) {
   let output = data;

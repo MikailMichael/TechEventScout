@@ -1,7 +1,6 @@
 // fetchEvent.js
 // Main entry point for scraping and storing event data from multiple sources.
 
-const fs = require('fs');
 const path = require('path');
 
 const scrapeEventbrite = require('./eventbrite');
@@ -10,7 +9,7 @@ const { log, saveJSON } = require('./utils');
 
 const EVENTS_FILE = path.join(__dirname, "..", "data", "events.json");
 
-/*
+/**
  * Main function that orchestrates event scraping from all sources,
  * merges the results, and saves them to disk.
  */
