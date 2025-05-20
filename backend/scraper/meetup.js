@@ -18,7 +18,7 @@ async function scrapeCore() {
     await page.goto(MEETUPURL, { waitUntil: "domcontentloaded" });
 
     log("Waiting for event links...");
-    page.waitForSelector('a[data-event-label="Revamped Event Card"]', { timeout: 2000 });
+    await page.waitForSelector('a[data-event-label="Revamped Event Card"]', { timeout: 2000 });
 
     log("Extracting Meetup events...");
     const eventLinks = await page.$$eval('a[data-event-label="Revamped Event Card"]', links => {
