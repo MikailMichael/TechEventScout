@@ -1,6 +1,7 @@
 // utils.js
 // Utility functions shared across the project: logging, retries, formatting, and file saving.
 
+const tagMap = require('../data/tagMap.json');
 const fs = require("fs");
 
 /**
@@ -17,7 +18,7 @@ async function retry(fn, retries = 3, delay = 3000) {
     try {
       return await fn();
     } catch (err) {
-      console.warn(`Retry ${i + 1}/${retries} failed: ${err.message}`);
+      log(`Retry ${i + 1}/${retries} failed: ${err.message}`, "warning");
       if (i === retries - 1) throw err;
       await new Promise(res => setTimeout(res, delay));
     }
@@ -37,7 +38,9 @@ function log(message, type = "info") {
     ? "\x1b[31m" // Red 
     : type === "success"
       ? "\x1b[32m"  // Green
-      : "\x1b[36m"; // Cyan 
+      : type === "warning"
+        ? "\x1b[33m" // Yellow
+        : "\x1b[36m"; // Cyan 
   console.log(`${color}[${timestamp}] [${type.toUpperCase()}] ${message}\x1b[0m`);
 }
 
@@ -76,4 +79,29 @@ async function saveJSON(filepath, data, append = false) {
   fs.writeFileSync(filepath, JSON.stringify(output, null, 2));
 }
 
-module.exports = { retry, log, formatDateTime, saveJSON };
+function normalizeTag(tag) {
+  return tag.toLowerCase().replace(/[_-]/g, " ").replace(/\s+/g, " ").trim();
+}
+
+function capitalizeTag(tag) {
+  return tag.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+}
+
+function deDuplicateTags(tags) {
+  const seen = new Set();
+  return tags.map(normalizeTag).filter(tag => {
+    if (seen.has(tag)) return false;
+    seen.add(tag);
+    return true;
+  });
+}
+
+function processTags(rawTags) {
+  const normalized = deDuplicateTags(rawTags);
+  const canonicalized = normalized.map(tag =>
+    tagMap[tag] || capitalizeTag(tag)
+  ).filter(tag => tag !== "Other");
+  return [...new Set(canonicalized)];
+}
+
+module.exports = { retry, log, formatDateTime, saveJSON, processTags };

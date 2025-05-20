@@ -3,7 +3,7 @@
 
 const { chromium } = require('playwright');
 const axios = require('axios');
-const { log } = require('./utils');
+const { log, processTags } = require('./utils');
 
 const URL = "https://www.eventbrite.com/d/united-kingdom--london/tech-conferences/";
 
@@ -65,7 +65,7 @@ module.exports = async function scrapeEventbrite() {
     } catch (err) {
       log(`❌ Error fetching batch: ${batch} ${err.message}`, "error");
     }
-  }
+}
 
   // Map API responses into simplified event objects
   return allEvents.map(evt => ({
@@ -73,7 +73,7 @@ module.exports = async function scrapeEventbrite() {
     date: evt.start_date,
     time: evt.start_time,
     location: evt.primary_venue?.address?.localized_address_display || "London",
-    tags: evt.tags.map(tag => tag.display_name),
+    tags: processTags(evt.tags.map(tag => tag.display_name)),
     link: evt.url
   }));
 }

@@ -2,7 +2,7 @@
 // Scraper module for fetching tech-related networking events from Meetup in London.
 
 const { chromium } = require('playwright');
-const { retry, log, formatDateTime } = require("./utils");
+const { retry, log, formatDateTime, processTags } = require("./utils");
 
 const MEETUPURL = "https://www.meetup.com/find/?location=gb--17--London&source=EVENTS&keywords=tech%20networking";
 
@@ -30,7 +30,7 @@ async function scrapeCore() {
     await page.goto(MEETUPURL, { waitUntil: "domcontentloaded" });
 
     log("Waiting for event links...");
-    await page.waitForSelector('a[data-event-label="Revamped Event Card"]', { timeout: 2000 });
+    await page.waitForSelector('a[data-event-label="Revamped Event Card"]', { timeout: 15000 });
 
     log("Extracting Meetup events...");
     const eventLinks = await page.$$eval('a[data-event-label="Revamped Event Card"]', links => {
@@ -79,12 +79,14 @@ async function scrapeCore() {
       });
 
       // Extract tags, filtering out generic categories
-      const tags = await eventPage.$$eval('.tag--topic', el =>
+      const rawTags = await eventPage.$$eval('.tag--topic', el =>
         el.map(tag => tag.innerText.trim())
           .filter(tag =>
             tag &&                                      //not empty
             !tag.toLowerCase().startsWith("events in") // exclude "Events in...", case-insensitive
           )).catch(() => ["Tech"]);
+        
+      const tags = processTags(rawTags);
 
       events.push({
         title: title || "Untitled",
