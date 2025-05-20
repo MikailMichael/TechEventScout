@@ -1,9 +1,18 @@
+// eventbrite.js
+// Scraper module for fetching tech events from Eventbrite's London listings page.
+
 const { chromium } = require('playwright');
 const axios = require('axios');
-
 const { log } = require('./utils');
 
 const URL = "https://www.eventbrite.com/d/united-kingdom--london/tech-conferences/";
+
+/**
+ * Launches a headless browser, scrapes event links from Eventbrite UI,
+ * then fetches detailed event data via Eventbrite's internal API.
+ * 
+ * @returns {Promise<Object[]>} List of parsed event objects.
+ */
 
 module.exports = async function scrapeEventbrite() {
   const browser = await chromium.launch({ headless: true });
@@ -12,7 +21,7 @@ module.exports = async function scrapeEventbrite() {
   log("Navigating to Eventbrite...");
   await page.goto(URL, { waitUntil: "domcontentloaded" });
 
-  // Wait for event cards to load
+  // Wait for event cards to appear in DOM
   await page.waitForSelector('.horizontal-event-card__column');
 
   log("Extracting event links...");
@@ -22,9 +31,9 @@ module.exports = async function scrapeEventbrite() {
 
   await browser.close();
 
-  // Extract event IDs from URLs
-  const eventIds = Array.from(new Set( // remove duplicates, converts back into an array
-    eventLinks.map(link => (link.match(/tickets-(\d+)/) || [])[1]).filter(Boolean) // after the litleral string tickets- captures one or more digitsd // remove nulls
+  // Extract unique numeric event IDs from URLs (e.g., ...tickets-123456789)
+  const eventIds = Array.from(new Set( 
+    eventLinks.map(link => (link.match(/tickets-(\d+)/) || [])[1]).filter(Boolean) 
   ));
 
   if (!eventIds.length) {
@@ -34,6 +43,7 @@ module.exports = async function scrapeEventbrite() {
 
   log(`Found ${eventIds.length} event IDs.`, "success");
 
+  // Chunk IDs into batches of 10 for API requests
   const chunks = eventIds.reduce((arr, _, i) =>
     i % 10 === 0 ? [...arr, eventIds.slice(i, i + 10)] : arr, []);
 
@@ -57,6 +67,7 @@ module.exports = async function scrapeEventbrite() {
     }
   }
 
+  // Map API responses into simplified event objects
   return allEvents.map(evt => ({
     title: evt.name,
     date: evt.start_date,
