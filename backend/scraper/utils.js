@@ -10,4 +10,14 @@ async function retry(fn, retries = 3, delay = 3000) {
   }
 }
 
-module.exports = { retry };
+function log(message, type = "info") {
+    const timestamp = new Date().toISOString();
+    const color = type === "error"
+     ? "\x1b[31m" // red 
+     : type === "success"
+        ? "\x1b[32m"  // green
+        : "\x1b[36m"; // cyan 
+    console.log(`${color}[${timestamp}] [${type.toUpperCase()}] ${message}\x1b[0m`);
+}
+
+module.exports = { retry, log };

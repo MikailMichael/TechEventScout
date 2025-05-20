@@ -1,19 +1,21 @@
 const { chromium } = require('playwright');
 const axios = require('axios');
 
+const { log } = require('./utils');
+
 const URL = "https://www.eventbrite.com/d/united-kingdom--london/tech-conferences/";
 
 module.exports = async function scrapeEventbrite() {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
 
-  console.log("Navigating to Eventbrite...");
+  log("Navigating to Eventbrite...");
   await page.goto(URL, { waitUntil: "domcontentloaded" });
 
   // Wait for event cards to load
   await page.waitForSelector('.horizontal-event-card__column');
 
-  console.log("Extracting event links...");
+  log("Extracting event links...");
   const eventLinks = await page.$$eval('a.event-card-link', links =>
     links.map(link => link.href)
   );
@@ -26,18 +28,18 @@ module.exports = async function scrapeEventbrite() {
   ));
 
   if (!eventIds.length) {
-    console.error("❌ No event IDs found.");
+    log("❌ No event IDs found.", "error");
     return [];
   }
 
-  console.log(`Found ${eventIds.length} event IDs.`);
+  log(`Found ${eventIds.length} event IDs.`, "success");
 
   const chunks = eventIds.reduce((arr, _, i) =>
     i % 10 === 0 ? [...arr, eventIds.slice(i, i + 10)] : arr, []);
 
   let allEvents = [];
 
-  console.log("Fetching event data...");
+  log("Fetching event data...");
   for (const batch of chunks) {
     // Prepare Eventbrite JSON API URL
     const apiUrl = `https://www.eventbrite.co.uk/api/v3/destination/events/?event_ids=${batch.join(",")}&expand=event_sales_status,image,primary_venue,saves,ticket_availability,primary_organizer,public_collections`;
@@ -51,7 +53,7 @@ module.exports = async function scrapeEventbrite() {
       });
       allEvents = allEvents.concat(res.data.events || []);
     } catch (err) {
-      console.error(`❌ Error fetching batch: ${batch}`, err.message);
+      log(`❌ Error fetching batch: ${batch} ${err.message}`, "error");
     }
   }
 
