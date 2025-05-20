@@ -11,7 +11,7 @@ async function retry(fn, retries = 3, delay = 3000) {
 }
 
 function log(message, type = "info") {
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toLocaleString("en-GB");
     const color = type === "error"
      ? "\x1b[31m" // red 
      : type === "success"
