@@ -3,9 +3,11 @@ const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 
-// Eventbrite page to scrape
+// Eventbrite & Meetup page to scrape
 const URL = "https://www.eventbrite.com/d/united-kingdom--london/tech-conferences/";
 const MEETUPURL = "https://www.meetup.com/find/?location=gb--17--London&source=EVENTS&keywords=tech%20networking";
+
+const EVENTS_FILE = path.join(__dirname, "data", "events.json");
 
 async function scrapeEventbrite() {
   const browser = await chromium.launch({ headless: true });
@@ -22,29 +24,23 @@ async function scrapeEventbrite() {
     links.map(link => link.href)
   );
 
-  //console.log(`Gatheredevent links: ${eventLinks}`);
   await browser.close();
 
   // Extract event IDs from URLs
-  const eventIds = Array.from(new Set(eventLinks // remove duplicates, converts back into an array
-    .map(link => {
-      const match = link.match(/tickets-(\d+)/); // after the litleral string tickets- captures one or more digitsd
-      return match ? match[1] : null;
-    })
-    .filter(Boolean))); // remove nulls
+  const eventIds = Array.from(new Set( // remove duplicates, converts back into an array
+    eventLinks.map(link => (link.match(/tickets-(\d+)/) || [])[1]).filter(Boolean) // after the litleral string tickets- captures one or more digitsd // remove nulls
+  ));
 
-  if (eventIds.length === 0) {
+  if (!eventIds.length) {
     console.error("❌ No event IDs found.");
-    return;
+    return [];
   }
 
   console.log(`Found ${eventIds.length} event IDs.`);
 
-  const chunkArray = (arr, size) =>
-    arr.reduce((chunks, _, i) =>
-      i % size === 0 ? [...chunks, arr.slice(i, i + size)] : chunks, []);
+  const chunks = eventIds.reduce((arr, _, i) =>
+    i % 10 === 0 ? [...arr, eventIds.slice(i, i + 10)] : arr, []);
 
-  const chunks = chunkArray(eventIds, 10);
   let allEvents = [];
 
   console.log("Fetching event data...");
@@ -59,15 +55,13 @@ async function scrapeEventbrite() {
           "Accept": "application/json"
         }
       });
-
-      const batchEvents = res.data.events || [];
-      allEvents = allEvents.concat(batchEvents);
+      allEvents = allEvents.concat(res.data.events || []);
     } catch (err) {
       console.error(`❌ Error fetching batch: ${batch}`, err.message);
     }
   }
 
-  const formatted = allEvents.map(evt => ({
+  return allEvents.map(evt => ({
     title: evt.name,
     date: evt.start_date,
     time: evt.start_time,
@@ -75,10 +69,6 @@ async function scrapeEventbrite() {
     tags: evt.tags.map(tag => tag.display_name),
     link: evt.url
   }));
-
-  const filePath = path.join(__dirname, "data", "events.json");
-  fs.writeFileSync(filePath, JSON.stringify(formatted, null, 2));
-  console.log(`✅ Saved ${formatted.length} events to events.json`);
 }
 
 async function scrapeMeetupEvents() {
@@ -89,10 +79,8 @@ async function scrapeMeetupEvents() {
   await page.goto(MEETUPURL, { waitUntil: "domcontentloaded" });
 
   console.log("Waiting for event links...");
-  await page.waitForSelector('a[data-event-label="Revamped Event Card"]', {
-    timeout: 15000,
-    state: 'visible'
-  });
+
+    page.waitForSelector('a[data-event-label="Revamped Event Card"]', { timeout: 2000 })
 
   console.log("Extracting Meetup events...");
   const eventLinks = await page.$$eval('a[data-event-label="Revamped Event Card"]', links => {
@@ -109,7 +97,7 @@ async function scrapeMeetupEvents() {
 
   const events = [];
 
-  for (const url of eventLinks.slice(0,10)) { 
+  for (const url of eventLinks) { 
     const eventPage = await browser.newPage();
     await eventPage.goto(url, { waitUntil: 'domcontentloaded'});
 
@@ -126,8 +114,7 @@ async function scrapeMeetupEvents() {
     const title = await eventPage.$eval('h1', el => el.innerText).catch(() => null);
     const rawDateTime = await eventPage.$eval('time', el => el.dateTime || el.innerText).catch(() => null);
 
-    let date = null;
-    let time = null;
+    let date = null, time = null;
 
     if(rawDateTime) {
       const iso = new Date(rawDateTime);
@@ -166,12 +153,23 @@ async function scrapeMeetupEvents() {
     await eventPage.close();
   }
 
-  const filePath = path.join(__dirname, "data", "eventsMeetup.json");
-  fs.writeFileSync(filePath, JSON.stringify(events, null, 2));
-  console.log(`✅ Saved ${events.length} Meetup events.`);
-
   await browser.close();
+  return events;
 }
 
-// scrapeEventbrite();
-scrapeMeetupEvents();
+async function saveEventsToFile(events) {
+  fs.writeFileSync(EVENTS_FILE, JSON.stringify(events, null, 2));
+  console.log(`✅ Saved ${events.length} events to ${EVENTS_FILE}`);
+}
+
+async function main() {
+  console.log("Starting event scraping...");
+
+  const eventbriteEvents = await scrapeEventbrite();
+  const meetupEvents = await scrapeMeetupEvents();
+
+  const allEvents = [...eventbriteEvents, ...meetupEvents];
+  await saveEventsToFile(allEvents);
+}
+
+main().catch(err => console.error("❌ Fatal error:", err));
