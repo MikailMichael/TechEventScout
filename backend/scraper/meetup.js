@@ -80,11 +80,7 @@ async function scrapeCore() {
 
       // Extract tags, filtering out generic categories
       const rawTags = await eventPage.$$eval('.tag--topic', el =>
-        el.map(tag => tag.innerText.trim())
-          .filter(tag =>
-            tag &&                                      //not empty
-            !tag.toLowerCase().startsWith("events in") // exclude "Events in...", case-insensitive
-          )).catch(() => ["Tech"]);
+        el.map(tag => tag.innerText.trim())).catch(() => ["Tech"]);
         
       const tags = processTags(rawTags);
 
