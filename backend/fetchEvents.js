@@ -79,8 +79,8 @@ async function scrapeMeetupEvents() {
   await page.goto(MEETUPURL, { waitUntil: "domcontentloaded" });
 
   console.log("Waiting for event links...");
-
-    page.waitForSelector('a[data-event-label="Revamped Event Card"]', { timeout: 2000 })
+  await retry(() =>
+    page.waitForSelector('a[data-event-label="Revamped Event Card"]', { timeout: 2000 }));
 
   console.log("Extracting Meetup events...");
   const eventLinks = await page.$$eval('a[data-event-label="Revamped Event Card"]', links => {
@@ -155,6 +155,18 @@ async function scrapeMeetupEvents() {
 
   await browser.close();
   return events;
+}
+
+async function retry(fn, retries = 3, delay = 3000) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      return await fn();
+    } catch (err) {
+      console.warn(`Retry ${i + 1}/${retries} failed: ${err.message}`);
+      if (i === retries - 1) throw err;
+      await new Promise(res => setTimeout(res, delay));
+    }
+  }
 }
 
 async function saveEventsToFile(events) {
