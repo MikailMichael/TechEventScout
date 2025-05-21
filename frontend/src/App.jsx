@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'; // library for making HTTP requests
 import './App.css'
 import EventCard from './components/EventCard';
@@ -15,7 +17,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState(""); // Tracks user input
   const [showModal, setShowModal] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const EVENTS_PER_PAGE = 20;
+  const EVENTS_PER_PAGE = 10;
 
   useHighlight(searchTerm, '.grid'); // Only highlights inside cards
 
@@ -110,7 +112,9 @@ function App() {
 
       {totalPages > 1 && (
         <div className='flex justify-center gap-2 mt-8'>
-          <button className='px-4 py-2 bg-gray-800 text-white rounded disabled:opacity-50' onClick={() => setCurrentPage(prev => prev - 1)} disabled={currentPage === 1}>Previous</button>
+          <button className='px-4 py-2 bg-gray-800 text-white rounded disabled:opacity-50' onClick={() => setCurrentPage(prev => prev - 1)} disabled={currentPage === 1}>
+            <FontAwesomeIcon icon={faArrowLeft}/>
+          </button>
           {Array.from({ length: totalPages }, (_, i) => (
             <button key={i} className={`px-4 py-2 rounded ${
               currentPage === i + 1
@@ -119,7 +123,9 @@ function App() {
             }`}
             onClick={() => setCurrentPage(i + 1)}>{i + 1}</button>
           ))}
-          <button className='px-4 py-2 bg-gray-800 text-white rounded disabled:opacity-50' onClick={() => setCurrentPage(prev => prev + 1)} disabled={currentPage === totalPages}>Next</button>
+          <button className='px-4 py-2 bg-gray-800 text-white rounded disabled:opacity-50' onClick={() => setCurrentPage(prev => prev + 1)} disabled={currentPage === totalPages}>
+            <FontAwesomeIcon icon={faArrowRight}/>
+          </button>
         </div>
       )}
 
