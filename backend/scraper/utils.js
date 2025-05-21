@@ -117,6 +117,7 @@ function deDuplicateTags(tags) {
 /**
  * Normalize, deduplicate, and canonicalize tags using a predefined tag map.
  * Filters out tags mapped to "Other" and ensures capitalization.
+ * Sorts tags so that "Other" is the last tag.
  * 
  * @param {string[]} rawTags - Array of raw tag strings from event sources.
  * @returns {string[]} Array of cleaned and canonicalized tags.
@@ -127,7 +128,14 @@ function processTags(rawTags) {
   const canonicalized = normalized.map(tag =>
     tagMap[tag] || "Other"
   );
-  return [...new Set(canonicalized)];
+
+  const sorted = canonicalized.sort((a, b) => {
+    if (a === "Other") return 1; // push "Other down"
+    if (b === "Other") return -1; // bring other tags up
+    return 0;
+  });
+
+  return [...new Set(sorted)];
 }
 
 module.exports = { retry, log, formatDateTime, saveJSON, processTags };
