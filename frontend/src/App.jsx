@@ -112,22 +112,26 @@ function App() {
 
       {totalPages > 1 && (
         <div className='flex justify-center gap-2 mt-8'>
-          <button className='px-4 py-2 bg-gray-800 text-white rounded disabled:opacity-50' onClick={() => setCurrentPage(prev => prev - 1)} disabled={currentPage === 1}>
-            <FontAwesomeIcon icon={faArrowLeft}/>
-          </button>
           {Array.from({ length: totalPages }, (_, i) => (
-            <button key={i} className={`px-4 py-2 rounded ${
+            <button key={i} className={`text-gray-100 font-bold rounded-md border border-gray-100 focus:outline-none focus:ring-2 hover:ring-1 transition disabled:opacity-50 ${
               currentPage === i + 1
-                ? 'bg-blue-500 text-white'
+                ? 'ring-2 ring-gray-300 bg-gray-800 text-white'
                 : 'bg-gray-700 text-gray-200'
             }`}
             onClick={() => setCurrentPage(i + 1)}>{i + 1}</button>
           ))}
-          <button className='px-4 py-2 bg-gray-800 text-white rounded disabled:opacity-50' onClick={() => setCurrentPage(prev => prev + 1)} disabled={currentPage === totalPages}>
-            <FontAwesomeIcon icon={faArrowRight}/>
-          </button>
         </div>
       )}
+
+      {/* Old Prev & Next Arrow Buttons
+          <button className='px-4 py-2 bg-gray-800 text-gray-100 font-bold rounded-md border border-gray-100 focus:outline-none hover:ring-1 disabled:opacity-50' onClick={() => setCurrentPage(prev => prev - 1)} disabled={currentPage === 1}>
+            <FontAwesomeIcon icon={faArrowLeft}/>
+          </button>
+          
+          <button className='px-4 py-2 bg-gray-800 text-gray-100 font-bold rounded-md border border-gray-100 focus:outline-none focus:ring-2 hover:ring-1 disabled:opacity-50' onClick={() => setCurrentPage(prev => prev + 1)} disabled={currentPage === totalPages}>
+            <FontAwesomeIcon icon={faArrowRight}/>
+          </button> 
+      */}
 
       {/* Filter Modal */}
       <FilterModal 
