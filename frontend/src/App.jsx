@@ -120,16 +120,6 @@ function App() {
 
       <Pagination totalPages={totalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
 
-      {/* Old Prev & Next Arrow Buttons
-          <button className='px-4 py-2 bg-gray-800 text-gray-100 font-bold rounded-md border border-gray-100 focus:outline-none hover:ring-1 disabled:opacity-50' onClick={() => setCurrentPage(prev => prev - 1)} disabled={currentPage === 1}>
-            <FontAwesomeIcon icon={faArrowLeft}/>
-          </button>
-          
-          <button className='px-4 py-2 bg-gray-800 text-gray-100 font-bold rounded-md border border-gray-100 focus:outline-none focus:ring-2 hover:ring-1 disabled:opacity-50' onClick={() => setCurrentPage(prev => prev + 1)} disabled={currentPage === totalPages}>
-            <FontAwesomeIcon icon={faArrowRight}/>
-          </button> 
-      */}
-
       {/* Filter Modal */}
       <FilterModal
         show={showModal}
