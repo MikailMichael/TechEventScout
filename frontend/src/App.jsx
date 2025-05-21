@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'; // library for making HTTP requests
 import './App.css'
 import EventCard from './components/EventCard';
