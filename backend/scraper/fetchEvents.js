@@ -8,6 +8,7 @@ const scrapeMeetup = require('./meetup');
 const { log, saveJSON } = require('./utils');
 
 const EVENTS_FILE = path.join(__dirname, "..", "data", "events.json");
+const NUM_OF_PAGES = parseInt(process.argv[2]) || 2;
 
 /**
  * Main function that orchestrates event scraping from all sources,
@@ -18,7 +19,7 @@ async function main() {
   log("Starting event scraping...");
 
   // Scrape events from each source
-  const eventbriteEvents = await scrapeEventbrite();
+  const eventbriteEvents = await scrapeEventbrite(NUM_OF_PAGES);
   const meetupEvents = await scrapeMeetup();
 
   // Combine results

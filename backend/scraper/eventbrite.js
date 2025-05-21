@@ -14,20 +14,29 @@ const URL = "https://www.eventbrite.com/d/united-kingdom--london/tech-conference
  * @returns {Promise<Object[]>} List of parsed event objects.
  */
 
-module.exports = async function scrapeEventbrite() {
+module.exports = async function scrapeEventbrite(pageCount = 2) {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
 
   log("Navigating to Eventbrite...");
   await page.goto(URL, { waitUntil: "domcontentloaded" });
 
-  // Wait for event cards to appear in DOM
-  await page.waitForSelector('.horizontal-event-card__column');
+  let eventLinks = [];
 
-  log("Extracting event links...");
-  const eventLinks = await page.$$eval('a.event-card-link', links =>
-    links.map(link => link.href)
-  );
+  for (let i = 1; i < pageCount + 1; i++) { // Scrape 2 pages
+    log(`Scraping page ${i}...`);
+
+    // Wait for event cards to appear in DOM
+    await page.waitForSelector('.horizontal-event-card__column', { timeout: 10000 });
+
+    // Collect links on current page
+    const linksOnPage = await page.$$eval('a.event-card-link', links =>
+      links.map(link => link.href)
+    );
+    eventLinks.push(...linksOnPage);
+
+    await page.goto(`${URL}?page=${i+1}`, {waitUntil: "domcontentloaded"});
+  }
 
   await browser.close();
 
