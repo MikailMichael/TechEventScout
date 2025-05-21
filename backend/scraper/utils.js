@@ -125,8 +125,8 @@ function processTags(rawTags) {
   const cleanedInput = rawTags.filter(tag => typeof tag === "string" && tag.trim()); // Remove nulls, undefined, and empty strings
   const normalized = deDuplicateTags(cleanedInput);
   const canonicalized = normalized.map(tag =>
-    tagMap[tag]// || capitalizeTag(tag)
-  ).filter(tag => tag && tag !== "Other");
+    tagMap[tag] || "Other"
+  );
   return [...new Set(canonicalized)];
 }
 
