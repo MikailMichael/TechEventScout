@@ -4,7 +4,7 @@ import tagColours from "../utils/tagColours";
 
 function EventCard({ title, date, time, location, link, tags }) {
   return (
-    <div className='bg-[#2f2f2f] rounded-xl p-6 space-y-4 border border-gray-100 hover:ring-1'>
+    <div className='bg-[#2f2f2f] rounded-xl p-6 space-y-4 border border-gray-100 hover:ring-1 transition'>
         <h2 className="text-xl font-bold text-gray-100 mb-1">{title}</h2>
         <p className="text-gray-400 text-sm mb-1">
           {new Date(`${date}T${time}`).toLocaleString(undefined, {
