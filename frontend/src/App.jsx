@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios'; // library for making HTTP requests
+import { motion, AnimatePresence } from 'framer-motion';
 import './App.css'
 import EventCard from './components/EventCard';
 import FilterButton from './components/FilterButton';
@@ -35,14 +36,14 @@ function App() {
   }, [currentPage]);
 
   const handleSearch = (text) => {
-    setSearchTerm(text); 
-    if(!text) {
+    setSearchTerm(text);
+    if (!text) {
       setEvents(allEvents);
     } else {
       const lower = text.toLowerCase();
-      const filtered = allEvents.filter(event => 
+      const filtered = allEvents.filter(event =>
         event.title.toLowerCase().includes(lower) ||
-        event.location.toLowerCase().includes(lower) || 
+        event.location.toLowerCase().includes(lower) ||
         event.tags.some(tag => tag.toLowerCase().includes(lower))
       );
       setEvents(filtered);
@@ -53,13 +54,13 @@ function App() {
   const handleFilter = ({ location, tag }) => {
     let filtered = [...allEvents];
 
-    if(location) {
-      filtered = filtered.filter(event => 
+    if (location) {
+      filtered = filtered.filter(event =>
         event.location.toLowerCase() === location.toLowerCase()
       );
     }
 
-    if(tag) {
+    if (tag) {
       filtered = filtered.filter(event =>
         event.tags.map(t => t.toLowerCase()).includes(tag.toLowerCase())
       );
@@ -79,7 +80,7 @@ function App() {
 
   return (
     <div className='p-6'>
-      <div id='banner' className='flex flex-col h-auto mb-4 border-b border-gray-100 py-4 lg:py-0 lg:h-[100px] lg:flex-row lg:items-center lg:justify-between lg:gap-4'>      
+      <div id='banner' className='flex flex-col h-auto mb-4 border-b border-gray-100 py-4 lg:py-0 lg:h-[100px] lg:flex-row lg:items-center lg:justify-between lg:gap-4'>
         <h1 className='text-3xl font-bold mb-4 truncate text-gray-100'>London Tech Events</h1>
         <div className="flex items-center gap-4 justify-center">
           <SearchBar onSearch={handleSearch} />
@@ -88,35 +89,42 @@ function App() {
         </div>
       </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6'>
-        {currentEvents.length > 0 ? (
-          currentEvents.map((event, idx) => (
-          <EventCard
-            key={idx}
-            title={event.title}
-            date={event.date}
-            time={event.time}
-            location={event.location}
-            link={event.link}
-            tags={event.tags.join(", ")}
-          />
-        ))
-        ) : (
-          <div className='col-span-full text-center text-2xl font-bold text-gray-600'>
-            No events found.
-          </div>
-        )}
-      </div>
+      <AnimatePresence mode="wait">
+        <motion.div 
+          key={currentPage} // triggers re-animation on page change
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.25 }}
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6'>
+          {currentEvents.length > 0 ? (
+            currentEvents.map((event, idx) => (
+              <EventCard
+                key={idx}
+                title={event.title}
+                date={event.date}
+                time={event.time}
+                location={event.location}
+                link={event.link}
+                tags={event.tags.join(", ")}
+              />
+            ))
+          ) : (
+            <div className='col-span-full text-center text-2xl font-bold text-gray-600'>
+              No events found.
+            </div>
+          )}
+        </motion.div>
+      </AnimatePresence>
 
       {totalPages > 1 && (
         <div className='flex justify-center gap-2 mt-8'>
           {Array.from({ length: totalPages }, (_, i) => (
-            <button key={i} className={`text-gray-100 font-bold rounded-md border border-gray-100 focus:outline-none focus:ring-2 hover:ring-1 transition disabled:opacity-50 ${
-              currentPage === i + 1
+            <button key={i} className={`text-gray-100 font-bold rounded-md border border-gray-100 focus:outline-none focus:ring-2 hover:ring-1 transition disabled:opacity-50 ${currentPage === i + 1
                 ? 'ring-2 ring-gray-300 bg-gray-800 text-white'
                 : 'bg-gray-700 text-gray-200'
-            }`}
-            onClick={() => setCurrentPage(i + 1)}>{i + 1}</button>
+              }`}
+              onClick={() => setCurrentPage(i + 1)}>{i + 1}</button>
           ))}
         </div>
       )}
@@ -132,7 +140,7 @@ function App() {
       */}
 
       {/* Filter Modal */}
-      <FilterModal 
+      <FilterModal
         show={showModal}
         onClose={() => setShowModal(false)}
         locations={allLocations}
