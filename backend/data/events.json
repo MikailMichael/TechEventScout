@@ -2,17 +2,12 @@
   {
     "title": "The Big Tech & Innovation Conference",
     "date": "2025-06-13",
-    "time": "12:00",
+    "time": "19:00",
     "location": "Central London, London, London",
     "tags": [
-      "High Tech",
-      "Science & Technology",
-      "Conference",
-      "tech",
-      "innovation",
-      "event",
-      "conference",
-      "big"
+      "Tech",
+      "Business",
+      "Other"
     ],
     "link": "https://www.eventbrite.com/e/the-big-tech-innovation-conference-tickets-1229906386109"
   },
@@ -22,15 +17,12 @@
     "time": "18:00",
     "location": "6 Langley Street, London, WC2H 9JA",
     "tags": [
-      "Science",
-      "Science & Technology",
-      "Meeting or Networking Event",
-      "innovation",
-      "startups",
-      "london",
-      "cleantech",
-      "climate_change",
-      "lightning_talks"
+      "STEM",
+      "Tech",
+      "Networking",
+      "Startups",
+      "Sustainability",
+      "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/climate-tech-time-tickets-1345118869749"
   },
@@ -40,19 +32,10 @@
     "time": "18:30",
     "location": "11-16 Dering Street, London, W1S 1AR",
     "tags": [
-      "High Tech",
-      "Science & Technology",
-      "Meeting or Networking Event",
-      "networking",
-      "tech",
-      "technology",
-      "startups",
-      "networkingevent",
-      "london_networking",
-      "networking_event",
-      "startup_event",
-      "startup_networking",
-      "technology_event"
+      "Tech",
+      "Networking",
+      "Startups",
+      "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/networking-for-tech-startups-investors-professionals-tickets-1353268425289"
   },
@@ -62,19 +45,11 @@
     "time": "19:00",
     "location": "52 Fulham Road, London, SW3 6HH",
     "tags": [
-      "Startups & Small Business",
-      "Business & Professional",
-      "Meeting or Networking Event",
-      "tech",
-      "technology",
-      "startup",
-      "startups",
-      "businessnetworking",
-      "londonnetworking",
-      "startup_business",
-      "startup_event",
-      "technology_networking",
-      "technology_event"
+      "Business",
+      "Networking",
+      "Tech",
+      "Startups",
+      "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/tech-startups-networking-event-connecting-founders-and-service-providers-tickets-1304030282679"
   },
@@ -84,42 +59,13 @@
     "time": "18:00",
     "location": "315, Highgate Studios 53-79 Highgate Rd, London, NW5 1TL",
     "tags": [
-      "Business & Professional",
-      "Meeting or Networking Event",
-      "diversity",
-      "geek",
-      "womenintech",
-      "softwaredevelopers",
-      "diversityandinclusion",
-      "softwaredevelopment",
-      "uxui_design",
-      "recruiting_event",
-      "cloud_talent",
-      "outgeek"
+      "Business",
+      "Networking",
+      "Diversity",
+      "Software Development",
+      "Other"
     ],
     "link": "https://www.eventbrite.com/e/women-in-tech-london-outgeekwomen-tickets-859064784897"
-  },
-  {
-    "title": "AI & Tech Connect Networking Mixer",
-    "date": "2025-05-28",
-    "time": "18:30",
-    "location": "11-16 Dering Street, London, W1S 1AR",
-    "tags": [
-      "High Tech",
-      "Science & Technology",
-      "Meeting or Networking Event",
-      "tech",
-      "technology",
-      "biotech",
-      "medtech",
-      "healthtech",
-      "businessnetworking",
-      "londonnetworking",
-      "technology_networking",
-      "healthtechnology",
-      "technology_event"
-    ],
-    "link": "https://www.eventbrite.co.uk/e/ai-tech-connect-networking-mixer-tickets-1345189430799"
   },
   {
     "title": "Tech Networking Event by Startup Valley  in London",
@@ -127,19 +73,13 @@
     "time": "18:00",
     "location": "2 Goldhawk Road, London, W12 8QD",
     "tags": [
-      "Startups & Small Business",
-      "Business & Professional",
-      "Meeting or Networking Event",
-      "career",
-      "networking",
-      "tech",
-      "technology",
-      "entrepreneurship",
-      "startup",
-      "investors",
-      "funding",
-      "london",
-      "pitch"
+      "Business",
+      "Networking",
+      "Careers",
+      "Tech",
+      "Startups",
+      "Entrepreneurship",
+      "Other"
     ],
     "link": "https://www.eventbrite.com/e/tech-networking-event-by-startup-valley-in-london-tickets-1316908190849"
   },
@@ -149,21 +89,25 @@
     "time": "18:00",
     "location": "30 Lombard Street, London, EC3V 9BQ",
     "tags": [
-      "Startups & Small Business",
-      "Business & Professional",
-      "Conference",
-      "technology",
-      "entrepreneurship",
-      "diversity",
-      "womenshealth",
-      "femalefounders",
-      "womenfounders",
-      "investinwomenfounders",
-      "genderhealthgap",
-      "diversitytechsummit2025",
-      "dts2025"
+      "Business",
+      "Tech",
+      "Diversity",
+      "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/diversity-tech-summit-2025-tickets-1335658834529"
+  },
+  {
+    "title": "AI & Tech Connect Networking Mixer",
+    "date": "2025-05-28",
+    "time": "18:30",
+    "location": "11-16 Dering Street, London, W1S 1AR",
+    "tags": [
+      "Tech",
+      "Networking",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/ai-tech-connect-networking-mixer-tickets-1345189430799"
   },
   {
     "title": "AI & Tech Connect Networking Mixer",
@@ -171,19 +115,11 @@
     "time": "18:30",
     "location": "12 Angel Court, London, EC2R 7HB",
     "tags": [
-      "High Tech",
-      "Science & Technology",
-      "Meeting or Networking Event",
-      "tech",
-      "technology",
-      "startup",
-      "startups",
-      "londonevents",
-      "businessnetworking",
-      "business_networking",
-      "technology_networking",
-      "startup_networking",
-      "technology_event"
+      "Tech",
+      "Networking",
+      "Startups",
+      "Business",
+      "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/ai-tech-connect-networking-mixer-tickets-1343778179709"
   },
@@ -193,18 +129,13 @@
     "time": "18:00",
     "location": "2 Goldhawk Road, London, W12 8QD",
     "tags": [
-      "Startups & Small Business",
-      "Business & Professional",
-      "Meeting or Networking Event",
-      "business",
-      "networking",
-      "marketing",
-      "technology",
-      "ai",
-      "london",
-      "pitch",
-      "founders",
-      "gamechangers"
+      "Business",
+      "Networking",
+      "Marketing",
+      "Tech",
+      "AI",
+      "Entrepreneurship",
+      "Other"
     ],
     "link": "https://www.eventbrite.com/e/ai-tech-networking-london-tickets-1316915713349"
   },
@@ -214,18 +145,12 @@
     "time": "09:00",
     "location": "Stanley Park Road, Carshalton, SM5 3JL",
     "tags": [
-      "Medicine",
-      "Science & Technology",
-      "Camp, Trip, or Retreat",
-      "tech",
-      "engineering",
-      "robotics",
-      "christmas",
-      "kidsclub",
-      "minecraft",
-      "coding_for_kids",
-      "robotics_for_kids",
-      "tech_camp"
+      "Health & MedTech",
+      "Tech",
+      "Business",
+      "STEM",
+      "Tech for Kids",
+      "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/stanley-park-junior-school-may-tech-camp-tickets-1342102618059"
   },
@@ -235,19 +160,10 @@
     "time": "19:00",
     "location": "92a Old Brompton Rd, London, SW7 3LQ",
     "tags": [
-      "Startups & Small Business",
-      "Business & Professional",
-      "Meeting or Networking Event",
-      "networking",
-      "sustainable",
-      "sustainability",
-      "greentech",
-      "businessnetworking",
-      "londonnetworking",
-      "businessnetworkingevents",
-      "professional_networking",
-      "business_networking",
-      "business_professional"
+      "Business",
+      "Networking",
+      "Sustainability",
+      "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/sustainability-and-green-tech-startups-and-entrepreneurs-networking-event-tickets-1322721458489"
   },
@@ -257,37 +173,14 @@
     "time": "09:00",
     "location": "The Gardens, Harrow, HA1 4EL",
     "tags": [
-      "Medicine",
-      "Science & Technology",
-      "Camp, Trip, or Retreat",
-      "tech",
-      "engineering",
-      "robotics",
-      "kidsclub",
-      "minecraft",
-      "coding_for_kids",
-      "robotics_for_kids",
-      "tech_camp"
+      "Health & MedTech",
+      "Tech",
+      "Business",
+      "STEM",
+      "Tech for Kids",
+      "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/vaughan-primary-school-may-tech-camp-tickets-1342124072229"
-  },
-  {
-    "title": "Net(working) brunch & social for non-techies May 2025",
-    "date": "2025-05-31",
-    "time": "10:30",
-    "location": "7 Boundary Street, London, E2 7JE",
-    "tags": [
-      "Career",
-      "Business & Professional",
-      "Meeting or Networking Event",
-      "social",
-      "networking",
-      "brunch",
-      "tech",
-      "event",
-      "nontechies"
-    ],
-    "link": "https://www.eventbrite.co.uk/e/networking-brunch-social-for-non-techies-may-2025-tickets-1253183719239"
   },
   {
     "title": "Tech in Ghana London - 15th Edition",
@@ -295,16 +188,25 @@
     "time": "08:30",
     "location": "60 Chiswell Street, London, EC1Y 4AG",
     "tags": [
-      "High Tech",
-      "Science & Technology",
-      "Conference",
-      "tech",
-      "ghana",
-      "london",
-      "2025",
-      "édition"
+      "Tech",
+      "Business",
+      "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/tech-in-ghana-london-15th-edition-tickets-1267189109739"
+  },
+  {
+    "title": "Net(working) brunch & social for non-techies May 2025",
+    "date": "2025-05-31",
+    "time": "10:30",
+    "location": "7 Boundary Street, London, E2 7JE",
+    "tags": [
+      "Careers",
+      "Business",
+      "Networking",
+      "Tech",
+      "Diversity"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/networking-brunch-social-for-non-techies-may-2025-tickets-1253183719239"
   },
   {
     "title": "Monthly  Startup, Tech & Business Networking London",
@@ -312,19 +214,12 @@
     "time": "19:15",
     "location": "2 Goldhawk Road, London, W12 8QD",
     "tags": [
-      "Startups & Small Business",
-      "Business & Professional",
-      "Meeting or Networking Event",
-      "business",
-      "networking",
-      "marketing",
-      "entrepreneurship",
-      "startup",
-      "london",
-      "pitch",
-      "founders",
-      "inperson",
-      "startup_event"
+      "Business",
+      "Networking",
+      "Marketing",
+      "Startups",
+      "Entrepreneurship",
+      "Other"
     ],
     "link": "https://www.eventbrite.com/e/monthly-startup-tech-business-networking-london-tickets-1260044971429"
   },
@@ -334,19 +229,12 @@
     "time": "18:30",
     "location": "11-16 Dering Street, London, W1S 1AR",
     "tags": [
-      "High Tech",
-      "Science & Technology",
-      "Meeting or Networking Event",
-      "tech",
-      "technology",
-      "startup",
-      "ai",
-      "startups",
-      "robotics",
-      "londonnetworking",
-      "artificial_intelligence",
-      "networking_event",
-      "startup_event"
+      "Tech",
+      "Networking",
+      "Startups",
+      "AI",
+      "STEM",
+      "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/network-connect-deep-tech-startups-innovators-entrepreneurs-tickets-1353268234719"
   },
@@ -356,19 +244,11 @@
     "time": "18:30",
     "location": "19-20 Hanover Street, London, W1S 1YR",
     "tags": [
-      "High Tech",
-      "Science & Technology",
-      "Meeting or Networking Event",
-      "entrepreneurs",
-      "womeninbusiness",
-      "womenempowerment",
-      "womenintech",
-      "womentech",
-      "small_business",
-      "women_in_business",
-      "women_in_tech",
-      "women_networking",
-      "women_entrepreneurs"
+      "Tech",
+      "Networking",
+      "Entrepreneurship",
+      "Diversity",
+      "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/women-in-tech-fintech-ai-startups-business-mixer-tickets-1336540481559"
   },
@@ -378,17 +258,12 @@
     "time": "09:00",
     "location": "Pitshanger Lane, London, W5 1RP",
     "tags": [
-      "Medicine",
-      "Science & Technology",
-      "Camp, Trip, or Retreat",
-      "tech",
-      "engineering",
-      "robotics",
-      "kidsclub",
-      "minecraft",
-      "coding_for_kids",
-      "robotics_for_kids",
-      "tech_camp"
+      "Health & MedTech",
+      "Tech",
+      "Business",
+      "STEM",
+      "Tech for Kids",
+      "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/north-ealing-primary-school-may-tech-camp-tickets-1342125707119"
   },
@@ -398,18 +273,12 @@
     "time": "09:00",
     "location": "490 High Road, Woodford, IG8 0PN",
     "tags": [
-      "Medicine",
-      "Science & Technology",
-      "Camp, Trip, or Retreat",
-      "tech",
-      "engineering",
-      "robotics",
-      "christmas",
-      "kidsclub",
-      "minecraft",
-      "coding_for_kids",
-      "robotics_for_kids",
-      "tech_camp"
+      "Health & MedTech",
+      "Tech",
+      "Business",
+      "STEM",
+      "Tech for Kids",
+      "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/avon-house-preparatory-school-may-tech-camp-tickets-1342014003009"
   },
@@ -419,21 +288,21 @@
     "time": "14:00",
     "location": "102 Lavender Hill · London",
     "tags": [
-      "Machine Learning",
-      "Computers",
-      "Professional Networking",
-      "Computer Programming",
-      "Technology"
+      "AI",
+      "Tech",
+      "Other"
     ],
-    "link": "https://www.meetup.com/the-techie-brunch-club/events/307112525/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "link": "https://www.meetup.com/the-techie-brunch-club/events/307112525/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "Online Social",
     "date": "2025-05-25",
     "time": "19:00",
     "location": "Online",
-    "tags": [],
-    "link": "https://www.meetup.com/london-lgbt-friends-tech-usa-uk/events/307662901/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/london-lgbt-friends-tech-usa-uk/events/307662901/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "Find Your Co-Founder or Partner: Tech Startup Founders Networking Event",
@@ -441,21 +310,22 @@
     "time": "19:00",
     "location": "52 Fulham Road · London",
     "tags": [
-      "Entrepreneur Networking",
-      "Technology",
-      "Startup Businesses",
-      "Internet Startups",
-      "Technology Startups"
+      "Networking",
+      "Tech",
+      "Startups",
+      "Other"
     ],
-    "link": "https://www.meetup.com/techconnect/events/306805410/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "link": "https://www.meetup.com/techconnect/events/306805410/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "TechConnect - Virtual Job and Networking Event for Data AI Tech Professionals",
     "date": "2025-06-04",
     "time": "16:00",
     "location": "Online",
-    "tags": [],
-    "link": "https://www.meetup.com/ac-lhr/events/306436762/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/ac-lhr/events/306436762/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "London HealthTech Connect: Networking for Health Startups, Investors, Innovators",
@@ -463,13 +333,12 @@
     "time": "19:00",
     "location": "92a Old Brompton Rd London SW7 3LQ · London",
     "tags": [
-      "Health and Technology",
-      "Technology",
-      "Healthcare IT",
-      "Technology Startups",
-      "Medical Technology"
+      "Health & MedTech",
+      "Tech",
+      "Startups",
+      "Other"
     ],
-    "link": "https://www.meetup.com/techconnect/events/307617569/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "link": "https://www.meetup.com/techconnect/events/307617569/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "Conf42 Observability 2025",
@@ -478,20 +347,19 @@
     "location": "Online",
     "tags": [
       "Cloud Computing",
-      "Cloud Native",
-      "DevOps",
-      "Kubernetes",
-      "Site Reliability Engineering (SRE)"
+      "Other"
     ],
-    "link": "https://www.meetup.com/london-tech-professionals/events/305437667/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "link": "https://www.meetup.com/london-tech-professionals/events/305437667/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "Networking for Tech Startups/Founders/Investors/Developers - London",
     "date": "2025-05-23",
     "time": "19:00",
     "location": "110 Bishopsgate, City of London · London",
-    "tags": [],
-    "link": "https://www.meetup.com/uktechnetwork/events/306971906/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/uktechnetwork/events/306971906/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "MedTech Connect: Healthcare Startups, Investors & Professionals Networking",
@@ -499,13 +367,12 @@
     "time": "19:00",
     "location": "92b Old Brompton Road · London",
     "tags": [
-      "Health and Technology",
-      "Technology",
-      "Healthcare IT",
-      "Technology Startups",
-      "Medical Technology"
+      "Health & MedTech",
+      "Tech",
+      "Startups",
+      "Other"
     ],
-    "link": "https://www.meetup.com/techconnect/events/307617584/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "link": "https://www.meetup.com/techconnect/events/307617584/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "Speed Networking: Business Networking for Professionals at Bond Mayfair",
@@ -514,28 +381,21 @@
     "location": "Bonds Mayfair 11-16 Dering Street London W1S 1AR · London",
     "tags": [
       "Business",
-      "Entrepreneur Networking",
-      "Startup Businesses",
-      "Professional Networking",
-      "Women's Networking"
+      "Networking",
+      "Startups",
+      "Other"
     ],
-    "link": "https://www.meetup.com/weareproptech-london-property-investor-landlord-agent-club/events/307838888/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "link": "https://www.meetup.com/weareproptech-london-property-investor-landlord-agent-club/events/307838888/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "Co-Working For Business Owners and Entrepreneurs",
     "date": "2025-05-21",
     "time": "19:00",
     "location": "Online",
-    "tags": [],
-    "link": "https://www.meetup.com/business-tools-and-networking/events/307589365/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
-  },
-  {
-    "title": "Cloud & Coffee Conversations Over Cloud Computing",
-    "date": "2025-05-20",
-    "time": "19:00",
-    "location": "Online",
-    "tags": [],
-    "link": "https://www.meetup.com/resilience-works/events/307567939/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/business-tools-and-networking/events/307589365/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "SaaS Connect: Networking for Startups, Investors & Experts",
@@ -543,34 +403,23 @@
     "time": "19:00",
     "location": "92a Old Brompton Rd London SW7 3LQ · London",
     "tags": [
-      "SaaS (Software as a Service)",
-      "Technology",
-      "Entrepreneur Networking",
-      "Startup Businesses",
-      "Technology Startups"
+      "Cloud Computing",
+      "Tech",
+      "Networking",
+      "Startups",
+      "Other"
     ],
-    "link": "https://www.meetup.com/techconnect/events/307334240/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "link": "https://www.meetup.com/techconnect/events/307334240/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
-    "title": "Women in Product - Informal networking drinks 👩🍹 (in person)",
-    "date": "2025-05-20",
-    "time": "18:00",
-    "location": "234-236 Tottenham Court Road, W1T 7QJ · London",
-    "tags": [
-      "Leadership",
-      "Eating & Drinking",
-      "Product Management",
-      "Professional Networking"
-    ],
-    "link": "https://www.meetup.com/women-in-product-london/events/307838830/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
-  },
-  {
-    "title": "Global Business Networking - Online Event",
-    "date": "2025-05-20",
-    "time": "14:00",
+    "title": "Cloud & Coffee Conversations Over Cloud Computing",
+    "date": "2025-05-27",
+    "time": "19:00",
     "location": "Online",
-    "tags": [],
-    "link": "https://www.meetup.com/global-business-alliance/events/307562291/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/resilience-works/events/307700226/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "London Designers x Developers - May Social: Bingo & Connections 🎉",
@@ -578,21 +427,32 @@
     "time": "18:30",
     "location": "31 Leman St, London E1 8PT · London",
     "tags": [
-      "Social Networking",
-      "UI/UX Design",
-      "Technology",
-      "iOS and Android Application Development",
-      "Professional Networking"
+      "Networking",
+      "UI/UX",
+      "Tech",
+      "Other"
     ],
-    "link": "https://www.meetup.com/london-designers-x-developers/events/307862714/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "link": "https://www.meetup.com/london-designers-x-developers/events/307862714/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "#AI #Data and #TechProfessionalNetworking",
     "date": "2025-05-22",
     "time": "17:00",
     "location": "Online",
-    "tags": [],
-    "link": "https://www.meetup.com/ac-lhr/events/306113862/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/ac-lhr/events/306113862/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
+  },
+  {
+    "title": "Global Business Networking - Online Event",
+    "date": "2025-05-27",
+    "time": "14:00",
+    "location": "Online",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/london-technology-community/events/307301708/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "CleanTech Networking Event for Innovators, Investors & Professionals",
@@ -600,13 +460,12 @@
     "time": "19:00",
     "location": "92a Old Brompton Rd London SW7 3LQ · London",
     "tags": [
-      "Clean Technology",
-      "Technology",
-      "Startup Businesses",
       "Sustainability",
-      "Technology Startups"
+      "Tech",
+      "Startups",
+      "Other"
     ],
-    "link": "https://www.meetup.com/techconnect/events/307455266/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "link": "https://www.meetup.com/techconnect/events/307455266/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   },
   {
     "title": "Tech Startup Founders Networking Event: Find Your Co-Founders & Partners",
@@ -615,11 +474,21 @@
     "location": "52 Fulham Road · London",
     "tags": [
       "Business",
-      "Startup Businesses",
-      "Entrepreneur Networking",
-      "Technology Startups",
-      "Technology"
+      "Startups",
+      "Networking",
+      "Tech",
+      "Other"
     ],
-    "link": "https://www.meetup.com/thebusinessminds/events/306737172/?recId=027e9d07-d08d-474a-a702-37c849c40366&recSource=event-search&searchId=af2375ef-2a06-4e76-9169-43626d50cb3d&eventOrigin=find_page%24all"
+    "link": "https://www.meetup.com/thebusinessminds/events/306737172/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
+  },
+  {
+    "title": "Tech Networking Event by Startup Valley in London",
+    "date": "2025-05-27",
+    "time": "18:00",
+    "location": "489 Liverpool Rd, London N7 8NS · London",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/startups-tech-events-in-london/events/307170853/?recId=063747d8-cdeb-4338-b0ba-5c1ddcfe43f0&recSource=event-search&searchId=0bcef648-a87b-438c-8580-8c045b55c758&eventOrigin=find_page%24all"
   }
 ]
