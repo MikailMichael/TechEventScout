@@ -20,8 +20,8 @@
   "softwaredevelopers": "Software Development",
   "softwaredevelopment": "Software Development",
 
-  "uxui_design": "Design",
-  "ui/ux design": "Design",
+  "uxui_design": "UI/UX",
+  "ui/ux design": "UI/UX",
 
   "entrepreneurs": "Entrepreneurship",
   "founders": "Entrepreneurship",
@@ -114,10 +114,6 @@
   "minecraft": "Tech for Kids",
   "coding_for_kids": "Tech for Kids",
   "robotics_for_kids": "Tech for Kids",
-  "tech_camp": "Tech for Kids",
+  "tech_camp": "Tech for Kids"
 
-  "gamechangers": "Other",
-  "édition": "Other",
-  "ghana": "Other",
-  "2025": "Other"
 }
