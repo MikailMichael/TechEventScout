@@ -29,6 +29,11 @@ function App() {
       .catch(err => console.error(err)); // failure, log error
   }, []);
 
+  // Runs when currentPage changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentPage]);
+
   const handleSearch = (text) => {
     setSearchTerm(text); 
     if(!text) {
