@@ -40,7 +40,7 @@ async function main() {
 
   // Scrape events from each source
   const eventbriteEvents = await scrapeEventbrite(NUM_OF_PAGES);
-  const meetupEvents = await scrapeMeetup();
+  const meetupEvents = await scrapeMeetup(NUM_OF_PAGES);
 
   // Combine results
   const allEvents = [...eventbriteEvents, ...meetupEvents];

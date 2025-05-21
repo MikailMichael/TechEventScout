@@ -11,8 +11,8 @@ const MEETUPURL = "https://www.meetup.com/find/?location=gb--17--London&source=E
  * 
  * @returns {Promise<Object[]>} List of parsed event objects.
  */
-module.exports = async function scrapeMeetupEvents() {
-  return await retry(scrapeCore, 3, 3000);
+module.exports = async function scrapeMeetupEvents(pageCount = 2) {
+  return await retry(() => scrapeCore(pageCount), 3, 3000);
 }
 
 /**
@@ -21,7 +21,7 @@ module.exports = async function scrapeMeetupEvents() {
  * 
  * @returns {Promise<Object[]>} List of event objects.
  */
-async function scrapeCore() {
+async function scrapeCore(pageCount) {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
 
@@ -31,6 +31,13 @@ async function scrapeCore() {
 
     log("Waiting for event links...");
     await page.waitForSelector('a[data-event-label="Revamped Event Card"]', { timeout: 15000 });
+
+    log("Scrolling to load more events...");
+    for(let i = 1; i < pageCount + 1; i++) {
+      await page.mouse.wheel(0, 10000);
+      await page.waitForTimeout(5000);
+    }
+    
 
     log("Extracting Meetup events...");
     const eventLinks = await page.$$eval('a[data-event-label="Revamped Event Card"]', links => {
