@@ -91,13 +91,18 @@ async function scrapeCore(pageCount) {
         
       const tags = processTags(rawTags);
 
+      const img = await eventPage.$eval('picture[data-testid="event-description-image"] img', img => img.getAttribute('src')).catch(() => null);
+      if(!img) log(`No image found on event page: ${url.match(/\/events\/(\d+)/)?.[1]}`);
+
       events.push({
+        id: url.match(/\/events\/(\d+)/)?.[1] || null,
         title: title || "Untitled",
         date: date || null,
         time: time || null,
         location,
         tags,
-        link: url
+        link: url,
+        img
       });
 
       await eventPage.close();

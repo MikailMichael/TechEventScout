@@ -78,11 +78,13 @@ module.exports = async function scrapeEventbrite(pageCount = 2) {
 
   // Map API responses into simplified event objects
   return allEvents.map(evt => ({
+    id: evt.id,
     title: evt.name,
     date: evt.start_date,
     time: evt.start_time,
     location: evt.primary_venue?.address?.localized_address_display || "London",
     tags: processTags(evt.tags.map(tag => tag.display_name)),
-    link: evt.url
+    link: evt.url,
+    image: evt.image.url
   }));
 }
