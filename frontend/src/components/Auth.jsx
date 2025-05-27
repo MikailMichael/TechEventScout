@@ -6,22 +6,36 @@ export default function Auth({ onAuthSuccess }) {
   const [password, setPassword] = useState('');
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState(null);
+  const [message, setMessage] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError(null);
 
-    let response;
     if (isLogin) {
-      response = await supabase.auth.signInWithPassword({ email, password });
+      const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+      if(error) {
+        setMessage(null);
+        setError(error.message);
+      } else {
+        setError(null);
+        setMessage(null);
+        onAuthSuccess(); // Successful Login
+      }
     } else {
-      response = await supabase.auth.signUp({ email, password });
-    }
-
-    if (response.error) {
-      setError(response.error.message);
-    } else {
-      setError(null);
-      onAuthSuccess();
+      const { data, error } = await supabase.auth.signUp({ email, password });
+      if (error) {
+        setMessage(null);
+        setError(error.message);
+      } else if (data.user && !data.session) {
+        // Confirmation email sent, but account isn't active yet
+        setError(null);
+        setMessage("A confirmation email has been sent. Please check your inbox.");
+      } else {
+        setError(null);
+        setMessage(null);
+        onAuthSuccess(); // In case email confirmation is disabled and signup completes immediately
+      }
     }
   };
 
@@ -57,7 +71,7 @@ export default function Auth({ onAuthSuccess }) {
           {isLogin ? 'Login' : 'Create Account'}
         </button>
 
-        {error && <p className="text-red-500 text-lg font-semi-bold text-center">{error}</p>}
+        
 
         <button
           type="button"
@@ -67,6 +81,9 @@ export default function Auth({ onAuthSuccess }) {
           {isLogin ? 'Need an account? Sign up' : 'Have an account? Login'}
         </button>
       </form>
+
+      {error && <p className="text-red-500 text-lg font-semi-bold text-center">{error}</p>}
+      {message && <p className='text-green-500 text-lg font-semi-bold text-center'>{message}</p>}
     </div>
   </div>
   );
