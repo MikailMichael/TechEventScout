@@ -33,7 +33,7 @@ async function scrapeCore(pageCount) {
     await page.waitForSelector('a[data-event-label="Revamped Event Card"]', { timeout: 5000 });
 
     log("Scrolling to load more events...");
-    for(let i = 1; i < pageCount + 1; i++) {
+    for(let i = 1; i < pageCount; i++) {
       await page.mouse.wheel(0, 10000);
       await page.waitForTimeout(5000);
     }
