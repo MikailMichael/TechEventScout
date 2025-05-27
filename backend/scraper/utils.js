@@ -6,6 +6,7 @@
 // Tags not in this map will fall back to capitalized form.
 const tagMap = require('../data/tagMap.json');
 const fs = require("fs");
+const supabase = require('../supabaseClient');
 
 /**
  * Retries a given async function multiple times before failing.
@@ -138,4 +139,21 @@ function processTags(rawTags) {
   return [...new Set(sorted)];
 }
 
-module.exports = { retry, log, formatDateTime, saveJSON, processTags };
+/**
+ * Inserts or updates a batch of event records in the 'events' table using Supabase.
+ * Utilizes upsert to avoid duplicates bosed on the 'id' column.
+ * Each object should match the schema of the 'events' table.
+ * 
+ * @param {Array<Object>} events - Array of event objects to be inserted or updated.
+ */
+async function insertEvents(events) {
+  const { error } = await supabase.from('events').upsert(events, { onConflict: 'id' });
+ 
+  if (error) {
+    log(`Error inserting events: ${error.message}`, 'error');
+  } else {
+    log(`✅ Successfully inserted/updated ${events.length} events`, 'success');
+  }
+}
+
+module.exports = { retry, log, formatDateTime, saveJSON, processTags, insertEvents };
