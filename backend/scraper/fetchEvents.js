@@ -2,6 +2,7 @@
 // Main entry point for scraping and storing event data from multiple sources.
 
 const { log, saveJSON } = require('./utils');
+const supabase = require('../supabaseClient');
 
 // Show usage if --help flag is passed
 if (process.argv.includes('--help')) {
@@ -46,8 +47,31 @@ async function main() {
   const allEvents = [...eventbriteEvents, ...meetupEvents];
 
   // Save to file
-  await saveJSON(EVENTS_FILE, allEvents);
-  log(`✅ Saved ${allEvents.length} events to ${EVENTS_FILE}`, "success");
+  // await saveJSON(EVENTS_FILE, allEvents);
+  // log(`✅ Saved ${allEvents.length} events to ${EVENTS_FILE}`, "success");.
+
+  // Save to supabase
+  async function insertEvents(events) {
+    /*
+    for (const event of events) {
+      const { id, title, description, date, time, location, tags, link, img } = event;
+
+      const { error } = await supabase.from('events').upsert({
+        id, title, description, date, time, location, tags, link, img
+      }, { onConflict: 'id' }); // Avoid duplicates
+
+      if (error) {
+        log(`Error inserting event ${id}: ${error.message}`, 'error');
+      } else {
+        log(`Inserted/updated event ${id}`);
+      }
+    }
+      */
+     //const { error } = await supabase.from('events').upsert(events, { onConflict: 'id' });
+  }
+
+  await insertEvents(allEvents);
+  log(`✅ Saved ${allEvents.length} events to Supabase`, "success");
 }
 
 // Run the main function and log any fatal errors
