@@ -12,7 +12,7 @@ function SearchBar({ onSearch }) {
   return (
     <input
       id="searchInp"
-      className="form-control w-[300px] flex-1 max-w-[400px] py-2 px-2 border border-gray rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition"
+      className="form-control w-[300px] flex-1 max-w-[400px] py-2 px-2 border border-gray bg-neutral-800 placeholder-neutral-400 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition"
       placeholder="Search events"
       value={input}
       onChange={handleChange}

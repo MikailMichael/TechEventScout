@@ -118,7 +118,7 @@ function App() {
           <SearchBar onSearch={handleSearch} />
           <FilterButton onClick={() => setShowModal(true)} />
           <FavoritesButton />
-          <button onClick={() => supabase.auth.signOut()} className='text-sm underline mb-4 text-gray-200'>Log out</button>
+          <button onClick={() => supabase.auth.signOut()} className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'>Log out</button>
         </div>
       </div>
 
