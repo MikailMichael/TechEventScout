@@ -156,4 +156,20 @@ async function insertEvents(events) {
   }
 }
 
-module.exports = { retry, log, formatDateTime, saveJSON, processTags, insertEvents };
+/**
+ * Removes duplicate events based on their unique ID.
+ * If multiple events share the same ID, only the last one is retained.
+ * 
+ * @param {Array} events - Array of event objects to deduplicate
+ * @returns {Array} - Array of unqiue event objects
+ */
+function deDuplicateEvents(events) {
+  const uniqueEventsMap = new Map();
+
+  for (const event of events) {
+    uniqueEventsMap.set(event.id, event);
+  }
+  return Array.from(uniqueEventsMap.values());
+}
+
+module.exports = { retry, log, formatDateTime, saveJSON, processTags, insertEvents, deDuplicateEvents };

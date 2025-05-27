@@ -1,7 +1,7 @@
 // fetchEvent.js
 // Main entry point for scraping and storing event data from multiple sources.
 
-const { log, insertEvents } = require('./utils');
+const { log, insertEvents, deDuplicateEvents } = require('./utils');
 
 // Show usage if --help flag is passed
 if (process.argv.includes('--help')) {
@@ -50,7 +50,7 @@ async function main() {
   // log(`✅ Saved ${allEvents.length} events to ${EVENTS_FILE}`, "success");.
 
   // Save to supabase
-  await insertEvents(allEvents);
+  await insertEvents(deDuplicateEvents(allEvents));
 }
 
 // Run the main function and log any fatal errors
