@@ -30,7 +30,7 @@ async function scrapeCore(pageCount) {
     await page.goto(MEETUPURL, { waitUntil: "domcontentloaded" });
 
     log("Waiting for event links...");
-    await page.waitForSelector('a[data-event-label="Revamped Event Card"]', { timeout: 15000 });
+    await page.waitForSelector('a[data-event-label="Revamped Event Card"]', { timeout: 5000 });
 
     log("Scrolling to load more events...");
     for(let i = 1; i < pageCount + 1; i++) {
