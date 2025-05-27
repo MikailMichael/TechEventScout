@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios'; // library for making HTTP requests
+import { supabase } from './supabaseClient';
 import { motion, AnimatePresence } from 'framer-motion';
 import './App.css'
 import EventCard from './components/EventCard';
@@ -23,12 +23,18 @@ function App() {
 
   // Runs once when component first loads
   useEffect(() => {
-    axios.get("http://localhost:3001/events") // GET request to backend /events route
-      .then(res => {
-        setEvents(res.data);
-        setAllEvents(res.data);
-      }) // success, update events state
-      .catch(err => console.error(err)); // failure, log error
+    const fetchEvents = async () => {
+      const { data, error } = await supabase.from('events').select('*').order('date', { ascending: true });
+
+      if (error) {
+        console.error("Error fetching events:", error.message);
+      } else {
+        setEvents(data);
+        setAllEvents(data);
+      }
+    };
+
+    fetchEvents();
   }, []);
 
   // Runs when currentPage changes
