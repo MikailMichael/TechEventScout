@@ -17,6 +17,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState(""); // Tracks user input
   const [showModal, setShowModal] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(true);
   const EVENTS_PER_PAGE = 10;
 
   useHighlight(searchTerm, '.grid'); // Only highlights inside cards
@@ -24,7 +25,9 @@ function App() {
   // Runs once when component first loads
   useEffect(() => {
     const fetchEvents = async () => {
+      setLoading(true);
       const { data, error } = await supabase.from('events').select('*').order('date', { ascending: true });
+      setLoading(false);
 
       if (error) {
         console.error("Error fetching events:", error.message);
@@ -96,35 +99,41 @@ function App() {
         </div>
       </div>
 
-      <AnimatePresence mode="wait">
-        <motion.div 
-          key={currentPage} // triggers re-animation on page change
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.25 }}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6'>
-          {currentEvents.length > 0 ? (
-            currentEvents.map((event, idx) => (
-              <EventCard
-                key={idx}
-                title={event.title}
-                date={event.date}
-                time={event.time}
-                location={event.location}
-                link={event.link}
-                tags={event.tags.join(", ")}
-              />
-            ))
-          ) : (
-            <div className='col-span-full text-center text-2xl font-bold text-gray-600'>
-              No events found.
-            </div>
-          )}
-        </motion.div>
-      </AnimatePresence>
+      {loading ? (
+        <div className='spinner-container flex justify-center items-center py-10'>
+          <div className='spinner animate-spin rounded-full h-10 w-10 border-t-4 border-gray-200' />
+        </div>
+      ) : (
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentPage} // triggers re-animation on page change
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25 }}
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6'>
+            {currentEvents.length > 0 ? (
+              currentEvents.map((event, idx) => (
+                <EventCard
+                  key={idx}
+                  title={event.title}
+                  date={event.date}
+                  time={event.time}
+                  location={event.location}
+                  link={event.link}
+                  tags={event.tags.join(", ")}
+                />
+              ))
+            ) : (
+              <div className='col-span-full text-center text-2xl font-bold text-gray-600'>
+                No events found.
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
+      )}
 
-      <Pagination totalPages={totalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+      <Pagination totalPages={totalPages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
       {/* Filter Modal */}
       <FilterModal
