@@ -9,6 +9,7 @@ import useHighlight from './hooks/useHighlight';
 import FavoritesButton from './components/FavoritesButton';
 import FilterModal from './components/FilterModal';
 import Pagination from './components/Pagination';
+import Auth from './components/Auth';
 
 
 function App() {
@@ -18,9 +19,24 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null);
   const EVENTS_PER_PAGE = 10;
 
   useHighlight(searchTerm, '.grid'); // Only highlights inside cards
+
+  useEffect(() => {
+    const session = supabase.auth.getSession().then(({ data }) => {
+      setUser(data?.session?.user || null);
+    });
+
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user || null);
+    });
+
+    return () => {
+      listener.subscription.unsubscribe();
+    }
+  }, []);
 
   // Runs once when component first loads
   useEffect(() => {
@@ -88,6 +104,10 @@ function App() {
 
   const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
 
+  if (!user) {
+    return <Auth onAuthSuccess={() => window.location.reload()} />;
+  }
+
   return (
     <div className='p-6'>
       <div id='banner' className='flex flex-col h-auto mb-4 border-b border-gray-100 py-4 lg:py-0 lg:h-[100px] lg:flex-row lg:items-center lg:justify-between lg:gap-4'>
@@ -96,6 +116,7 @@ function App() {
           <SearchBar onSearch={handleSearch} />
           <FilterButton onClick={() => setShowModal(true)} />
           <FavoritesButton />
+          <button onClick={() => supabase.auth.signOut()} className='text-sm underline mb-4 text-gray-200'>Log out</button>
         </div>
       </div>
 
