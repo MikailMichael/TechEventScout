@@ -38,8 +38,10 @@ function App() {
     }
   }, []);
 
-  // Runs once when component first loads
+  // Fetch only after a user is known
   useEffect(() => {
+    if (!user) return;
+
     const fetchEvents = async () => {
       setLoading(true);
       const { data, error } = await supabase.from('events').select('*').order('date', { ascending: true });
@@ -54,7 +56,7 @@ function App() {
     };
 
     fetchEvents();
-  }, []);
+  }, [user]);
 
   // Runs when currentPage changes
   useEffect(() => {
