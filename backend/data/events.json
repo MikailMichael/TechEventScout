@@ -2,6 +2,7 @@
   {
     "id": "1229906386109",
     "title": "The Big Tech & Innovation Conference",
+    "description": "Grow your network and upskill at The Big Tech & Innovation Conference - where the latest trends and cutting-edge ideas collide!",
     "date": "2025-06-13",
     "time": "19:00",
     "location": "Central London, London, London",
@@ -16,6 +17,7 @@
   {
     "id": "1345118869749",
     "title": "Climate Tech Time",
+    "description": "Bringing together innovators, investors and enthusiasts",
     "date": "2025-05-28",
     "time": "18:00",
     "location": "6 Langley Street, London, WC2H 9JA",
@@ -33,6 +35,7 @@
   {
     "id": "1353268425289",
     "title": "Networking for Tech Startups, Investors, Professionals",
+    "description": "Come mingle with tech startups, investors, and professionals to make connections and grow your network!",
     "date": "2025-05-28",
     "time": "18:30",
     "location": "11-16 Dering Street, London, W1S 1AR",
@@ -48,6 +51,7 @@
   {
     "id": "1304030282679",
     "title": "Tech Startups Networking Event: Connecting Founders and Service Providers",
+    "description": "Join the Tech Startups Networking Event to connect with service providers and build partnerships to accelerate your growth!",
     "date": "2025-05-27",
     "time": "19:00",
     "location": "52 Fulham Road, London, SW3 6HH",
@@ -64,6 +68,7 @@
   {
     "id": "859064784897",
     "title": "Women in Tech London - OutGeekWomen",
+    "description": "All the badass women in tech, are you in? #outgeekwomen",
     "date": "2025-06-12",
     "time": "18:00",
     "location": "315, Highgate Studios 53-79 Highgate Rd, London, NW5 1TL",
@@ -80,6 +85,7 @@
   {
     "id": "1335658834529",
     "title": "Diversity Tech Summit 2025",
+    "description": "Diversity UK is proud to present the third Diversity Tech Summit in 2025, a gathering of industry leaders, innovators, and changemakers.",
     "date": "2025-06-25",
     "time": "18:00",
     "location": "30 Lombard Street, London, EC3V 9BQ",
@@ -95,6 +101,7 @@
   {
     "id": "1316908190849",
     "title": "Tech Networking Event by Startup Valley  in London",
+    "description": "Dive into tech with other professionals! Network and build strong relationships with investors, tech experts, and entrepreneurs in London.",
     "date": "2025-05-27",
     "time": "18:00",
     "location": "2 Goldhawk Road, London, W12 8QD",
@@ -113,6 +120,7 @@
   {
     "id": "1345189430799",
     "title": "AI & Tech Connect Networking Mixer",
+    "description": "Join us for a fun evening of mingling, making connections, and talking tech at our Tech Connect Networking Mixer!",
     "date": "2025-05-28",
     "time": "18:30",
     "location": "11-16 Dering Street, London, W1S 1AR",
@@ -128,6 +136,7 @@
   {
     "id": "1343778179709",
     "title": "AI & Tech Connect Networking Mixer",
+    "description": "Join us for a fun evening of mingling, making connections, and talking tech at our Tech Connect Networking Mixer!",
     "date": "2025-06-13",
     "time": "18:30",
     "location": "12 Angel Court, London, EC2R 7HB",
@@ -135,7 +144,6 @@
       "Tech",
       "Networking",
       "Startups",
-      "Business",
       "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/ai-tech-connect-networking-mixer-tickets-1343778179709",
@@ -144,6 +152,7 @@
   {
     "id": "1316915713349",
     "title": "AI &  Tech Networking London",
+    "description": "Come to the best AI Networking Event in London and dive into the world of innovations. Pitch to investors, entrepreneurs and game changers.",
     "date": "2025-05-27",
     "time": "18:00",
     "location": "2 Goldhawk Road, London, W12 8QD",
@@ -160,25 +169,9 @@
     "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F969404223%2F2171032696763%2F1%2Foriginal.20250225-215513?crop=focalpoint&fit=crop&w=357&auto=format%2Ccompress&q=75&sharp=10&fp-x=7.95453389486e-06&fp-y=2.82338270501e-05&s=1296d25547ff4e7f7161554d306ed396"
   },
   {
-    "id": "1342102618059",
-    "title": "Stanley Park Junior School May Tech Camp",
-    "date": "2025-05-27",
-    "time": "09:00",
-    "location": "Stanley Park Road, Carshalton, SM5 3JL",
-    "tags": [
-      "Health & MedTech",
-      "Tech",
-      "Business",
-      "STEM",
-      "Tech for Kids",
-      "Other"
-    ],
-    "link": "https://www.eventbrite.co.uk/e/stanley-park-junior-school-may-tech-camp-tickets-1342102618059",
-    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F514508939%2F239433420259%2F1%2Foriginal.20230514-204337?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=179%2C0%2C2572%2C1286&s=e9a5d8c5804310de78852f90f9c7342a"
-  },
-  {
     "id": "1322721458489",
     "title": "Sustainability and Green Tech Startups and Entrepreneurs Networking Event",
+    "description": "Join us at the highly anticipated Green Technology and Sustainability Entrepreneurs and Professionals Networking Event in London",
     "date": "2025-05-29",
     "time": "19:00",
     "location": "92a Old Brompton Rd, London, SW7 3LQ",
@@ -189,11 +182,12 @@
       "Other"
     ],
     "link": "https://www.eventbrite.co.uk/e/sustainability-and-green-tech-startups-and-entrepreneurs-networking-event-tickets-1322721458489",
-    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1007720713%2F1598191844883%2F1%2Foriginal.20250413-115522?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.484848484848&fp-y=0.698443579767&s=21d80a7444a5736e2fb50c68789dffe3"
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1007720713%2F1598191844883%2F1%2Foriginal.20250413-115522?crop=focalpoint&fit=crop&w=355&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.484848484848&fp-y=0.698443579767&s=884f8c9aefb393af8cc9826c5ac7f113"
   },
   {
     "id": "1267189109739",
     "title": "Tech in Ghana London - 15th Edition",
+    "description": "Join Tech in Ghana London 2025 during LTW to explore Ghana's thriving tech ecosystem, innovation, and UK collaboration opportunities.",
     "date": "2025-06-10",
     "time": "08:30",
     "location": "60 Chiswell Street, London, EC1Y 4AG",
@@ -206,8 +200,25 @@
     "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F973629313%2F142387908854%2F1%2Foriginal.20250303-140418?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C104%2C1284%2C642&s=a8571b6898a21a8c5d5e5e51f4ea89b7"
   },
   {
+    "id": "1332828508949",
+    "title": "London Tech Week 2025 Networking Party at Mint Leaf Bank",
+    "description": "Join us for London Tech Week 2025 Networking Party...",
+    "date": "2025-06-13",
+    "time": "18:30",
+    "location": "12 Angel Court, London, EC2R 7HB",
+    "tags": [
+      "Tech",
+      "Networking",
+      "Business",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/london-tech-week-2025-networking-party-at-mint-leaf-bank-tickets-1332828508949",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1013053893%2F269403584076%2F1%2Foriginal.20250421-081405?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=3392c4866fb3dceafefd464bf1604641"
+  },
+  {
     "id": "1253183719239",
     "title": "Net(working) brunch & social for non-techies May 2025",
+    "description": "Join us for a fun Net(working) brunch & social where you can connect with other non-techies, get relevant career advice and make new friends",
     "date": "2025-05-31",
     "time": "10:30",
     "location": "7 Boundary Street, London, E2 7JE",
@@ -222,25 +233,9 @@
     "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F884713573%2F1626447620403%2F1%2Foriginal.20241028-121720?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C1324%2C1170%2C585&s=0a38f2cffeb1775bfe2872577bb84c59"
   },
   {
-    "id": "1342124072229",
-    "title": "Vaughan Primary School May Tech Camp",
-    "date": "2025-05-27",
-    "time": "09:00",
-    "location": "The Gardens, Harrow, HA1 4EL",
-    "tags": [
-      "Health & MedTech",
-      "Tech",
-      "Business",
-      "STEM",
-      "Tech for Kids",
-      "Other"
-    ],
-    "link": "https://www.eventbrite.co.uk/e/vaughan-primary-school-may-tech-camp-tickets-1342124072229",
-    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F514508939%2F239433420259%2F1%2Foriginal.20230514-204337?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=179%2C0%2C2572%2C1286&s=e9a5d8c5804310de78852f90f9c7342a"
-  },
-  {
     "id": "1260044971429",
     "title": "Monthly  Startup, Tech & Business Networking London",
+    "description": "We are organizing a Networking Event for Startups Founders, Professionals and Investors. Venue — Sindercombe Social",
     "date": "2025-04-01",
     "time": "19:15",
     "location": "2 Goldhawk Road, London, W12 8QD",
@@ -256,8 +251,26 @@
     "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F969405393%2F2171032696763%2F1%2Foriginal.20250225-215623?w=400&auto=format%2Ccompress&q=75&sharp=10&s=2ea468fa5b56dc4e90ca4d4f6060457d"
   },
   {
+    "id": "1336540481559",
+    "title": "Women in Tech, Fintech, AI, Startups, Business Mixer",
+    "description": "Come mingle with badass women in tech, fintech, AI, startups, and business at our epic mixer",
+    "date": "2025-06-16",
+    "time": "18:30",
+    "location": "19-20 Hanover Street, London, W1S 1YR",
+    "tags": [
+      "Tech",
+      "Networking",
+      "Entrepreneurship",
+      "Diversity",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/women-in-tech-fintech-ai-startups-business-mixer-tickets-1336540481559",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1015801893%2F2503392003511%2F1%2Foriginal.20250424-112024?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=75396a5685815cc60fae74deadd0c460"
+  },
+  {
     "id": "1353268234719",
     "title": "Network Connect: Deep Tech Startups, Innovators & Entrepreneurs",
+    "description": "Get ready to mingle with deep tech startups, innovators, and entrepreneurs at our event - it's all about making connections!",
     "date": "2025-05-28",
     "time": "18:30",
     "location": "11-16 Dering Street, London, W1S 1AR",
@@ -273,58 +286,370 @@
     "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F996534733%2F2691508877981%2F1%2Foriginal.20250331-102558?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=3e8e72b996692de78e814aae3a9e1ffd"
   },
   {
-    "id": "1336540481559",
-    "title": "Women in Tech, Fintech, AI, Startups, Business Mixer",
-    "date": "2025-06-16",
+    "id": "1352101765779",
+    "title": "Tech Ilford: A Festival of Creativity & Innovation",
+    "description": "Tech Ilford: A hands-on festival of creative tech—free and fun for all the family.",
+    "date": "2025-06-14",
+    "time": "11:00",
+    "location": "Clements Road, Ilford, IG1 1EA",
+    "tags": [
+      "Tech",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/tech-ilford-a-festival-of-creativity-innovation-tickets-1352101765779",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1034290223%2F192892026176%2F1%2Foriginal.20250519-192258?w=355&auto=format%2Ccompress&q=75&sharp=10&s=e3156404f1f8c4c0b0457c9c4dcc3366"
+  },
+  {
+    "id": "1362730175639",
+    "title": "Tech Startups, Investors, Innovators & Professionals  Networking Event",
+    "description": "Tech Startups & Innovators Event: Connect with like-minded professionals, investors, and tech leaders for collaboration and opportunities.",
+    "date": "2025-06-18",
+    "time": "19:00",
+    "location": "The Queen's Walk, London, SE1 7PB",
+    "tags": [
+      "Business",
+      "Networking",
+      "Tech",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/tech-startups-investors-innovators-professionals-networking-event-tickets-1362730175639",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F875125579%2F1598191844883%2F1%2Foriginal.20241015-170226?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=5e-05&fp-y=5e-05&s=d9a190b004e5d0340a7eda1ced72d9a7"
+  },
+  {
+    "id": "859057142037",
+    "title": "OutGeek Women in Tech - London Team Ticket",
+    "description": "Everyone is invited. Are you in? #womenintech #outgeeklondon",
+    "date": "2025-06-12",
+    "time": "18:00",
+    "location": "315, Highgate Studios 53-79 Highgate Rd, London, NW5 1TL",
+    "tags": [
+      "Business",
+      "Networking",
+      "Diversity",
+      "STEM",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.com/e/outgeek-women-in-tech-london-team-ticket-tickets-859057142037",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F937437563%2F45737626823%2F1%2Foriginal.20250116-161349?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.000580807310162&fp-y=0.00517412783495&s=82eaee56b2f3c3870eda9856641c1483"
+  },
+  {
+    "id": "1143518477549",
+    "title": "Education Conferences 2025",
+    "description": "Education Conferences 2025 (https://edtechconferences.london) in London is the EdTech World 2025 based in London UK, for the EdTech Industry",
+    "date": "2025-06-04",
+    "time": "09:00",
+    "location": "44 Hallam Street, London, W1W 6JJ",
+    "tags": [
+      "Business",
+      "Tech",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/education-conferences-2025-tickets-1143518477549",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1029223433%2F520375021019%2F1%2Foriginal.20250512-234813?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C12%2C1104%2C552&s=eb3cb86bac409f6f1ed8fa622765cade"
+  },
+  {
+    "id": "1130327813919",
+    "title": "INTEGRATE 2025 - The Largest Microsoft Integration Tech Conference",
+    "description": "Get ready for INTEGRATE 2025 - the ultimate Microsoft Integration Tech Conference coming at you live and in person!",
+    "date": "2025-06-09",
+    "time": "08:30",
+    "location": "155 Bishopsgate, London, EC2M 3YD",
+    "tags": [
+      "Tech",
+      "Business",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.com/e/integrate-2025-the-largest-microsoft-integration-tech-conference-tickets-1130327813919",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F926052923%2F1982185837923%2F1%2Foriginal.20250102-093801?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=6d543cd1acad8ae1ada35faf765e243f"
+  },
+  {
+    "id": "1287373551949",
+    "title": "Find Your Co-Founder or Partner: Tech Startup Founders Networking Event",
+    "description": "Join our Networking Event to connect with Co Founders or Partners who can help accelerate your startup’s growth and success.",
+    "date": "2025-05-27",
+    "time": "19:00",
+    "location": "52 Fulham Road, London, SW3 6HH",
+    "tags": [
+      "Business",
+      "Networking",
+      "Tech",
+      "Startups",
+      "Entrepreneurship",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/find-your-co-founder-or-partner-tech-startup-founders-networking-event-tickets-1287373551949",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F879561803%2F2108009601763%2F1%2Foriginal.20241021-125104?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C200%2C1200%2C600&s=c49f99d370e781f6a30c2a5599ac4ec9"
+  },
+  {
+    "id": "1037695534277",
+    "title": "Digi-Tech Pharma & AI 2025",
+    "description": "Join us at Digi-Tech Pharma & AI 2025 for cutting-edge insights on the future of healthcare technology!",
+    "date": "2025-05-28",
+    "time": "08:30",
+    "location": "Wrights Lane, London, W8 5SP",
+    "tags": [
+      "Business",
+      "Tech",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/digi-tech-pharma-ai-2025-tickets-1037695534277",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F865577479%2F315561237648%2F1%2Foriginal.20241003-091843?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C14%2C1200%2C600&s=817acc182070b447389d5e4e1db589de"
+  },
+  {
+    "id": "1378668678129",
+    "title": "Networking for Tech Startups, Investors & Working Professionals",
+    "description": "Networking event for tech startups, investors & professionals",
+    "date": "2025-06-25",
     "time": "18:30",
-    "location": "19-20 Hanover Street, London, W1S 1YR",
+    "location": "11-16 Dering Street, London, W1S 1AR",
     "tags": [
       "Tech",
       "Networking",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/networking-for-tech-startups-investors-working-professionals-tickets-1378668678129",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1004654673%2F2691508877981%2F1%2Foriginal.20250409-091125?w=300&auto=format%2Ccompress&q=75&sharp=10&s=4de97ceea5b81e2c23bac1dbb01232ca"
+  },
+  {
+    "id": "1369982517589",
+    "title": "Tech Startups, Investors, Innovators Networking Event ate The Other House",
+    "description": "Tech Startups & Innovators Event: Connect with like-minded professionals, investors, and tech leaders for collaboration and opportunities.",
+    "date": "2025-06-24",
+    "time": "19:00",
+    "location": "15-17 Harrington Gardens, London, SW7 4JJ",
+    "tags": [
+      "Business",
+      "Networking",
+      "Tech",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/tech-startups-investors-innovators-networking-event-ate-the-other-house-tickets-1369982517589",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F875125579%2F1598191844883%2F1%2Foriginal.20241015-170226?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=5e-05&fp-y=5e-05&s=d9a190b004e5d0340a7eda1ced72d9a7"
+  },
+  {
+    "id": "1352103771779",
+    "title": "Tech Ilford: A Festival of Creativity & Innovation",
+    "description": "Tech Ilford: A hands-on festival of creative tech—free and fun for all the family.",
+    "date": "2025-06-14",
+    "time": "11:00",
+    "location": "Clements Road, Ilford, IG1 1EA",
+    "tags": [
+      "Tech",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/tech-ilford-a-festival-of-creativity-innovation-tickets-1352103771779",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1034288383%2F192892026176%2F1%2Foriginal.20250519-192113?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C60%2C1920%2C960&s=b102f310dfd2cee87f36be3f168ceefa"
+  },
+  {
+    "id": "1351282144269",
+    "title": "AI Connector®, during LondonTech Week, fringe event of AI Summit",
+    "description": "Connect with innovators at our AI Connector® event, a fringe event of The AI Summit during London Tech Week. Network, pitch, and collaborate",
+    "date": "2025-06-10",
+    "time": "19:00",
+    "location": "55-61 Tabernacle Street, London, EC2A 4AA",
+    "tags": [
+      "Tech",
+      "Networking",
+      "Business",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/ai-connector-during-londontech-week-fringe-event-of-ai-summit-tickets-1351282144269",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1022365413%2F56281031621%2F1%2Foriginal.20250503-051716?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C940%2C470&s=b9b50137048a77872bb40b0d99e1157e"
+  },
+  {
+    "id": "1378596361829",
+    "title": "Networking for Tech Startups, Investors during London Tech Week",
+    "description": "Networking event for Tech Startups and Investors during London Tech Week",
+    "date": "2025-06-13",
+    "time": "18:30",
+    "location": "12 Angel Court, London, EC2R 7HB",
+    "tags": [
+      "Tech",
+      "Networking",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/networking-for-tech-startups-investors-during-london-tech-week-tickets-1378596361829",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1004654673%2F2691508877981%2F1%2Foriginal.20250409-091125?w=300&auto=format%2Ccompress&q=75&sharp=10&s=4de97ceea5b81e2c23bac1dbb01232ca"
+  },
+  {
+    "id": "1260045021579",
+    "title": "Tech & Business Networking London",
+    "description": "Dive into tech with other professionals! Network and build strong relationships with investors, tech experts, and entrepreneurs in London",
+    "date": "2025-04-01",
+    "time": "19:15",
+    "location": "2 Goldhawk Road, London, W12 8QD",
+    "tags": [
+      "Business",
+      "Networking",
+      "Careers",
+      "Marketing",
       "Entrepreneurship",
-      "Diversity",
+      "Startups",
       "Other"
     ],
-    "link": "https://www.eventbrite.co.uk/e/women-in-tech-fintech-ai-startups-business-mixer-tickets-1336540481559",
-    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1015801893%2F2503392003511%2F1%2Foriginal.20250424-112024?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=75396a5685815cc60fae74deadd0c460"
+    "link": "https://www.eventbrite.com/e/tech-business-networking-london-tickets-1260045021579",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1030933783%2F2171032696763%2F1%2Foriginal.20250514-175257?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=5.87121212121e-08&fp-y=1.74732761312e-07&s=f8820554f0c9dbea0aa621a4fa36187d"
   },
   {
-    "id": "1342125707119",
-    "title": "North Ealing Primary School May Tech Camp",
-    "date": "2025-05-27",
-    "time": "09:00",
-    "location": "Pitshanger Lane, London, W5 1RP",
+    "id": "726687199977",
+    "title": "Out in Tech London | Monthly Mixer",
+    "description": "Join OIT London for our monthly after work networking event, hosted the first Wednesday of every month in Soho.",
+    "date": "2023-10-11",
+    "time": "19:00",
+    "location": "60-66 Wardour Street, London, W1F 0TA",
     "tags": [
-      "Health & MedTech",
+      "Networking",
       "Tech",
-      "Business",
-      "STEM",
-      "Tech for Kids",
       "Other"
     ],
-    "link": "https://www.eventbrite.co.uk/e/north-ealing-primary-school-may-tech-camp-tickets-1342125707119",
-    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F514508939%2F239433420259%2F1%2Foriginal.20230514-204337?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=179%2C0%2C2572%2C1286&s=e9a5d8c5804310de78852f90f9c7342a"
+    "link": "https://www.eventbrite.com/e/out-in-tech-london-monthly-mixer-tickets-726687199977",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F790790969%2F221529729607%2F1%2Foriginal.20240617-080813?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=a300e9c28b99dba3e4b9dc9df53c721a"
   },
   {
-    "id": "1342014003009",
-    "title": "Avon House Preparatory School May Tech Camp",
-    "date": "2025-05-27",
+    "id": "1374730629319",
+    "title": "London Climate Tech Meet-up",
+    "description": "This event is for a community of people in and around London who are passionate about climate change and technology.",
+    "date": "2025-06-05",
+    "time": "16:00",
+    "location": "30 Engate Street, London, SE13 7HA",
+    "tags": [],
+    "link": "https://www.eventbrite.com/e/london-climate-tech-meet-up-tickets-1374730629319",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1036003893%2F2351057641473%2F1%2Foriginal.20250521-161825?w=318&auto=format%2Ccompress&q=75&sharp=10&s=972496698fca4065f4ba78ff68132cc1"
+  },
+  {
+    "id": "1143512880809",
+    "title": "EdTech World Forum 2025",
+    "description": "EdTech World Forum 2025 ( https://edtechconferences.london ) in London is the EdTech Summit 2025. Educational technology EdTech events 2025",
+    "date": "2025-06-04",
     "time": "09:00",
-    "location": "490 High Road, Woodford, IG8 0PN",
+    "location": "44 Hallam Street, London, W1W 6JJ",
     "tags": [
-      "Health & MedTech",
-      "Tech",
       "Business",
-      "STEM",
-      "Tech for Kids",
+      "Tech",
       "Other"
     ],
-    "link": "https://www.eventbrite.co.uk/e/avon-house-preparatory-school-may-tech-camp-tickets-1342014003009",
-    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F514508939%2F239433420259%2F1%2Foriginal.20230514-204337?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=179%2C0%2C2572%2C1286&s=e9a5d8c5804310de78852f90f9c7342a"
+    "link": "https://www.eventbrite.co.uk/e/edtech-world-forum-2025-tickets-1143512880809",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1029228363%2F520375021019%2F1%2Foriginal.20250512-235527?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C12%2C1104%2C552&s=a92345127f9fab3e290d97ed203b67e4"
+  },
+  {
+    "id": "1208708683209",
+    "title": "Technology in Gaming 2025",
+    "description": "Join us for a deep dive into the future of gaming tech at Technology in Gaming 2025.",
+    "date": "2025-07-01",
+    "time": "09:30",
+    "location": "47-49 Charlotte Road, London, EC2A 3QT",
+    "tags": [
+      "Tech",
+      "Business",
+      "AI",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.com/e/technology-in-gaming-2025-tickets-1208708683209",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F979895643%2F2582969785781%2F1%2Foriginal.20250310-164633?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=912b0efacfc603366a3b2dd47634650c"
+  },
+  {
+    "id": "1353884237199",
+    "title": "An evening of music, poetry, and tech talk [xi] – North London",
+    "description": "Join us for a chill night of live music, spoken word poetry, and interesting tech discussions in North London!",
+    "date": "2025-05-27",
+    "time": "19:30",
+    "location": "762-764 High Road, London, N12 9QH",
+    "tags": [
+      "Tech",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/an-evening-of-music-poetry-and-tech-talk-xi-north-london-tickets-1353884237199",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F942399553%2F155644030672%2F1%2Foriginal.20250122-221235?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C146%2C1024%2C512&s=85cdf9f24fdb2328045d5c0694f1a64d"
+  },
+  {
+    "id": "1248773839169",
+    "title": "Tech Summit London",
+    "description": "Meet top tech leaders, explore cutting-edge trends & unlock opportunities. Inspiration, insights, & powerful connections – all in one place",
+    "date": "2025-11-27",
+    "time": "08:30",
+    "location": "Regent's University London, Inner Cir,, London, NW1 4NS",
+    "tags": [
+      "Tech",
+      "Business",
+      "AI",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/tech-summit-london-tickets-1248773839169",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F960429203%2F444490327668%2F1%2Foriginal.20250213-224730?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C18%2C1024%2C512&s=d062c607188868a42abfeeb0577e111b"
+  },
+  {
+    "id": "1362757387029",
+    "title": "Tech Startups Networking Event: Founders, CTOs & Technical Partners",
+    "description": "Connect with business founders, CTOs, and technical partners to build strong startup teams, explore collaborations, and scale your venture.",
+    "date": "2025-06-18",
+    "time": "19:00",
+    "location": "The Queen's Walk, London, SE1 7PB",
+    "tags": [
+      "Business",
+      "Networking",
+      "Tech",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/tech-startups-networking-event-founders-ctos-technical-partners-tickets-1362757387029",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F967783773%2F1598191844883%2F1%2Foriginal.20250224-122257?w=300&auto=format%2Ccompress&q=75&sharp=10&s=af25d3e57d36a117404f507428e97c52"
+  },
+  {
+    "id": "940242670137",
+    "title": "In-house Recruitment Talent Attraction Conference 2025",
+    "description": "In June 2025, our annual In-house Talent Attraction Conference arrives!",
+    "date": "2025-06-11",
+    "time": "09:00",
+    "location": "28 Great Russell Street, London, WC1B 3LS",
+    "tags": [
+      "Business",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/in-house-recruitment-talent-attraction-conference-2025-tickets-940242670137",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F822297099%2F1597784746%2F1%2Foriginal.20240807-135615?w=355&auto=format%2Ccompress&q=75&sharp=10&s=c71db64b3f9d7e214d389b3e955ff710"
+  },
+  {
+    "id": "1332993572659",
+    "title": "AI, Digital & FinTech Networking for Startups, Entrepreneurs and Investors",
+    "description": "Come mingle with fellow startup enthusiasts, tech entrepreneurs, and investors at our AI, Digital & FinTech Networking event",
+    "date": "2025-05-28",
+    "time": "18:30",
+    "location": "11-16 Dering Street, London, W1S 1AR",
+    "tags": [
+      "Tech",
+      "Networking",
+      "Business",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/ai-digital-fintech-networking-for-startups-entrepreneurs-and-investors-tickets-1332993572659",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1013110973%2F269403584076%2F1%2Foriginal.20250421-122626?crop=focalpoint&fit=crop&w=300&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e86f2f7184c7c3a71c7aba1a385c8644"
+  },
+  {
+    "id": "1362754698989",
+    "title": "Tech Startup Connect: Founders, CTOs & Technical Experts Networking Event",
+    "description": "Networking event for business founders, CTOs, and tech experts to find co-founders, partners, and collaboration opportunities.",
+    "date": "2025-06-18",
+    "time": "19:00",
+    "location": "The Queen's Walk, London, SE1 7PB",
+    "tags": [
+      "Business",
+      "Networking",
+      "Tech",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.eventbrite.co.uk/e/tech-startup-connect-founders-ctos-technical-experts-networking-event-tickets-1362754698989",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F967818273%2F2108009601763%2F1%2Foriginal.20250224-132503?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=6458fd2b47475ca426dc1ba37b2b6d06"
   },
   {
     "id": "307112525",
     "title": "Saturday Tech Networking - June 2025",
+    "description": "The event focuses on networking alongside a group exercise where you fill out a post-it note with a topic you want to learn about. Then, we tally up the results and ask someone from the group to step up and speak about it.\n\nThis event is open to anyone who works in or is interested in the tech industry, whether you are a developer, designer, engineer, entrepreneur, student, or hobbyist. You will be able to meet new people, share your experiences, learn from others, and find potential collaborators or mentors.\n\nWe usually start around 2 p.m. at The Crown pub, following the earlier Brunch event. The Crown offers a wide range of alcoholic and non-alcoholic drinks to suit all tastes and burgers for those who missed the brunch.\n\nIt is worth noting that whilst the event is free, the food and drinks aren't. Come thirsty, curious, and ready to have a great time!",
     "date": "2025-06-21",
     "time": "14:00",
     "location": "102 Lavender Hill · London",
@@ -333,51 +658,39 @@
       "Tech",
       "Other"
     ],
-    "link": "https://www.meetup.com/the-techie-brunch-club/events/307112525/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/the-techie-brunch-club/events/307112525/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/6/1/8/c/highres_524964972.webp?w=750"
   },
   {
-    "id": "307662901",
-    "title": "Online Social",
-    "date": "2025-05-25",
-    "time": "19:00",
-    "location": "Online",
+    "id": "308026483",
+    "title": "London Tech Mixer and Social (Tech / AI / Data) 💻🌐✨ London Connect",
+    "description": "Join us at our TECH MIXER AND SOCIAL for afterwork drinks, networking with tech workers in London and meet people from London and all over the world 🌏🎉\n\nTech, AI, Data, and more ~\n\nWhether you're a seasoned tech veteran or just starting out, let's create the ideal afterwork place to meet and chill with other workers in tech - find that new job, expand your network, share ideas, and stay up-to-date on the latest trends in the industry. Let's inspire, innovate, and shape the future of technology in London!\n\n🍺🥃 Afterwork drinks\n📍 All Bar One Villiers St - 6 Villiers St, London\n🕕 5:30pm onwards every Friday\n🎫 just £3 entry online or £6 at the door! (helps us to run the event inc. Meetup costs etc!)\n🔗 Link to Eventbrite\n\nLondon tech social mixer afterwork drinks AI connect network data IT programming cybersecurity digital nomad blockchain crypto big data science computer networking community career jobs entrepreneur industry product design startup London tech social mixer afterwork drinks AI connect network data IT programming cybersecurity digital nomad blockchain crypto big data science computer networking community career jobs entrepreneur industry product design startup",
+    "date": "2025-05-30",
+    "time": "17:30",
+    "location": "All Bar One Villiers St. · London",
     "tags": [
       "Other"
     ],
-    "link": "https://www.meetup.com/london-lgbt-friends-tech-usa-uk/events/307662901/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
-    "img": "https://secure.meetupstatic.com/photos/event/2/8/9/4/highres_527590388.jpeg?w=750"
-  },
-  {
-    "id": "306805410",
-    "title": "Find Your Co-Founder or Partner: Tech Startup Founders Networking Event",
-    "date": "2025-05-27",
-    "time": "19:00",
-    "location": "52 Fulham Road · London",
-    "tags": [
-      "Networking",
-      "Tech",
-      "Startups",
-      "Other"
-    ],
-    "link": "https://www.meetup.com/techconnect/events/306805410/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
-    "img": "https://secure.meetupstatic.com/photos/event/c/8/9/5/highres_524211349.webp?w=750"
+    "link": "https://www.meetup.com/london-tech-mixer-and-social-tech-ai-data/events/308026483/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/a/0/0/f/highres_528100975.webp?w=750"
   },
   {
     "id": "306436762",
-    "title": "TechConnect - Virtual Job and Networking Event for Data AI Tech Professionals",
+    "title": "TechConnect: Global Virtual Job & Networking Event for Data, AI, and Tech Pros",
+    "description": "Calling all developers, AI engineers, software architects, data scientists, DevOps professionals, and tech enthusiasts — TechConnect is your ultimate destination for career growth, project showcasing, and global peer networking in the tech ecosystem.\n\nHosted in a self-led, Slack-style virtual space, this virtual tech networking event invites you to connect, collaborate, and innovate with a diverse community of tech minds and hiring professionals from around the world. Whether you're looking for your next job, exploring startups, showcasing tools, or building a peer coding accountability group, TechConnect is where meaningful connections are made.\n\n🎥 Watch the explainer video to see how it works:\n👉 https://www.youtube.com/watch?v=pgm2_MiHLDk\n\n💬 What to Expect:\nAt TechConnect, participants enjoy full access to group discussions and 1-on-1 video/text chats, with zero moderation — allowing spontaneous, genuine interaction across roles and regions.\n\nAttendees can engage across several thoughtfully organized channels:\n\n📍 Where:\nJoin virtually at:\n👉 https://events.tao.ai/pod/analytics.club/te5gd5wngmz9\n🕓 When:\nThe event takes place from 4:00 PM – 6:00 PM local time, globally. Join to network, hire, learn, and collaborate.\n\n👥 Who Should Attend:\n\n🔧 Why You’ll Love It:\n\n❓ Have Questions or Suggestions?\nWe’re here to help. Reach out at:\n👉 https://noworkerleftbehind.org/event_support\n\n🔖 Hashtags:\n#TechConnect #VirtualTechNetworkingEvent #OnlineDeveloperCommunityMeetup #TechJobFairOnline #DeveloperProjectShowcasePlatform #PeerCodingAccountabilityGroup #AIJobs #DataScienceNetworking #SoftwareEngineerMeetup #GlobalTechEvent #TechCareersVirtual",
     "date": "2025-06-04",
     "time": "16:00",
     "location": "Online",
     "tags": [
       "Other"
     ],
-    "link": "https://www.meetup.com/ac-lhr/events/306436762/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/ac-lhr/events/306436762/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/c/3/c/f/highres_526490127.webp?w=750"
   },
   {
     "id": "307617569",
     "title": "London HealthTech Connect: Networking for Health Startups, Investors, Innovators",
+    "description": "Join the vibrant community of health tech startups, entrepreneurs, and professionals at London HealthTech Connect. This premier networking event is dedicated to fostering connections and collaborations among those passionate about revolutionizing healthcare through technology.\n\nWhether you're a budding startup looking to make your mark, an entrepreneur with innovative ideas, or a seasoned professional seeking new opportunities, London HealthTech Connect offers the perfect platform to exchange insights, discover cutting-edge advancements, and build meaningful relationships.\n\nWho Should Attend?\nHealth Tech Startups: If you're an emerging health tech company looking to make a mark, this event is the perfect opportunity to network with potential partners, investors, and clients. Share your innovative ideas and discover new pathways for growth.\nEntrepreneurs: Those with a vision for transforming healthcare through technology will find valuable connections and insights at London HealthTech Connect. Meet like-minded entrepreneurs, share your experiences, and collaborate on groundbreaking projects.\nHealthcare Professionals: Doctors, nurses, and other healthcare providers interested in integrating technology into their practices can benefit from the latest innovations and network with tech developers who understand the needs of the healthcare industry.\nInvestors: Venture capitalists and angel investors looking for the next big thing in health tech will have the chance to meet promising startups and entrepreneurs. Discover investment opportunities and stay informed about cutting-edge developments.\nTech Enthusiasts and Innovators: Anyone passionate about the intersection of technology and healthcare is welcome. Engage in thought-provoking conversations, learn from others in the field, and contribute your ideas to the health tech community.\nPolicy Makers and Industry Leaders: Individuals involved in shaping healthcare policy and leading industry organizations can gain insights into emerging trends and connect with innovators driving the future of health technology.\nThe event focuses on dynamic networking sessions and engaging speed presentations. These concise, impactful presentations allow participants to quickly share their innovations and ideas with the entire audience, fostering an environment of rapid learning and connection.\nWhy Attend?\nExpand Your Network: Connect with like-minded individuals who share a passion for health technology. Build relationships with potential partners, collaborators, and mentors who can help you grow your business and advance your career.\nSpeed Presentations: Engage in dynamic speed presentations where participants share innovative ideas and solutions. Gain quick insights into the latest trends and developments in health tech, and find inspiration for your own projects.\nDiscover Opportunities: Meet potential investors, partners, and clients. Whether you're looking to fund your startup, collaborate on a project, or expand your professional network, this event provides a unique platform to discover new opportunities.\nStay Ahead of the Curve: Keep up-to-date with the latest advancements and emerging trends in health technology. Learn from your peers and stay informed about the innovations that are shaping the future of healthcare.\nBe Part of a Community: Join a dynamic community of health tech innovators who are dedicated to making a difference in healthcare. Share your experiences, challenges, and successes with others who understand your journey.\n\nLondon HealthTech Connect is not just about networking; it's about being part of a dynamic community that is shaping the future of health technology. Don’t miss this chance to be at the forefront of healthcare innovation. Come and join us for an event that promises to ignite ideas and foster growth in the health tech sector.",
     "date": "2025-06-05",
     "time": "19:00",
     "location": "92a Old Brompton Rd London SW7 3LQ · London",
@@ -387,36 +700,58 @@
       "Startups",
       "Other"
     ],
-    "link": "https://www.meetup.com/techconnect/events/307617569/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/techconnect/events/307617569/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/1/a/f/b/highres_522246907.webp?w=750"
   },
   {
-    "id": "306113862",
-    "title": "AIDataTech Connect: Global Virtual Networking Event for AI, Data & Tech Pros",
-    "date": "2025-05-22",
-    "time": "17:00",
-    "location": "Online",
+    "id": "307981082",
+    "title": "£25 to Join 3 High-Level Networking Events? Yes, Really",
+    "description": "Kindly note that this is a paid event and the average number of attendees for our events is 60-70 people. You can register on https://www.eventbrite.co.uk/e/25-to-join-3-high-level-networking-events-yes-really-tickets-1370886431219?aff=meetup\n\nWe’re thrilled to offer you a unique opportunity to attend three high-calibre networking events all for just £25 in total. Build meaningful connections across industries in elegant venues, each with a curated guest list and a relaxed, professional atmosphere.\nThese events are ideal for:\n✔️ Entrepreneurs and business owners looking to connect with investors, legal advisors, and fellow directors\n✔️ Wealth managers, financial advisors, and investors keen to meet high-net-worth individuals and professionals with aligned interests\n✔️ Solicitors, legal consultants, and legaltech founders aiming to grow their client base and engage with directors and business decision-makers\n✔️ Directors, CEOs, and senior executives wanting to explore collaborations, partnerships, or strategic introductions\n🎯 What's Included in the £25 Pass?\n📍 Wealth Connector\n📅 Wednesday 29th May | 7 PM Connect with wealth managers, financial advisors, investors, and HNWIs.\n📍 **The Legal Connector **📅 Monday 3rd June | 7 PM Meet solicitors, legal consultants, and legaltech innovators.\n📍 Director Connector at the Institute of Directors 📅 Thursday 27th June | 6 PM Network with company directors, decision-makers, and business owners.\n\n🎟 One Ticket – Full Access Attend all three events for just £25. Meet professionals from three powerful sectors, grow your network, and explore new business opportunities.\n💬 A dedicated WhatsApp group will be available for attendees to connect before and after the events.\n🕴️ Dress Code: Smart/business casual (no trainers or T-shirts) 📢 Spaces are limited and this offer will go fast.\n➡️ Book your £25 pass now and enjoy an exceptional networking experience across three dynamic events.",
+    "date": "2025-05-29",
+    "time": "19:00",
+    "location": "24 Egerton Gardens, London, SW3 2DB · London · London",
     "tags": [
       "Other"
     ],
-    "link": "https://www.meetup.com/ac-lhr/events/306113862/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
-    "img": "https://secure.meetupstatic.com/photos/event/1/7/4/6/highres_526205958.webp?w=750"
+    "link": "https://www.meetup.com/devtank/events/307981082/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/a/b/6/b/highres_528103883.webp?w=750"
   },
   {
-    "id": "306971906",
-    "title": "Networking for Tech Startups/Founders/Investors/Developers - London",
-    "date": "2025-05-23",
+    "id": "306805410",
+    "title": "Find Your Co-Founder or Partner: Tech Startup Founders Networking Event",
+    "description": "Looking for a game-changing co-founder or the perfect partner to help scale your tech startup? Look no further! Tech Startup Founders Networking Night is the place where ambitious entrepreneurs, brilliant minds, and key service providers come together to spark new collaborations.\nWe’re all about connections and real conversations in a laid-back, energetic environment. Skip the formalities and dive straight into meaningful interactions with people who could be the missing piece to your startup’s success. Whether you’re hunting for a co-founder, a marketing expert, or a legal partner, you’ll find the talent and expertise you need right here.\n\n### Event Highlights:\n\n### Why You Should Be There:\n\n### Who’s Coming:\n\n###\n\nSpaces are limited, so don’t miss out on this chance to build valuable connections and partnerships. Secure your spot now!\n\nAGENDA OF THIS NETWORKING EVENT IN LONDON\n7:00 pm - 7:30 pm: Meet and greet. Upon arrival, ask the receptionist about the business networking event, and they will guide you to our designated area.\n8 pm - 8:30 - Elevator Pitch\n8:30 pm -10 pm: Informal networking\nDress code: business smart casual.\nRegister now - space is limited to 50 attendees only!\nP.S. Click Follow for future event alerts!",
+    "date": "2025-05-27",
     "time": "19:00",
-    "location": "110 Bishopsgate, City of London · London",
+    "location": "52 Fulham Road · London",
     "tags": [
+      "Networking",
+      "Tech",
+      "Startups",
       "Other"
     ],
-    "link": "https://www.meetup.com/uktechnetwork/events/306971906/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
-    "img": "https://secure.meetupstatic.com/photos/event/e/2/1/c/highres_525777884.webp?w=750"
+    "link": "https://www.meetup.com/techconnect/events/306805410/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/c/8/9/5/highres_524211349.webp?w=750"
+  },
+  {
+    "id": "307838888",
+    "title": "Speed Networking: Business Networking for Professionals at Bond Mayfair",
+    "description": "RSVP TO ATTEND THIS EVENT. ALL TICKETS MUST BE PURCHASED IN ADVANCE TO ATTEND THIS EVENT..\n\nSpeed Networking is a revolutionary platform designed for professionals looking to accelerate their connections and grow their businesses. Imagine meeting and connecting with a room full of like-minded professionals in a fun and time-efficient manner.\n\nYou must book a ticket via the link: https://fatso.ma/1Kpg\n\nBook here via: https://www.eventbrite.co.uk/e/speed-business-networking-for-professionals-at-bonds-mayfair-tickets-1332935268269?aff=oddtdtcreator\n\nEvent Overview\n\nOur unique speed networking format allows you to make meaningful connections, foster new relationships, and uncover new business opportunities—all in a fast-paced and dynamic environment. Grow your network, share your expertise, and build lasting relationships with like-minded individuals.\n\nSpeed Networking is a dynamic and efficient way to connect with professionals across various industries. Break out of your networking comfort zone and say goodbye to missed opportunities with this structured format.\n\nSocialite Connections offers you the perfect platform to make meaningful connections quickly and effectively. Join us to accelerate your networking experience and unlock new business opportunities.\n\nWho Should Attend?\n\n- Business Professionals\n\n- Entrepreneurs\n\n- Investors\n\n- Startups\n\n- Small Business Owners\n\n- Business Managers and Leaders\n\n- Anyone interested in Business Networking\n\nWhy Attend?\n\nDon't miss this exclusive opportunity to expand your network and forge valuable connections on a 1-2-1 basis. With just 3 minutes per attendee, you'll get the opportunity to speak to everyone attending in a timed and structured format.\n\nRemember to bring your business cards for quick exchanges! Elevate your business game with speed networking and secure your spot now.\n\nSchedule of Event\n\nYou are invited to join the dedicated Whatsapp group for the event and start networking before the actual event when you have purchased your ticket.\n\n6:30 pm: Arrival & Registration (Ask for Socialite Connections) Your name will be checked off the guest list and you will be given a name badge and introduced to each other.\n\nThe dress code is smart, smart casual or office attire.\n\nYou must book a ticket via the link: https://fatso.ma/1Kpg\n\nBook here via: https://www.eventbrite.co.uk/e/speed-business-networking-for-professionals-at-bonds-mayfair-tickets-1332935268269?aff=oddtdtcreator\n\nSecure your spot now and elevate your media business network!\n\nTickets need to be bought online in advance to attend this event. Tickets are not available at the door.\n\nRefund policy: There is no refund at this event. Your ticket can be reassigned to another person of your choice.",
+    "date": "2025-05-27",
+    "time": "18:30",
+    "location": "Bonds Mayfair 11-16 Dering Street London W1S 1AR · London",
+    "tags": [
+      "Business",
+      "Networking",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/weareproptech-london-property-investor-landlord-agent-club/events/307838888/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/6/a/8/5/highres_527967269.webp?w=750"
   },
   {
     "id": "307617584",
     "title": "MedTech Connect: Healthcare Startups, Investors & Professionals Networking",
+    "description": "Join us for MedTech Connect, an exclusive networking event dedicated to bringing together healthcare startups, investors, and industry professionals. This event is the perfect opportunity to build meaningful connections, explore collaboration opportunities, and discover innovative solutions in the rapidly growing MedTech space.\nEvent Highlights:\n\nWho Should Attend?\n\nWhy You Should Attend:\n\nWhether you’re a MedTech startup founder, an investor looking for the next big opportunity, or a professional eager to connect with innovators, MedTech Connect provides the ideal platform to spark collaborations and drive the future of healthcare.\nSpaces are limited—secure your spot today and join us in shaping the next wave of MedTech innovation!",
     "date": "2025-06-05",
     "time": "19:00",
     "location": "92b Old Brompton Road · London",
@@ -426,27 +761,26 @@
       "Startups",
       "Other"
     ],
-    "link": "https://www.meetup.com/techconnect/events/307617584/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/techconnect/events/307617584/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/d/c/4/6/highres_525296390.webp?w=750"
   },
   {
-    "id": "307838888",
-    "title": "Speed Networking: Business Networking for Professionals at Bond Mayfair",
-    "date": "2025-05-27",
-    "time": "18:30",
-    "location": "Bonds Mayfair 11-16 Dering Street London W1S 1AR · London",
+    "id": "306971908",
+    "title": "Networking for Tech Startups/Founders/Investors/Developers - London",
+    "description": "TechNetwork is an exclusive community of Founders and Investors, founded in Madrid, Spain and now with presence accross a 100 cities globally. Our registration system is a bit more exclusive so please dont just sign up and show, we will reach out with an exclusive invite post signup if you qualify!\n\nRegistration\n✅ Join us on Whatsapp:\nhttps://chat.whatsapp.com/BFnCkhLRXhPE5tnb9beSAm\n\nIn case you are late and cant find the group, call our event host (Admin of the whatsapp group)\n\nHow many people attend?\nWe get 50 people on average in all our events and invite our members on Meetup and other platforms.\nMembers of other groups who RSVP are included as guests to give an idea of expected numbers.\nWho should attend?\n\nJust like any event, slots are limited. RSVP and complete your registration at the earliest.\nHappy Networking 😊",
+    "date": "2025-05-30",
+    "time": "19:00",
+    "location": "110 Bishopsgate, City of London · London",
     "tags": [
-      "Business",
-      "Networking",
-      "Startups",
       "Other"
     ],
-    "link": "https://www.meetup.com/weareproptech-london-property-investor-landlord-agent-club/events/307838888/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
-    "img": "https://secure.meetupstatic.com/photos/event/6/a/8/5/highres_527967269.webp?w=750"
+    "link": "https://www.meetup.com/uktechnetwork/events/306971908/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/3/0/7/1/highres_528132401.webp?w=750"
   },
   {
     "id": "305437667",
     "title": "Conf42 Observability 2025",
+    "description": "On the day:",
     "date": "2025-06-05",
     "time": "17:00",
     "location": "Online",
@@ -454,64 +788,80 @@
       "Cloud Computing",
       "Other"
     ],
-    "link": "https://www.meetup.com/london-tech-professionals/events/305437667/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/london-tech-professionals/events/305437667/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/5/9/4/8/highres_526882856.webp?w=750"
   },
   {
-    "id": "307334240",
-    "title": "SaaS Connect: Networking for Startups, Investors & Experts",
-    "date": "2025-05-22",
-    "time": "19:00",
-    "location": "92a Old Brompton Rd London SW7 3LQ · London",
+    "id": "307798887",
+    "title": "Marionete Meetup: Kubernetes Network in Action",
+    "description": "🗓 Agenda:\n\n💡 Speaker:\nRafael Natali, Lead DevSecOps, Marionete\n\nTitle of Talk:\nKubernetes Network in Action\n\nAbstract:\nCurious about how networking works in Kubernetes? In this session, Rafael Natali will guide us through the essential building blocks of Kubernetes networking. You will learn what happens behind the scenes when pods communicate, how DNS works inside a cluster, and gain a solid understanding of key concepts such as Services, Ingress, and Network Policies.\n\nThis session is ideal for those embarking on their Kubernetes journey or anyone looking to reinforce their foundational knowledge. Don’t miss this opportunity to enhance your skillset and navigate the complexities of Kubernetes networking with confidence!\n\nBio:\nRafael Natali has 20 years of experience in the IT industry, specifically as a System Administrator and DevSecOps professional. Throughout his career, he has developed extensive knowledge in designing, operating, and troubleshooting solutions that prioritize scalability and reliability. Rafael is also an expert in Automation as well as Continuous Integration and Delivery.\nHe has been working with Kubernetes since 2018 and is recognised as a Kubestronaut since 2024. Currently, Rafael leads a team that is implementing a hybrid streaming data and analytics platform for a major insurance company in the UK.\n\n***\nDISCLAIMER\nNOTE: We are unable to cater for any attendees under the age of 18.",
+    "date": "2025-06-11",
+    "time": "18:00",
+    "location": "1 Long Ln · London",
     "tags": [
       "Cloud Computing",
       "Tech",
-      "Networking",
-      "Startups",
       "Other"
     ],
-    "link": "https://www.meetup.com/techconnect/events/307334240/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
-    "img": "https://secure.meetupstatic.com/photos/event/e/9/0/4/highres_522659652.webp?w=750"
-  },
-  {
-    "id": "307301708",
-    "title": "Global Business Networking - Online Event",
-    "date": "2025-05-27",
-    "time": "14:00",
-    "location": "Online",
-    "tags": [
-      "Other"
-    ],
-    "link": "https://www.meetup.com/london-technology-community/events/307301708/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
-    "img": "https://secure.meetupstatic.com/photos/event/b/0/2/0/highres_519885088.webp?w=750"
+    "link": "https://www.meetup.com/marionete-uk/events/307798887/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/c/c/3/8/highres_527932280.webp?w=750"
   },
   {
     "id": "307700226",
     "title": "Cloud & Coffee Conversations Over Cloud Computing",
+    "description": "An informal meetup for cloud enthusiasts and curious minds alike.\nJoin us for a relaxed cozy coffee or tea and cloud talk whether you're just getting started or scaling globally with Kubernetes, Lambda, Azure, or Load Balancers, you're welcome here. No pitches, just real conversations.\nAgenda:\n\nWho is this Meetup for?\n\nCurious Minds & Beginners Thinking about learning cloud? This is the perfect place to start, ask questions, and get inspired.\nCloud Experts & Engineers Come to reflect, contribute, and learn from fellow builders.\nEntrepreneurs & Founders Learn how cloud can power your vision, simplify your stack, and scale your startup.\nInnovators & Builders Working on something exciting? Share it, test ideas, and connect.\nKnowledge Sharers Whether you’ve mastered Kubernetes or just launched your first deployment, your experience matters.\n\nJoin Zoom Meeting\nhttps://us06web.zoom.us/j/81038043496\nMeeting ID: 810 3804 3496\n\n07:00 PM London\nEvery week on Tue, 110 occurrence(s)\nPlease download and import the following iCalendar (.ics) files to your calendar system.\nWeekly: https://us06web.zoom.us/meeting/tZUtdOGoqjguE9IpUr4M96VDCKpbJ322dIhl/ics?icsToken=DHxlQSToWxyMfPZv2wAALAAAAGnCTcGJCiTD_a0lrbww6NDP2kb7eijMBzt2w3FpTsclFyfBfcWv00CsIPcETiVd9kKE319LWa5ukhHR4jAwMDAwMQ&meetingMasterEventId=vJRVF7ggTUarBgiEatlhjw",
     "date": "2025-05-27",
     "time": "19:00",
     "location": "Online",
     "tags": [
       "Other"
     ],
-    "link": "https://www.meetup.com/resilience-works/events/307700226/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/resilience-works/events/307700226/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/b/7/b/0/highres_527147024.webp?w=750"
   },
   {
     "id": "307657309",
     "title": "Co-Working For Business Owners and Entrepreneurs",
+    "description": "Co-Working This Wednesday\n\nStruggling to stay productive or not sure where to start on your to-do list? Whether it’s updating your website, creating social media content, or catching up on bookkeeping, co-working can help!\n\nJoin Penny’s Power Hour for:\n⏱️ 10 minutes of expert tips\n⏱️ 50 minutes of focused work time\n\nLed by Penny Wallace, a finance and operations strategist, this session is designed to help you tackle tasks and make real progress.\n\n👉 Join us this Wednesday and turn procrastination into productivity!\n\nAchieveIt is an expert on websites that convert to sales.\n\nYappa provides venues, speakers and workshops for Content Club\n\nAchieveIt is an expert on websites that convert to sales.\n\nYappa provides venues, speakers and workshops for Content Club\n\nAchieveIt is an expert on websites that convert to sales.\n\nYappa provides venues, speakers and workshops for Content Club\n\nAchieveIt is an expert on websites that convert to sales.\n\nYappa provides venues, speakers and workshops for Content Club\n\nAchieveIt is an expert on websites that convert to sales.\n\nYappa provides venues, speakers and workshops for Content Club\n\nAchieveIt is an expert on websites that convert to sales.\n\nYappa provides venues, speakers and workshops for Content Club",
     "date": "2025-05-28",
     "time": "19:00",
     "location": "Online",
     "tags": [
       "Other"
     ],
-    "link": "https://www.meetup.com/business-tools-and-networking/events/307657309/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/business-tools-and-networking/events/307657309/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/7/7/f/5/highres_527010709.webp?w=750"
+  },
+  {
+    "id": "307301708",
+    "title": "Global Business Networking - Online Event",
+    "description": "Wishing you a very happy 2025!\n\nWelcome to the Weekly Global Business Networking event.\n\nWe are a truly global and fast growing community of businesses from across the world. The companies attending have been from across the world, from US and Canada to UK, from Europe to India, from Africa to Japan and South Korea. It is a tech focussed community of like minded business owners, startups and professionals, who are a part of this community to find customers, partnerships, contacts and to have an international reach.\n\nThis may also be your doorway to India, the world's largest (after China in market size), fastest growing and most lucrative market.\n\nInitially the meetup was meant only for tech companies but as a community we voted and unanimously decided to open up these meetings to all businesses, not just tech companies, simply because every business runs on technology so when we talk about technology it includes all businesses.\n\nHow to join?\n\nYou can join this meeting on the online link provided. Please note that do not save this link, instead come to this page and join from the link here because this link may change from time to time.\n\nMeeting Link: https://meet.google.com/dxp-xumc-sot\n\nThis event is also organized on our other groups. Please feel free to join those groups as well.\n\nLondon Technology Community\nhttps://www.meetup.com/london-technology-community/\n\nGlobal Business Alliance\nhttps://www.meetup.com/global-business-alliance\n\nSilicon Roundabout\nhttps://www.meetup.com/siliconroundabout/\n\nAI Community Meetup\nhttps://www.meetup.com/aimeetup/\n\nEmerging Technologies, AI and Digital Creatives\nhttps://www.meetup.com/emerging-technologies-ai-and-digital-creatives/\n\nHow to connect with members you met?\n\nFor members who wish to connect with others they met or with past attendees there is a LinkedIn group which they can join.\n\nLinkedin Group: https://www.linkedin.com/groups/14493642/\n\nFor people who attend often can also join the Whatsapp group and keep in contact with the core members of our community and share leads, ideas or any calls for help or advice. To join this group add me on Whatsapp and I can add you to the group.\n\nMy Whatsapp: +44-7770028273\nMy Linkedin Profile: https://www.linkedin.com/in/pankajgoel/\n\nFormat of the meeting\n\nRound 1:\nFor each event the attending companies would get 1-2 minutes to introduce themselves and what they are looking for, whether they are looking to introduce their technology into the market, looking for clients, looking for partners or looking for technology solutions.\n\nRound 2:\nEach member gets to ask any questions or have further comments.\n\nRound 3:\nIf any time is left after Round 1 or 2, regular members can volunteer to show some slides or demos or suggest a topic of discussion.\n\nMeetings start precisely on time and we wait for 3 minutes to allow attendees to join before the round of introductions start, so if you do not want to miss out on some of the introductions please join on time. We also have a hard stop at 1 hour if meeting lasts for 1 hour.\n\nRules\n\nFor safety reasons and to avoid spam and bots: during the call the members camera should be on. We would remove any members who do not have their camera on. Exception to this rule would only be made for frequent attendees who we recognise once in while if their camera malfunctions.\n\nAvoid interruptions to members. In first round of introductions you can make a note and then ask any question to wish to ask in the Round 2 after all introductions have taken place.\n\nBusinesses, startups and professionals from around the world are welcome to join including aspiring businesses but please note that primary focus of these meetings is on tech aspects of the businesses and international alliances.\n\nAny members joining must have some relevance to business community. No quick money making schemes, MLM schemes or other such promotions would be allowed.\n\nThe reason for organising these meetups\n\nOf course these meetups are organized for purpose of helping the business community BUT my main interest in creating this forum is to spread awareness of a revolutionary new technology Wohola X.\n\nWohola X\n\nIt is a revolutionary new technology with which you can build software quicker and can have better features compared to traditional technologies like React, Angular, .Net, PHP, Java and other such technologies that are currently popular for building business software.\n\nWohola X is an intelligent platform which automatically figures out a lot of the things so programmers do not need to write code for a large chunks of application hence reducing time and cost.\n\nAlso, most of the coding that needs to be done can be done in an enhanced version of HTML called WXML so even very low skilled programmers can build high end enterprise grade software, hence reducing time and cost.\n\nThe admins can simply click on the page edit content directly so no need for complex admin panels for managing the site, but it also means no need for programmers to build a lot of admin panels, hence reduction in time and cost.\n\nThe reductions in time and cost do not mean compromise in quality. Instead you get top notch scalability, security, performance, role based access control and so much more without hiring technical people.\n\nYou also get unmatched feature set which would cost quite a lot if it were to be built from scratch for your application. Small companies are unlikely to be able to find programmers who could provide the type of features that come with Wohola X as standard.\n\nUnlike many other low code or no code platforms there is no limitation in Wohola X as any trained programmer can enhance the platform capability and build any new custom features or have any type of look and feel.\n\nIn general the time and cost estimates for your project are expected to reduce and quality and feature set are expected to increase simply by using this platform.\n\nPlease contact me on LinkedIn or Whatsapp to see the demo of Wohola X and see how it can benefit your company.\n\nDownload link: https://github.com/ben7265/woholax\n\nLook forward to see you in the meeting.\n\nRegards,\nGuruBen",
+    "date": "2025-05-27",
+    "time": "14:00",
+    "location": "Online",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/london-technology-community/events/307301708/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/b/0/2/0/highres_519885088.webp?w=750"
+  },
+  {
+    "id": "307170853",
+    "title": "Tech Networking Event by Startup Valley in London",
+    "description": "Attention attendees!\nTo register, use Eventbrite or Luma\n\nWarning:\nThe meetup is not a platform for RSVP registration; for this, you need to follow thisLink to purchase a registration ticket.\nThe meetup is one of the platforms through which we offer participation in our events.\n\nJoin Us for Our Networking Event in London!\n\nWe host networking events every two weeks, bringing together startups and investors from diverse industries. This is your chance to connect with leading entrepreneurs, venture capitalists, and like-minded professionals, exchange ideas, and expand your business network. Don’t miss the opportunity to pitch your startup, gain valuable insights from industry experts, and secure funding. We look forward to seeing you at our event!\nWhat You Can Achieve at Our Events:\n• Find Investors: Pitchers are included in our exclusive distribution to venture funds, syndicates, and angel investors.\n• Expand Your Network: Build meaningful connections with peers, mentors, and partners.\n• Receive Feedback: Gain expert advice on strategies and growth.\n• Validate Ideas: Test your concepts with professionals and industry leaders.\n• Scale Your Business: Learn strategies for growth and market expansion.\n• Relaxed Atmosphere: Network in a casual cocktail-party setting.\n• Problem-Solving: Collaborate with others to find solutions and exchange ideas.\nAt our events, you’ll gain practical tools to tackle these challenges.\nRequirements:\n• Must be 21+\n• Neat appearance\n• Positive attitude\n• A minimum of 1 drink purchased at the bar (alcoholic or non-alcoholic)\n🤝 Our Partner Venue:\nTo continue hosting events at this space, we kindly ask participants to purchase 1–2 drinks at the bar. Thank you for your support.\nWho Will Be There:\n• Venture capital representatives\n• Entrepreneurs\n• Startup founders\n• Marketers\n• Experienced professionals from various industries\n• HR specialists\n• Innovators\n• Investors\n• Accelerator and incubator representatives\n• AI experts from the USA, Europe, Asia, and the UK\n📈 Pitch Your Startup:\nSend your pitch deck to **contact.us@startupvalley.club** and submit your application!\n💼 For Investors:\nExpand your network, evaluate startups, and access our global database.\nComplete your application on our website to receive weekly digests and curated lists of startups. Enjoy free access to our events as part of your membership.\n🎟 Reserve Your Tickets Today!\nWe are also expanding our partner network to provide even more tailored solutions for your projects.\nSincerely,\nThe Startup Valley Team",
+    "date": "2025-05-27",
+    "time": "18:00",
+    "location": "489 Liverpool Rd, London N7 8NS · London",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/startups-tech-events-in-london/events/307170853/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/4/f/a/0/highres_527240384.webp?w=750"
   },
   {
     "id": "307862714",
     "title": "London Designers x Developers - May Social: Bingo & Connections 🎉",
+    "description": "We’ve added a fun new twist to our upcoming event — Bingo🎉 It’s a secret for now, but we’ll reveal all the details when you arrive. The winners will win a special prize🎁\n\nGet ready for an awesome night at the London Tech Social! It’s the perfect spot to chill with designers and engineers and make new friends.\n\nWhether you’re a tech wizard or just curious, you’ll fit right in. This is your chance to meet cool people and maybe even kick off some exciting projects together🚀\n\nMark your calendar for a night filled with fun and new connections📅 We look forward to seeing you there!",
     "date": "2025-05-28",
     "time": "18:30",
     "location": "31 Leman St, London E1 8PT · London",
@@ -521,24 +871,26 @@
       "Tech",
       "Other"
     ],
-    "link": "https://www.meetup.com/london-designers-x-developers/events/307862714/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/london-designers-x-developers/events/307862714/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/a/f/2/b/highres_527984843.webp?w=750"
   },
   {
     "id": "307975164",
     "title": "Social & Business Networking at The Franklin",
+    "description": "Kindly note that this is a paid event and the average number of attendees for our events is 60-70 people. You can register on https://www.eventbrite.co.uk/e/social-business-networking-at-the-franklin-tickets-1352475062319?aff=meetup\n\nReady to elevate your network in one of London’s most prestigious venues? Join us for a unique Saturday night mixer at The Franklin Hotel, where high-caliber professionals come together to build meaningful connections, explore new opportunities, and share insightful conversations.\n\n### Why Attend?\n\n### What to Expect\n\n👔 Dress Code: Smart casual or business attire\n\n### Limited Spots – Secure Your Ticket Today!\n\nThis event is strictly limited to 60 attendees to ensure a meaningful and intimate networking experience. Tickets are selling fast—don’t miss your chance to connect with the best. Book now to secure your spot before it’s too late!\n\n### Event Disclaimer\n\nPlease note that photos and videos may be taken during this event for our social media channels and promotional materials. If you prefer not to appear in any photos or videos, please inform the event host upon arrival, and we will ensure your preference is respected.",
     "date": "2025-06-05",
     "time": "19:00",
     "location": "24 Egerton Gardens, London, SW3 2DB · London · London",
     "tags": [
       "Other"
     ],
-    "link": "https://www.meetup.com/devtank/events/307975164/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/devtank/events/307975164/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/9/5/d/6/highres_528098358.webp?w=750"
   },
   {
     "id": "307455266",
     "title": "CleanTech Networking Event for Innovators, Investors & Professionals",
+    "description": "Join us for an exclusive networking event bringing together CleanTech startups, investors, and industry professionals driving the future of sustainable innovation. This event offers a unique platform for entrepreneurs to showcase cutting-edge technologies, for investors to explore new opportunities, and for professionals to collaborate on the latest advancements in clean energy, green technology, and environmental sustainability.\nAttendees will have the chance to:\n\nWho Should Attend:\n\nWhy Attend?\n\nWhether you're a startup founder, a seasoned investor, or a cleantech expert, this event provides the perfect environment to build meaningful connections and shape the future of sustainable technology.\nNetwork with peers, discover new ventures, and help drive the next wave of green innovation. Attending this event is your gateway to accelerating cleantech innovation, gaining funding, finding partners, and contributing to a more sustainable future.\nDue to the exclusive nature of this event and the high demand for attendance, tickets are limited.\n\nAGENDA OF THIS NETWORKING EVENT IN LONDON\n7:00 pm - 7:30 pm: Meet and greet. Upon arrival, ask the receptionist about the business networking event, and they will guide you to our designated area.\n7:30 pm -10 pm: Informal networking\nDress code: business smart casual.\nRegister now - space is limited to 50 attendees only!\nP.S. Click Follow for future event alerts!",
     "date": "2025-05-29",
     "time": "19:00",
     "location": "92a Old Brompton Rd London SW7 3LQ · London",
@@ -548,12 +900,13 @@
       "Startups",
       "Other"
     ],
-    "link": "https://www.meetup.com/techconnect/events/307455266/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/techconnect/events/307455266/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/b/1/3/2/highres_523605362.webp?w=750"
   },
   {
     "id": "306737172",
     "title": "Tech Startup Founders Networking Event: Find Your Co-Founders & Partners",
+    "description": "TO ATTEND THIS EVENT TICKETS NEED TO BE PURCHASED IN ADVANCE, RSVP ALONE IS NOT VALID\nhttps://www.eventbrite.co.uk/e/1287372498799?aff=oddtdtcreator\n\nJoin us for the Tech Startup Founders Networking Event, an exclusive opportunity designed to connect tech founders with potential co-founders and strategic partners. This event is ideal for startup founders seeking to expand their teams, collaborate with like-minded individuals, and build partnerships that can accelerate their ventures.\n\nEvent Highlights:\nCo-Founder Matchmaking: Find potential co-founders with complementary skills and shared visions to help take your startup to the next level.\nPartner Connections: Meet strategic partners in areas like tech development, marketing, finance, and operations who can help accelerate your startup’s growth.\nCollaborative Networking: Engage with like-minded founders and professionals in a relaxed, supportive setting designed to foster meaningful connections.\nExpert Insights: Gain valuable advice and guidance from fellow founders who are navigating or have successfully navigated the startup journey.\nCollaborative Growth Opportunities: Discover new collaboration opportunities that can address challenges and fuel your business’s expansion.\n\nWho Should Attend?\n\nWhy Attend?\nBuild Your Dream Team: Find the perfect co-founder or strategic partner with the skills and experience needed to scale your startup.\nExpand Your Network: Grow your connections within the tech startup ecosystem, creating opportunities for collaboration, investment, and shared resources.\nAccess Growth Opportunities: By networking with fellow founders and partners, you can uncover new ideas, solutions, and support that can help you overcome obstacles and accelerate your business growth.\nGain Insight from Peers: Learn from the experiences of other founders who have faced similar challenges, gaining valuable knowledge and inspiration for your own journey.\n\nThis event provides a unique platform for founders and professionals to connect, collaborate, and grow together. Don’t miss the chance to build the relationships that will help shape your startup’s future!\n\nHow our event works:\nYou are invited to join the dedicated Whatsapp group for the event and start networking before the actual event.\nThis event will be hosted till 9pm; the key to making the most of speed friending is to follow up with your contacts over time to develop friendships.\nDress code is either business or office attire or smart casual, no T-shirts, no trainers.\nIf you have any questions email contact@thebusinessminds.co.uk\nTicket for 1 person allows 1 person to enter the venue from 7pm\n\nBusiness Minds is looking to connect with suitable venues for our networking events. So if you are a venue in central London and would be interested in a collaboration with us then please email us contact@thebusinessminds.co.uk\n\nYou must buy a ticket to attend this event: https://fatso.ma/1uWU\n\nPlease Note:\n\nTickets need to be bought online and are not available at the door.",
     "date": "2025-05-27",
     "time": "19:00",
     "location": "52 Fulham Road · London",
@@ -564,24 +917,283 @@
       "Tech",
       "Other"
     ],
-    "link": "https://www.meetup.com/thebusinessminds/events/306737172/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/thebusinessminds/events/306737172/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/c/8/e/e/highres_524211438.webp?w=750"
+  },
+  {
+    "id": "307672945",
+    "title": "Legal Industry Networking Night for Lawyers, Legal Innovators and Experts",
+    "description": "Join us for an exclusive Legal Networking Event, bringing together attorneys, legal professionals, and industry leaders for a dynamic evening of networking and collaboration. This event is designed to facilitate meaningful connections among legal professionals from diverse practice areas through structured networking opportunities and one-minute elevator pitches, where you can showcase your expertise or services. Whether you're looking to expand your professional network, meet potential clients, or exchange industry insights, this event offers the perfect platform to foster new relationships and grow your legal practice.\n\n### Event Highlights:\n\n### Who Should Attend:\n\n### Why Attend:\n\nTickets are limited—reserve your spot now to connect with top professionals in the legal industry and expand your network!\n\nWhat to join this event and all our future events for FREE? Join The Business Minds Membership to unlock free entry to all our events, plus exclusive networking opportunities. Learn more: https://thebusinessminds.co.uk/membership.\n\nAGENDA OF THIS NETWORKING EVENT IN LONDON\n7:00 pm - 7:30 pm: Meet and greet. Upon arrival, ask the receptionist about the business networking event, and they will guide you to our designated area.\n8 pm - 8:30 - Presentations\n8:30 pm -10 pm: Informal networking\nDress code: business smart casual.\nRegister now - space is limited to 50 attendees only!\nP.S. Click Follow for future event alerts!",
+    "date": "2025-06-11",
+    "time": "19:00",
+    "location": "111 Old Broad St, City of London, London EC2N 1AP · London",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/techconnect/events/307672945/?recId=b71a29a9-e502-4727-853c-db96404d8671&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/b/1/c/2/highres_523605506.webp?w=750"
+  },
+  {
+    "id": "307112525",
+    "title": "Saturday Tech Networking - June 2025",
+    "description": "The event focuses on networking alongside a group exercise where you fill out a post-it note with a topic you want to learn about. Then, we tally up the results and ask someone from the group to step up and speak about it.\n\nThis event is open to anyone who works in or is interested in the tech industry, whether you are a developer, designer, engineer, entrepreneur, student, or hobbyist. You will be able to meet new people, share your experiences, learn from others, and find potential collaborators or mentors.\n\nWe usually start around 2 p.m. at The Crown pub, following the earlier Brunch event. The Crown offers a wide range of alcoholic and non-alcoholic drinks to suit all tastes and burgers for those who missed the brunch.\n\nIt is worth noting that whilst the event is free, the food and drinks aren't. Come thirsty, curious, and ready to have a great time!",
+    "date": "2025-06-21",
+    "time": "14:00",
+    "location": "102 Lavender Hill · London",
+    "tags": [
+      "AI",
+      "Tech",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/the-techie-brunch-club/events/307112525/?recId=fc3b54be-c447-4d02-b51e-f272d7bbb9c0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/6/1/8/c/highres_524964972.webp?w=750"
+  },
+  {
+    "id": "308026483",
+    "title": "London Tech Mixer and Social (Tech / AI / Data) 💻🌐✨ London Connect",
+    "description": "Join us at our TECH MIXER AND SOCIAL for afterwork drinks, networking with tech workers in London and meet people from London and all over the world 🌏🎉\n\nTech, AI, Data, and more ~\n\nWhether you're a seasoned tech veteran or just starting out, let's create the ideal afterwork place to meet and chill with other workers in tech - find that new job, expand your network, share ideas, and stay up-to-date on the latest trends in the industry. Let's inspire, innovate, and shape the future of technology in London!\n\n🍺🥃 Afterwork drinks\n📍 All Bar One Villiers St - 6 Villiers St, London\n🕕 5:30pm onwards every Friday\n🎫 just £3 entry online or £6 at the door! (helps us to run the event inc. Meetup costs etc!)\n🔗 Link to Eventbrite\n\nLondon tech social mixer afterwork drinks AI connect network data IT programming cybersecurity digital nomad blockchain crypto big data science computer networking community career jobs entrepreneur industry product design startup London tech social mixer afterwork drinks AI connect network data IT programming cybersecurity digital nomad blockchain crypto big data science computer networking community career jobs entrepreneur industry product design startup",
+    "date": "2025-05-30",
+    "time": "17:30",
+    "location": "All Bar One Villiers St. · London",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/london-tech-mixer-and-social-tech-ai-data/events/308026483/?recId=fc3b54be-c447-4d02-b51e-f272d7bbb9c0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/a/0/0/f/highres_528100975.webp?w=750"
+  },
+  {
+    "id": "306436762",
+    "title": "TechConnect: Global Virtual Job & Networking Event for Data, AI, and Tech Pros",
+    "description": "Calling all developers, AI engineers, software architects, data scientists, DevOps professionals, and tech enthusiasts — TechConnect is your ultimate destination for career growth, project showcasing, and global peer networking in the tech ecosystem.\n\nHosted in a self-led, Slack-style virtual space, this virtual tech networking event invites you to connect, collaborate, and innovate with a diverse community of tech minds and hiring professionals from around the world. Whether you're looking for your next job, exploring startups, showcasing tools, or building a peer coding accountability group, TechConnect is where meaningful connections are made.\n\n🎥 Watch the explainer video to see how it works:\n👉 https://www.youtube.com/watch?v=pgm2_MiHLDk\n\n💬 What to Expect:\nAt TechConnect, participants enjoy full access to group discussions and 1-on-1 video/text chats, with zero moderation — allowing spontaneous, genuine interaction across roles and regions.\n\nAttendees can engage across several thoughtfully organized channels:\n\n📍 Where:\nJoin virtually at:\n👉 https://events.tao.ai/pod/analytics.club/te5gd5wngmz9\n🕓 When:\nThe event takes place from 4:00 PM – 6:00 PM local time, globally. Join to network, hire, learn, and collaborate.\n\n👥 Who Should Attend:\n\n🔧 Why You’ll Love It:\n\n❓ Have Questions or Suggestions?\nWe’re here to help. Reach out at:\n👉 https://noworkerleftbehind.org/event_support\n\n🔖 Hashtags:\n#TechConnect #VirtualTechNetworkingEvent #OnlineDeveloperCommunityMeetup #TechJobFairOnline #DeveloperProjectShowcasePlatform #PeerCodingAccountabilityGroup #AIJobs #DataScienceNetworking #SoftwareEngineerMeetup #GlobalTechEvent #TechCareersVirtual",
+    "date": "2025-06-04",
+    "time": "16:00",
+    "location": "Online",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/ac-lhr/events/306436762/?recId=fc3b54be-c447-4d02-b51e-f272d7bbb9c0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/c/3/c/f/highres_526490127.webp?w=750"
+  },
+  {
+    "id": "307617569",
+    "title": "London HealthTech Connect: Networking for Health Startups, Investors, Innovators",
+    "description": "Join the vibrant community of health tech startups, entrepreneurs, and professionals at London HealthTech Connect. This premier networking event is dedicated to fostering connections and collaborations among those passionate about revolutionizing healthcare through technology.\n\nWhether you're a budding startup looking to make your mark, an entrepreneur with innovative ideas, or a seasoned professional seeking new opportunities, London HealthTech Connect offers the perfect platform to exchange insights, discover cutting-edge advancements, and build meaningful relationships.\n\nWho Should Attend?\nHealth Tech Startups: If you're an emerging health tech company looking to make a mark, this event is the perfect opportunity to network with potential partners, investors, and clients. Share your innovative ideas and discover new pathways for growth.\nEntrepreneurs: Those with a vision for transforming healthcare through technology will find valuable connections and insights at London HealthTech Connect. Meet like-minded entrepreneurs, share your experiences, and collaborate on groundbreaking projects.\nHealthcare Professionals: Doctors, nurses, and other healthcare providers interested in integrating technology into their practices can benefit from the latest innovations and network with tech developers who understand the needs of the healthcare industry.\nInvestors: Venture capitalists and angel investors looking for the next big thing in health tech will have the chance to meet promising startups and entrepreneurs. Discover investment opportunities and stay informed about cutting-edge developments.\nTech Enthusiasts and Innovators: Anyone passionate about the intersection of technology and healthcare is welcome. Engage in thought-provoking conversations, learn from others in the field, and contribute your ideas to the health tech community.\nPolicy Makers and Industry Leaders: Individuals involved in shaping healthcare policy and leading industry organizations can gain insights into emerging trends and connect with innovators driving the future of health technology.\nThe event focuses on dynamic networking sessions and engaging speed presentations. These concise, impactful presentations allow participants to quickly share their innovations and ideas with the entire audience, fostering an environment of rapid learning and connection.\nWhy Attend?\nExpand Your Network: Connect with like-minded individuals who share a passion for health technology. Build relationships with potential partners, collaborators, and mentors who can help you grow your business and advance your career.\nSpeed Presentations: Engage in dynamic speed presentations where participants share innovative ideas and solutions. Gain quick insights into the latest trends and developments in health tech, and find inspiration for your own projects.\nDiscover Opportunities: Meet potential investors, partners, and clients. Whether you're looking to fund your startup, collaborate on a project, or expand your professional network, this event provides a unique platform to discover new opportunities.\nStay Ahead of the Curve: Keep up-to-date with the latest advancements and emerging trends in health technology. Learn from your peers and stay informed about the innovations that are shaping the future of healthcare.\nBe Part of a Community: Join a dynamic community of health tech innovators who are dedicated to making a difference in healthcare. Share your experiences, challenges, and successes with others who understand your journey.\n\nLondon HealthTech Connect is not just about networking; it's about being part of a dynamic community that is shaping the future of health technology. Don’t miss this chance to be at the forefront of healthcare innovation. Come and join us for an event that promises to ignite ideas and foster growth in the health tech sector.",
+    "date": "2025-06-05",
+    "time": "19:00",
+    "location": "92a Old Brompton Rd London SW7 3LQ · London",
+    "tags": [
+      "Health & MedTech",
+      "Tech",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/techconnect/events/307617569/?recId=fc3b54be-c447-4d02-b51e-f272d7bbb9c0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/1/a/f/b/highres_522246907.webp?w=750"
+  },
+  {
+    "id": "307981082",
+    "title": "£25 to Join 3 High-Level Networking Events? Yes, Really",
+    "description": "Kindly note that this is a paid event and the average number of attendees for our events is 60-70 people. You can register on https://www.eventbrite.co.uk/e/25-to-join-3-high-level-networking-events-yes-really-tickets-1370886431219?aff=meetup\n\nWe’re thrilled to offer you a unique opportunity to attend three high-calibre networking events all for just £25 in total. Build meaningful connections across industries in elegant venues, each with a curated guest list and a relaxed, professional atmosphere.\nThese events are ideal for:\n✔️ Entrepreneurs and business owners looking to connect with investors, legal advisors, and fellow directors\n✔️ Wealth managers, financial advisors, and investors keen to meet high-net-worth individuals and professionals with aligned interests\n✔️ Solicitors, legal consultants, and legaltech founders aiming to grow their client base and engage with directors and business decision-makers\n✔️ Directors, CEOs, and senior executives wanting to explore collaborations, partnerships, or strategic introductions\n🎯 What's Included in the £25 Pass?\n📍 Wealth Connector\n📅 Wednesday 29th May | 7 PM Connect with wealth managers, financial advisors, investors, and HNWIs.\n📍 **The Legal Connector **📅 Monday 3rd June | 7 PM Meet solicitors, legal consultants, and legaltech innovators.\n📍 Director Connector at the Institute of Directors 📅 Thursday 27th June | 6 PM Network with company directors, decision-makers, and business owners.\n\n🎟 One Ticket – Full Access Attend all three events for just £25. Meet professionals from three powerful sectors, grow your network, and explore new business opportunities.\n💬 A dedicated WhatsApp group will be available for attendees to connect before and after the events.\n🕴️ Dress Code: Smart/business casual (no trainers or T-shirts) 📢 Spaces are limited and this offer will go fast.\n➡️ Book your £25 pass now and enjoy an exceptional networking experience across three dynamic events.",
+    "date": "2025-05-29",
+    "time": "19:00",
+    "location": "24 Egerton Gardens, London, SW3 2DB · London · London",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/devtank/events/307981082/?recId=fc3b54be-c447-4d02-b51e-f272d7bbb9c0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/a/b/6/b/highres_528103883.webp?w=750"
+  },
+  {
+    "id": "306805410",
+    "title": "Find Your Co-Founder or Partner: Tech Startup Founders Networking Event",
+    "description": "Looking for a game-changing co-founder or the perfect partner to help scale your tech startup? Look no further! Tech Startup Founders Networking Night is the place where ambitious entrepreneurs, brilliant minds, and key service providers come together to spark new collaborations.\nWe’re all about connections and real conversations in a laid-back, energetic environment. Skip the formalities and dive straight into meaningful interactions with people who could be the missing piece to your startup’s success. Whether you’re hunting for a co-founder, a marketing expert, or a legal partner, you’ll find the talent and expertise you need right here.\n\n### Event Highlights:\n\n### Why You Should Be There:\n\n### Who’s Coming:\n\n###\n\nSpaces are limited, so don’t miss out on this chance to build valuable connections and partnerships. Secure your spot now!\n\nAGENDA OF THIS NETWORKING EVENT IN LONDON\n7:00 pm - 7:30 pm: Meet and greet. Upon arrival, ask the receptionist about the business networking event, and they will guide you to our designated area.\n8 pm - 8:30 - Elevator Pitch\n8:30 pm -10 pm: Informal networking\nDress code: business smart casual.\nRegister now - space is limited to 50 attendees only!\nP.S. Click Follow for future event alerts!",
+    "date": "2025-05-27",
+    "time": "19:00",
+    "location": "52 Fulham Road · London",
+    "tags": [
+      "Networking",
+      "Tech",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/techconnect/events/306805410/?recId=fc3b54be-c447-4d02-b51e-f272d7bbb9c0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/c/8/9/5/highres_524211349.webp?w=750"
+  },
+  {
+    "id": "307838888",
+    "title": "Speed Networking: Business Networking for Professionals at Bond Mayfair",
+    "description": "RSVP TO ATTEND THIS EVENT. ALL TICKETS MUST BE PURCHASED IN ADVANCE TO ATTEND THIS EVENT..\n\nSpeed Networking is a revolutionary platform designed for professionals looking to accelerate their connections and grow their businesses. Imagine meeting and connecting with a room full of like-minded professionals in a fun and time-efficient manner.\n\nYou must book a ticket via the link: https://fatso.ma/1Kpg\n\nBook here via: https://www.eventbrite.co.uk/e/speed-business-networking-for-professionals-at-bonds-mayfair-tickets-1332935268269?aff=oddtdtcreator\n\nEvent Overview\n\nOur unique speed networking format allows you to make meaningful connections, foster new relationships, and uncover new business opportunities—all in a fast-paced and dynamic environment. Grow your network, share your expertise, and build lasting relationships with like-minded individuals.\n\nSpeed Networking is a dynamic and efficient way to connect with professionals across various industries. Break out of your networking comfort zone and say goodbye to missed opportunities with this structured format.\n\nSocialite Connections offers you the perfect platform to make meaningful connections quickly and effectively. Join us to accelerate your networking experience and unlock new business opportunities.\n\nWho Should Attend?\n\n- Business Professionals\n\n- Entrepreneurs\n\n- Investors\n\n- Startups\n\n- Small Business Owners\n\n- Business Managers and Leaders\n\n- Anyone interested in Business Networking\n\nWhy Attend?\n\nDon't miss this exclusive opportunity to expand your network and forge valuable connections on a 1-2-1 basis. With just 3 minutes per attendee, you'll get the opportunity to speak to everyone attending in a timed and structured format.\n\nRemember to bring your business cards for quick exchanges! Elevate your business game with speed networking and secure your spot now.\n\nSchedule of Event\n\nYou are invited to join the dedicated Whatsapp group for the event and start networking before the actual event when you have purchased your ticket.\n\n6:30 pm: Arrival & Registration (Ask for Socialite Connections) Your name will be checked off the guest list and you will be given a name badge and introduced to each other.\n\nThe dress code is smart, smart casual or office attire.\n\nYou must book a ticket via the link: https://fatso.ma/1Kpg\n\nBook here via: https://www.eventbrite.co.uk/e/speed-business-networking-for-professionals-at-bonds-mayfair-tickets-1332935268269?aff=oddtdtcreator\n\nSecure your spot now and elevate your media business network!\n\nTickets need to be bought online in advance to attend this event. Tickets are not available at the door.\n\nRefund policy: There is no refund at this event. Your ticket can be reassigned to another person of your choice.",
+    "date": "2025-05-27",
+    "time": "18:30",
+    "location": "Bonds Mayfair 11-16 Dering Street London W1S 1AR · London",
+    "tags": [
+      "Business",
+      "Networking",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/weareproptech-london-property-investor-landlord-agent-club/events/307838888/?recId=fc3b54be-c447-4d02-b51e-f272d7bbb9c0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/6/a/8/5/highres_527967269.webp?w=750"
+  },
+  {
+    "id": "307617584",
+    "title": "MedTech Connect: Healthcare Startups, Investors & Professionals Networking",
+    "description": "Join us for MedTech Connect, an exclusive networking event dedicated to bringing together healthcare startups, investors, and industry professionals. This event is the perfect opportunity to build meaningful connections, explore collaboration opportunities, and discover innovative solutions in the rapidly growing MedTech space.\nEvent Highlights:\n\nWho Should Attend?\n\nWhy You Should Attend:\n\nWhether you’re a MedTech startup founder, an investor looking for the next big opportunity, or a professional eager to connect with innovators, MedTech Connect provides the ideal platform to spark collaborations and drive the future of healthcare.\nSpaces are limited—secure your spot today and join us in shaping the next wave of MedTech innovation!",
+    "date": "2025-06-05",
+    "time": "19:00",
+    "location": "92b Old Brompton Road · London",
+    "tags": [
+      "Health & MedTech",
+      "Tech",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/techconnect/events/307617584/?recId=fc3b54be-c447-4d02-b51e-f272d7bbb9c0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/d/c/4/6/highres_525296390.webp?w=750"
+  },
+  {
+    "id": "306971908",
+    "title": "Networking for Tech Startups/Founders/Investors/Developers - London",
+    "description": "TechNetwork is an exclusive community of Founders and Investors, founded in Madrid, Spain and now with presence accross a 100 cities globally. Our registration system is a bit more exclusive so please dont just sign up and show, we will reach out with an exclusive invite post signup if you qualify!\n\nRegistration\n✅ Join us on Whatsapp:\nhttps://chat.whatsapp.com/BFnCkhLRXhPE5tnb9beSAm\n\nIn case you are late and cant find the group, call our event host (Admin of the whatsapp group)\n\nHow many people attend?\nWe get 50 people on average in all our events and invite our members on Meetup and other platforms.\nMembers of other groups who RSVP are included as guests to give an idea of expected numbers.\nWho should attend?\n\nJust like any event, slots are limited. RSVP and complete your registration at the earliest.\nHappy Networking 😊",
+    "date": "2025-05-30",
+    "time": "19:00",
+    "location": "110 Bishopsgate, City of London · London",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/uktechnetwork/events/306971908/?recId=fc3b54be-c447-4d02-b51e-f272d7bbb9c0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/3/0/7/1/highres_528132401.webp?w=750"
+  },
+  {
+    "id": "305437667",
+    "title": "Conf42 Observability 2025",
+    "description": "On the day:",
+    "date": "2025-06-05",
+    "time": "17:00",
+    "location": "Online",
+    "tags": [
+      "Cloud Computing",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/london-tech-professionals/events/305437667/?recId=fc3b54be-c447-4d02-b51e-f272d7bbb9c0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/5/9/4/8/highres_526882856.webp?w=750"
+  },
+  {
+    "id": "307798887",
+    "title": "Marionete Meetup: Kubernetes Network in Action",
+    "description": "🗓 Agenda:\n\n💡 Speaker:\nRafael Natali, Lead DevSecOps, Marionete\n\nTitle of Talk:\nKubernetes Network in Action\n\nAbstract:\nCurious about how networking works in Kubernetes? In this session, Rafael Natali will guide us through the essential building blocks of Kubernetes networking. You will learn what happens behind the scenes when pods communicate, how DNS works inside a cluster, and gain a solid understanding of key concepts such as Services, Ingress, and Network Policies.\n\nThis session is ideal for those embarking on their Kubernetes journey or anyone looking to reinforce their foundational knowledge. Don’t miss this opportunity to enhance your skillset and navigate the complexities of Kubernetes networking with confidence!\n\nBio:\nRafael Natali has 20 years of experience in the IT industry, specifically as a System Administrator and DevSecOps professional. Throughout his career, he has developed extensive knowledge in designing, operating, and troubleshooting solutions that prioritize scalability and reliability. Rafael is also an expert in Automation as well as Continuous Integration and Delivery.\nHe has been working with Kubernetes since 2018 and is recognised as a Kubestronaut since 2024. Currently, Rafael leads a team that is implementing a hybrid streaming data and analytics platform for a major insurance company in the UK.\n\n***\nDISCLAIMER\nNOTE: We are unable to cater for any attendees under the age of 18.",
+    "date": "2025-06-11",
+    "time": "18:00",
+    "location": "1 Long Ln · London",
+    "tags": [
+      "Cloud Computing",
+      "Tech",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/marionete-uk/events/307798887/?recId=fc3b54be-c447-4d02-b51e-f272d7bbb9c0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/c/c/3/8/highres_527932280.webp?w=750"
+  },
+  {
+    "id": "307700226",
+    "title": "Cloud & Coffee Conversations Over Cloud Computing",
+    "description": "An informal meetup for cloud enthusiasts and curious minds alike.\nJoin us for a relaxed cozy coffee or tea and cloud talk whether you're just getting started or scaling globally with Kubernetes, Lambda, Azure, or Load Balancers, you're welcome here. No pitches, just real conversations.\nAgenda:\n\nWho is this Meetup for?\n\nCurious Minds & Beginners Thinking about learning cloud? This is the perfect place to start, ask questions, and get inspired.\nCloud Experts & Engineers Come to reflect, contribute, and learn from fellow builders.\nEntrepreneurs & Founders Learn how cloud can power your vision, simplify your stack, and scale your startup.\nInnovators & Builders Working on something exciting? Share it, test ideas, and connect.\nKnowledge Sharers Whether you’ve mastered Kubernetes or just launched your first deployment, your experience matters.\n\nJoin Zoom Meeting\nhttps://us06web.zoom.us/j/81038043496\nMeeting ID: 810 3804 3496\n\n07:00 PM London\nEvery week on Tue, 110 occurrence(s)\nPlease download and import the following iCalendar (.ics) files to your calendar system.\nWeekly: https://us06web.zoom.us/meeting/tZUtdOGoqjguE9IpUr4M96VDCKpbJ322dIhl/ics?icsToken=DHxlQSToWxyMfPZv2wAALAAAAGnCTcGJCiTD_a0lrbww6NDP2kb7eijMBzt2w3FpTsclFyfBfcWv00CsIPcETiVd9kKE319LWa5ukhHR4jAwMDAwMQ&meetingMasterEventId=vJRVF7ggTUarBgiEatlhjw",
+    "date": "2025-05-27",
+    "time": "19:00",
+    "location": "Online",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/resilience-works/events/307700226/?recId=fc3b54be-c447-4d02-b51e-f272d7bbb9c0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/b/7/b/0/highres_527147024.webp?w=750"
+  },
+  {
+    "id": "307657309",
+    "title": "Co-Working For Business Owners and Entrepreneurs",
+    "description": "Co-Working This Wednesday\n\nStruggling to stay productive or not sure where to start on your to-do list? Whether it’s updating your website, creating social media content, or catching up on bookkeeping, co-working can help!\n\nJoin Penny’s Power Hour for:\n⏱️ 10 minutes of expert tips\n⏱️ 50 minutes of focused work time\n\nLed by Penny Wallace, a finance and operations strategist, this session is designed to help you tackle tasks and make real progress.\n\n👉 Join us this Wednesday and turn procrastination into productivity!\n\nAchieveIt is an expert on websites that convert to sales.\n\nYappa provides venues, speakers and workshops for Content Club\n\nAchieveIt is an expert on websites that convert to sales.\n\nYappa provides venues, speakers and workshops for Content Club\n\nAchieveIt is an expert on websites that convert to sales.\n\nYappa provides venues, speakers and workshops for Content Club\n\nAchieveIt is an expert on websites that convert to sales.\n\nYappa provides venues, speakers and workshops for Content Club\n\nAchieveIt is an expert on websites that convert to sales.\n\nYappa provides venues, speakers and workshops for Content Club\n\nAchieveIt is an expert on websites that convert to sales.\n\nYappa provides venues, speakers and workshops for Content Club",
+    "date": "2025-05-28",
+    "time": "19:00",
+    "location": "Online",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/business-tools-and-networking/events/307657309/?recId=fc3b54be-c447-4d02-b51e-f272d7bbb9c0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/7/7/f/5/highres_527010709.webp?w=750"
+  },
+  {
+    "id": "307301708",
+    "title": "Global Business Networking - Online Event",
+    "description": "Wishing you a very happy 2025!\n\nWelcome to the Weekly Global Business Networking event.\n\nWe are a truly global and fast growing community of businesses from across the world. The companies attending have been from across the world, from US and Canada to UK, from Europe to India, from Africa to Japan and South Korea. It is a tech focussed community of like minded business owners, startups and professionals, who are a part of this community to find customers, partnerships, contacts and to have an international reach.\n\nThis may also be your doorway to India, the world's largest (after China in market size), fastest growing and most lucrative market.\n\nInitially the meetup was meant only for tech companies but as a community we voted and unanimously decided to open up these meetings to all businesses, not just tech companies, simply because every business runs on technology so when we talk about technology it includes all businesses.\n\nHow to join?\n\nYou can join this meeting on the online link provided. Please note that do not save this link, instead come to this page and join from the link here because this link may change from time to time.\n\nMeeting Link: https://meet.google.com/dxp-xumc-sot\n\nThis event is also organized on our other groups. Please feel free to join those groups as well.\n\nLondon Technology Community\nhttps://www.meetup.com/london-technology-community/\n\nGlobal Business Alliance\nhttps://www.meetup.com/global-business-alliance\n\nSilicon Roundabout\nhttps://www.meetup.com/siliconroundabout/\n\nAI Community Meetup\nhttps://www.meetup.com/aimeetup/\n\nEmerging Technologies, AI and Digital Creatives\nhttps://www.meetup.com/emerging-technologies-ai-and-digital-creatives/\n\nHow to connect with members you met?\n\nFor members who wish to connect with others they met or with past attendees there is a LinkedIn group which they can join.\n\nLinkedin Group: https://www.linkedin.com/groups/14493642/\n\nFor people who attend often can also join the Whatsapp group and keep in contact with the core members of our community and share leads, ideas or any calls for help or advice. To join this group add me on Whatsapp and I can add you to the group.\n\nMy Whatsapp: +44-7770028273\nMy Linkedin Profile: https://www.linkedin.com/in/pankajgoel/\n\nFormat of the meeting\n\nRound 1:\nFor each event the attending companies would get 1-2 minutes to introduce themselves and what they are looking for, whether they are looking to introduce their technology into the market, looking for clients, looking for partners or looking for technology solutions.\n\nRound 2:\nEach member gets to ask any questions or have further comments.\n\nRound 3:\nIf any time is left after Round 1 or 2, regular members can volunteer to show some slides or demos or suggest a topic of discussion.\n\nMeetings start precisely on time and we wait for 3 minutes to allow attendees to join before the round of introductions start, so if you do not want to miss out on some of the introductions please join on time. We also have a hard stop at 1 hour if meeting lasts for 1 hour.\n\nRules\n\nFor safety reasons and to avoid spam and bots: during the call the members camera should be on. We would remove any members who do not have their camera on. Exception to this rule would only be made for frequent attendees who we recognise once in while if their camera malfunctions.\n\nAvoid interruptions to members. In first round of introductions you can make a note and then ask any question to wish to ask in the Round 2 after all introductions have taken place.\n\nBusinesses, startups and professionals from around the world are welcome to join including aspiring businesses but please note that primary focus of these meetings is on tech aspects of the businesses and international alliances.\n\nAny members joining must have some relevance to business community. No quick money making schemes, MLM schemes or other such promotions would be allowed.\n\nThe reason for organising these meetups\n\nOf course these meetups are organized for purpose of helping the business community BUT my main interest in creating this forum is to spread awareness of a revolutionary new technology Wohola X.\n\nWohola X\n\nIt is a revolutionary new technology with which you can build software quicker and can have better features compared to traditional technologies like React, Angular, .Net, PHP, Java and other such technologies that are currently popular for building business software.\n\nWohola X is an intelligent platform which automatically figures out a lot of the things so programmers do not need to write code for a large chunks of application hence reducing time and cost.\n\nAlso, most of the coding that needs to be done can be done in an enhanced version of HTML called WXML so even very low skilled programmers can build high end enterprise grade software, hence reducing time and cost.\n\nThe admins can simply click on the page edit content directly so no need for complex admin panels for managing the site, but it also means no need for programmers to build a lot of admin panels, hence reduction in time and cost.\n\nThe reductions in time and cost do not mean compromise in quality. Instead you get top notch scalability, security, performance, role based access control and so much more without hiring technical people.\n\nYou also get unmatched feature set which would cost quite a lot if it were to be built from scratch for your application. Small companies are unlikely to be able to find programmers who could provide the type of features that come with Wohola X as standard.\n\nUnlike many other low code or no code platforms there is no limitation in Wohola X as any trained programmer can enhance the platform capability and build any new custom features or have any type of look and feel.\n\nIn general the time and cost estimates for your project are expected to reduce and quality and feature set are expected to increase simply by using this platform.\n\nPlease contact me on LinkedIn or Whatsapp to see the demo of Wohola X and see how it can benefit your company.\n\nDownload link: https://github.com/ben7265/woholax\n\nLook forward to see you in the meeting.\n\nRegards,\nGuruBen",
+    "date": "2025-05-27",
+    "time": "14:00",
+    "location": "Online",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/london-technology-community/events/307301708/?recId=f6f233ea-579f-4b92-95d6-6d9cf2a32d59&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/b/0/2/0/highres_519885088.webp?w=750"
   },
   {
     "id": "307170853",
     "title": "Tech Networking Event by Startup Valley in London",
+    "description": "Attention attendees!\nTo register, use Eventbrite or Luma\n\nWarning:\nThe meetup is not a platform for RSVP registration; for this, you need to follow thisLink to purchase a registration ticket.\nThe meetup is one of the platforms through which we offer participation in our events.\n\nJoin Us for Our Networking Event in London!\n\nWe host networking events every two weeks, bringing together startups and investors from diverse industries. This is your chance to connect with leading entrepreneurs, venture capitalists, and like-minded professionals, exchange ideas, and expand your business network. Don’t miss the opportunity to pitch your startup, gain valuable insights from industry experts, and secure funding. We look forward to seeing you at our event!\nWhat You Can Achieve at Our Events:\n• Find Investors: Pitchers are included in our exclusive distribution to venture funds, syndicates, and angel investors.\n• Expand Your Network: Build meaningful connections with peers, mentors, and partners.\n• Receive Feedback: Gain expert advice on strategies and growth.\n• Validate Ideas: Test your concepts with professionals and industry leaders.\n• Scale Your Business: Learn strategies for growth and market expansion.\n• Relaxed Atmosphere: Network in a casual cocktail-party setting.\n• Problem-Solving: Collaborate with others to find solutions and exchange ideas.\nAt our events, you’ll gain practical tools to tackle these challenges.\nRequirements:\n• Must be 21+\n• Neat appearance\n• Positive attitude\n• A minimum of 1 drink purchased at the bar (alcoholic or non-alcoholic)\n🤝 Our Partner Venue:\nTo continue hosting events at this space, we kindly ask participants to purchase 1–2 drinks at the bar. Thank you for your support.\nWho Will Be There:\n• Venture capital representatives\n• Entrepreneurs\n• Startup founders\n• Marketers\n• Experienced professionals from various industries\n• HR specialists\n• Innovators\n• Investors\n• Accelerator and incubator representatives\n• AI experts from the USA, Europe, Asia, and the UK\n📈 Pitch Your Startup:\nSend your pitch deck to **contact.us@startupvalley.club** and submit your application!\n💼 For Investors:\nExpand your network, evaluate startups, and access our global database.\nComplete your application on our website to receive weekly digests and curated lists of startups. Enjoy free access to our events as part of your membership.\n🎟 Reserve Your Tickets Today!\nWe are also expanding our partner network to provide even more tailored solutions for your projects.\nSincerely,\nThe Startup Valley Team",
     "date": "2025-05-27",
     "time": "18:00",
     "location": "489 Liverpool Rd, London N7 8NS · London",
     "tags": [
       "Other"
     ],
-    "link": "https://www.meetup.com/startups-tech-events-in-london/events/307170853/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/startups-tech-events-in-london/events/307170853/?recId=f6f233ea-579f-4b92-95d6-6d9cf2a32d59&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/4/f/a/0/highres_527240384.webp?w=750"
   },
   {
-    "id": "306973193",
-    "title": "StartUp Founders and & Service Providers Networking Mixer in London",
+    "id": "307862714",
+    "title": "London Designers x Developers - May Social: Bingo & Connections 🎉",
+    "description": "We’ve added a fun new twist to our upcoming event — Bingo🎉 It’s a secret for now, but we’ll reveal all the details when you arrive. The winners will win a special prize🎁\n\nGet ready for an awesome night at the London Tech Social! It’s the perfect spot to chill with designers and engineers and make new friends.\n\nWhether you’re a tech wizard or just curious, you’ll fit right in. This is your chance to meet cool people and maybe even kick off some exciting projects together🚀\n\nMark your calendar for a night filled with fun and new connections📅 We look forward to seeing you there!",
+    "date": "2025-05-28",
+    "time": "18:30",
+    "location": "31 Leman St, London E1 8PT · London",
+    "tags": [
+      "Networking",
+      "UI/UX",
+      "Tech",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/london-designers-x-developers/events/307862714/?recId=f6f233ea-579f-4b92-95d6-6d9cf2a32d59&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/a/f/2/b/highres_527984843.webp?w=750"
+  },
+  {
+    "id": "307975164",
+    "title": "Social & Business Networking at The Franklin",
+    "description": "Kindly note that this is a paid event and the average number of attendees for our events is 60-70 people. You can register on https://www.eventbrite.co.uk/e/social-business-networking-at-the-franklin-tickets-1352475062319?aff=meetup\n\nReady to elevate your network in one of London’s most prestigious venues? Join us for a unique Saturday night mixer at The Franklin Hotel, where high-caliber professionals come together to build meaningful connections, explore new opportunities, and share insightful conversations.\n\n### Why Attend?\n\n### What to Expect\n\n👔 Dress Code: Smart casual or business attire\n\n### Limited Spots – Secure Your Ticket Today!\n\nThis event is strictly limited to 60 attendees to ensure a meaningful and intimate networking experience. Tickets are selling fast—don’t miss your chance to connect with the best. Book now to secure your spot before it’s too late!\n\n### Event Disclaimer\n\nPlease note that photos and videos may be taken during this event for our social media channels and promotional materials. If you prefer not to appear in any photos or videos, please inform the event host upon arrival, and we will ensure your preference is respected.",
+    "date": "2025-06-05",
+    "time": "19:00",
+    "location": "24 Egerton Gardens, London, SW3 2DB · London · London",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/devtank/events/307975164/?recId=f6f233ea-579f-4b92-95d6-6d9cf2a32d59&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/9/5/d/6/highres_528098358.webp?w=750"
+  },
+  {
+    "id": "307455266",
+    "title": "CleanTech Networking Event for Innovators, Investors & Professionals",
+    "description": "Join us for an exclusive networking event bringing together CleanTech startups, investors, and industry professionals driving the future of sustainable innovation. This event offers a unique platform for entrepreneurs to showcase cutting-edge technologies, for investors to explore new opportunities, and for professionals to collaborate on the latest advancements in clean energy, green technology, and environmental sustainability.\nAttendees will have the chance to:\n\nWho Should Attend:\n\nWhy Attend?\n\nWhether you're a startup founder, a seasoned investor, or a cleantech expert, this event provides the perfect environment to build meaningful connections and shape the future of sustainable technology.\nNetwork with peers, discover new ventures, and help drive the next wave of green innovation. Attending this event is your gateway to accelerating cleantech innovation, gaining funding, finding partners, and contributing to a more sustainable future.\nDue to the exclusive nature of this event and the high demand for attendance, tickets are limited.\n\nAGENDA OF THIS NETWORKING EVENT IN LONDON\n7:00 pm - 7:30 pm: Meet and greet. Upon arrival, ask the receptionist about the business networking event, and they will guide you to our designated area.\n7:30 pm -10 pm: Informal networking\nDress code: business smart casual.\nRegister now - space is limited to 50 attendees only!\nP.S. Click Follow for future event alerts!",
+    "date": "2025-05-29",
+    "time": "19:00",
+    "location": "92a Old Brompton Rd London SW7 3LQ · London",
+    "tags": [
+      "Sustainability",
+      "Tech",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/techconnect/events/307455266/?recId=f6f233ea-579f-4b92-95d6-6d9cf2a32d59&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/b/1/3/2/highres_523605362.webp?w=750"
+  },
+  {
+    "id": "306737172",
+    "title": "Tech Startup Founders Networking Event: Find Your Co-Founders & Partners",
+    "description": "TO ATTEND THIS EVENT TICKETS NEED TO BE PURCHASED IN ADVANCE, RSVP ALONE IS NOT VALID\nhttps://www.eventbrite.co.uk/e/1287372498799?aff=oddtdtcreator\n\nJoin us for the Tech Startup Founders Networking Event, an exclusive opportunity designed to connect tech founders with potential co-founders and strategic partners. This event is ideal for startup founders seeking to expand their teams, collaborate with like-minded individuals, and build partnerships that can accelerate their ventures.\n\nEvent Highlights:\nCo-Founder Matchmaking: Find potential co-founders with complementary skills and shared visions to help take your startup to the next level.\nPartner Connections: Meet strategic partners in areas like tech development, marketing, finance, and operations who can help accelerate your startup’s growth.\nCollaborative Networking: Engage with like-minded founders and professionals in a relaxed, supportive setting designed to foster meaningful connections.\nExpert Insights: Gain valuable advice and guidance from fellow founders who are navigating or have successfully navigated the startup journey.\nCollaborative Growth Opportunities: Discover new collaboration opportunities that can address challenges and fuel your business’s expansion.\n\nWho Should Attend?\n\nWhy Attend?\nBuild Your Dream Team: Find the perfect co-founder or strategic partner with the skills and experience needed to scale your startup.\nExpand Your Network: Grow your connections within the tech startup ecosystem, creating opportunities for collaboration, investment, and shared resources.\nAccess Growth Opportunities: By networking with fellow founders and partners, you can uncover new ideas, solutions, and support that can help you overcome obstacles and accelerate your business growth.\nGain Insight from Peers: Learn from the experiences of other founders who have faced similar challenges, gaining valuable knowledge and inspiration for your own journey.\n\nThis event provides a unique platform for founders and professionals to connect, collaborate, and grow together. Don’t miss the chance to build the relationships that will help shape your startup’s future!\n\nHow our event works:\nYou are invited to join the dedicated Whatsapp group for the event and start networking before the actual event.\nThis event will be hosted till 9pm; the key to making the most of speed friending is to follow up with your contacts over time to develop friendships.\nDress code is either business or office attire or smart casual, no T-shirts, no trainers.\nIf you have any questions email contact@thebusinessminds.co.uk\nTicket for 1 person allows 1 person to enter the venue from 7pm\n\nBusiness Minds is looking to connect with suitable venues for our networking events. So if you are a venue in central London and would be interested in a collaboration with us then please email us contact@thebusinessminds.co.uk\n\nYou must buy a ticket to attend this event: https://fatso.ma/1uWU\n\nPlease Note:\n\nTickets need to be bought online and are not available at the door.",
     "date": "2025-05-27",
     "time": "19:00",
     "location": "52 Fulham Road · London",
@@ -592,12 +1204,117 @@
       "Tech",
       "Other"
     ],
-    "link": "https://www.meetup.com/techconnect/events/306973193/?recId=38baa47d-34ab-4c75-9aa2-b02aa3c9326b&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/thebusinessminds/events/306737172/?recId=f6f233ea-579f-4b92-95d6-6d9cf2a32d59&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/c/8/e/e/highres_524211438.webp?w=750"
+  },
+  {
+    "id": "307714131",
+    "title": "Women in Technology Networking Mixer at The Other House with welcome drink",
+    "description": "Step into an evening dedicated exclusively to networking at the \"Women in Tech: London Networking Mixer.\" Set in an iconic location in London, this event is a unique opportunity for women in the tech industry to connect and collaborate in an informal and relaxed setting.\n\nThe focus of the evening is purely on networking and mixing, with no formal speeches or panels. This creates a perfect environment for spontaneous interactions and the building of meaningful relationships.\n\nAttendees will mingle with a diverse array of women from different tech backgrounds, ranging from start-up founders to software engineers and corporate leaders.\n\nWho Should Attend?\nStartup Founders: Connect with other women who are leading the way in tech startups. Share your experiences, find potential collaborators, and gain insights from peers who understand the unique challenges of building a tech company.\nSoftware Engineers and Developers: Meet fellow engineers and developers, exchange ideas, and discuss the latest trends and technologies. This is a great chance to expand your professional network and find new opportunities.\nCorporate Leaders: Women in leadership roles within tech companies can connect with emerging talent and like-minded leaders. Share your experiences and strategies for success in a supportive environment.\nAspiring Tech Professionals: If you're new to the tech industry or looking to transition into it, this mixer is a perfect opportunity to meet mentors, learn from others, and find your place within the tech community.\nTech Enthusiasts: Anyone passionate about technology and supporting women in tech is welcome. Engage in meaningful conversations, build connections, and contribute to the thriving network of women in tech.\n\nWhy Attend?\n\nSpaces are limited to maintain an exclusive experience. Secure your spot today and join us for an evening of high-impact networking at The Other House.\nWhether you are looking to expand your professional network, find potential mentors, or simply make new friends in the tech community, this mixer provides the ideal platform. Join us to be part of a thriving network committed to empowering women in tech.\n\nWhat to join this event and all our future events for FREE? Join The Business Minds Membership to unlock free entry to all our 290+ yearly networking events, plus exclusive networking opportunities. Learn more: https://thebusinessminds.co.uk/membership.\n\nWhether you are looking to expand your professional network, find potential mentors, or simply make new friends in the tech community, this mixer provides the ideal platform. Join us to be part of a thriving network committed to empowering women in tech.",
+    "date": "2025-06-17",
+    "time": "19:00",
+    "location": "111 Old Broad St, City of London, London EC2N 1AP · London",
+    "tags": [
+      "Business",
+      "Tech",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/techconnect/events/307714131/?recId=f6f233ea-579f-4b92-95d6-6d9cf2a32d59&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/3/3/5/4/highres_526633140.webp?w=750"
+  },
+  {
+    "id": "307781166",
+    "title": "Tech Startups, Investors, and Entrepreneurs Networking Event",
+    "description": "TechConnect invites you to an exclusive evening where tech startups, seasoned investors, and forward-thinking entrepreneurs come together. This event is designed purely for networking, offering a unique opportunity to connect with industry leaders, innovative startups, and potential investors in a relaxed, informal setting.\n\nWhy Attend?\n\nJoin us at TechConnect for an evening of exclusive networking tailored to the tech community's vibrant spirit. Expand your professional network, uncover new opportunities, and enjoy engaging discussions with peers and potential partners.",
+    "date": "2025-06-18",
+    "time": "19:00",
+    "location": "The Queen's Walk London SE1 7PB · London",
+    "tags": [
+      "Networking",
+      "Startups",
+      "Tech",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/techconnect/events/307781166/?recId=f6f233ea-579f-4b92-95d6-6d9cf2a32d59&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/e/9/0/4/highres_522659652.webp?w=750"
+  },
+  {
+    "id": "307692121",
+    "title": "Fintech Startups, Investors & Professionals Networking Event in London",
+    "description": "Join us for an exclusive evening dedicated to the Fintech community in the heart of London! The Fintech Startups, Investors & Professionals Networking Event is the premier gathering for innovators, investors, and industry experts looking to connect, collaborate, and shape the future of financial technology.\n\nEvent Highlights:\n\nWho Should Attend:\n\nWhy Attend:\n\nDon't miss this opportunity to be part of London's vibrant fintech ecosystem. Register now to secure your spot and take the next step in your fintech journey!",
+    "date": "2025-06-12",
+    "time": "19:00",
+    "location": "92a Old Brompton Rd London SW7 3LQ · London",
+    "tags": [
+      "Startups",
+      "Tech",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/techconnect/events/307692121/?recId=f6f233ea-579f-4b92-95d6-6d9cf2a32d59&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/3/a/7/4/highres_523694964.webp?w=750"
+  },
+  {
+    "id": "307170739",
+    "title": "Tech & Business Networking London",
+    "description": "Attention attendees!\nTo register, use Eventbrite or Luma\n\nWarning:\nThe meetup is not a platform for RSVP registration; for this, you need to follow thisLink to purchase a registration ticket.\nThe meetup is one of the platforms through which we offer participation in our events.\n\nJoin Us for Our Networking Event in London!\nWe host networking events every two weeks, bringing together startups and investors from diverse industries. This is your chance to connect with leading entrepreneurs, venture capitalists, and like-minded professionals, exchange ideas, and expand your business network. Don’t miss the opportunity to pitch your startup, gain valuable insights from industry experts, and secure funding. We look forward to seeing you at our event!\n\nWhat You Can Achieve at Our Events:\n• Find Investors: Pitchers are included in our exclusive distribution to venture funds, syndicates, and angel investors.\n• Expand Your Network: Build meaningful connections with peers, mentors, and partners.\n• Receive Feedback: Gain expert advice on strategies and growth.\n• Validate Ideas: Test your concepts with professionals and industry leaders.\n• Scale Your Business: Learn strategies for growth and market expansion.\n• Relaxed Atmosphere: Network in a casual cocktail-party setting.\n• Problem-Solving: Collaborate with others to find solutions and exchange ideas.\nAt our events, you’ll gain practical tools to tackle these challenges.\n\nRequirements:\n• Must be 21+\n• Neat appearance\n• Positive attitude\n• A minimum of 1 drink purchased at the bar (alcoholic or non-alcoholic)\n\n🤝 Our Partner Venue:\nTo continue hosting events at this space, we kindly ask participants to purchase 1–2 drinks at the bar. Thank you for your support.\n\nWho Will Be There:\n• Venture capital representatives\n• Entrepreneurs\n• Startup founders\n• Marketers\n• Experienced professionals from various industries\n• HR specialists\n• Innovators\n• Investors\n• Accelerator and incubator representatives\n• AI experts from the USA, Europe, Asia, and the UK\n\n📈 Pitch Your Startup:\nSend your pitch deck to **contact.us@startupvalley.club** and submit your application!\n\n💼 For Investors:\nExpand your network, evaluate startups, and access our global database.\nComplete your application on our website to receive weekly digests and curated lists of startups. Enjoy free access to our events as part of your membership.\n\n🎟 Reserve Your Tickets Today!\nWe are also expanding our partner network to provide even more tailored solutions for your projects.\nSincerely,\n\nThe Startup Valley Team",
+    "date": "2025-05-27",
+    "time": "18:00",
+    "location": "489 Liverpool Rd, London N7 8NS · London",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/startups-tech-events-in-london/events/307170739/?recId=f6f233ea-579f-4b92-95d6-6d9cf2a32d59&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/4/e/d/6/highres_527240182.webp?w=750"
+  },
+  {
+    "id": "306973193",
+    "title": "StartUp Founders and & Service Providers Networking Mixer in London",
+    "description": "Join us for a dynamic Tech Startup Networking Event, designed to bring together innovative founders and essential service providers to help elevate your business. This event connects startups with professionals in key areas like marketing, legal, finance, software development, and more, offering the resources and expertise needed to drive growth.\nEvent Highlights:\n\nWho Should Attend?\n\nWhy Attend?\nFor Founders:\n\nFor Service Providers:\n\nEvent Venue and Tickets: Hosted at a modern, elegant venue equipped with top-tier facilities, this event ensures a comfortable and professional setting for networking and collaboration.\nSpaces are limited—secure your ticket now! Whether you’re a founder seeking support or a service provider looking to grow your client base by working with innovative startups, this event is your platform for connection and growth. Don’t miss the opportunity to pitch, connect, and scale!\n\nAGENDA OF THIS NETWORKING EVENT IN LONDON\n7:00 pm - 7:30 pm: Meet and greet. Upon arrival, ask the receptionist about the business networking event, and they will guide you to our designated area.\n8 pm - 8:30 - Elevator Pitch\n8:30 pm -10 pm: Informal networking\nDress code: business smart casual.\nRegister now - space is limited to 50 attendees only!\nP.S. Click Follow for future event alerts!\nRegister now - space is limited to 50 attendees only!\nP.S. Click Follow for future event alerts!",
+    "date": "2025-05-27",
+    "time": "19:00",
+    "location": "52 Fulham Road · London",
+    "tags": [
+      "Business",
+      "Startups",
+      "Networking",
+      "Tech",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/techconnect/events/306973193/?recId=f6f233ea-579f-4b92-95d6-6d9cf2a32d59&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/7/8/9/1/highres_524070865.webp?w=750"
+  },
+  {
+    "id": "307932641",
+    "title": "Tech Networking Event by Startup Valley in London",
+    "description": "Attention attendees!\nTo register, use Eventbrite or Luma\n\nWarning:\nThe meetup is not a platform for RSVP registration; for this, you need to follow thisLink to purchase a registration ticket.\nThe meetup is one of the platforms through which we offer participation in our events.\n\nJoin Us for Our Networking Event in London!\n\nWe host networking events every two weeks, bringing together startups and investors from diverse industries. This is your chance to connect with leading entrepreneurs, venture capitalists, and like-minded professionals, exchange ideas, and expand your business network. Don’t miss the opportunity to pitch your startup, gain valuable insights from industry experts, and secure funding. We look forward to seeing you at our event!\nWhat You Can Achieve at Our Events:\n• Find Investors: Pitchers are included in our exclusive distribution to venture funds, syndicates, and angel investors.\n• Expand Your Network: Build meaningful connections with peers, mentors, and partners.\n• Receive Feedback: Gain expert advice on strategies and growth.\n• Validate Ideas: Test your concepts with professionals and industry leaders.\n• Scale Your Business: Learn strategies for growth and market expansion.\n• Relaxed Atmosphere: Network in a casual cocktail-party setting.\n• Problem-Solving: Collaborate with others to find solutions and exchange ideas.\nAt our events, you’ll gain practical tools to tackle these challenges.\nRequirements:\n• Must be 21+\n• Neat appearance\n• Positive attitude\n• A minimum of 1 drink purchased at the bar (alcoholic or non-alcoholic)\n🤝 Our Partner Venue:\nTo continue hosting events at this space, we kindly ask participants to purchase 1–2 drinks at the bar. Thank you for your support.\nWho Will Be There:\n• Venture capital representatives\n• Entrepreneurs\n• Startup founders\n• Marketers\n• Experienced professionals from various industries\n• HR specialists\n• Innovators\n• Investors\n• Accelerator and incubator representatives\n• AI experts from the USA, Europe, Asia, and the UK\n📈 Pitch Your Startup:\nSend your pitch deck to **contact.us@startupvalley.club** and submit your application!\n💼 For Investors:\nExpand your network, evaluate startups, and access our global database.\nComplete your application on our website to receive weekly digests and curated lists of startups. Enjoy free access to our events as part of your membership.\n🎟 Reserve Your Tickets Today!\nWe are also expanding our partner network to provide even more tailored solutions for your projects.\nSincerely,\nThe Startup Valley Team",
+    "date": "2025-06-10",
+    "time": "18:00",
+    "location": "489 Liverpool Rd, London N7 8NS · London",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/startups-tech-events-in-london/events/307932641/?recId=9f87f91c-0ab9-4882-bc50-9d6e68afa1a0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/1/d/e/c/highres_528067660.webp?w=750"
+  },
+  {
+    "id": "307618009",
+    "title": "Startup Connect: Travel, Hospitality & Innovation Networking Event",
+    "description": "The travel and hospitality industries are changing fast—and the people driving that change aren’t waiting for formal introductions. They’re out there building, investing, and connecting.\nThis event is for those people.\nIf you’re launching a travel startup, building a hospitality brand, developing tech for the industry, or investing in bold ideas, this is where you’ll meet your next collaborators, clients, or partners.\nForget long panels and stiff networking. This is about conversations that lead to action.\n\nWhat’s the Format?\nWe’ll kick things off with casual introductions followed by 1-minute pitches where founders, investors, and professionals can briefly share who they are, what they’re working on, and what they’re looking for. No slides. No scripts. Just clear, honest insights.\nThen it’s all about mixing and mingling. Meet like-minded people. Trade ideas. Find opportunities. Whether you're scaling a startup, scouting for investment, or offering services, there’s space for real conversations.\n\nWho Will Be There?\nYou’ll meet:\n\nWhy it matters?\nBecause your network is your fastest route to growth.\nBecause partnerships, funding, and opportunities often start with a simple, honest conversation.\nBecause no matter how strong your business plan is, the right people can take it further.\nStartup Connect isn’t about just exchanging business cards. It’s about finding those key people who can help you move forward—whether that’s an investor, a partner, a mentor, or someone who shares your vision.\nTickets are limited. Book yours and come meet the people shaping what’s next in travel and hospitality.\nWhat to join this event and all our future events for FREE? Join The Business Minds Membership to unlock free entry to all our 290+ yearly networking events, plus exclusive networking opportunities. Learn more: https://thebusinessminds.co.uk/membership.\n\nAGENDA OF THIS NETWORKING EVENT IN LONDON\n• 7:00 pm - 7:30 pm: Meet and greet. Upon arrival, ask the receptionist about the business networking event, and they will guide you to our designated area.\n• 7:30 pm -10 pm: Informal networking\nDress code: business smart casual.\nRegister now - space is limited to 50 attendees only!\nP.S. Click Follow for future event alerts!",
+    "date": "2025-06-09",
+    "time": "19:00",
+    "location": "110 Southwark Street, SE1 0TF · London",
+    "tags": [
+      "Networking",
+      "Startups",
+      "Other"
+    ],
+    "link": "https://www.meetup.com/techconnect/events/307618009/?recId=9f87f91c-0ab9-4882-bc50-9d6e68afa1a0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/4/8/3/c/highres_527718492.webp?w=750"
   },
   {
     "id": "307862789",
     "title": "BioTech Startups, Investors, Innovators & Professionals Mixer at Bonds Mayfair",
+    "description": "RSVP TO ATTEND THIS EVENT. ALL TICKETS MUST BE PURCHASED IN ADVANCE TO ATTEND THIS EVENT..\n\nJoin Socialite Connections for Business Networking for Investors, Entrepreneurs, Startups. This exclusive business networking event is open to all entrepreneurs, business people, investors, and company directors who wish to partake in this extraordinary opportunity.\n\nYou must book a ticket via the link: https://fatso.ma/1Kpm\n\nBook here via: https://www.eventbrite.co.uk/e/ai-digital-tech-networking-elevator-pitch-at-bonds-mayfair-tickets-1332993572659?aff=oddtdtcreator\n\nEvent Overview\n\nAs the name suggests, Socialite Connections we are all about bringing people and together in a relaxed setting to network and learn from each other.\n\nWhether you are an entrepreneur, small business owner or business professional, this event is the perfect opportunity to get away from your desk, have some cocktails and network after work with potential business partners, investors, industry professionals and new clients.\n\nWhether you’re looking to fund your next project, find your next great investment, or network with fellow entrepreneurs, our events and initiatives are tailored to help you succeed in today’s competitive\nlandscape.\n\nWhy Attend?\n\nSocialite Connections events are designed to facilitate authentic relationships between professionals, entrepreneurs, and innovators, providing a space to share knowledge, exchange opportunities, and build lasting business partnerships.\n\nAttend this unique networking event to meet like-minded professionals, gain insights, and uncover new business opportunities.\n\nOne Minute Presentation: All attendees will be given the opportunity to pitch for one minute about their business to potential Investors and possibly business collaborations.\n\nSchedule of Event\n\nYou are invited to join the dedicated Whatsapp group for the event and start networking before the actual event when you have purchased your ticket.\n\n6.30pm - Arrival & Introductions (Ask for Socialite Connections) Your name will be checked off the guest list and you will be given a name badge and introduced to each other.\n\n7.30pm – One Minute Presentation: All attendees will be given the opportunity to pitch for one minute about their business to potential Investors and possibly business collaborations.\n\nThe dress code is smart, smart casual or office attire.\n\nYou must book a ticket via the link: https://fatso.ma/1Kpm\n\nBook here via: https://www.eventbrite.co.uk/e/ai-digital-tech-networking-elevator-pitch-at-bonds-mayfair-tickets-1332993572659?aff=oddtdtcreator\n\nSecure your spot now and elevate your business network!\n\nTickets need to be bought online in advance to attend this event. Tickets are not available at the door.\n\nRefund policy: There is no refund at this event. Your ticket can be reassigned to another person of your choice.",
     "date": "2025-05-28",
     "time": "18:30",
     "location": "Bonds Mayfair 11-16 Dering Street London W1S 1AR · London",
@@ -607,40 +1324,26 @@
       "Startups",
       "Other"
     ],
-    "link": "https://www.meetup.com/wearefintechlondon/events/307862789/?recId=7f1373ea-b42f-439f-864f-89b2da945dad&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/wearefintechlondon/events/307862789/?recId=9f87f91c-0ab9-4882-bc50-9d6e68afa1a0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/a/f/b/6/highres_527984982.webp?w=750"
   },
   {
-    "id": "307618009",
-    "title": "Startup Connect: Travel, Hospitality & Innovation Networking Event",
-    "date": "2025-06-09",
+    "id": "307672945",
+    "title": "Legal Industry Networking Night for Lawyers, Legal Innovators and Experts",
+    "description": "Join us for an exclusive Legal Networking Event, bringing together attorneys, legal professionals, and industry leaders for a dynamic evening of networking and collaboration. This event is designed to facilitate meaningful connections among legal professionals from diverse practice areas through structured networking opportunities and one-minute elevator pitches, where you can showcase your expertise or services. Whether you're looking to expand your professional network, meet potential clients, or exchange industry insights, this event offers the perfect platform to foster new relationships and grow your legal practice.\n\n### Event Highlights:\n\n### Who Should Attend:\n\n### Why Attend:\n\nTickets are limited—reserve your spot now to connect with top professionals in the legal industry and expand your network!\n\nWhat to join this event and all our future events for FREE? Join The Business Minds Membership to unlock free entry to all our events, plus exclusive networking opportunities. Learn more: https://thebusinessminds.co.uk/membership.\n\nAGENDA OF THIS NETWORKING EVENT IN LONDON\n7:00 pm - 7:30 pm: Meet and greet. Upon arrival, ask the receptionist about the business networking event, and they will guide you to our designated area.\n8 pm - 8:30 - Presentations\n8:30 pm -10 pm: Informal networking\nDress code: business smart casual.\nRegister now - space is limited to 50 attendees only!\nP.S. Click Follow for future event alerts!",
+    "date": "2025-06-11",
     "time": "19:00",
-    "location": "110 Southwark Street, SE1 0TF · London",
+    "location": "111 Old Broad St, City of London, London EC2N 1AP · London",
     "tags": [
-      "Networking",
-      "Startups",
       "Other"
     ],
-    "link": "https://www.meetup.com/techconnect/events/307618009/?recId=7f1373ea-b42f-439f-864f-89b2da945dad&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
-    "img": "https://secure.meetupstatic.com/photos/event/4/8/3/c/highres_527718492.webp?w=750"
-  },
-  {
-    "id": "307692121",
-    "title": "Fintech Startups, Investors & Professionals Networking Event in London",
-    "date": "2025-06-12",
-    "time": "19:00",
-    "location": "92a Old Brompton Rd London SW7 3LQ · London",
-    "tags": [
-      "Startups",
-      "Tech",
-      "Other"
-    ],
-    "link": "https://www.meetup.com/techconnect/events/307692121/?recId=7f1373ea-b42f-439f-864f-89b2da945dad&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
-    "img": "https://secure.meetupstatic.com/photos/event/3/a/7/4/highres_523694964.webp?w=750"
+    "link": "https://www.meetup.com/techconnect/events/307672945/?recId=9f87f91c-0ab9-4882-bc50-9d6e68afa1a0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/b/1/c/2/highres_523605506.webp?w=750"
   },
   {
     "id": "307352705",
     "title": "Marketing, Advertising, PR - Entrepreneurs & Professionals Networking in London",
+    "description": "Join us for the Marketing, Advertising, and PR Entrepreneurs Mixer, a premier networking event designed to connect startups, entrepreneurs, and professionals from the marketing, advertising, and public relations industries. Whether you're looking to grow your business, find collaborators, or stay ahead of industry trends, this event offers a unique opportunity to build valuable connections, showcase your expertise, and explore new partnerships.\nThe event features informal networking sessions, where you can engage with like-minded professionals, and a 1-minute elevator pitch segment, allowing attendees to introduce their businesses or services in a concise, impactful way. Whether you're a seasoned professional or a startup founder, this event is tailored to help you expand your network and drive growth in your field.\n\n### Event Highlights:\n\n### Who Should Attend:\n\nBusiness owners and startups looking to grow their brand, connect with potential clients, and find partners in the marketing industry.\n\nAdvertising experts, freelancers, and agencies seeking new business opportunities, collaborations, and insights into the latest trends.\n\nPR consultants, firms, and startups interested in expanding their network, finding clients, or partnering with others in the marketing and advertising sectors.\n\nProfessionals specializing in digital marketing, SEO, social media, and content strategy who want to connect with peers and potential clients.\n\nDesigners, copywriters, and content creators looking to collaborate with marketing, advertising, or PR professionals on creative projects.\n\nThose responsible for brand growth and strategy, interested in learning new approaches and networking with industry peers.\n\nDevelopers of tools and platforms for marketing, advertising, and PR looking to meet potential customers and collaborators.\n\nVenture capitalists, angel investors, and mentors focused on helping marketing, advertising, and PR startups scale and succeed.\n\n### Why Attend:\n\nLimited tickets available! Don’t miss your chance to connect, collaborate, and grow at this exciting event. Secure your spot now!Dress code: business smart casual.\nRegister now - space is limited to 50 attendees only!\nP.S. Click Follow for future event alerts!",
     "date": "2025-05-28",
     "time": "19:00",
     "location": "The Queen's Walk London SE1 7PB · London",
@@ -649,24 +1352,65 @@
       "Marketing",
       "Other"
     ],
-    "link": "https://www.meetup.com/techconnect/events/307352705/?recId=7f1373ea-b42f-439f-864f-89b2da945dad&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/techconnect/events/307352705/?recId=9f87f91c-0ab9-4882-bc50-9d6e68afa1a0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/5/f/1/2/highres_523824338.webp?w=750"
+  },
+  {
+    "id": "307781151",
+    "title": "Tech Startup Leaders Connect: Founders, CTOs & Technical Experts Mixer in London",
+    "description": "Building a successful startup requires the right mix of vision, strategy, and technology. This event brings together business founders, CTOs, and technical experts who are looking to collaborate, share insights, and form strategic partnerships. Whether you're an entrepreneur in search of a technical co-founder, a CTO exploring new opportunities, or a tech expert looking to work with innovative startups, this is the perfect space to connect.\n\n### What to expect?\n\nFind the Right People – Engage with startup founders, CTOs, engineers, and product leaders all in one place.\n1-Minute Elevator Pitches – A chance to introduce yourself, highlight what you’re working on, and share what you’re looking for—whether it’s a co-founder, a new role, or business collaboration.\nBuild Your Tech Team – Connect with experienced developers, engineers, and tech leads who are open to new ventures.\nExplore Startup & Investment Opportunities – Investors, entrepreneurs, and technical experts will have a chance to network, discuss ideas, and explore partnerships.\nIndustry Trends & Collaboration – Learn about the latest innovations in SaaS, AI, fintech, blockchain, and emerging tech sectors.\n\n### Who Will Benefit from This Event?\n\n### Why You Should Attend\n\nAttendance is limited—reserve your spot today and take the next step in growing your startup, career, or investment network.\n\nWhat to join this event and all our future events for FREE? Join The Business Minds Membership to unlock free entry to all our 290+ yearly networking events, plus exclusive networking opportunities. Learn more: https://thebusinessminds.co.uk/membership.\n\nAGENDA OF THIS NETWORKING EVENT IN LONDON\n7:00 pm - 7:30 pm: Meet and greet. Upon arrival, ask the receptionist about the business networking event, and they will guide you to our designated area.\n8 pm - 8:30 - Presentations\n8:30 pm -10 pm: Informal networking\nDress code: business smart casual.\nRegister now - space is limited to 50 attendees only!\nP.S. Click Follow for future event alerts!",
+    "date": "2025-06-18",
+    "time": "19:00",
+    "location": "The Queen's Walk London SE1 7PB · London",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/techconnect/events/307781151/?recId=9f87f91c-0ab9-4882-bc50-9d6e68afa1a0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/3/5/a/8/highres_525733736.webp?w=750"
+  },
+  {
+    "id": "305944836",
+    "title": "Tech Startups in the Pub - Relaxed Networking",
+    "description": "## Details\n\n🍻 Join Us for Tech Startups in the Pub! 🍻\nHey there! 🌟\nWe'd love for you to join us for our next edition of Tech Startups in the Pub. It's a relaxed evening at The Windmill, our go-to spot for tech chats and good vibes. We have been running for 2.5 years, and it's always a joy to see familiar faces and meet new folks.\nWhether you're a regular, a tech founder, an enthusiast, a budding entrepreneur, or simply curious about the tech scene, you'll fit right in. This isn't about panels or pitching, just good old-fashioned networking with like-minded people over a drink (and maybe some pizza) on a Friday evening.\n📍 Where: The Windmill, 27 Tabernacle St, Shoreditch, London EC2A 4DE\n🕕 When: From 6 PM on the 3rd Friday of every month!\nHouse Rules:\n\nMark your calendar and come down for some fun tech talk. See you there!",
+    "date": "2025-06-20",
+    "time": "18:00",
+    "location": "27 Tabernacle Street · London",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/tech-startups-in-the-pub-relaxed-networking/events/305944836/?recId=9f87f91c-0ab9-4882-bc50-9d6e68afa1a0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/9/4/0/1/highres_525877889.webp?w=750"
   },
   {
     "id": "307877931",
     "title": "Official Founders Connector — During London Tech Week Hosted at the IoD",
+    "description": "Kindly note that this is a paid event and the average number of attendees for our events is 60-70 people. You can register on https://www.eventbrite.co.uk/e/official-founders-connector-during-london-tech-week-hosted-at-the-iod-tickets-1363965299929?aff=meetup\n\nJoin us for the Official Founders Connector, the original and trademark event for founders, entrepreneurs, and company directors taking place during London Tech Week.\nThis special edition will be held at the prestigious Institute of Directors, a fitting venue to welcome ambitious founders, business leaders, and innovative thinkers looking to connect, collaborate, and share opportunities.\nAs the flagship Founders Connector event during London Tech Week, this gathering is designed to bring together high-calibre individuals driving growth and innovation across the UK and beyond. Whether you’re scaling a startup, launching a new venture, looking to build strategic alliances or are an investor, this is where meaningful conversations begin.\nExpect a curated mix of inspiring minds, a warm and professional atmosphere, and an evening full of impactful networking.\n👥 Who Should Attend: Founders, co-founders, company directors of any type of company, tech and non tech related, investors, and tech ecosystem partners\n🎟️ Tickets: Early booking is strongly recommended – limited spaces available\nThe format of the event is free networking, prior to the event, attendees will be invited to join a whatsapp group dedicated to this specific event, so that they can introduce themselves and find out more about other guests in attendance.\n\nUpcoming Events You May Be Interested In\nIf you're a founder, startup enthusiast, or involved in the world of artificial intelligence, don’t miss our upcoming events:\nFounder Connector on 9th June, AI Connector on 10th June, and Startup Connector on 11th June.\nA combined ticket is available for those who wish to attend all three.\n\n### Event Disclaimer\n\nPlease note that photos and videos may be taken during this event for our social media channels and promotional materials. If you prefer not to appear in any photos or videos, please inform the event host upon arrival, and we will ensure your preference is respected.",
     "date": "2025-06-09",
     "time": "18:00",
     "location": "116 Pall Mall London SW1Y 5ED United Kingdom · London",
     "tags": [
       "Other"
     ],
-    "link": "https://www.meetup.com/london-tech-forum/events/307877931/?recId=7f1373ea-b42f-439f-864f-89b2da945dad&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/london-tech-forum/events/307877931/?recId=9f87f91c-0ab9-4882-bc50-9d6e68afa1a0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/d/c/7/2/highres_527996434.webp?w=750"
+  },
+  {
+    "id": "307635673",
+    "title": "AI Connector, during LondonTech Week, fringe event of AI Summit",
+    "description": "Kindly note that this is a paid event and the average number of attendees for our events is 60-70 people. You can register on https://www.eventbrite.co.uk/e/ai-connector-during-londontech-week-fringe-event-of-ai-summit-tickets-1351282144269?aff=meetup\n\nGet ready for an exciting evening designed to connect innovators and decision-makers in the AI, digital, and tech space. This special edition of the AI Connector is proud to be part of the fringe events of The AI Summit during London Tech Week — the UK’s premier festival of technology and innovation. The AI Summit is the flagship AI event of London Tech Week, gathering global AI pioneers, enterprise leaders, and startups to explore real-world applications and the future of artificial intelligence.\nWhy Join?\n🔹 Expand Your Network: Connect with like-minded professionals, potential clients, and collaborators who share your passion for AI and tech innovation.\n🔹 Explore Alliances: Discover synergies across AI, digital, and tech sectors that can enhance your business outcomes.\n🔹 Showcase and Discover Solutions: Whether you're a provider or seeker of tech-based tools, this event is your gateway to valuable connections and insights.\n\nWhat You’ll Gain\n✅ Strategic Connections: Engage with entrepreneurs, company directors, and decision-makers.\n✅ Valuable Insights: Stay updated on the latest trends and advancements in AI, digital, and tech.\n✅ Collaboration Opportunities: Find partners to co-create or implement transformative solutions.\nEvent Details\n🕖 7:00 PM – Fully hosted free-format networking begins.\n🕗 8:00 PM – Elevator pitches, followed by more networking.\n📱 WhatsApp Group – Get connected before and after the event.\nDress Code: Business attire or smart casual.\n\nRefund Policy Advance tickets are discounted and non-refundable, but they can be reassigned if you can't attend.\nPlease Note: Photos and videos may be taken during the event for promotional use. If you'd prefer not to appear, inform the host upon arrival.",
+    "date": "2025-06-10",
+    "time": "19:00",
+    "location": "55-61 Tabernacle Street London EC2A 4AA United Kingdom · London",
+    "tags": [
+      "Other"
+    ],
+    "link": "https://www.meetup.com/london-tech-forum/events/307635673/?recId=9f87f91c-0ab9-4882-bc50-9d6e68afa1a0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
+    "img": "https://secure.meetupstatic.com/photos/event/b/a/c/7/highres_527747815.webp?w=750"
   },
   {
     "id": "307543075",
     "title": "Business, Entrepreneurs, Investors and StartUps Networking Event in London",
+    "description": "Startups and Business Founders Social Networking Event in London\n\nJoin us for an exclusive evening of networking and connection at the Startups and Business Founders Social Networking Event in London! This event is tailored for ambitious entrepreneurs, innovative startups, and visionary business founders who are eager to expand their network and foster new relationships.\n\n#### Event Highlights:\n\n#### Who Should Attend:\n\nDon't miss this opportunity to be part of a thriving community of innovators and game-changers. Come with an open mind, a passion for entrepreneurship, and a desire to connect with the brightest minds in the industry. Let's build the future of business together!\n\nRegister now and secure your spot at the most anticipated networking event for startups and business founders in London!",
     "date": "2025-05-28",
     "time": "19:00",
     "location": "The Queen's Walk London SE1 7PB · London",
@@ -676,45 +1420,7 @@
       "Tech",
       "Other"
     ],
-    "link": "https://www.meetup.com/techconnect/events/307543075/?recId=7f1373ea-b42f-439f-864f-89b2da945dad&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
+    "link": "https://www.meetup.com/techconnect/events/307543075/?recId=9f87f91c-0ab9-4882-bc50-9d6e68afa1a0&recSource=event-search&searchId=0b9bc974-ad26-4c78-a85d-b3836b00a581&eventOrigin=find_page%24all",
     "img": "https://secure.meetupstatic.com/photos/event/1/d/7/3/highres_526867539.webp?w=750"
-  },
-  {
-    "id": "307672945",
-    "title": "Legal Industry Networking Night for Lawyers, Legal Innovators and Experts",
-    "date": "2025-06-11",
-    "time": "19:00",
-    "location": "111 Old Broad St, City of London, London EC2N 1AP · London",
-    "tags": [
-      "Other"
-    ],
-    "link": "https://www.meetup.com/techconnect/events/307672945/?recId=7f1373ea-b42f-439f-864f-89b2da945dad&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
-    "img": "https://secure.meetupstatic.com/photos/event/b/1/c/2/highres_523605506.webp?w=750"
-  },
-  {
-    "id": "307506534",
-    "title": "Property Entrepreneurs, Investors, StartUps, Professionals Networking Event",
-    "date": "2025-06-03",
-    "time": "19:00",
-    "location": "52 Fulham Road · London",
-    "tags": [
-      "Other"
-    ],
-    "link": "https://www.meetup.com/techconnect/events/307506534/?recId=7f1373ea-b42f-439f-864f-89b2da945dad&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
-    "img": "https://secure.meetupstatic.com/photos/event/3/5/a/8/highres_525733736.webp?w=750"
-  },
-  {
-    "id": "307714131",
-    "title": "Women in Technology Networking Mixer at The Other House with welcome drink",
-    "date": "2025-06-17",
-    "time": "19:00",
-    "location": "111 Old Broad St, City of London, London EC2N 1AP · London",
-    "tags": [
-      "Business",
-      "Tech",
-      "Other"
-    ],
-    "link": "https://www.meetup.com/techconnect/events/307714131/?recId=7f1373ea-b42f-439f-864f-89b2da945dad&recSource=event-search&searchId=42f5b6ab-e655-4df0-8bef-bc6bf36221ba&eventOrigin=find_page%24all",
-    "img": "https://secure.meetupstatic.com/photos/event/3/3/5/4/highres_526633140.webp?w=750"
   }
 ]

@@ -74,6 +74,12 @@ async function scrapeCore(pageCount) {
       const rawDateTime = await eventPage.$eval('time', el => el.dateTime || el.innerText).catch(() => null);
       const { date, time } = formatDateTime(rawDateTime);
 
+      // Extract Description
+
+      const description = await eventPage.$$eval('div.break-words p', paragraphs => 
+        paragraphs.map(p => p.innerText.trim()).join('\n\n')
+      );
+
       // Determine location
       const location = await eventPage.evaluate(() => {
         const venue = document.querySelector('[data-testid="venue-name-value"]');
@@ -97,6 +103,7 @@ async function scrapeCore(pageCount) {
       events.push({
         id: url.match(/\/events\/(\d+)/)?.[1] || null,
         title: title || "Untitled",
+        description,
         date: date || null,
         time: time || null,
         location,

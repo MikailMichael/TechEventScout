@@ -80,6 +80,7 @@ module.exports = async function scrapeEventbrite(pageCount = 2) {
   return allEvents.map(evt => ({
     id: evt.id,
     title: evt.name,
+    description: evt.summary,
     date: evt.start_date,
     time: evt.start_time,
     location: evt.primary_venue?.address?.localized_address_display || "London",
