@@ -46,7 +46,7 @@ export default function Auth({ onAuthSuccess }) {
     setMessage(null);
 
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: '',
+      redirectTo: 'http://localhost:5173/reset-password',
     });
 
     if (error) {
@@ -75,10 +75,17 @@ export default function Auth({ onAuthSuccess }) {
 
             <button
               type='submit'
+              className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'
+            >Send Reset Link</button>
+
+            <button
+              type='button'
               onClick={() => {
                 setIsForgetPassword(false);
                 setError(null);
                 setMessage(null);
+                setEmail('');
+                setPassword('');
               }}
               className='w-full text-sm text-gray-100 border bg-neutral-800 border-neutral-400 underline hover:ring-1 transition mt-2 text-center'
             >Back to Login</button>
