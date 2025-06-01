@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { supabase } from '../supabaseClient';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 export default function Auth({ onAuthSuccess }) {
   const [email, setEmail] = useState('');
@@ -152,9 +154,25 @@ export default function Auth({ onAuthSuccess }) {
             </div>
 
             <div className='flex flex-col gap-2 my-4'>
-              <button onClick={() => handleSocialLogin('discord')} className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>Continue with Discord</button>
-              <button onClick={() => handleSocialLogin('github')} className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>Continue with Github</button>
-              <button onClick={() => handleSocialLogin('google')} className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>Continue with Google</button>
+              <button
+                onClick={() => handleSocialLogin('discord')}
+                className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>
+                <FontAwesomeIcon className="mx-2" icon={faDiscord} />
+                Continue with Discord
+              </button>
+              <button
+                onClick={() => handleSocialLogin('github')}
+                className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>
+                  <FontAwesomeIcon className="mx-2" icon={faGithub} />
+                Continue with Github
+
+              </button>
+              <button
+                onClick={() => handleSocialLogin('google')}
+                className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>
+                  <FontAwesomeIcon className="mx-2" icon={faGoogle} />
+                Continue with Google
+              </button>
             </div>
           </div>
         )}
