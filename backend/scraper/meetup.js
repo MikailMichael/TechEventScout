@@ -23,7 +23,8 @@ module.exports = async function scrapeMeetupEvents(pageCount = 2) {
  */
 async function scrapeCore(pageCount) {
   const browser = await chromium.launch({ headless: true });
-  const page = await browser.newPage();
+  const context = await browser.newContext({ viewport: { width: 1920, height: 1080 } });
+  const page = await context.newPage();
 
   try {
     log("Navigating to Meetup...");
