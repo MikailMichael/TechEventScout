@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "../supabaseClient";
 
 export default function ResetPassword() {
   const [newPassword, setNewPassword] = useState('');
   const [confirmed, setConfirmed] = useState(false);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -28,16 +30,20 @@ export default function ResetPassword() {
     }
   };
 
+  const handleBackToLogin = () => {
+    navigate('/');
+  };
+
   if (confirmed) {
     return (
-      <div className="min-h-screen w-screen flex items-center justify-center bg-neutral-900 x-4 text-white ">
-        <p>Your password has been reset. You can now log in.</p>
-        <a href="http://localhost:5173">
-          <button
-            type="button"
-            className="w-full font-bold py-2 px-4 bg-neutral-700 border border-neutral-400 text-white rounded-md hover:ring-1 transition"
-          >Return To Login</button>
-        </a>
+      <div className="min-h-screen w-screen flex items-center justify-center bg-neutral-900 x-4">
+        <div className="bg-neutral-800 p-6 rounded-lg border border-neutral-400 max-w-sm w-full text-center space-y-6">
+          <h2 className="text-2xl font-bold text-white">Password Reset</h2>
+          <p className="text-gray-200">Your password has been reset successfully. You can now log in with your new password.</p>
+          <button type="button" onClick={handleBackToLogin} className="w-full font-bold py-2 px-4 bg-neutral-700 border border-neutral-400 text-white rounded-md hover:ring-1 transition">
+            Return to Login
+          </button>
+        </div>
       </div>
     );
   }

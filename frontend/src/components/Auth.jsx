@@ -139,7 +139,7 @@ export default function Auth({ onAuthSuccess }) {
             )}
           </form>
         )}
-        
+
         {error && <p className="text-red-500 text-lg font-semi-bold text-center">{error}</p>}
         {message && <p className='text-green-500 text-lg font-semi-bold text-center'>{message}</p>}
       </div>

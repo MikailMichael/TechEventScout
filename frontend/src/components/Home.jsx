@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import '../App.css'
 import EventCard from './EventCard';
 import FilterButton from './FilterButton';
@@ -20,6 +21,7 @@ function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
   const EVENTS_PER_PAGE = 10;
 
   useHighlight(searchTerm, '.grid'); // Only highlights inside cards
@@ -107,7 +109,7 @@ function Home() {
   const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
 
   if (!user) {
-    return <Auth onAuthSuccess={() => window.location.reload()} />;
+    return <Auth onAuthSuccess={() => navigate('/')} />;
   }
 
   return (
