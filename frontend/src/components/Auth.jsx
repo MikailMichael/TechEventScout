@@ -144,14 +144,17 @@ export default function Auth({ onAuthSuccess }) {
                 >Forgot your password?</button>
               )}
             </form>
+
             <div className='flex items-center my-4'>
               <hr className='flex-grow border-t border-gray-600' />
               <span className='mx-4 text-gray-400 text-sm'>or</span>
               <hr className='flex-grow border-t border-gray-600' />
             </div>
+
             <div className='flex flex-col gap-2 my-4'>
               <button onClick={() => handleSocialLogin('discord')} className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>Continue with Discord</button>
               <button onClick={() => handleSocialLogin('github')} className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>Continue with Github</button>
+              <button onClick={() => handleSocialLogin('google')} className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>Continue with Google</button>
             </div>
           </div>
         )}
