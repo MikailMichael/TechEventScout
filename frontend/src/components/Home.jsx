@@ -27,7 +27,7 @@ function Home() {
   useHighlight(searchTerm, '.grid'); // Only highlights inside cards
 
   useEffect(() => {
-    const session = supabase.auth.getSession().then(({ data }) => {
+    supabase.auth.getSession().then(({ data }) => {
       setUser(data?.session?.user || null);
     });
 

@@ -96,65 +96,64 @@ export default function Auth({ onAuthSuccess }) {
             >Back to Login</button>
           </form>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border border-neutral-400 rounded-md bg-neutral-700 text-gray-100 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-gray-100 hover:ring-1 transition"
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              required
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border border-neutral-400 rounded-md bg-neutral-700 text-gray-100 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-gray-100 hover:ring-1 transition"
-            />
+          <div>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <input
+                type="email"
+                placeholder="Email"
+                required
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                className="w-full px-4 py-2 border border-neutral-400 rounded-md bg-neutral-700 text-gray-100 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-gray-100 hover:ring-1 transition"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                required
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+                className="w-full px-4 py-2 border border-neutral-400 rounded-md bg-neutral-700 text-gray-100 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-gray-100 hover:ring-1 transition"
+              />
 
 
 
-            <button
-              type="submit"
-              className="w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition"
-            >
-              {isLogin ? 'Login' : 'Create Account'}
-            </button>
+              <button
+                type="submit"
+                className="w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition"
+              >
+                {isLogin ? 'Login' : 'Create Account'}
+              </button>
 
-            <div className='flex items-center'>
+              <button
+                type="button"
+                onClick={() => setIsLogin(!isLogin)}
+                className="w-full text-sm text-gray-100 border bg-neutral-800 border-neutral-400 underline hover:ring-1 transition text-center"
+              >
+                {isLogin ? 'Need an account? Sign up' : 'Have an account? Login'}
+              </button>
+
+              {isLogin && (
+                <button
+                  type='button'
+                  onClick={() => {
+                    setIsForgetPassword(true);
+                    setError(null);
+                    setMessage(null);
+                  }}
+                  className='w-full text-sm text-gray-100 bg-transparent underline text-center'
+                >Forgot your password?</button>
+              )}
+            </form>
+            <div className='flex items-center my-4'>
               <hr className='flex-grow border-t border-gray-600' />
               <span className='mx-4 text-gray-400 text-sm'>or</span>
               <hr className='flex-grow border-t border-gray-600' />
             </div>
-
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2 my-4'>
               <button onClick={() => handleSocialLogin('discord')} className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>Continue with Discord</button>
               <button onClick={() => handleSocialLogin('github')} className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>Continue with Github</button>
-              <button onClick={() => handleSocialLogin('linkedin')} className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>Continue with LinkedIn</button>
             </div>
-
-            <button
-              type="button"
-              onClick={() => setIsLogin(!isLogin)}
-              className="w-full text-sm text-gray-100 border bg-neutral-800 border-neutral-400 underline hover:ring-1 transition mt-2 text-center"
-            >
-              {isLogin ? 'Need an account? Sign up' : 'Have an account? Login'}
-            </button>
-
-            {isLogin && (
-              <button
-                type='button'
-                onClick={() => {
-                  setIsForgetPassword(true);
-                  setError(null);
-                  setMessage(null);
-                }}
-                className='w-full text-sm text-gray-100 bg-transparent underline mt-2 text-center'
-              >Forgot your password?</button>
-            )}
-          </form>
+          </div>
         )}
 
         {error && <p className="text-red-500 text-lg font-semi-bold text-center">{error}</p>}
