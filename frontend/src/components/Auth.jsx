@@ -56,6 +56,11 @@ export default function Auth({ onAuthSuccess }) {
     }
   };
 
+  const handleSocialLogin = async (provider) => {
+    const { error } = await supabase.auth.signInWithOAuth({ provider, options: { redirectTo: window.location.origin } });
+    if (error) setError(error.message);
+  };
+
   return (
     <div className="min-h-screen min-w-screen flex items-center justify-center bg-neutral-900 px-4">
       <div className="w-full max-w-sm bg-neutral-800 border border-neutral-400 rounded-2xl p-6 space-y-6">
@@ -109,6 +114,8 @@ export default function Auth({ onAuthSuccess }) {
               className="w-full px-4 py-2 border border-neutral-400 rounded-md bg-neutral-700 text-gray-100 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-gray-100 hover:ring-1 transition"
             />
 
+
+
             <button
               type="submit"
               className="w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition"
@@ -116,7 +123,17 @@ export default function Auth({ onAuthSuccess }) {
               {isLogin ? 'Login' : 'Create Account'}
             </button>
 
+            <div className='flex items-center'>
+              <hr className='flex-grow border-t border-gray-600' />
+              <span className='mx-4 text-gray-400 text-sm'>or</span>
+              <hr className='flex-grow border-t border-gray-600' />
+            </div>
 
+            <div className='flex flex-col gap-2'>
+              <button onClick={() => handleSocialLogin('discord')} className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>Continue with Discord</button>
+              <button onClick={() => handleSocialLogin('github')} className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>Continue with Github</button>
+              <button onClick={() => handleSocialLogin('linkedin')} className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>Continue with LinkedIn</button>
+            </div>
 
             <button
               type="button"
