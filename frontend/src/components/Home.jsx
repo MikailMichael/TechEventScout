@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../App.css'
 import EventCard from './EventCard';
 import FilterButton from './FilterButton';
@@ -11,6 +11,7 @@ import FavoritesButton from './FavoritesButton';
 import FilterModal from './FilterModal';
 import Pagination from './Pagination';
 import Auth from './Auth';
+import FavouritesModal from './FavouritesModal';
 
 
 function Home() {
@@ -21,6 +22,8 @@ function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
+  const [favourites, setFavourites] = useState([]);
+  const [showFavourites, setShowFavourites] = useState(false);
   const navigate = useNavigate();
   const EVENTS_PER_PAGE = 10;
 
@@ -58,6 +61,22 @@ function Home() {
     };
 
     fetchEvents();
+  }, [user]);
+
+  useEffect(() => {
+    if (!user) return;
+
+    const fetchFavourites = async () => {
+      const { data, error } = await supabase
+        .from('favourites')
+        .select('event_id')
+        .eq('user_id', user.id);
+      if (data) {
+        setFavourites(data.map(f => f.event_id));
+      }
+    }
+
+    fetchFavourites();
   }, [user]);
 
   // Runs when currentPage changes
@@ -99,6 +118,22 @@ function Home() {
     setCurrentPage(1);
   }
 
+  const handleFavouriteToggle = async (eventId) => {
+    if (favourites.includes(eventId)) {
+      await supabase
+        .from('favourites')
+        .delete()
+        .eq('user_id', user.id)
+        .eq('event_id', eventId);
+      setFavourites(favourites.filter(id => id !== eventId));
+    } else {
+      await supabase
+        .from('favourites')
+        .insert({ user_id: user.id, event_id: eventId });
+      setFavourites([... favourites, eventId]);
+    }
+  }
+
   const allLocations = [...new Set(allEvents.map(e => e.location))];
   const allTags = [...new Set(allEvents.flatMap(e => e.tags))];
 
@@ -119,7 +154,7 @@ function Home() {
         <div className="flex items-center gap-4 justify-center">
           <SearchBar onSearch={handleSearch} />
           <FilterButton onClick={() => setShowModal(true)} />
-          <FavoritesButton />
+          <FavoritesButton onClick={() => setShowFavourites(true)} />
           <button onClick={() => supabase.auth.signOut()} className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'>Log out</button>
         </div>
       </div>
@@ -141,12 +176,15 @@ function Home() {
               currentEvents.map((event, idx) => (
                 <EventCard
                   key={idx}
+                  id={event.id}
                   title={event.title}
                   date={event.date}
                   time={event.time}
                   location={event.location}
                   link={event.link}
                   tags={event.tags.join(", ")}
+                  onFavourite={handleFavouriteToggle}
+                  isFavourited={favourites.includes(event.id)}
                 />
               ))
             ) : (
@@ -167,6 +205,13 @@ function Home() {
         locations={allLocations}
         tags={allTags}
         onFilter={handleFilter}
+      />
+
+      {/* Favourites Modal */}
+      <FavouritesModal 
+        show={showFavourites}
+        onClose={() => setShowFavourites(false)}
+        favouriteEventIds={favourites}
       />
 
     </div>
