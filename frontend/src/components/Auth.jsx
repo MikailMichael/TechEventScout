@@ -2,65 +2,64 @@ import { useState } from 'react';
 import { supabase } from '../supabaseClient';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import toast from 'react-hot-toast';
 
 export default function Auth({ onAuthSuccess }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLogin, setIsLogin] = useState(true);
-  const [error, setError] = useState(null);
-  const [message, setMessage] = useState(null);
   const [isForgetPassword, setIsForgetPassword] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(null);
 
-    if (isLogin) {
-      const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-      if (error) {
-        setMessage(null);
-        setError(error.message);
+    const toastId = toast.loading(isLogin ? 'Logging in...' : 'Creating accont...');
+
+    let result;
+    try {
+      if (isLogin) {
+        result = await supabase.auth.signInWithPassword({ email, password });
       } else {
-        setError(null);
-        setMessage(null);
-        onAuthSuccess(); // Successful Login
+        result = await supabase.auth.signUp({ email, password });
       }
-    } else {
-      const { data, error } = await supabase.auth.signUp({ email, password });
+
+      const { data, error } = result;
+      toast.dismiss(toastId);
+
       if (error) {
-        setMessage(null);
-        setError(error.message);
-      } else if (data.user && !data.session) {
-        // Confirmation email sent, but account isn't active yet
-        setError(null);
-        setMessage("A confirmation email has been sent. Please check your inbox.");
+        toast.error(error.message);
       } else {
-        setError(null);
-        setMessage(null);
-        onAuthSuccess(); // In case email confirmation is disabled and signup completes immediately
+        if (!isLogin && data?.user && !data.session) {
+          toast.success("Check your email to confirm your account.");
+        } else {
+          toast.success(isLogin ? "Logged in successfully!" : "Account created!");
+          onAuthSuccess();
+        }
       }
+    } catch (err) {
+      toast.dismiss(toastId);
+      toast.error("Something went wrong. Please try again.");
     }
   };
 
   const handlePasswordReset = async (e) => {
     e.preventDefault();
-    setError(null);
-    setMessage(null);
-
+    const toastId = toast.loading('Sending reset email...');
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
       redirectTo: 'http://localhost:5173/reset-password',
     });
 
+    toast.dismiss(toastId);
     if (error) {
-      setError(error.message);
+      toast.error(error.message);
     } else {
-      setMessage('A password reset link has been set to your email.');
+      toast.success('A password reset link has been sent to your email.');
     }
   };
 
   const handleSocialLogin = async (provider) => {
     const { error } = await supabase.auth.signInWithOAuth({ provider, options: { redirectTo: window.location.origin } });
-    if (error) setError(error.message);
+    if (error) toast.error(error);
   };
 
   return (
@@ -89,8 +88,6 @@ export default function Auth({ onAuthSuccess }) {
               type='button'
               onClick={() => {
                 setIsForgetPassword(false);
-                setError(null);
-                setMessage(null);
                 setEmail('');
                 setPassword('');
               }}
@@ -139,8 +136,6 @@ export default function Auth({ onAuthSuccess }) {
                   type='button'
                   onClick={() => {
                     setIsForgetPassword(true);
-                    setError(null);
-                    setMessage(null);
                   }}
                   className='w-full text-sm text-gray-100 bg-transparent underline text-center'
                 >Forgot your password?</button>
@@ -176,9 +171,6 @@ export default function Auth({ onAuthSuccess }) {
             </div>
           </div>
         )}
-
-        {error && <p className="text-red-500 text-lg font-semi-bold text-center">{error}</p>}
-        {message && <p className='text-green-500 text-lg font-semi-bold text-center'>{message}</p>}
       </div>
     </div>
   );
