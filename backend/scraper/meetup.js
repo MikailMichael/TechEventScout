@@ -12,7 +12,7 @@ const MEETUPURL = "https://www.meetup.com/find/?location=gb--17--London&source=E
  * @returns {Promise<Object[]>} List of parsed event objects.
  */
 module.exports = async function scrapeMeetupEvents(pageCount = 2) {
-  return await retry(() => scrapeCore(pageCount), 3, 3000);
+  return await retry(() => scrapeCore(pageCount), 5, 3000);
 }
 
 /**

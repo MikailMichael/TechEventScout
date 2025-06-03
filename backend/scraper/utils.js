@@ -90,6 +90,15 @@ function normalizeTag(tag) {
   return tag.toLowerCase().replace(/[_-]/g, " ").replace(/\s+/g, " ").trim();
 }
 
+/*
+function normalizeTagArray(tags) {
+  if (Array.isArray(tags) && tags.length === 1 && Array.isArray(tags[0])) {
+    return tags[0];
+  }
+  return tags;
+}
+*/
+
 /**
  * Capitalize the first letter of each word in a tag string.
  * 
@@ -144,7 +153,7 @@ function processTags(rawTags, title = "", description = "") {
     return 0;
   });
 
-  return [sorted];
+  return sorted;
 }
 
 /**
