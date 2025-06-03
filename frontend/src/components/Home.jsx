@@ -98,7 +98,7 @@ function Home() {
       setEvents(filtered);
       setCurrentPage(1);
     }
-  }
+  };
 
   const handleFilter = ({ location, tag }) => {
     let filtered = [...allEvents];
@@ -116,7 +116,7 @@ function Home() {
     }
     setEvents(filtered);
     setCurrentPage(1);
-  }
+  };
 
   const handleFavouriteToggle = async (eventId) => {
     if (favourites.includes(eventId)) {
@@ -132,7 +132,11 @@ function Home() {
         .insert({ user_id: user.id, event_id: eventId });
       setFavourites([... favourites, eventId]);
     }
-  }
+  };
+
+  const handleRemoveFavourite = (eventId) => {
+    setFavourites(prev => prev.filter(id => id !== eventId));
+  };
 
   const allLocations = [...new Set(allEvents.map(e => e.location))];
   const allTags = [...new Set(allEvents.flatMap(e => e.tags))];
@@ -212,6 +216,7 @@ function Home() {
         show={showFavourites}
         onClose={() => setShowFavourites(false)}
         favouriteEventIds={favourites}
+        onRemoveFavourite={handleRemoveFavourite}
       />
 
     </div>

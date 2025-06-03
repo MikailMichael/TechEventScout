@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faTrash } from '@fortawesome/free-solid-svg-icons';
 import tagColours from '../utils/tagColours';
 
-function FavouritesModal({ show, onClose, favouriteEventIds = [] }) {
+function FavouritesModal({ show, onClose, favouriteEventIds = [], onRemoveFavourite }) {
   const [favouritesEvents, setFavouriteEvents] = useState([]);
 
   useEffect(() => {
@@ -40,6 +40,7 @@ function FavouritesModal({ show, onClose, favouriteEventIds = [] }) {
 
     if (!error) {
       setFavouriteEvents(prev => prev.filter(e => e.id !== eventId));
+      onRemoveFavourite?.(eventId);
     }
   };
 
