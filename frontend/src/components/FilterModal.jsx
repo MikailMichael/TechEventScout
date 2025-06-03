@@ -3,6 +3,7 @@ import { useState } from 'react';
 function FilterModal({ show, onClose, locations, tags, onFilter }) {
   const [selectedLocation, setSelectedLocation] = useState('');
   const [selectedTags, setSelectedTags] = useState([]);
+  const [matchAllTags, setMatchAllTags] = useState(false);
 
   const handleTagSelect = (e) => {
     const newTag = e.target.value;
@@ -16,7 +17,7 @@ function FilterModal({ show, onClose, locations, tags, onFilter }) {
   };
 
   const handleSubmit = () => {
-    onFilter({ location: selectedLocation, tags: selectedTags });
+    onFilter({ location: selectedLocation, tags: selectedTags, matchAll: matchAllTags });
     onClose();
   }
 
@@ -62,6 +63,26 @@ function FilterModal({ show, onClose, locations, tags, onFilter }) {
               <option key={i} value={tag}>{tag}</option>
             ))}
           </select>
+        </div>
+
+        {/* Toggle Switch */}
+        <div className='flex items-center gap-2 mb-4'>
+          <label className='text-neutral-900 font-semibold'>Match All Tags</label>
+          <label className='inline-flex items-center cursor-pointer'>
+            <input
+              type='checkbox'
+              className='sr-only-peer'
+              checked={matchAllTags}
+              onChange={() => setMatchAllTags(prev => !prev)}
+            />
+            <div className='w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-neutral-700 relative transition-colors'>
+              <div className='absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow transform peer-checked:translate-x-5 transition-transform'></div>
+            </div>
+
+            <span className="text-sm text-neutral-600 italic">
+              {matchAllTags ? 'Filtering: All tags must match' : 'Filtering: Any tag can match'}
+            </span>
+          </label>
         </div>
 
         {/* Selected Tags Pills */}
