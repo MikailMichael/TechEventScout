@@ -114,12 +114,11 @@ function Home() {
 
     if (tags && tags.length > 0) {
       filtered = filtered.filter(event => {
-        const eventTags = event.tags.map(t => {
-          t.toLowerCase();
-      });
+        const eventTags = event.tags.map(t => t.toLowerCase());
         return tags.some(tag => eventTags.includes(tag.toLowerCase()));
       });
     }
+
     setEvents(filtered);
     setCurrentPage(1);
   };
@@ -137,7 +136,7 @@ function Home() {
       await supabase
         .from('favourites')
         .insert({ user_id: user.id, event_id: eventId });
-      setFavourites([... favourites, eventId]);
+      setFavourites([...favourites, eventId]);
       toast.success(`Added "${title}" to favourites`);
     }
   };
@@ -221,7 +220,7 @@ function Home() {
       />
 
       {/* Favourites Modal */}
-      <FavouritesModal 
+      <FavouritesModal
         show={showFavourites}
         onClose={() => setShowFavourites(false)}
         favouriteEventIds={favourites}
