@@ -123,20 +123,28 @@ function deDuplicateTags(tags) {
  * @param {string[]} rawTags - Array of raw tag strings from event sources.
  * @returns {string[]} Array of cleaned and canonicalized tags.
  */
-function processTags(rawTags) {
+function processTags(rawTags, title = "", description = "") {
   const cleanedInput = rawTags.filter(tag => typeof tag === "string" && tag.trim()); // Remove nulls, undefined, and empty strings
   const normalized = deDuplicateTags(cleanedInput);
-  const canonicalized = normalized.map(tag =>
-    tagMap[tag] || "Other"
-  );
+  const canonicalized = normalized.map(tag => tagMap[tag] || "Other");
 
-  const sorted = canonicalized.sort((a, b) => {
+  const tagSet = new Set(canonicalized);
+  const content = `${title} ${description}`.toLowerCase();
+
+  // Search the title/description for any tagMap keys
+  for (const [keyword, mappedTag] of Object.entries(tagMap)) {
+    if (content.includes(keyword.toLowerCase()) && !tagSet.has(mappedTag)) {
+      tagSet.add(mappedTag);
+    }
+  }
+
+  const sorted = Array.from(tagSet).sort((a, b) => {
     if (a === "Other") return 1; // push "Other down"
     if (b === "Other") return -1; // bring other tags up
     return 0;
   });
 
-  return [...new Set(sorted)];
+  return [sorted];
 }
 
 /**
