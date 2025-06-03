@@ -9,7 +9,7 @@ function EventCard({ id, title, date, time, location, link, tags, onFavourite, i
 
       {/* Favorite Button */}
       <button
-        onClick={() => onFavourite(id)}
+        onClick={() => onFavourite(id, title)}
         className="absolute bottom-4 right-4 text-yellow-400 hover:text-yellow-300"
         title="Save to favourites"
       >

@@ -12,6 +12,7 @@ import FilterModal from './FilterModal';
 import Pagination from './Pagination';
 import Auth from './Auth';
 import FavouritesModal from './FavouritesModal';
+import { toast } from 'react-hot-toast';
 
 
 function Home() {
@@ -118,7 +119,7 @@ function Home() {
     setCurrentPage(1);
   };
 
-  const handleFavouriteToggle = async (eventId) => {
+  const handleFavouriteToggle = async (eventId, title) => {
     if (favourites.includes(eventId)) {
       await supabase
         .from('favourites')
@@ -126,11 +127,13 @@ function Home() {
         .eq('user_id', user.id)
         .eq('event_id', eventId);
       setFavourites(favourites.filter(id => id !== eventId));
+      toast.success(`Removed "${title}" from favourites`);
     } else {
       await supabase
         .from('favourites')
         .insert({ user_id: user.id, event_id: eventId });
       setFavourites([... favourites, eventId]);
+      toast.success(`Added "${title}" to favourites`);
     }
   };
 

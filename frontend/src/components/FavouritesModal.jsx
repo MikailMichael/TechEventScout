@@ -2,17 +2,21 @@ import { supabase } from "../supabaseClient";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faTrash } from '@fortawesome/free-solid-svg-icons';
 import tagColours from '../utils/tagColours';
+import { toast } from 'react-hot-toast';
 
 function FavouritesModal({ show, onClose, onRemoveFavourite, favouriteEvents = [] }) {
 
-  const handleRemove = async (eventId) => {
+  const handleRemove = async (eventId, title) => {
     const { error } = await supabase
       .from('favourites')
       .delete()
       .eq('event_id', eventId);
 
     if (!error) {
+      toast.success(`Removed "${title}" from favourites`);
       onRemoveFavourite?.(eventId);
+    } else {
+      toast.error("Failed to remove from favourites")
     }
   };
 
@@ -65,7 +69,7 @@ function FavouritesModal({ show, onClose, onRemoveFavourite, favouriteEvents = [
                       className="text-blue-400 hover:text-blue-300 text-sm font-medium"
                     >View Event</a>
                     <button
-                      onClick={() => handleRemove(event.id)}
+                      onClick={() => handleRemove(event.id, event.title)}
                       className="text-red-400 hover:text-red-300"
                       title="Remove from favourites"
                     ><FontAwesomeIcon icon={faTrash} /></button>
