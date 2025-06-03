@@ -144,6 +144,7 @@ function Home() {
   const indexOfLastEvent = currentPage * EVENTS_PER_PAGE;
   const indexOfFirstEvent = indexOfLastEvent - EVENTS_PER_PAGE;
   const currentEvents = events.slice(indexOfFirstEvent, indexOfLastEvent);
+  const favouriteEventDetails = allEvents.filter(e => favourites.includes(e.id));
 
   const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
 
@@ -216,6 +217,7 @@ function Home() {
         show={showFavourites}
         onClose={() => setShowFavourites(false)}
         favouriteEventIds={favourites}
+        favouriteEvents={favouriteEventDetails}
         onRemoveFavourite={handleRemoveFavourite}
       />
 

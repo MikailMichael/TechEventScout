@@ -1,36 +1,9 @@
-import { useEffect, useState } from "react";
 import { supabase } from "../supabaseClient";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faTrash } from '@fortawesome/free-solid-svg-icons';
 import tagColours from '../utils/tagColours';
 
-function FavouritesModal({ show, onClose, favouriteEventIds = [], onRemoveFavourite }) {
-  const [favouritesEvents, setFavouriteEvents] = useState([]);
-
-  useEffect(() => {
-    if (!show || favouriteEventIds.length === 0) {
-      setFavouriteEvents([]);
-      return;
-    }
-
-    const fetchFavouriteEvents = async () => {
-      const { data, error } = await supabase
-        .from('events')
-        .select('*')
-        .in('id', favouriteEventIds);
-
-      if (error) {
-        console.error(`Error fetching favourite events:`, error.message);
-        return;
-      }
-
-      // Sort by event date (expired events will appear first)
-      const sorted = data.sort((a, b) => new Date(a.Date) - new DataTransfer(b.Date));
-      setFavouriteEvents(sorted);
-    };
-
-    fetchFavouriteEvents();
-  }, [show, favouriteEventIds]);
+function FavouritesModal({ show, onClose, onRemoveFavourite, favouriteEvents = [] }) {
 
   const handleRemove = async (eventId) => {
     const { error } = await supabase
@@ -39,7 +12,6 @@ function FavouritesModal({ show, onClose, favouriteEventIds = [], onRemoveFavour
       .eq('event_id', eventId);
 
     if (!error) {
-      setFavouriteEvents(prev => prev.filter(e => e.id !== eventId));
       onRemoveFavourite?.(eventId);
     }
   };
@@ -58,11 +30,11 @@ function FavouritesModal({ show, onClose, favouriteEventIds = [], onRemoveFavour
 
         <h2 className="text-2xl font-bold mb-4">Your Saved Events</h2>
 
-        {favouritesEvents.length === 0 ? (
+        {favouriteEvents.length === 0 ? (
           <p className="text-gray-400">No saved events.</p>
         ) : (
           <div className="space-y-4">
-            {favouritesEvents.map(event => {
+            {favouriteEvents.map(event => {
               const isExpired = new Date(event.date) < new Date();
               return (
                 <div key={event.id} className={`p-4 rounded-lg border relative ${isExpired ? 'bg-neutral-800 border-red-400' : 'bg-neutral-800 border-gray-700'}`}>
