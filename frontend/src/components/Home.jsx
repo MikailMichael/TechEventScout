@@ -101,7 +101,7 @@ function Home() {
     }
   };
 
-  const handleFilter = ({ location, tag }) => {
+  const handleFilter = ({ location, tags }) => {
     let filtered = [...allEvents];
 
     if (location) {
@@ -110,10 +110,15 @@ function Home() {
       );
     }
 
-    if (tag) {
-      filtered = filtered.filter(event =>
-        event.tags.map(t => t.toLowerCase()).includes(tag.toLowerCase())
-      );
+    console.log(tags);
+
+    if (tags && tags.length > 0) {
+      filtered = filtered.filter(event => {
+        const eventTags = event.tags.map(t => {
+          t.toLowerCase();
+      });
+        return tags.some(tag => eventTags.includes(tag.toLowerCase()));
+      });
     }
     setEvents(filtered);
     setCurrentPage(1);
