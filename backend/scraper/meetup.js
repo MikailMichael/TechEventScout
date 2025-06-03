@@ -96,7 +96,7 @@ async function scrapeCore(pageCount) {
       const rawTags = await eventPage.$$eval('.tag--topic', el =>
         el.map(tag => tag.innerText.trim())).catch(() => ["Tech"]);
         
-      const tags = processTags(rawTags);
+      const tags = processTags(rawTags, title, description);
 
       const img = await eventPage.$eval('picture[data-testid="event-description-image"] img', img => img.getAttribute('src')).catch(() => null);
       if(!img) log(`No image found on event page: ${url.match(/\/events\/(\d+)/)?.[1]}`);

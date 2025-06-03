@@ -84,8 +84,8 @@ module.exports = async function scrapeEventbrite(pageCount = 2) {
     date: evt.start_date,
     time: evt.start_time,
     location: evt.primary_venue?.address?.localized_address_display || "London",
-    tags: processTags(evt.tags.map(tag => tag.display_name)),
+    tags: processTags(evt.tags.map(tag => tag.display_name), evt.name, evt.summary),
     link: evt.url,
-    img: evt.image.url
+    img: evt?.image?.url
   }));
 }
