@@ -69,18 +69,18 @@ function FilterModal({ show, onClose, locations, tags, onFilter }) {
         {/* Toggle Switch */}
         <div className='flex items-center gap-2 mb-4'>
           <label className='text-neutral-900 font-semibold'>Match All Tags</label>
-          <label className='inline-flex items-center cursor-pointer'>
+          <label className='inline-flex items-center cursor-pointer relative'>
             <input
               type='checkbox'
-              className='sr-only-peer'
+              className='sr-only peer'
               checked={matchAllTags}
               onChange={() => setMatchAllTags(prev => !prev)}
             />
-            <div className='w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-neutral-700 relative transition-colors'>
-              <div className='absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow transform peer-checked:translate-x-5 transition-transform'></div>
-            </div>
+            
+            <div className='w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-neutral-700 relative transition-colors'></div>
+            <div className='absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow transform transition-transform peer-checked:translate-x-5'></div>
 
-            <span className="text-sm text-neutral-600 italic">
+            <span className="ml-2 text-sm text-neutral-600 italic">
               {matchAllTags ? 'Filtering: All tags must match' : 'Filtering: Any tag can match'}
             </span>
           </label>
