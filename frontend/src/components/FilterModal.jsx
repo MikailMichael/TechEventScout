@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import tagColours from "../utils/tagColours";
 
 function FilterModal({ show, onClose, locations, tags, onFilter }) {
   const [selectedLocation, setSelectedLocation] = useState('');
@@ -89,11 +90,11 @@ function FilterModal({ show, onClose, locations, tags, onFilter }) {
         {selectedTags.length > 0 && (
           <div className='mb-4 flex flex-wrap gap-2'>
             {selectedTags.map((tag, index) => (
-              <span key={index} className='bg-neutral-300 text-neutral-900 text-sm px-2 py-1 rounded-full flex items-center gap-2'>
+              <span key={index} className={`text-sm px-3 py-1 rounded-full font-medium ${tagColours[tag.trim()] || 'bg-zinc-700 text-zinc-200'}`}>
                 {tag}
                 <button
                   onClick={() => removeTag(tag)}
-                  className='text-neuitral-700 hover:text-neutral-900 text-xs'
+                  className='text-gray-300 hover:text-gray-100 text-xs px-1'
                 >
                   &times;
                 </button>
