@@ -126,7 +126,7 @@ export default function Auth({ onAuthSuccess }) {
               <button
                 type="button"
                 onClick={() => setIsLogin(!isLogin)}
-                className="w-full text-sm text-gray-100 border bg-neutral-800 border-neutral-400 underline hover:ring-1 transition text-center"
+                className="w-full text-sm py-2 px-4 text-gray-100 border bg-neutral-800 border-neutral-400 underline hover:ring-1 transition text-center"
               >
                 {isLogin ? 'Need an account? Sign up' : 'Have an account? Login'}
               </button>
