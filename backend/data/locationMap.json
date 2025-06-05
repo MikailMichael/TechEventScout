@@ -1,0 +1,57 @@
+[
+  {
+    "zone": "Central",
+    "postcodes": ["WC1", "WC2", "W1", "W2"],
+    "locations": ["Russell Square", "Soho", "Holborn", "Fitzrovia", "Oxford Street", "Marylebone"]
+  },
+  {
+    "zone": "City",
+    "postcodes": ["EC1", "EC2", "EC3", "EC4"],
+    "locations": ["City of London", "Lothbury", "Bishopsgate", "Old Broad Street", "Moorgate", "Bank"]
+  },
+  {
+    "zone": "East",
+    "postcodes": ["E1", "E2", "E3", "E8", "E9", "E14", "E16"],
+    "locations": ["Canary Wharf", "Bethnal Green", "Hackney", "Bow", "Stratford", "Tabernacle Street", "Shoreditch"]
+  },
+  {
+    "zone": "South East",
+    "postcodes": ["SE1", "SE5", "SE6", "SE10", "SE13", "SE15", "SE16", "SE17"],
+    "locations": ["London Bridge", "Peckham", "Deptford", "New Cross", "Tooley Street", "Greenwich"]
+  },
+  {
+    "zone": "South West",
+    "postcodes": ["SW1", "SW3", "SW4", "SW5", "SW6", "SW7", "SW8", "SW11"],
+    "locations": ["Fulham", "Chelsea", "South Kensington", "Brompton", "Battersea", "Clapham"]
+  },
+  {
+    "zone": "West",
+    "postcodes": ["W4", "W8", "W11", "W12", "W14"],
+    "locations": ["Hammersmith", "Chiswick", "Shepherd's Bush", "Notting Hill", "Goldhawk Road"]
+  },
+  {
+    "zone": "North",
+    "postcodes": ["N1", "N5", "N7", "N12", "N16"],
+    "locations": ["Islington", "Highbury", "Highgate", "Finsbury Park"]
+  },
+  {
+    "zone": "North West",
+    "postcodes": ["NW1", "NW3", "NW5", "NW6"],
+    "locations": ["Camden", "Regent's Park", "Hampstead", "Kentish Town"]
+  },
+  {
+    "zone": "Greater London",
+    "postcodes": ["IG1", "IG11", "BR", "CR", "E18"],
+    "locations": ["Ilford", "Barking", "Croydon", "Bromley", "Romford"]
+  },
+  {
+    "zone": "Online",
+    "postcodes": ["ONLINE"],
+    "locations": ["Online"]
+  },
+  {
+    "zone": "London",
+    "postcodes": [],
+    "locations": []
+  }
+]
