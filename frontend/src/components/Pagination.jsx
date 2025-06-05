@@ -6,7 +6,7 @@ function Pagination({ totalPages, currentPage, setCurrentPage }) {
     return (
         <div className='flex justify-center gap-2 mt-8'>
           {Array.from({ length: totalPages }, (_, i) => (
-            <button key={i} className={`text-gray-100 font-bold rounded-md border border-gray-100 focus:outline-none focus:ring-2 hover:ring-1 transition disabled:opacity-50 ${currentPage === i + 1
+            <button key={i} className={`text-gray-100 px-4 py-2 font-bold rounded-md border border-gray-100 focus:outline-none focus:ring-2 hover:ring-1 transition disabled:opacity-50 ${currentPage === i + 1
                 ? 'ring-2 ring-gray-300 bg-neutral-700 text-gray-100'
                 : 'bg-neutral-800 text-gray-200'
               }`}
