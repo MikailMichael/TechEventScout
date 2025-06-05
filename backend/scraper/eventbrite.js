@@ -3,7 +3,7 @@
 
 const { chromium } = require('playwright');
 const axios = require('axios');
-const { log, processTags } = require('./utils');
+const { log, processTags, mapLocation } = require('./utils');
 
 const URL = "https://www.eventbrite.com/d/united-kingdom--london/tech-conferences/";
 
@@ -35,14 +35,14 @@ module.exports = async function scrapeEventbrite(pageCount = 2) {
     );
     eventLinks.push(...linksOnPage);
 
-    await page.goto(`${URL}?page=${i+1}`, {waitUntil: "domcontentloaded"});
+    await page.goto(`${URL}?page=${i + 1}`, { waitUntil: "domcontentloaded" });
   }
 
   await browser.close();
 
   // Extract unique numeric event IDs from URLs (e.g., ...tickets-123456789)
-  const eventIds = Array.from(new Set( 
-    eventLinks.map(link => (link.match(/tickets-(\d+)/) || [])[1]).filter(Boolean) 
+  const eventIds = Array.from(new Set(
+    eventLinks.map(link => (link.match(/tickets-(\d+)/) || [])[1]).filter(Boolean)
   ));
 
   if (!eventIds.length) {
@@ -74,7 +74,7 @@ module.exports = async function scrapeEventbrite(pageCount = 2) {
     } catch (err) {
       log(`❌ Error fetching batch: ${batch} ${err.message}`, "error");
     }
-}
+  }
 
   // Map API responses into simplified event objects
   return allEvents.map(evt => ({
@@ -83,7 +83,7 @@ module.exports = async function scrapeEventbrite(pageCount = 2) {
     description: evt.summary,
     date: evt.start_date,
     time: evt.start_time,
-    location: evt.primary_venue?.address?.localized_address_display || "London",
+    location: mapLocation(evt.primary_venue?.address?.localized_address_display || "London"),
     tags: processTags(evt.tags.map(tag => tag.display_name), evt.name, evt.summary),
     link: evt.url,
     img: evt?.image?.url

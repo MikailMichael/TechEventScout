@@ -5,6 +5,7 @@
 // Example: "Artificial Intelligence" → "AI", "startup_event" → "Startups"
 // Tags not in this map will fall back to capitalized form.
 const tagMap = require('../data/tagMap.json');
+const locationMap = require('../data/locationMap.json');
 const fs = require("fs");
 const supabase = require('../supabaseClient');
 
@@ -165,7 +166,7 @@ function processTags(rawTags, title = "", description = "") {
  */
 async function insertEvents(events) {
   const { error } = await supabase.from('events').upsert(events, { onConflict: 'id' });
- 
+
   if (error) {
     log(`Error inserting events: ${error.message}`, 'error');
   } else {
@@ -189,4 +190,27 @@ function deDuplicateEvents(events) {
   return Array.from(uniqueEventsMap.values());
 }
 
-module.exports = { retry, log, formatDateTime, saveJSON, processTags, insertEvents, deDuplicateEvents };
+function mapLocation(location = "") {
+  const cleaned = location.toUpperCase();
+
+  if (cleaned.includes("ONLINE")) return "Online";
+
+  const postcodeMatch = cleaned.match(/\b([A-Z]{1,2}[0-9][A-Z0-9]?)\b/);
+  const postcodePrefix = postcodeMatch ? postcodeMatch[1] : null;
+
+  if (postcodePrefix) {
+    for (const { zone, postcodes } of locationMap) {
+      if (postcodes.includes(postcodePrefix)) return zone;
+    }
+  }
+
+  for (const { zone, locations } of locationMap) {
+    for (const keyword of locations) {
+      if (cleaned.includes(keyword.toUpperCase())) return zone;
+    }
+  }
+
+  return location;
+}
+
+module.exports = { retry, log, formatDateTime, saveJSON, processTags, insertEvents, deDuplicateEvents, mapLocation };

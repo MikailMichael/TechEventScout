@@ -2,7 +2,7 @@
 // Scraper module for fetching tech-related networking events from Meetup in London.
 
 const { chromium } = require('playwright');
-const { retry, log, formatDateTime, processTags } = require("./utils");
+const { retry, log, formatDateTime, processTags, mapLocation } = require("./utils");
 
 const MEETUPURL = "https://www.meetup.com/find/?location=gb--17--London&source=EVENTS&keywords=tech%20networking";
 
@@ -107,7 +107,7 @@ async function scrapeCore(pageCount) {
         description,
         date: date || null,
         time: time || null,
-        location,
+        location: mapLocation(location),
         tags,
         link: url,
         img
