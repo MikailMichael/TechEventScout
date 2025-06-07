@@ -195,12 +195,14 @@ function mapLocation(location = "") {
 
   if (cleaned.includes("ONLINE")) return "Online";
 
-  const postcodeMatch = cleaned.match(/\b([A-Z]{1,2}[0-9][A-Z0-9]?)\b/);
-  const postcodePrefix = postcodeMatch ? postcodeMatch[1] : null;
+  const postcodeMatch = cleaned.match(/\b([A-Z]{1,2}[0-9][0-9A-Z]?)\s?[0-9][A-Z]{2}\b/);
+  if (postcodeMatch) {
+    const postcodePrefix = postcodeMatch[1];
 
-  if (postcodePrefix) {
     for (const { zone, postcodes } of locationMap) {
-      if (postcodes.includes(postcodePrefix)) return zone;
+      for (const code of postcodes) {
+        if (postcodePrefix.startsWith(code)) return zone;
+      }
     }
   }
 
@@ -210,7 +212,7 @@ function mapLocation(location = "") {
     }
   }
 
-  return location;
+  return "London";
 }
 
 module.exports = { retry, log, formatDateTime, saveJSON, processTags, insertEvents, deDuplicateEvents, mapLocation };
