@@ -59,7 +59,7 @@ function FilterModal({ show, onClose, locations, tags, onFilter }) {
             onChange={handleTagSelect}
             className='w-full border border-neutral-900 rounded px-3 py-2 text-neutral-900'
           >
-            <option value="">All Tags</option>
+            <option value="">Select a tag</option>
             {tags.filter(tag => !selectedTags.includes(tag)).map((tag, i) => (
               <option key={i} value={tag}>{tag}</option>
             ))}
