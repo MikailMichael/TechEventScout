@@ -99,7 +99,7 @@ module.exports = async function scrapeEventbrite(pageCount = 2) {
         log(`⚠️ Unable to parse datetime from: "${datetimeText}"`, "warn");
       }
     } catch (err) {
-      // log(`⚠️ Failed to scrape datetime from ${eventURL}: ${err.message}`, "warn");
+       log(`⚠️ Failed to scrape datetime from ${eventURL}: ${err.message}`, "warn");
     }
 
     enrichedEvents.push({
