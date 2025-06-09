@@ -1,4 +1,6 @@
 // Pagination.jsx
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 function Pagination({ totalPages, currentPage, setCurrentPage }) {
   if (totalPages <= 1) return null;
@@ -46,13 +48,13 @@ function Pagination({ totalPages, currentPage, setCurrentPage }) {
         className="px-3 py-2 text-sm text-gray-300 hover:text-white disabled:opacity-50"
         onClick={() => setCurrentPage(currentPage - 1)}
         disabled={currentPage === 1}
-      >Prev</button>
+      ><FontAwesomeIcon icon={faArrowLeft} /></button>
       {pageNumbers}
       <button
         className="px-3 py-2 text-sm text-gray-300 hover:text-white disabled:opacity-50"
         onClick={() => setCurrentPage(currentPage + 1)}
         disabled={currentPage === totalPages}
-      >Next</button>
+      ><FontAwesomeIcon icon={faArrowRight} /></button>
     </div>
   );
 }
