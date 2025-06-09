@@ -3,7 +3,7 @@
 
 const { chromium } = require('playwright');
 const axios = require('axios');
-const { log, processTags, mapLocation } = require('./utils');
+const { log, processTags, mapLocation, monthMap, parseDatetimeText } = require('./utils');
 
 const URL = "https://www.eventbrite.com/d/united-kingdom--london/tech-conferences/";
 
@@ -80,12 +80,6 @@ module.exports = async function scrapeEventbrite(pageCount = 2) {
   page = await context.newPage();
 
   const enrichedEvents = [];
-  const monthMap = {Jan: "01", Feb: "02", Mar: "03", Apr: "04",
-  May: "05", Jun: "06", Jul: "07", Aug: "08",
-  Sep: "09", Oct: "10", Nov: "11", Dec: "12",
-  January: "01", February: "02", March: "03", April: "04",
-  June: "06", July: "07", August: "08", September: "09",
-  October: "10", November: "11", December: "12"};
 
   for(const evt of allEvents) {
     const eventURL = evt.url;
@@ -95,32 +89,12 @@ module.exports = async function scrapeEventbrite(pageCount = 2) {
     try {
       // log(`Visiting event: ${eventURL}`);
       await page.goto(eventURL, { waitUntil: "domcontentloaded", timeout: 15000 });
-
       const datetimeText = await page.$eval('span.date-info__full-datetime', el => el.textContent.trim());
-      // Format 1: Tue, 10 Jun 2025 18:00
-      const ShortMatch = datetimeText.match(/(\d{1,2}) (\w{3}) (\d{4}) (\d{2}):(\d{2})/);
-      // Format 2: Friday, June 13 · 5:30 - 8:30pm GMT+1
-      const longMatch = datetimeText.match(/(\w+), (\w+) (\d{1,2}) · (\d{1,2})(?::(\d{2}))?\s?(am|pm)?/i);
-      // Format 3: September 30 · 10am - October 1 · 4pm GMT+1
-      const daylessMatch = datetimeText.match(/^([A-Za-z]+) (\d{1,2}) · (\d{1,2})(?::(\d{2}))?(am|pm)?/i);
-      if (ShortMatch) {
-        const [, day, month, year, hour ,minute] = ShortMatch;
-        date = `${year}-${monthMap[month]}-${day.padStart(2, '0')}`;
-        time = `${hour}:${minute}`;
-      } else if (longMatch) {
-        const [, , monthName, day, hour, minute = "00", period = "am"] = longMatch;
-        let hour24 = parseInt(hour, 10);
-        if (period.toLowerCase() === "pm" && hour24 !== 12) hour24 += 12;
-        if (period.toLowerCase() === "am" && hour24 === 12) hour24 = 0;
-        date = `2025-${monthMap[monthName]}-${day.padStart(2, '0')}`;
-        time = `${hour24.toString().padStart(2, '0')}:${minute}`;
-      } else if (daylessMatch) {
-        const [, monthName, day, hour, minute = "00", period = "am"] = daylessMatch;
-        let hour24 = parseInt(hour, 10);
-        if (period.toLowerCase() === "pm" && hour24 !== 12) hour24 += 12;
-        if (period.toLowerCase() === "am" && hour24 === 12) hour24 = 0;
-        date = `2025-${monthMap[monthName]}-${day.padStart(2, '0')}`;
-        time = `${hour24.toString().padStart(2, '0')}:${minute}`;
+
+      const parsed = parseDatetimeText(datetimeText);
+      if (parsed) {
+        date = parsed.date;
+        time = parsed.time;
       } else {
         log(`⚠️ Unable to parse datetime from: "${datetimeText}"`, "warn");
       }
