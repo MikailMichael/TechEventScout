@@ -5,7 +5,7 @@ import useBreakpoint from '../hooks/useBreakpoint';
 
 function Pagination({ totalPages, currentPage, setCurrentPage }) {
   const breakpoint = useBreakpoint();
-  const maxVisibleButtons = breakpoint === 'sm' || breakpoint === 'md' ? 4 : 8;
+  const maxVisibleButtons = breakpoint === 'sm' || breakpoint === 'md' ? 4 : 9;
 
   if (totalPages <= 1) return null;
 
