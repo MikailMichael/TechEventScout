@@ -1,11 +1,14 @@
 // Pagination.jsx
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import useBreakpoint from '../hooks/useBreakpoint';
 
 function Pagination({ totalPages, currentPage, setCurrentPage }) {
+  const breakpoint = useBreakpoint();
+  const maxVisibleButtons = breakpoint === 'sm' || breakpoint === 'md' ? 4 : 8;
+
   if (totalPages <= 1) return null;
 
-  const maxVisibleButtons = window.innerWidth < 1080 ? 4 : 8;
   const pageNumbers = [];
   const sideButtons = Math.floor(maxVisibleButtons / 2);
 
