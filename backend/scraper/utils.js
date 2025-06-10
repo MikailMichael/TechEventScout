@@ -136,7 +136,7 @@ function deDuplicateTags(tags) {
 function processTags(rawTags, title = "", description = "") {
   const cleanedInput = rawTags.filter(tag => typeof tag === "string" && tag.trim()); // Remove nulls, undefined, and empty strings
   const normalized = deDuplicateTags(cleanedInput);
-  const canonicalized = normalized.map(tag => tagMap[tag]/* || "Other"*/);
+  const canonicalized = normalized.map(tag => tagMap[tag]/* || "Other"*/).filter(tag => tag != null);
 
   const tagSet = new Set(canonicalized);
   const content = `${title} ${description}`.toLowerCase();
@@ -148,13 +148,7 @@ function processTags(rawTags, title = "", description = "") {
     }
   }
 
-  const sorted = Array.from(tagSet).sort((a, b) => {
-    if (a === "Other") return 1; // push "Other down"
-    if (b === "Other") return -1; // bring other tags up
-    return 0;
-  });
-
-  return sorted;
+  return Array.from(tagSet);
 }
 
 /**
