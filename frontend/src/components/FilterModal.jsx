@@ -1,10 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import tagColours from "../utils/tagColours";
 
-function FilterModal({ show, onClose, locations, tags, onFilter }) {
+function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation, currentTags, activeMatchAll }) {
   const [selectedLocation, setSelectedLocation] = useState('');
   const [selectedTags, setSelectedTags] = useState([]);
   const [matchAllTags, setMatchAllTags] = useState(false);
+
+  // When modal opens, sync to current filter state
+  useEffect(() => {
+    if (show) {
+      setSelectedLocation(currentLocation || '');
+      setSelectedTags(currentTags || []);
+      setMatchAllTags(activeMatchAll || false);
+    }
+  }, [show, currentLocation, currentTags, activeMatchAll])
 
   const handleTagSelect = (e) => {
     const newTag = e.target.value;

@@ -25,6 +25,9 @@ function Home() {
   const [user, setUser] = useState(null);
   const [favourites, setFavourites] = useState([]);
   const [showFavourites, setShowFavourites] = useState(false);
+  const [currentLocation, setCurrentLocation] = useState('');
+  const [currentTags, setCurrentTags] = useState([]);
+  const [activeMatchAll, setActiveMatchAll] = useState(false);
   const navigate = useNavigate();
   const EVENTS_PER_PAGE = 10;
 
@@ -102,6 +105,9 @@ function Home() {
   };
 
   const handleFilter = ({ location, tags, matchAll }) => {
+    setCurrentLocation(location);
+    setCurrentTags(tags);
+    setActiveMatchAll(matchAll);
     let filtered = [...allEvents];
 
     if (location) {
@@ -222,6 +228,9 @@ function Home() {
         locations={allLocations}
         tags={allTags}
         onFilter={handleFilter}
+        currentLocation={currentLocation}
+        currentTags={currentTags}
+        activeMatchAll={activeMatchAll}
       />
 
       {/* Favourites Modal */}
