@@ -33,15 +33,12 @@ function Home() {
   const navigate = useNavigate();
   const EVENTS_PER_PAGE = 10;
 
-  useHighlight(searchTerm && highlightReady ? searchTerm : '', '.grid'); // Only highlights inside cards
+  useHighlight(highlightReady ? searchTerm : '', '.grid');
 
   useEffect(() => {
-    const timeout = setTimeout(() => setHighlightReady(true), 0);
-    return () => {
-      clearTimeout(timeout);
-      setHighlightReady(false);
-    };
-  }, [events]);
+  // Reset ready state when page changes so useHighlight doesn't fire early
+  setHighlightReady(false);
+}, [currentPage]);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -205,6 +202,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
+            onAnimationComplete={() => setHighlightReady(true)}
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 mt-6'>
             {currentEvents.length > 0 ? (
               currentEvents.map((event, idx) => (
