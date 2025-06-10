@@ -148,6 +148,10 @@ function processTags(rawTags, title = "", description = "") {
     }
   }
 
+  if (tagSet.size === 0) {
+    tagSet.add("Other");
+  }
+
   return Array.from(tagSet);
 }
 
