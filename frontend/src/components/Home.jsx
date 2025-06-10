@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { supabase } from '../supabaseClient';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
@@ -28,6 +28,7 @@ function Home() {
   const [currentLocation, setCurrentLocation] = useState('');
   const [currentTags, setCurrentTags] = useState([]);
   const [activeMatchAll, setActiveMatchAll] = useState(false);
+  const prevUserIdRef = useRef(null);
   const navigate = useNavigate();
   const EVENTS_PER_PAGE = 10;
 
@@ -49,7 +50,9 @@ function Home() {
 
   // Fetch only after a user is known
   useEffect(() => {
-    if (!user) return;
+    if (!user || prevUserIdRef.current === user.id) return;
+
+    prevUserIdRef.current = user.id;
 
     const fetchEvents = async () => {
       setLoading(true);
