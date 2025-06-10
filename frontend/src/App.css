@@ -8,6 +8,24 @@
   text-align: center;
 }
 
+.highlight {
+  background-color: #facc15;
+  padding: 0.1em 0.2em;
+  border-radius: 0.25em;
+  animation: popIn 0.3s ease forwards;
+  transform-origin: center;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+}
 
 .logo {
   height: 6em;
