@@ -234,7 +234,7 @@ function parseDatetimeText(datetimeText) {
   const ShortMatch = datetimeText.match(/(\d{1,2}) (\w{3}) (\d{4}) (\d{2}):(\d{2})/);
 
   // Format 2: Friday, June 13 · 5:30 - 8:30pm GMT+1
-  const longMatch = datetimeText.match(/(\w+), (\w+) (\d{1,2}) · (\d{1,2})(?::(\d{2}))?\s?(am|pm)?/i);
+  const longMatch = datetimeText.match(/(\w+), (\w+) (\d{1,2}) · (\d{1,2})(?::(\d{2}))?\s?(am|pm)? ?- ?(\d{1,2})(?::(\d{2}))?\s?(am|pm)?/i);
 
   // Format 3: September 30 · 10am - October 1 · 4pm GMT+1
   const daylessMatch = datetimeText.match(/^([A-Za-z]+) (\d{1,2}) · (\d{1,2})(?::(\d{2}))?(am|pm)?/i);
@@ -246,8 +246,16 @@ function parseDatetimeText(datetimeText) {
       time: `${hour}:${minute}`
     };
   } else if (longMatch) {
-    const [, , month, day, hour, minute = "00", period = "am"] = longMatch;
-    return convertTo24HourDate(month, day, hour, minute, period);
+    const [, , month, day, startHour, startMinute = "00", startPeriod, endHour, endMinute = "00", endPeriod] = longMatch;
+    let inferredStartPeriod = startPeriod;
+    if (!inferredStartPeriod) {
+      if (endPeriod) {
+        const startH = parseInt(startHour, 10);
+        const endH = parseInt(endHour, 10);
+        inferredStartPeriod = (startH <= endH) ? endPeriod : "am";
+      } else inferredStartPeriod = "am";
+    }
+    return convertTo24HourDate(month, day, startHour, startMinute, inferredStartPeriod);
   } else if (daylessMatch) {
     const [, month, day, hour, minute = "00", period = "am"] = daylessMatch;
     return convertTo24HourDate(month, day, hour, minute, period);
