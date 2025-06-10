@@ -136,7 +136,7 @@ function deDuplicateTags(tags) {
 function processTags(rawTags, title = "", description = "") {
   const cleanedInput = rawTags.filter(tag => typeof tag === "string" && tag.trim()); // Remove nulls, undefined, and empty strings
   const normalized = deDuplicateTags(cleanedInput);
-  const canonicalized = normalized.map(tag => tagMap[tag] || "Other");
+  const canonicalized = normalized.map(tag => tagMap[tag]/* || "Other"*/);
 
   const tagSet = new Set(canonicalized);
   const content = `${title} ${description}`.toLowerCase();
@@ -230,7 +230,7 @@ function convertTo24HourDate(month, day, hour, minute = "00", period = "am") {
   if (period.toLowerCase() === "am" && hour24 === 12) hour24 = 0;
 
   return {
-    date: `${new Date().getFullYear()}-${monthMap[monthName]}-${day.padStart(2, '0')}`,
+    date: `${new Date().getFullYear()}-${monthMap[month]}-${day.padStart(2, '0')}`,
     time: `${hour24.toString().padStart(2, '0')}:${minute}`
   };
 }
@@ -252,11 +252,11 @@ function parseDatetimeText(datetimeText) {
       time: `${hour}:${minute}`
     };
   } else if (longMatch) {
-    const [, , monthName, day, hour, minute = "00", period = "am"] = longMatch;
-    return convertTo24HourDate(monthName, day, hour, minute, period);
+    const [, , month, day, hour, minute = "00", period = "am"] = longMatch;
+    return convertTo24HourDate(month, day, hour, minute, period);
   } else if (daylessMatch) {
-    const [, monthName, day, hour, minute = "00", period = "am"] = daylessMatch;
-    return convertTo24HourDate(monthName, day, hour, minute, period);
+    const [, month, day, hour, minute = "00", period = "am"] = daylessMatch;
+    return convertTo24HourDate(month, day, hour, minute, period);
   }
 
   return null;
