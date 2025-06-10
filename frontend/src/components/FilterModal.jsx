@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import tagColours from "../utils/tagColours";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRotateLeft } from '@fortawesome/free-solid-svg-icons';
 
 function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation, currentTags, activeMatchAll }) {
   const [selectedLocation, setSelectedLocation] = useState('');
@@ -85,7 +87,7 @@ function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation
               checked={matchAllTags}
               onChange={() => setMatchAllTags(prev => !prev)}
             />
-            
+
             <div className='w-11 h-6 bg-gray-300 rounded-full peer-checked:bg-neutral-700 relative transition-colors'></div>
             <div className='absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow transform transition-transform peer-checked:translate-x-5'></div>
 
@@ -94,6 +96,7 @@ function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation
             </span>
           </label>
         </div>
+
 
         {/* Selected Tags Pills */}
         {selectedTags.length > 0 && (
@@ -111,6 +114,19 @@ function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation
             ))}
           </div>
         )}
+
+          {/* Reset Filters Button */}
+          <button
+            onClick={() => {
+              setSelectedLocation('');
+              setSelectedTags([]);
+              setMatchAllTags(false);
+            }}
+            className='text-sm text-neutral-700 hover:text-black flex items-center gap-2 mb-4'
+          >
+            <FontAwesomeIcon icon={faRotateLeft} />
+            Reset Filters
+          </button>
 
         {/* Apply Button */}
         <button onClick={handleSubmit} className='bg-neutral-700 text-white px-4 py-2 rounded hover:bg-neutral-800 w-full'>Apply Filters</button>
