@@ -50,7 +50,7 @@ function Home() {
 
     const fetchEvents = async () => {
       setLoading(true);
-      const { data, error } = await supabase.from('events').select('*').order('date', { ascending: true });
+      const { data, error } = await supabase.from('events').select('*').order('date', { ascending: true }).order('time', { ascending: true });
       setLoading(false);
 
       if (error) {
