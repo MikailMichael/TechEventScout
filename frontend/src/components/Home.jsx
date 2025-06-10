@@ -28,11 +28,20 @@ function Home() {
   const [currentLocation, setCurrentLocation] = useState('');
   const [currentTags, setCurrentTags] = useState([]);
   const [activeMatchAll, setActiveMatchAll] = useState(false);
+  const [highlightReady, setHighlightReady] = useState(false);
   const prevUserIdRef = useRef(null);
   const navigate = useNavigate();
   const EVENTS_PER_PAGE = 10;
 
-  useHighlight(searchTerm, '.grid'); // Only highlights inside cards
+  useHighlight(searchTerm && highlightReady ? searchTerm : '', '.grid'); // Only highlights inside cards
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setHighlightReady(true), 0);
+    return () => {
+      clearTimeout(timeout);
+      setHighlightReady(false);
+    };
+  }, [events]);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
