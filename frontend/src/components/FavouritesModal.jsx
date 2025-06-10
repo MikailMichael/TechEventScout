@@ -39,7 +39,7 @@ function FavouritesModal({ show, onClose, onRemoveFavourite, favouriteEvents = [
         ) : (
           <div className="space-y-4">
             {favouriteEvents.map(event => {
-              const isExpired = new Date(event.date) < new Date();
+              const isExpired = new Date(`${event.date}T${event.time}`) < new Date();
               return (
                 <div key={event.id} className={`p-4 rounded-lg border relative ${isExpired ? 'bg-neutral-800 border-red-400' : 'bg-neutral-800 border-gray-700'}`}>
                   <h3 className="text-lg font-bold">{event.title}</h3>
