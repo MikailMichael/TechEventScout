@@ -3,6 +3,7 @@ import tagColours from "../utils/tagColours";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotateLeft } from '@fortawesome/free-solid-svg-icons';
 import { toast } from 'react-hot-toast';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation, currentTags, activeMatchAll }) {
   const [selectedLocation, setSelectedLocation] = useState('');
@@ -124,13 +125,23 @@ function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation
         )}
 
         {/* Reset Filters Button */}
-        <button
-          onClick={handleReset}
-          className='text-sm text-neutral-700 hover:text-black flex items-center gap-2 mb-4'
-        >
-          <FontAwesomeIcon icon={faRotateLeft} />
-          Reset Filters
-        </button>
+        {/* Only shows if there are any active filters */}
+        <AnimatePresence>
+          {(selectedLocation || selectedTags.length > 0 || matchAllTags) && (
+            <motion.button
+              key='reset filters'
+              onClick={handleReset}
+              initial={{ opacity: 0, y: -4 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -4 }}
+              transition={{ duration: 0.2 }}
+              className='text-sm text-neutral-700 hover:text-black flex items-center gap-2 mb-4'
+            >
+              <FontAwesomeIcon icon={faRotateLeft} />
+              Reset Filters
+            </motion.button>
+          )}
+        </AnimatePresence>
 
         {/* Apply Button */}
         <button onClick={handleSubmit} className='bg-neutral-700 text-white px-4 py-2 rounded hover:bg-neutral-800 w-full'>Apply Filters</button>
