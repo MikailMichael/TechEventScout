@@ -6,18 +6,24 @@ import Mark from 'mark.js'; // default export from mark.js
 export default function useHighlight(searchTerm, rootSelector = 'body') {
   useEffect(() => {
     const context = document.querySelector(rootSelector); // Finds DOM element to search in
+    if (!context) return;
+
     const instance = new Mark(context); // Creates new mark.js instance tied to the selected DOM element
 
-    instance.unmark({ // Removes all existing highlights in target element (prevent stacking highlights)
-      done: () => { // Callback using the done property, runs once unmarking is finished
-        // Wrap matching text inside a span with class "highlight"
-        if (searchTerm) {
-          instance.mark(searchTerm, {
-            element: "span",
-            className: "highlight"
-          });
+    const timeout = setTimeout(() => {
+      instance.unmark({ // Removes all existing highlights in target element (prevent stacking highlights)
+        done: () => { // Callback using the done property, runs once unmarking is finished
+          // Wrap matching text inside a span with class "highlight"
+          if (searchTerm) {
+            instance.mark(searchTerm, {
+              element: "span",
+              className: "highlight"
+            });
+          }
         }
-      }
-    });
+      });
+    }, 100);
+
+    return () => clearTimeout(timeout);
   }, [searchTerm, rootSelector]); // This tells React to rerun the effect whenever searchTerm or rootSelector Changes
 }
