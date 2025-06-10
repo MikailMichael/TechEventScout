@@ -9,6 +9,7 @@ function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation
   const [selectedLocation, setSelectedLocation] = useState('');
   const [selectedTags, setSelectedTags] = useState([]);
   const [matchAllTags, setMatchAllTags] = useState(false);
+  const [showResetButton, setShowResetButton] = useState(false);
 
   // When modal opens, sync to current filter state
   useEffect(() => {
@@ -18,6 +19,17 @@ function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation
       setMatchAllTags(activeMatchAll || false);
     }
   }, [show, currentLocation, currentTags, activeMatchAll])
+
+  const hasActiveFilters = selectedLocation || selectedTags.length > 0 || matchAllTags;
+
+  useEffect(() => {
+    let timeout;
+
+    if (hasActiveFilters) timeout = setTimeout(() => setShowResetButton(true), 300);
+    else setShowResetButton(false);
+
+    return () => clearTimeout(timeout);
+  }, [hasActiveFilters]);
 
   const handleTagSelect = (e) => {
     const newTag = e.target.value;
@@ -127,7 +139,7 @@ function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation
         {/* Reset Filters Button */}
         {/* Only shows if there are any active filters */}
         <AnimatePresence>
-          {(selectedLocation || selectedTags.length > 0 || matchAllTags) && (
+          {showResetButton && (
             <motion.button
               key='reset filters'
               onClick={handleReset}
