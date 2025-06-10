@@ -32,7 +32,14 @@ function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation
   const handleSubmit = () => {
     onFilter({ location: selectedLocation, tags: selectedTags, matchAll: matchAllTags });
     onClose();
-  }
+  };
+
+  const handleReset = () => {
+    setSelectedLocation('');
+    setSelectedTags([]);
+    setMatchAllTags(false);
+    toast.success(`Reset Filters.`);
+  };
 
   if (!show) return null;
 
@@ -116,19 +123,14 @@ function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation
           </div>
         )}
 
-          {/* Reset Filters Button */}
-          <button
-            onClick={() => {
-              setSelectedLocation('');
-              setSelectedTags([]);
-              setMatchAllTags(false);
-              toast.success(`Reset Filters.`);
-            }}
-            className='text-sm text-neutral-700 hover:text-black flex items-center gap-2 mb-4'
-          >
-            <FontAwesomeIcon icon={faRotateLeft} />
-            Reset Filters
-          </button>
+        {/* Reset Filters Button */}
+        <button
+          onClick={handleReset}
+          className='text-sm text-neutral-700 hover:text-black flex items-center gap-2 mb-4'
+        >
+          <FontAwesomeIcon icon={faRotateLeft} />
+          Reset Filters
+        </button>
 
         {/* Apply Button */}
         <button onClick={handleSubmit} className='bg-neutral-700 text-white px-4 py-2 rounded hover:bg-neutral-800 w-full'>Apply Filters</button>
