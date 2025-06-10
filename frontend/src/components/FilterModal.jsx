@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import tagColours from "../utils/tagColours";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotateLeft } from '@fortawesome/free-solid-svg-icons';
+import { toast } from 'react-hot-toast';
 
 function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation, currentTags, activeMatchAll }) {
   const [selectedLocation, setSelectedLocation] = useState('');
@@ -121,6 +122,7 @@ function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation
               setSelectedLocation('');
               setSelectedTags([]);
               setMatchAllTags(false);
+              toast.success(`Reset Filters.`);
             }}
             className='text-sm text-neutral-700 hover:text-black flex items-center gap-2 mb-4'
           >
