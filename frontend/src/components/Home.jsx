@@ -91,50 +91,49 @@ function Home() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentPage]);
 
-  const handleSearch = (text) => {
-    setSearchTerm(text);
-    if (!text) {
-      setEvents(allEvents);
-    } else {
-      const lower = text.toLowerCase();
-      const filtered = allEvents.filter(event =>
+  useEffect(() => {
+    let filtered = [...allEvents];
+
+    // Apply location filter
+    if (currentLocation) {
+      filtered = filtered.filter(event => 
+        event.location.toLowerCase() === currentLocation.toLowerCase()
+      );
+    }
+
+    // Apply tags filter
+    if (currentTags.length > 0) {
+      filtered = filtered.filter(event => {
+        const eventTags = event.tags.map(t => t.toLowerCase());
+        if (activeMatchAll) {
+          return currentTags.every(tag => eventTags.includes(tag.toLowerCase()));
+        } else {
+          return currentTags.some(tag => eventTags.includes(tag.toLowerCase()));
+        }
+      });
+    }
+
+    // Apply search filter
+    if (searchTerm.trim()) {
+      const lower = searchTerm.toLowerCase();
+      filtered = filtered.filter(event => 
         event.title.toLowerCase().includes(lower) ||
         event.location.toLowerCase().includes(lower) ||
-        event.tags.some(tag => tag.toLowerCase().includes(lower))
+        event.tags.some(tag => tag.toLowerCase().includes(lower)) ||
+        event.date.toLowerCase().includes(lower)
       );
-      setEvents(filtered);
-      setCurrentPage(1);
     }
-  };
+
+    setEvents(filtered);
+    setCurrentPage(1);
+  }, [searchTerm, currentLocation, currentTags, activeMatchAll, allEvents]);
+
+  const handleSearch = (text) => setSearchTerm(text);
 
   const handleFilter = ({ location, tags, matchAll }) => {
     setCurrentLocation(location);
     setCurrentTags(tags);
     setActiveMatchAll(matchAll);
-    let filtered = [...allEvents];
-
-    if (location) {
-      filtered = filtered.filter(event =>
-        event.location.toLowerCase() === location.toLowerCase()
-      );
-    }
-
-    if (tags && tags.length > 0) {
-      filtered = filtered.filter(event => {
-        const eventTags = event.tags.map(t => t.toLowerCase());
-
-        if (matchAll) {
-          // AND logic: must include ALL selected tags
-          return tags.every(tag => eventTags.includes(tag.toLowerCase()));
-        } else {
-          // OR logic: include ANY matching tag
-          return tags.some(tag => eventTags.includes(tag.toLowerCase()));
-        }
-      });
-    }
-
-    setEvents(filtered);
-    setCurrentPage(1);
   };
 
   const handleFavouriteToggle = async (eventId, title) => {
