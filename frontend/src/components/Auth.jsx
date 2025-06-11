@@ -95,7 +95,7 @@ export default function Auth({ onAuthSuccess, onClose }) {
                 setEmail('');
                 setPassword('');
               }}
-              className='w-full text-sm text-gray-100 border bg-neutral-800 border-neutral-400 underline hover:ring-1 transition mt-2 text-center'
+              className='w-full py-2 px-4 text-sm text-gray-100 border bg-neutral-800 border-neutral-400 underline hover:ring-1 transition mt-2 text-center'
             >Back to Login</button>
           </form>
         ) : (
