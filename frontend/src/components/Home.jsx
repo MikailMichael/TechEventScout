@@ -191,10 +191,14 @@ function Home() {
   };
 
   const handleFavouritesButton = () => {
-    setPendingAction({ type: 'favourite-modal' });
-    toast("Login or sign up to save favourites!", { icon: "🔐" });
-    if (!user) setShowAuthModal(true);
-    else setShowFavourites(true);
+    if (!user) {
+      setPendingAction({ type: 'favourite-modal' });
+      toast("Login or sign up to save favourites!", { icon: "🔐" });
+      setShowAuthModal(true);
+      return;
+    }
+    
+    setShowFavourites(true);
   };
 
   const handleLogOut = async () => {
