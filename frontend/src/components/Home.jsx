@@ -145,6 +145,7 @@ function Home() {
 
   const handleFavouriteToggle = async (eventId, title) => {
     if (!user) {
+      toast("Login or sign up to save favourites!", { icon: "🔐" });
       setShowAuthModal(true);
       return;
     }
@@ -177,6 +178,7 @@ function Home() {
   };
 
   const handleFavouritesButton = () => {
+    toast("Login or sign up to save favourites!", { icon: "🔐" });
     if (!user) setShowAuthModal(true);
     else setShowFavourites(true);
   };
