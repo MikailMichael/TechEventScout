@@ -9,10 +9,9 @@
 }
 
 .highlight {
-  display: inline-block;
   background-color: #facc15;
-  padding: 0.1em 0.3em;
-  border-radius: 0.3em;
+  padding: 0.1em 0.1em;
+  border-radius: 0.25em;
   animation: popIn 0.3s ease forwards;
   transform-origin: center;
   transition: all 0.2s ease;
@@ -72,8 +71,3 @@
   color: #888;
 }
 
-.highlight {
-  background-color: orange;
-  padding: 0 2px;
-  border-radius: 2px;
-}
