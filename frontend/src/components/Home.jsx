@@ -30,6 +30,7 @@ function Home() {
   const [activeMatchAll, setActiveMatchAll] = useState(false);
   const [highlightReady, setHighlightReady] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const [pendingAction, setPendingAction] = useState(null);
   const prevUserIdRef = useRef(null);
   const navigate = useNavigate();
   const EVENTS_PER_PAGE = 10;
@@ -135,6 +136,13 @@ function Home() {
     setCurrentPage(1);
   }, [searchTerm, currentLocation, currentTags, activeMatchAll, allEvents]);
 
+  useEffect(() => {
+    if (user && pendingAction?.type === 'favourite') {
+      handleFavouriteToggle(pendingAction.eventId, pendingAction.title);
+      setPendingAction(null);
+    }
+  }, [user, pendingAction]);
+
   const handleSearch = (text) => setSearchTerm(text);
 
   const handleFilter = ({ location, tags, matchAll }) => {
@@ -145,6 +153,7 @@ function Home() {
 
   const handleFavouriteToggle = async (eventId, title) => {
     if (!user) {
+      setPendingAction({ type: 'favourite', eventId, title });
       toast("Login or sign up to save favourites!", { icon: "🔐" });
       setShowAuthModal(true);
       return;
@@ -174,7 +183,8 @@ function Home() {
   const handleAuth = async () => {
     setShowAuthModal(false);
     const { data } = await supabase.auth.getSession();
-    setUser(data?.session?.user || null);
+    const loggedInUser = data?.session?.user || null;
+    setUser(loggedInUser);
   };
 
   const handleFavouritesButton = () => {
