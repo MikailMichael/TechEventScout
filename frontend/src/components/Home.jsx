@@ -29,6 +29,7 @@ function Home() {
   const [currentTags, setCurrentTags] = useState([]);
   const [activeMatchAll, setActiveMatchAll] = useState(false);
   const [highlightReady, setHighlightReady] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
   const prevUserIdRef = useRef(null);
   const navigate = useNavigate();
   const EVENTS_PER_PAGE = 10;
@@ -36,9 +37,9 @@ function Home() {
   useHighlight(highlightReady ? searchTerm : '', '.grid');
 
   useEffect(() => {
-  // Reset ready state when page changes so useHighlight doesn't fire early
-  setHighlightReady(false);
-}, [currentPage]);
+    // Reset ready state when page changes so useHighlight doesn't fire early
+    setHighlightReady(false);
+  }, [currentPage]);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -56,9 +57,9 @@ function Home() {
 
   // Fetch only after a user is known
   useEffect(() => {
-    if (!user || prevUserIdRef.current === user.id) return;
+    if (user && prevUserIdRef.current === user.id) return;
 
-    prevUserIdRef.current = user.id;
+    prevUserIdRef.current = user?.id ?? "anonymous";
 
     const fetchEvents = async () => {
       setLoading(true);
@@ -102,7 +103,7 @@ function Home() {
 
     // Apply location filter
     if (currentLocation) {
-      filtered = filtered.filter(event => 
+      filtered = filtered.filter(event =>
         event.location.toLowerCase() === currentLocation.toLowerCase()
       );
     }
@@ -122,7 +123,7 @@ function Home() {
     // Apply search filter
     if (searchTerm.trim()) {
       const lower = searchTerm.toLowerCase();
-      filtered = filtered.filter(event => 
+      filtered = filtered.filter(event =>
         event.title.toLowerCase().includes(lower) ||
         event.location.toLowerCase().includes(lower) ||
         event.tags.some(tag => tag.toLowerCase().includes(lower)) ||
@@ -143,6 +144,11 @@ function Home() {
   };
 
   const handleFavouriteToggle = async (eventId, title) => {
+    if (!user) {
+      setShowAuthModal(true);
+      return;
+    }
+
     if (favourites.includes(eventId)) {
       await supabase
         .from('favourites')
@@ -164,6 +170,17 @@ function Home() {
     setFavourites(prev => prev.filter(id => id !== eventId));
   };
 
+  const handleAuth = async () => {
+    setShowAuthModal(false);
+    const { data } = await supabase.auth.getSession();
+    setUser(data?.session?.user || null);
+  };
+
+  const handleFavouritesButton = () => {
+    if (!user) setShowAuthModal(true);
+    else setShowFavourites(true);
+  };
+
   const allLocations = [...new Set(allEvents.map(e => e.location))];
   const allTags = [...new Set(allEvents.flatMap(e => e.tags))];
 
@@ -173,10 +190,11 @@ function Home() {
   const favouriteEventDetails = allEvents.filter(e => favourites.includes(e.id));
 
   const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
-
+  /*
   if (!user) {
     return <Auth onAuthSuccess={() => navigate('/')} />;
-  }
+  } 
+  */
 
   return (
     <div className='p-6 bg-neutral-900 mx-10'>
@@ -185,7 +203,7 @@ function Home() {
         <div className="flex items-center gap-4 justify-center">
           <SearchBar onSearch={handleSearch} />
           <FilterButton onClick={() => setShowModal(true)} />
-          <FavoritesButton onClick={() => setShowFavourites(true)} />
+          <FavoritesButton onClick={handleFavouritesButton} />
           <button onClick={() => supabase.auth.signOut()} className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'>Log out</button>
         </div>
       </div>
@@ -250,6 +268,11 @@ function Home() {
         favouriteEvents={favouriteEventDetails}
         onRemoveFavourite={handleRemoveFavourite}
       />
+
+      {/* Auth Modal */}
+      {showAuthModal && (
+        <Auth onAuthSuccess={handleAuth} onClose={() => setShowAuthModal(false)} />
+      )}
 
     </div>
   )
