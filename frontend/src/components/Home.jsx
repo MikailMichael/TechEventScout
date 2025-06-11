@@ -140,6 +140,9 @@ function Home() {
     if (user && pendingAction?.type === 'favourite') {
       handleFavouriteToggle(pendingAction.eventId, pendingAction.title);
       setPendingAction(null);
+    } else if (user && pendingAction?.type === 'favourite-modal') {
+      setShowFavourites(true);
+      setPendingAction(null);
     }
   }, [user, pendingAction]);
 
@@ -188,6 +191,7 @@ function Home() {
   };
 
   const handleFavouritesButton = () => {
+    setPendingAction({ type: 'favourite-modal' });
     toast("Login or sign up to save favourites!", { icon: "🔐" });
     if (!user) setShowAuthModal(true);
     else setShowFavourites(true);
