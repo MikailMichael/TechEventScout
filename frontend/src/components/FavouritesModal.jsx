@@ -24,8 +24,8 @@ function FavouritesModal({ show, onClose, onRemoveFavourite, favouriteEvents = [
   if (!supabase.auth.getUser()) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75">
-      <div className="bg-neutral-900 text-gray-100 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-xl p-6 relative shadow-xl border border-gray-700">
+    <div onClick={onClose} className="fixed inset-0 z-50 flex items-center justify-center bg-black/75">
+      <div onClick={(e) => e.stopPropagation()} className="bg-neutral-900 text-gray-100 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-xl p-6 relative shadow-xl border border-gray-700">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-300 hover:text-white"

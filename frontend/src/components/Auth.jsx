@@ -64,8 +64,8 @@ export default function Auth({ onAuthSuccess, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center">
-      <div className="w-full max-w-sm bg-neutral-900 border border-neutral-400 rounded-xl p-6 space-y-6 text-gray-100 relative">
+    <div onClick={onClose} className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center">
+      <div onClick={(e) => e.stopPropagation()} className="w-full max-w-sm bg-neutral-900 border border-neutral-400 rounded-xl p-6 space-y-6 text-gray-100 relative">
         <button onClick={onClose} className='absolute top-4 right-4 text-gray-300 hover:text-white'>
           <FontAwesomeIcon icon={faXmark} size="lg" /> 
         </button>

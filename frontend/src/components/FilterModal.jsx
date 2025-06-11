@@ -57,8 +57,8 @@ function FilterModal({ show, onClose, locations, tags, onFilter, currentLocation
   if (!show) return null;
 
   return (
-    <div className='fixed inset-0 bg-black/75 z-50 flex items-center justify-center'>
-      <div className='bg-gray-100 p-6 rounded-lg w-[90%] max-w-md shadow-lg relative'>
+    <div onClick={onClose} className='fixed inset-0 bg-black/75 z-50 flex items-center justify-center'>
+      <div onClick={(e) => e.stopPropagation()} className='bg-gray-100 p-6 rounded-lg w-[90%] max-w-md shadow-lg relative'>
         <button
           className='absolute top-2 right-2 text-neutral-900 hover:text-black'
           onClick={onClose}
