@@ -183,6 +183,13 @@ function Home() {
     else setShowFavourites(true);
   };
 
+  const handleLogOut = () => {
+    const toastId = toast.loading("Logging out...");
+    supabase.auth.signOut();
+    toast.dismiss(toastId);
+    toast.success("Logged out successfully");
+  }
+
   const allLocations = [...new Set(allEvents.map(e => e.location))];
   const allTags = [...new Set(allEvents.flatMap(e => e.tags))];
 
@@ -206,7 +213,7 @@ function Home() {
           <SearchBar onSearch={handleSearch} />
           <FilterButton onClick={() => setShowModal(true)} />
           <FavoritesButton onClick={handleFavouritesButton} />
-          <button onClick={() => supabase.auth.signOut()} className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'>Log out</button>
+          <button onClick={handleLogOut} className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'>Log out</button>
         </div>
       </div>
 
