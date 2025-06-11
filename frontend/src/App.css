@@ -9,11 +9,20 @@
 }
 
 .highlight {
+  display: inline-block;
   background-color: #facc15;
-  padding: 0.1em 0.2em;
-  border-radius: 0.25em;
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
   animation: popIn 0.3s ease forwards;
   transform-origin: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.highlight:hover {
+  background-color: #fbbf24;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
 }
 
 @keyframes popIn {
