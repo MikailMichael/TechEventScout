@@ -186,6 +186,8 @@ function Home() {
   const handleLogOut = async () => {
     const toastId = toast.loading("Logging out...");
     await supabase.auth.signOut();
+    setUser(null);
+    setFavourites([]);
     toast.dismiss(toastId);
     toast.success("Logged out successfully");
   };
