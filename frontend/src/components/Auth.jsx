@@ -3,8 +3,9 @@ import { supabase } from '../supabaseClient';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
 import toast from 'react-hot-toast';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
-export default function Auth({ onAuthSuccess }) {
+export default function Auth({ onAuthSuccess, onClose }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLogin, setIsLogin] = useState(true);
@@ -63,8 +64,11 @@ export default function Auth({ onAuthSuccess }) {
   };
 
   return (
-    <div className="min-h-screen min-w-screen flex items-center justify-center bg-neutral-900 px-4">
-      <div className="w-full max-w-sm bg-neutral-800 border border-neutral-400 rounded-2xl p-6 space-y-6">
+    <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center">
+      <div className="w-full max-w-sm bg-neutral-900 border border-neutral-400 rounded-xl p-6 space-y-6 text-gray-100 relative">
+        <button onClick={onClose} className='absolute top-4 right-4 text-gray-300 hover:text-white'>
+          <FontAwesomeIcon icon={faXmark} size="lg" /> 
+        </button>
         <h2 className="text-2xl font-bold text-gray-100 text-center">
           {isLogin ? 'Login' : 'Sign Up'}
         </h2>
