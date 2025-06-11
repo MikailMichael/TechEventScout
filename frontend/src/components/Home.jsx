@@ -183,12 +183,17 @@ function Home() {
     else setShowFavourites(true);
   };
 
-  const handleLogOut = () => {
+  const handleLogOut = async () => {
     const toastId = toast.loading("Logging out...");
-    supabase.auth.signOut();
+    await supabase.auth.signOut();
     toast.dismiss(toastId);
     toast.success("Logged out successfully");
-  }
+  };
+
+  const handleShowAuth = () => {
+    toast("Create an account to save your favourites!", { icon: "🔐" });
+    setShowAuthModal(true);
+  };
 
   const allLocations = [...new Set(allEvents.map(e => e.location))];
   const allTags = [...new Set(allEvents.flatMap(e => e.tags))];
@@ -199,11 +204,6 @@ function Home() {
   const favouriteEventDetails = allEvents.filter(e => favourites.includes(e.id));
 
   const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
-  /*
-  if (!user) {
-    return <Auth onAuthSuccess={() => navigate('/')} />;
-  } 
-  */
 
   return (
     <div className='p-6 bg-neutral-900 mx-10'>
@@ -213,7 +213,11 @@ function Home() {
           <SearchBar onSearch={handleSearch} />
           <FilterButton onClick={() => setShowModal(true)} />
           <FavoritesButton onClick={handleFavouritesButton} />
-          <button onClick={handleLogOut} className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'>Log out</button>
+          {user ? (
+            <button onClick={handleLogOut} className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'>Log out</button>
+          ) : (
+            <button onClick={handleShowAuth} className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'>Login / Sign up</button>
+          )}
         </div>
       </div>
 
