@@ -31,6 +31,7 @@ function Home() {
   const [highlightReady, setHighlightReady] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [pendingAction, setPendingAction] = useState(null);
+  const [showExpired, setShowExpired] = useState(false);
   const prevUserIdRef = useRef(null);
   const navigate = useNavigate();
   const EVENTS_PER_PAGE = 10;
@@ -64,14 +65,37 @@ function Home() {
 
     const fetchEvents = async () => {
       setLoading(true);
+
+      // Check localStorage for cache
+      const cached = localStorage.getItem("cachedEvents");
+      const cachedTime = localStorage.getItem("cachedEventsTimestamp");
+
+      if (cached && cachedTime) {
+        const ageInMinutes = (Date.now() - parseInt(cachedTime)) / 60000;
+
+        if (ageInMinutes < 60) {
+          // Use cached data if under 60 mins old
+          const events = JSON.parse(cached);
+          setEvents(events);
+          setAllEvents(events);
+          setLoading(false);
+          return;
+        }
+      }
+
+      // Fetch from Supabase if no fresh cache
+
       const { data, error } = await supabase.from('events').select('*').order('date', { ascending: true }).order('time', { ascending: true });
       setLoading(false);
 
       if (error) {
         console.error("Error fetching events:", error.message);
       } else {
+        // Save to state and localStorage
         setEvents(data);
         setAllEvents(data);
+        localStorage.setItem("cachedEvents", JSON.stringify(data));
+        localStorage.setItem("cachedEventsTimestamp", Date.now().toString());
       }
     };
 
@@ -132,9 +156,12 @@ function Home() {
       );
     }
 
+    // Apply data filter
+    if (!showExpired) filtered = filtered.filter(event => new Date(`${event.date}T${event.time}`) >= new Date());
+
     setEvents(filtered);
     setCurrentPage(1);
-  }, [searchTerm, currentLocation, currentTags, activeMatchAll, allEvents]);
+  }, [searchTerm, currentLocation, currentTags, activeMatchAll, allEvents, showExpired]);
 
   useEffect(() => {
     if (user && pendingAction?.type === 'favourite') {
@@ -197,7 +224,7 @@ function Home() {
       setShowAuthModal(true);
       return;
     }
-    
+
     setShowFavourites(true);
   };
 
@@ -238,6 +265,10 @@ function Home() {
           ) : (
             <button onClick={handleShowAuth} className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'>Login / Sign up</button>
           )}
+          <button
+            onClick={() => setShowExpired(prev => !prev)}
+            className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'
+          >{showExpired ? 'Hide Past Events' : 'Show Past Events'}</button>
         </div>
       </div>
 
