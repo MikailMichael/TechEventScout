@@ -11,6 +11,7 @@ import FavoritesButton from './FavoritesButton';
 import FilterModal from './FilterModal';
 import Pagination from './Pagination';
 import Auth from './Auth';
+import Header from './Header';
 import FavouritesModal from './FavouritesModal';
 import { toast } from 'react-hot-toast';
 
@@ -272,24 +273,15 @@ function Home() {
   const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
 
   return (
-    <div className='p-6 bg-neutral-900 mx-10'>
-      <div id='banner' className='flex flex-col h-auto mb-4 border-b border-gray-100 py-4 lg:py-0 lg:h-[100px] lg:flex-row lg:items-center lg:justify-between lg:gap-4'>
-        <h1 className='text-3xl font-bold mb-4 truncate text-gray-100'>London Tech Events</h1>
-        <div className="flex items-center gap-4 justify-center">
-          <SearchBar onSearch={handleSearch} />
-          <FilterButton onClick={() => setShowModal(true)} />
-          <FavoritesButton onClick={handleFavouritesButton} />
-          {user ? (
-            <button onClick={handleLogOut} className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'>Log out</button>
-          ) : (
-            <button onClick={handleShowAuth} className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'>Login / Sign up</button>
-          )}
-          <button
-            onClick={() => setShowExpired(prev => !prev)}
-            className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'
-          >{showExpired ? 'Hide Past Events' : 'Show Past Events'}</button>
-        </div>
-      </div>
+    <div className='bg-[#0A0A0A]'>
+      <Header user={user} onLogOut={handleLogOut} onShowAuth={handleShowAuth} showFavourites={handleFavouritesButton} />
+      <SearchBar onSearch={handleSearch} />
+      <FilterButton onClick={() => setShowModal(true)} />
+
+      <button
+        onClick={() => setShowExpired(prev => !prev)}
+        className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'
+      >{showExpired ? 'Hide Past Events' : 'Show Past Events'}</button>
 
       {loading ? (
         <div className='spinner-container flex justify-center items-center py-10'>
