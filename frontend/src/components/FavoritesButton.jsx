@@ -1,10 +1,10 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import bookmark from "../assets/bookmark.png";
 
 function FavoritesButton({ onClick }) {
   return (
-    <button onClick={onClick} type="button" className="btn text-gray-100 font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition">
-      <FontAwesomeIcon icon={faStar} />
+    <button onClick={onClick} type="button" className="text-white text-sm font-semibold py-1.5 px-2 gap-2 flex flex-inline items-center rounded-md h-9 bg-gradient-to-br from-[#7C82FF] to-[#C355F5]">
+      <img src={bookmark} alt="Bookmark icon" className="h-6 w-auto" />
+      Bookmarks
     </button>
   )
 }
