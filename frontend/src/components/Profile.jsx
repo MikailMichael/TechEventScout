@@ -19,14 +19,13 @@ function Profile({ user, onLogOut }) {
 
   return (
     <div className='relative' ref={menuRef}>
-      <button
-        onClick={() => setOpen(!open)}
-        className='flex items-center gap-2 text-sm text-white font-semibold px-4 py-2 border border-gray-100 bg-neutral-800 rounded-md hover:ring-1 transition'
-      >
-        <img src={profileTP} alt='Profile icon with trapnsparent background' className='h-[24px] w-auto' />
-        Profile
-      </button>
-
+        <button
+          onClick={() => setOpen(!open)}
+          className='flex items-center h-9 w-full gap-2 text-sm text-white font-semibold px-2 py-1.5 gradient-border'
+        >
+          <img src={profileTP} alt='Profile icon with trapnsparent background' className='h-6 w-auto' />
+          Profile
+        </button>
       {open && (
         <div className='absolute right-0 mt-2 w-48 bg-neutral-800 border border-gray-200 rounded-md shadow-lg z-50'>
           <div className='px-4 py-2 text-sm text-gray-300 border-b border-gray-600 flex flex-inline items-center gap-1'>
