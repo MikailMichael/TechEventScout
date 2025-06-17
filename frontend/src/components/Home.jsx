@@ -105,18 +105,37 @@ function Home() {
   useEffect(() => {
     if (!user) return;
 
+    // Only fetch if users favourites haven't been cached recently
+    const cachedUserId = localStorage.getItem("cachedFavouritesUserId");
+    const cachedFavourites = localStorage.getItem("cachedFavourites");
+    const cachedTime = localStorage.getItem("cachedFavouritesTimestamp");
+
+    if (cachedUserId === user.id && cachedFavourites && cachedTime && ((Date.now() - parseInt(cachedTime)) < 60 * 60 * 1000)) {
+      setFavourites(JSON.parse(cachedFavourites));
+      return;
+    }
+
     const fetchFavourites = async () => {
+      console.log("Fetching favourites for user:", user?.id);
       const { data, error } = await supabase
         .from('favourites')
         .select('event_id')
         .eq('user_id', user.id);
       if (data) {
         setFavourites(data.map(f => f.event_id));
+      } else {
+        console.error("Error fetching favourites:", error.message);
+        return;
       }
-    }
+
+      // Cache to localStorage
+      localStorage.setItem("cachedFavourites", JSON.stringify(data.map(f => f.event_id)));
+      localStorage.setItem("cachedFavouritesTimestamp", Date.now().toString());
+      localStorage.setItem("cachedFavouritesUserId", user.id);
+    };
 
     fetchFavourites();
-  }, [user]);
+  }, [user?.id]);
 
   // Runs when currentPage changes
   useEffect(() => {
