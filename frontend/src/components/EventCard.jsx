@@ -1,50 +1,50 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare, faStar as solidStar } from "@fortawesome/free-solid-svg-icons";
-import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
-import tagColours from "../utils/tagColours";
+import TagPill from "./TagPill";
+import BookmarkButton from "./BookmarkButton";
 
-function EventCard({ id, title, date, time, location, link, tags, onFavourite, isFavourited }) {
+function EventCard({ id, title, img, description, date, time, location, link, tags, onFavourite, isFavourited }) {
   return (
-    <div className='relative bg-neutral-800 rounded-xl p-6 border border-gray-100 hover:ring-1 transition'>
+    <div className='flex bg-neutral-800 rounded-xl overflow-hidden border border-gray-700 hover:ring-1 transition'>
+      {/* Image */}
+      {img && (
+        <img
+          src={img}
+          alt={title}
+          className="w-70 h-70 object-cover flex-shrink-0 rounded-lg"
+        />
+      )}
 
-      {/* Favorite Button */}
-      <button
-        onClick={() => onFavourite(id, title)}
-        className={`absolute bottom-4 right-4 ${isFavourited ? 'text-yellow-400' : 'text-yellow-300'} hover:text-yellow-200`}
-        title={isFavourited ? "Remove from favourites" : "Save to favourites"}
-      >
-        <FontAwesomeIcon icon={isFavourited ? solidStar : regularStar} />
-      </button>
+      {/* Content */}
 
-      <h2 className="text-xl font-bold text-gray-100 mb-1">{title}</h2>
-      <p className="text-gray-400 text-sm mb-1">
-        {new Date(`${date}T${time}`).toLocaleString(undefined, {
-          weekday: 'short',
-          month: 'short',
-          day: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit'
-        })}
-      </p>
-      <p className="text-gray-100 text-sm mb-2">{location}</p>
-      <div className="flex flex-wrap gap-2 mb-2">
-        {tags.split(',').map((tag, i) => {
-          const colorClass = tagColours[tag.trim()] || 'bg-zinc-700 text-zinc-200';
-          return (
-            <span key={i} className={`text-sm font-medium px-3 py-1 rounded-full ${colorClass}`}>{tag.trim()}</span>
-          );
-        })}
+      <div className="flex-1 p-4 flex flex-col justify-between">
+        <div>
+          <h2 className="text-xl font-bold text-white">{title}</h2>
+          <p className="text-gray-400 text-sm mt-1">
+            {new Date(`${date}T${time}`).toLocaleString(undefined, {
+              weekday: 'short',
+              month: 'short',
+              day: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit'
+            })}{" • "}
+            {location}
+          </p>
+          <p className="mt-2 text-gray-200 text-sm line-clamp-2">{description}</p>
+        </div>
+
+        <div className="mt-4 flex items-center justify-between">
+          <div className="flex flex-wrap gap-2">
+            {tags.split(",").map((tag) => (
+              <TagPill key={tag} tag={tag} />
+            ))}
+          </div>
+          <a href={link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm font-medium">Go to Event</a>
+        </div>
       </div>
 
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium"
-      >
-        Link to event
-        <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2 h-4 w-4" />
-      </a>
+      {/* Favorite Button */}
+      <div className="p-2 flex items-start">
+            <BookmarkButton isFavourited={isFavourited} onClick={() => onFavourite(id, title)} />
+      </div>
     </div>
   )
 }
