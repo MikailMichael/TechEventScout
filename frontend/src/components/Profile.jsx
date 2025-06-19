@@ -27,20 +27,20 @@ function Profile({ user, onLogOut }) {
           Profile
         </button>
       {open && (
-        <div className='absolute right-0 w-70 bg-background border border-gray-200 rounded-lg shadow-lg z-50'>
-          <div className='px-4 py-2 text-sm text-gray-300 border-b border-gray-600 flex flex-inline items-center gap-1'>
-            <img src={profile} alt="Profile icon" />
+        <div className='absolute right-0 w-70 bg-background-2 border border-border-gray rounded-lg shadow-lg z-50 p-2.5'>
+          <div className='pb-2 text-sm text-white flex flex-inline items-center gap-2 border-b border-border-gray'>
+            <img src={profile} alt="Profile icon" className='h-6 w-auto' />
             <span>{user?.email || "Email"}</span>
           </div>
           <button
             onClick={() => alert('Password change coming soon')}
-            className='w-full text-left px-4 py-2 text-sm hover:bg-neutral-700 text-gray-100 flex items-center gap-2'
+            className='w-full text-left px-4 py-2 mt-2 text-sm text-white flex items-center font-semibold hover:bg-gradient-to-br hover:from-grad-purp-start-hover hover:to-grad-purp-end-hover hover:rounded-lg'
           >
             Change Password
           </button>
           <button
             onClick={onLogOut}
-            className='w-full text-left px-4 py-2 text-sm hover:bg-neutral-700 text-gray-100 flex items-center gap-2'
+            className='w-full text-left px-4 py-2 text-sm text-white flex items-center font-semibold hover:bg-gradient-to-br hover:from-grad-purp-start-hover hover:to-grad-purp-end-hover hover:rounded-lg'
           >
             Log Out
           </button>

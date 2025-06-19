@@ -7,9 +7,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background:                 "#0A0A0A",
+        "background":                 "#0A0A0A",
+        "background-2":             "#121212",
+        "border-gray":              "#262626",
         "grad-purp-start":          "#7C82FF",
         "grad-purp-end":            "#C355F5",
+        "grad-purp-start-hover":    "rgba(124, 130, 255, 0.2)",
+        "grad-purp-end-hover":      "rgba(195, 85, 245, 0.2)",
       },
     },
   },
