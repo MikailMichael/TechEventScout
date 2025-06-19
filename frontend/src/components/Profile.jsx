@@ -27,10 +27,10 @@ function Profile({ user, onLogOut }) {
           Profile
         </button>
       {open && (
-        <div className='absolute right-0 mt-2 w-48 bg-neutral-800 border border-gray-200 rounded-md shadow-lg z-50'>
+        <div className='absolute right-0 w-70 bg-background border border-gray-200 rounded-lg shadow-lg z-50'>
           <div className='px-4 py-2 text-sm text-gray-300 border-b border-gray-600 flex flex-inline items-center gap-1'>
             <img src={profile} alt="Profile icon" />
-            <span>{user.email}</span>
+            <span>{user?.email || "Email"}</span>
           </div>
           <button
             onClick={() => alert('Password change coming soon')}

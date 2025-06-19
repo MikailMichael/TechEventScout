@@ -273,7 +273,7 @@ function Home() {
   const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
 
   return (
-    <div className='bg-[#0A0A0A]'>
+    <div className='bg-background'>
       <Header user={user} onLogOut={handleLogOut} onShowAuth={handleShowAuth} showFavourites={handleFavouritesButton} />
       <SearchBar onSearch={handleSearch} />
       <FilterButton onClick={() => setShowModal(true)} />

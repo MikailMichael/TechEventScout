@@ -26,8 +26,8 @@
      2) gradient in the border-box
   */
   background-image:
-    /* inner fill */ linear-gradient(#0A0A0A, #0A0A0A),
-    /* outer frame */ linear-gradient(to bottom right, #7C82FF, #C355F5);
+    /* inner fill */ linear-gradient(theme("colors.background"), theme("colors.background")),
+    /* outer frame */ linear-gradient(to bottom right, theme("colors.grad-purp-start"), theme("colors.grad-purp-end"));
   background-origin: padding-box, border-box;
   background-clip: padding-box, border-box;
 }
