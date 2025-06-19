@@ -296,24 +296,34 @@ function Home() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
             onAnimationComplete={() => setHighlightReady(true)}
-            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 mt-6'>
+            className='flex flex-col gap-4 mt-6'>
             {currentEvents.length > 0 ? (
               currentEvents.map((event, idx) => (
-                <EventCard
-                  key={idx}
-                  id={event.id}
-                  title={event.title}
-                  date={event.date}
-                  time={event.time}
-                  location={event.location}
-                  link={event.link}
-                  tags={event.tags.join(", ")}
-                  onFavourite={handleFavouriteToggle}
-                  isFavourited={favourites.includes(event.id)}
-                />
+                <motion.div
+                  key={event.id}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{ duration: 0.2, delay: idx * 0.05 }}
+                >
+                  <EventCard
+                    id={event.id}
+                    title={event.title}
+                    img={event.img}
+                    description={event.description}
+                    date={event.date}
+                    time={event.time}
+                    location={event.location}
+                    link={event.link}
+                    tags={event.tags.join(", ")}
+                    onFavourite={handleFavouriteToggle}
+                    isFavourited={favourites.includes(event.id)}
+                  />
+                </motion.div>
+
               ))
             ) : (
-              <div className='col-span-full text-center text-2xl font-bold text-gray-600'>
+              <div className='text-center text-2xl font-bold text-white'>
                 No events found.
               </div>
             )}
