@@ -310,16 +310,15 @@ function Home() {
 
   const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
 
+  /* <button
+        onClick={() => setShowExpired(prev => !prev)}
+        className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'
+      >{showExpired ? 'Hide Past Events' : 'Show Past Events'}</button> */
+
   return (
     <div className='bg-background'>
       <Header user={user} onLogOut={handleLogOut} onShowAuth={handleShowAuth} showFavourites={handleFavouritesButton} />
       <SearchBar onSearch={handleSearch} />
-      <FilterButton onClick={() => setShowModal(true)} />
-
-      <button
-        onClick={() => setShowExpired(prev => !prev)}
-        className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'
-      >{showExpired ? 'Hide Past Events' : 'Show Past Events'}</button>
 
       <div className='flex gap-6 p-6 bg-neutral-900'>
         <FilterSidebar
