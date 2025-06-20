@@ -8,7 +8,7 @@ import FilterButton from './FilterButton';
 import SearchBar from './SearchBar';
 import useHighlight from '../hooks/useHighlight';
 import FavoritesButton from './FavoritesButton';
-import FilterModal from './FilterModal';
+import FilterSidebar from './FilterSidebar';
 import Pagination from './Pagination';
 import Auth from './Auth';
 import Header from './Header';
@@ -20,7 +20,7 @@ function Home() {
   const [allEvents, setAllEvents] = useState([]); // All events, caches all the events, prevents excessive backend calls
   const [events, setEvents] = useState([]); // Current list of tech events, function to update, initializes as an empty array
   const [searchTerm, setSearchTerm] = useState(""); // Tracks user input
-  const [showModal, setShowModal] = useState(false);
+  const [currentDate, setCurrentDate] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
@@ -153,6 +153,33 @@ function Home() {
       );
     }
 
+    // Apply date filter
+    const now = new Date();
+    if (currentDate === "today") {
+      filtered = filtered.filter(evt => {
+        const d = new Date(`${evt.date}T${evt.time}`);
+        return (
+          d.getFullYear() === now.getFullYear() &&
+          d.getMonth()    === now.getMonth() &&
+          d.getDate()     === now.getDate()
+        );
+      });
+    } else if (currentDate === "week") {
+      const oneWeekFromNow = new Date(now);
+      oneWeekFromNow.setDate(now.getDate() + 7);
+      filtered = filtered.filter(evt => {
+        const d = new Date(`${evt.date}T${evt.time}`);
+        return d >= now && d <= oneWeekFromNow;
+      });
+    } else if (currentDate === "month") {
+      const oneMonthFromNow = new Date(now);
+      oneMonthFromNow.setMonth(now.getMonth() + 1);
+      filtered = filtered.filter(evt => {
+        const d = new Date(`${evt.date}T${evt.time}`);
+        return d >= now && d <= oneMonthFromNow;
+      });
+    }
+
     // Apply tags filter
     if (currentTags.length > 0) {
       filtered = filtered.filter(event => {
@@ -181,7 +208,7 @@ function Home() {
 
     setEvents(filtered);
     setCurrentPage(1);
-  }, [searchTerm, currentLocation, currentTags, activeMatchAll, allEvents, showExpired]);
+  }, [searchTerm, currentLocation, currentDate, currentTags, activeMatchAll, allEvents, showExpired]);
 
   useEffect(() => {
     if (user && pendingAction?.type === 'favourite') {
@@ -283,67 +310,73 @@ function Home() {
         className='text-sm text-gray-100 btn font-bold py-2 px-4 border border-gray-100 bg-neutral-800 rounded-md focus:outline-none focus:ring-2 hover:ring-1 transition'
       >{showExpired ? 'Hide Past Events' : 'Show Past Events'}</button>
 
-      {loading ? (
-        <div className='spinner-container flex justify-center items-center py-10'>
-          <div className='spinner animate-spin rounded-full h-10 w-10 border-t-4 border-gray-200' />
-        </div>
-      ) : (
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentPage} // triggers re-animation on page change
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.25 }}
-            onAnimationComplete={() => setHighlightReady(true)}
-            className='flex flex-col gap-4 mt-6'>
-            {currentEvents.length > 0 ? (
-              currentEvents.map((event, idx) => (
-                <motion.div
-                  key={event.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 20 }}
-                  transition={{ duration: 0.2, delay: idx * 0.05 }}
-                >
-                  <EventCard
-                    id={event.id}
-                    title={event.title}
-                    img={event.img}
-                    description={event.description}
-                    date={event.date}
-                    time={event.time}
-                    location={event.location}
-                    link={event.link}
-                    tags={event.tags.join(", ")}
-                    onFavourite={handleFavouriteToggle}
-                    isFavourited={favourites.includes(event.id)}
-                  />
-                </motion.div>
+      <div className='flex gap-6 p-6 bg-neutral-900'>
+        <FilterSidebar
+          locations={allLocations}
+          tags={allTags}
+          currentLocation={currentLocation}
+          currentDate={currentDate}
+          activeMatchAll={activeMatchAll}
+          onFilter={({ location, date, tags, matchAll }) => {
+            setCurrentLocation(location);
+            setCurrentDate(date);
+            setCurrentTags(tags);
+            setActiveMatchAll(matchAll);
+          }}
+        />
 
-              ))
-            ) : (
-              <div className='text-center text-2xl font-bold text-white'>
-                No events found.
-              </div>
-            )}
-          </motion.div>
-        </AnimatePresence>
-      )}
+        <div className='flex-1'>
+          {loading ? (
+            <div className='spinner-container flex justify-center items-center py-10'>
+              <div className='spinner animate-spin rounded-full h-10 w-10 border-t-4 border-gray-200' />
+            </div>
+          ) : (
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentPage} // triggers re-animation on page change
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.25 }}
+                onAnimationComplete={() => setHighlightReady(true)}
+                className='flex flex-col gap-4 mt-6'>
+                {currentEvents.length > 0 ? (
+                  currentEvents.map((event, idx) => (
+                    <motion.div
+                      key={event.id}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 20 }}
+                      transition={{ duration: 0.2, delay: idx * 0.05 }}
+                    >
+                      <EventCard
+                        id={event.id}
+                        title={event.title}
+                        img={event.img}
+                        description={event.description}
+                        date={event.date}
+                        time={event.time}
+                        location={event.location}
+                        link={event.link}
+                        tags={event.tags.join(", ")}
+                        onFavourite={handleFavouriteToggle}
+                        isFavourited={favourites.includes(event.id)}
+                      />
+                    </motion.div>
+
+                  ))
+                ) : (
+                  <div className='text-center text-2xl font-bold text-white'>
+                    No events found.
+                  </div>
+                )}
+              </motion.div>
+            </AnimatePresence>
+          )}
+        </div>
+      </div>
 
       <Pagination totalPages={totalPages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
-
-      {/* Filter Modal */}
-      <FilterModal
-        show={showModal}
-        onClose={() => setShowModal(false)}
-        locations={allLocations}
-        tags={allTags}
-        onFilter={handleFilter}
-        currentLocation={currentLocation}
-        currentTags={currentTags}
-        activeMatchAll={activeMatchAll}
-      />
 
       {/* Favourites Modal */}
       <FavouritesModal
