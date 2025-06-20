@@ -9,7 +9,7 @@ import TagFilter from "./TagFilter";
 
 function FilterSidebar({ locations, tags, currentLocation, currentTags, currentDate, matchAll, onLocationChange, onDateChange, onTagToggle, onMatchModeToggle }) {
   return (
-    <aside className='w-64 flex-shrink-0 space-y-6 p-4 bg-neutral-900 text-white rounded-lg'>
+    <aside className='w-70 flex-shrink-0 space-y-6 text-white'>
       {/* Location */}
       <LocationFilter locations={locations} selected={currentLocation} onChange={onLocationChange} />
 

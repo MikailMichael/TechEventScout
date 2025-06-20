@@ -1,7 +1,7 @@
 function LocationFilter({ locations, selected, onChange }) {
   return (
-    <div className="space-y-2">
-      <h3 className="font-semibold">Locations</h3>
+    <div className="space-y-2 p-4.5 bg-background-2 rounded-lg">
+      <h3 className="font-semibold text-left">Locations</h3>
       <ul className="space-y-1">
         <li>
           <button
