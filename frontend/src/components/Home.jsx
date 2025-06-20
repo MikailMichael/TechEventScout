@@ -332,7 +332,7 @@ function Home() {
       <Header user={user} onLogOut={handleLogOut} onShowAuth={handleShowAuth} showFavourites={handleFavouritesButton} />
       <SearchBar onSearch={handleSearch} />
 
-      <div className='flex gap-6 p-6 bg-neutral-900'>
+      <div className='flex gap-6 my-6 px-14.5 bg-background'>
         <FilterSidebar
           locations={allLocations}
           tags={allTags}
@@ -353,7 +353,7 @@ function Home() {
             </div>
           ) : (
             <div>
-              <p className='text-sm text-gray-400 mb-2'>Found {events.length} {events.length === 1 ? "event" : "events"}</p>
+              <p className='text-md text-left text-gray-400'>Found {events.length} {events.length === 1 ? "event" : "events"}</p>
               <AnimatePresence mode="wait">
                 <motion.div
 
