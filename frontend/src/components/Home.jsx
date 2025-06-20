@@ -316,13 +316,12 @@ function Home() {
           tags={allTags}
           currentLocation={currentLocation}
           currentDate={currentDate}
-          activeMatchAll={activeMatchAll}
-          onFilter={({ location, date, tags, matchAll }) => {
-            setCurrentLocation(location);
-            setCurrentDate(date);
-            setCurrentTags(tags);
-            setActiveMatchAll(matchAll);
-          }}
+          currentTags={currentTags}
+          matchAll={activeMatchAll}
+          onLocationChange={setCurrentLocation}
+          onDateChange={setCurrentDate}
+          onTagToggle={(tag) => setCurrentTags((ts) => ts.includes(tag) ? ts.filter((t) => t !== tag) : [...ts, tag])}
+          onMatchModeToggle={() => setActiveMatchAll((m) => !m)}
         />
 
         <div className='flex-1'>

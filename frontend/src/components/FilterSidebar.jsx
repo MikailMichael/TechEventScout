@@ -8,10 +8,6 @@ import MatchModeToggle from "./MatchModeToggle";
 import TagFilter from "./TagFilter";
 
 function FilterSidebar({ locations, tags, currentLocation, currentTags, currentDate, matchAll, onLocationChange, onDateChange, onTagToggle, onMatchModeToggle }) {
-  const [loc, setLoc] = useState('');
-  const [date, setDate] = useState("all");
-  const [selTags, setSelTags] = useState([]);
-  const [matchAll, setMatchAll] = useState(false);
   /*
   // Sync when sidebar mounts or filters change externally
   useEffect(() => {
