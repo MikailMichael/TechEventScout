@@ -24,6 +24,7 @@ function Home() {
   const [currentDate, setCurrentDate] = useState("all");
   const [visibleCount, setVisibleCount] = useState(EVENTS_PER_PAGE);
   const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
   const [user, setUser] = useState(null);
   const [favourites, setFavourites] = useState([]);
   const [showFavourites, setShowFavourites] = useState(false);
@@ -63,6 +64,7 @@ function Home() {
     if (!loaderRef.current) return;
     const obs = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting && visibleCount < events.length) {
+        setLoadingMore(true);
         setVisibleCount((v) => Math.min(v + EVENTS_PER_PAGE, events.length));
       }
     }, { rootMargin: "200px" });
@@ -70,6 +72,14 @@ function Home() {
     obs.observe(loaderRef.current);
     return () => obs.disconnect();
   }, [loaderRef.current, visibleCount, events.length]);
+
+  /*
+  useEffect(() => {
+    if (!loadingMore) return;
+    const id = setTimeout(() => setLoadingMore(false), 300);
+    return () => clearTimeout(id);
+  }, [loadingMore]);
+  */
 
   // Fetch only after a user is known
   useEffect(() => {
@@ -152,11 +162,11 @@ function Home() {
   }, [user?.id]);
 
   // Runs when filters change
-  /*
+  
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [searchTerm, currentLocation, currentDate, currentTags, activeMatchAll]);
-  */
+  
 
   useEffect(() => {
     let filtered = [...allEvents];
@@ -339,7 +349,7 @@ function Home() {
         <div className='flex-1'>
           {loading ? (
             <div className='spinner-container flex justify-center items-center py-10'>
-              <div className='spinner animate-spin rounded-full h-10 w-10 border-t-4 border-gray-200' />
+              <div className='spinner animate-spin rounded-full h-10 w-10 border-t-4 border-grad-purp-start' />
             </div>
           ) : (
             <div>
@@ -385,6 +395,12 @@ function Home() {
                   )}
                 </motion.div>
               </AnimatePresence>
+            </div>
+          )}
+
+          {loadingMore && (
+            <div className="flex justify-center py-4">
+              <div className="animate-spin rounded-full h-6 w-6 border-t-4 border-grad-purp-start" />
             </div>
           )}
 
