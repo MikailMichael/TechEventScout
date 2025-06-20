@@ -152,9 +152,11 @@ function Home() {
   }, [user?.id]);
 
   // Runs when filters change
+  /*
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [searchTerm, currentLocation, currentDate, currentTags, activeMatchAll]);
+  */
 
   useEffect(() => {
     let filtered = [...allEvents];
@@ -340,47 +342,50 @@ function Home() {
               <div className='spinner animate-spin rounded-full h-10 w-10 border-t-4 border-gray-200' />
             </div>
           ) : (
-            <AnimatePresence mode="wait">
-              <motion.div
-                
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.25 }}
-                onAnimationComplete={() => setHighlightReady(true)}
-                className='flex flex-col gap-4 mt-6'>
-                {visibleEvents.length > 0 ? (
-                  visibleEvents.map((event, idx) => (
-                    <motion.div
-                      key={event.id}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 20 }}
-                      transition={{ duration: 0.2, delay: idx * 0.05 }}
-                    >
-                      <EventCard
-                        id={event.id}
-                        title={event.title}
-                        img={event.img}
-                        description={event.description}
-                        date={event.date}
-                        time={event.time}
-                        location={event.location}
-                        link={event.link}
-                        tags={event.tags.join(", ")}
-                        onFavourite={handleFavouriteToggle}
-                        isFavourited={favourites.includes(event.id)}
-                      />
-                    </motion.div>
+            <div>
+              <p className='text-sm text-gray-400 mb-2'>Found {events.length} {events.length === 1 ? "event" : "events"}</p>
+              <AnimatePresence mode="wait">
+                <motion.div
 
-                  ))
-                ) : (
-                  <div className='text-center text-2xl font-bold text-white'>
-                    No events found.
-                  </div>
-                )}
-              </motion.div>
-            </AnimatePresence>
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.25 }}
+                  onAnimationComplete={() => setHighlightReady(true)}
+                  className='flex flex-col gap-4 mt-6'>
+                  {visibleEvents.length > 0 ? (
+                    visibleEvents.map((event, idx) => (
+                      <motion.div
+                        key={event.id}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: 20 }}
+                        transition={{ duration: 0.2, delay: idx * 0.05 }}
+                      >
+                        <EventCard
+                          id={event.id}
+                          title={event.title}
+                          img={event.img}
+                          description={event.description}
+                          date={event.date}
+                          time={event.time}
+                          location={event.location}
+                          link={event.link}
+                          tags={event.tags.join(", ")}
+                          onFavourite={handleFavouriteToggle}
+                          isFavourited={favourites.includes(event.id)}
+                        />
+                      </motion.div>
+
+                    ))
+                  ) : (
+                    <div className='text-center text-2xl font-bold text-white'>
+                      No events found.
+                    </div>
+                  )}
+                </motion.div>
+              </AnimatePresence>
+            </div>
           )}
 
           {/* Sentinel: Invisible div that triggers loading more */}
