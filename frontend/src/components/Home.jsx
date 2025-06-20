@@ -9,7 +9,7 @@ import SearchBar from './SearchBar';
 import useHighlight from '../hooks/useHighlight';
 import FavoritesButton from './FavoritesButton';
 import FilterSidebar from './FilterSidebar';
-import Pagination from './Pagination';
+// import Pagination from './Pagination';
 import Auth from './Auth';
 import Header from './Header';
 import FavouritesModal from './FavouritesModal';
@@ -17,11 +17,12 @@ import { toast } from 'react-hot-toast';
 
 
 function Home() {
+  const EVENTS_PER_PAGE = 10;
   const [allEvents, setAllEvents] = useState([]); // All events, caches all the events, prevents excessive backend calls
   const [events, setEvents] = useState([]); // Current list of tech events, function to update, initializes as an empty array
   const [searchTerm, setSearchTerm] = useState(""); // Tracks user input
   const [currentDate, setCurrentDate] = useState("all");
-  const [currentPage, setCurrentPage] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(EVENTS_PER_PAGE);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
   const [favourites, setFavourites] = useState([]);
@@ -34,15 +35,15 @@ function Home() {
   const [pendingAction, setPendingAction] = useState(null);
   const [showExpired, setShowExpired] = useState(false);
   const prevUserIdRef = useRef(null);
+  const loaderRef = useRef(null);
   const navigate = useNavigate();
-  const EVENTS_PER_PAGE = 10;
 
   useHighlight(highlightReady ? searchTerm : '', '.grid');
 
   useEffect(() => {
     // Reset ready state when page changes so useHighlight doesn't fire early
     setHighlightReady(false);
-  }, [currentPage]);
+  }, [searchTerm, currentLocation, currentDate, currentTags, activeMatchAll]);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -57,6 +58,18 @@ function Home() {
       listener.subscription.unsubscribe();
     }
   }, []);
+
+  useEffect(() => {
+    if (!loaderRef.current) return;
+    const obs = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && visibleCount < events.length) {
+        setVisibleCount((v) => Math.min(v + EVENTS_PER_PAGE, events.length));
+      }
+    }, { rootMargin: "200px" });
+
+    obs.observe(loaderRef.current);
+    return () => obs.disconnect();
+  }, [loaderRef.current, visibleCount, events.length]);
 
   // Fetch only after a user is known
   useEffect(() => {
@@ -138,10 +151,10 @@ function Home() {
     fetchFavourites();
   }, [user?.id]);
 
-  // Runs when currentPage changes
+  // Runs when filters change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [currentPage]);
+  }, [searchTerm, currentLocation, currentDate, currentTags, activeMatchAll]);
 
   useEffect(() => {
     let filtered = [...allEvents];
@@ -160,8 +173,8 @@ function Home() {
         const d = new Date(`${evt.date}T${evt.time}`);
         return (
           d.getFullYear() === now.getFullYear() &&
-          d.getMonth()    === now.getMonth() &&
-          d.getDate()     === now.getDate()
+          d.getMonth() === now.getMonth() &&
+          d.getDate() === now.getDate()
         );
       });
     } else if (currentDate === "week") {
@@ -207,7 +220,7 @@ function Home() {
     if (!showExpired) filtered = filtered.filter(event => new Date(`${event.date}T${event.time}`) >= new Date());
 
     setEvents(filtered);
-    setCurrentPage(1);
+    setVisibleCount(EVENTS_PER_PAGE);
   }, [searchTerm, currentLocation, currentDate, currentTags, activeMatchAll, allEvents, showExpired]);
 
   useEffect(() => {
@@ -292,9 +305,7 @@ function Home() {
   const allLocations = [...new Set(allEvents.map(e => e.location))];
   const allTags = [...new Set(allEvents.flatMap(e => e.tags))];
 
-  const indexOfLastEvent = currentPage * EVENTS_PER_PAGE;
-  const indexOfFirstEvent = indexOfLastEvent - EVENTS_PER_PAGE;
-  const currentEvents = events.slice(indexOfFirstEvent, indexOfLastEvent);
+  const visibleEvents = events.slice(0, visibleCount);
   const favouriteEventDetails = allEvents.filter(e => favourites.includes(e.id));
 
   const totalPages = Math.ceil(events.length / EVENTS_PER_PAGE);
@@ -332,15 +343,15 @@ function Home() {
           ) : (
             <AnimatePresence mode="wait">
               <motion.div
-                key={currentPage} // triggers re-animation on page change
+                
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.25 }}
                 onAnimationComplete={() => setHighlightReady(true)}
                 className='flex flex-col gap-4 mt-6'>
-                {currentEvents.length > 0 ? (
-                  currentEvents.map((event, idx) => (
+                {visibleEvents.length > 0 ? (
+                  visibleEvents.map((event, idx) => (
                     <motion.div
                       key={event.id}
                       initial={{ opacity: 0, x: -20 }}
@@ -372,10 +383,16 @@ function Home() {
               </motion.div>
             </AnimatePresence>
           )}
+
+          {/* Sentinel: Invisible div that triggers loading more */}
+          <div ref={loaderRef} />
         </div>
       </div>
 
+      {/*
       <Pagination totalPages={totalPages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      */}
+
 
       {/* Favourites Modal */}
       <FavouritesModal
