@@ -162,10 +162,11 @@ function Home() {
   }, [user?.id]);
 
   // Runs when filters change
-  
+  /*
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [searchTerm, currentLocation, currentDate, currentTags, activeMatchAll]);
+  */
   
 
   useEffect(() => {
