@@ -34,6 +34,49 @@
   background-clip: padding-box, border-box;
 }
 
+.toast-success {
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  background-image:
+    linear-gradient(#121212,
+      #121212),
+    linear-gradient(to bottom right,
+      #61AA00,
+      #D38E00);
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  color: white;
+}
+
+.toast-failed {
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  background-image:
+    linear-gradient(#121212,
+      #121212),
+    linear-gradient(to bottom right,
+      #FC4400,
+      #962800);
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  color: white;
+}
+
+.toast-loading {
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+
+  background-image: 
+    linear-gradient(#121212,
+      #121212),
+    linear-gradient(to bottom right,
+      #7C82FF,
+      #C355F5);
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  color: white;
+}
+
 .gradient-border:hover {
   border: 2px solid transparent;
   border-radius: 0.5rem;
@@ -50,35 +93,8 @@
   background-clip: padding-box, border-box;
 }
 
-/*
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-*/
 button {
-  /*border: 1px solid transparent;*/
-  /* padding: 0.6em 1.2em; */
-  /* font-size: 1em; */
   font-family: inherit;
-  /* background-color: #2f2f2f; */
   cursor: pointer;
 }
 
@@ -87,16 +103,6 @@ button {
     color: #213547;
     background-color: #ffffff;
   }
-
-  /*
-  a:hover {
-    color: #747bff;
-  }
-    
-  button {
-    background-color: #f9f9f9;
-  }
-  */
 }
 
 .tag-button {
