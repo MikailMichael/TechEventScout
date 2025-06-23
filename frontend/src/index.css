@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -18,21 +21,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.gradient-border {
-  border: 2px solid transparent;
-  border-radius: 0.5rem;
+/* styles/global.css or wherever your global styles are */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #121212 inset !important;
+  /* Tailwind gray-800 */
+  -webkit-text-fill-color: white !important;
+  /* Tailwind gray-100 */
+  transition: background-color 5000s ease-in-out 0s;
+  /* helps suppress flashing */
 
-  background-image:
-    /* inner fill (bg) */
-    linear-gradient(#0A0A0A,
-      #0A0A0A),
-    /* outer frame (gradient) */
-    linear-gradient(to bottom right,
-      #7C82FF,
-      #C355F5);
-  background-origin: padding-box, border-box;
-  background-clip: padding-box, border-box;
 }
+
+@layer utilities {
+  .gradient-border {
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+
+    background-image:
+      /* inner fill (bg) */
+      linear-gradient(#0A0A0A,
+        #0A0A0A),
+      /* outer frame (gradient) */
+      linear-gradient(to bottom right,
+        #7C82FF,
+        #C355F5);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+  }
+}
+
+
 
 .toast-success {
   border: 1px solid transparent;
@@ -66,7 +87,7 @@
   border: 1px solid transparent;
   border-radius: 0.5rem;
 
-  background-image: 
+  background-image:
     linear-gradient(#121212,
       #121212),
     linear-gradient(to bottom right,
