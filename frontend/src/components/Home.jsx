@@ -53,9 +53,10 @@ function Home() {
       setUser(data?.session?.user || null);
     });
 
+
     const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
       switch (event) {
-        case 'SIGNED IN':
+        case 'SIGNED_IN':
           toast.success('Logged in successfully!', {
             className: 'toast-success',
             icon: <img src={successIcon} alt="Success" className="h-5 w-5" />
@@ -87,13 +88,13 @@ function Home() {
     return () => obs.disconnect();
   }, [loaderRef.current, visibleCount, events.length]);
 
-  
+
   useEffect(() => {
     if (!loadingMore) return;
     const id = setTimeout(() => setLoadingMore(false), 300);
     return () => clearTimeout(id);
   }, [loadingMore]);
-  
+
 
   // Fetch only after a user is known
   useEffect(() => {
@@ -181,7 +182,7 @@ function Home() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [searchTerm, currentLocation, currentDate, currentTags, activeMatchAll]);
   */
-  
+
 
   useEffect(() => {
     let filtered = [...allEvents];
@@ -282,13 +283,13 @@ function Home() {
         .eq('user_id', user.id)
         .eq('event_id', eventId);
       setFavourites(favourites.filter(id => id !== eventId));
-      toast.success(`Removed "${title}" from favourites`, {className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" />});
+      toast.success(`Removed "${title}" from favourites`, { className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" /> });
     } else {
       await supabase
         .from('favourites')
         .insert({ user_id: user.id, event_id: eventId });
       setFavourites([...favourites, eventId]);
-      toast.success(`Added "${title}" to favourites`, {className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" />});
+      toast.success(`Added "${title}" to favourites`, { className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" /> });
     }
   };
 
@@ -314,12 +315,12 @@ function Home() {
   };
 
   const handleLogOut = async () => {
-    const toastId = toast.loading("Logging out...", {className: "toast-loading"});
+    const toastId = toast.loading("Logging out...", { className: "toast-loading" });
     await supabase.auth.signOut();
     setUser(null);
     setFavourites([]);
     toast.dismiss(toastId);
-    toast.success("Logged out successfully", {className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" />});
+    toast.success("Logged out successfully", { className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" /> });
   };
 
   const handleShowAuth = () => {
