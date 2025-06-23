@@ -6,7 +6,7 @@ import mapPin from "../assets/map-pin.png";
 import tagDark from "../assets/tag-dark.png";
 import linkIcon from "../assets/link-icon.png";
 
-function EventCard({ id, title, img, description, date, time, location, link, tags, onFavourite, isFavourited }) {
+function EventCard({ id, title, img, description, date, time, location, link, tags, onFavourite, isFavourited, user }) {
   const isExpired = new Date(`${date}T${time}`) < new Date();
 
   return (
@@ -67,7 +67,7 @@ function EventCard({ id, title, img, description, date, time, location, link, ta
 
       {/* Favorite Button */}
       <div className="pt-3 pr-3 flex items-start">
-        <BookmarkButton isFavourited={isFavourited} onClick={() => onFavourite(id, title)} />
+        {user && (<BookmarkButton isFavourited={isFavourited} onClick={() => onFavourite(id, title)} />)}
       </div>
     </div>
   )

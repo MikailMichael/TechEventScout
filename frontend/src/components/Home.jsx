@@ -383,6 +383,7 @@ function Home() {
                           tags={event.tags.join(", ")}
                           onFavourite={handleFavouriteToggle}
                           isFavourited={favourites.includes(event.id)}
+                          user={user?.id}
                         />
                       </motion.div>
 
