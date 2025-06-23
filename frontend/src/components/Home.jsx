@@ -350,7 +350,7 @@ function Home() {
         <div className='flex-1'>
           {loading ? (
             <div className='spinner-container flex justify-center items-center py-10'>
-              <div className='spinner animate-spin rounded-full h-10 w-10 border-t-4 border-grad-purp-start' />
+              <div className='spinner animate-spin rounded-full h-10 w-10 border-t-4 border-grad-blue-start' />
             </div>
           ) : (
             <div>
@@ -401,7 +401,7 @@ function Home() {
 
           {loadingMore && (
             <div className="flex justify-center py-4">
-              <div className="animate-spin rounded-full h-6 w-6 border-t-4 border-grad-purp-start" />
+              <div className="animate-spin rounded-full h-6 w-6 border-t-4 border-grad-blue-start" />
             </div>
           )}
 
