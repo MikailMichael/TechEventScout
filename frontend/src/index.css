@@ -53,6 +53,53 @@ input:-webkit-autofill:active {
   }
 }
 
+  .gradient-border {
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+
+    background-image:
+      /* inner fill (bg) */
+      linear-gradient(#0A0A0A,
+        #0A0A0A),
+      /* outer frame (gradient) */
+      linear-gradient(to bottom right,
+        #7C82FF,
+        #C355F5);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+  }
+
+.social-login {
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+
+    background-image:
+      /* inner fill (bg) */
+      linear-gradient(#121212,
+        #121212),
+      /* outer frame (gradient) */
+      linear-gradient(to bottom right,
+        #7C82FF,
+        #C355F5);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+}
+.social-login:hover {
+  border: 2px solid transparent;
+    border-radius: 0.5rem;
+
+    background-image:
+      /* inner fill (bg) */
+      linear-gradient(#121212,
+        #121212),
+      /* outer frame (gradient) */
+      linear-gradient(to bottom right,
+        #C355F5,
+        #7C82FF);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+}
+
 .input-wrapper {
   position: relative;
   width: 100%;

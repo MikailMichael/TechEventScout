@@ -64,6 +64,7 @@ export default function Auth({ onAuthSuccess, onClose }) {
   };
 
   const handleSocialLogin = async (provider) => {
+    const toastId = toast.loading(isLogin ? 'Logging in...' : 'Creating accont...', { className: "toast-loading" });
     const { error } = await supabase.auth.signInWithOAuth({ provider, options: { redirectTo: window.location.origin } });
     if (error) toast.error(error, { className: "toast-error", icon: <img src={errorIcon} alt="Error" className="h-5 w-5" /> });
   };
@@ -176,18 +177,21 @@ export default function Auth({ onAuthSuccess, onClose }) {
 
                 <div className='flex flex-inline gap-3'>
                   <button
+                    type='button'
                     onClick={() => handleSocialLogin('discord')}
-                    className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>
+                    className='w-full font-bold py-2 px-4 rounded-lg transition social-login'>
                     <FontAwesomeIcon className="mx-2" icon={faDiscord} />
                   </button>
                   <button
+                    type='button'
                     onClick={() => handleSocialLogin('github')}
-                    className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>
+                    className='w-full font-bold py-2 px-4 rounded-lg transition social-login'>
                     <FontAwesomeIcon className="mx-2" icon={faGithub} />
                   </button>
                   <button
+                    type='button'
                     onClick={() => handleSocialLogin('google')}
-                    className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'>
+                    className='w-full font-bold py-2 px-4 rounded-lg transition social-login'>
                     <FontAwesomeIcon className="mx-2" icon={faGoogle} />
                   </button>
                 </div>
@@ -195,9 +199,10 @@ export default function Auth({ onAuthSuccess, onClose }) {
                 <button
                   type="button"
                   onClick={() => setIsLogin(!isLogin)}
-                  className="w-full text-sm py-2 px-4 text-gray-100 border bg-neutral-800 border-neutral-400 underline hover:ring-1 transition text-center"
+                  className="w-full underline pt-4 text-center"
                 >
-                  {isLogin ? 'Need an account? Sign up' : 'Have an account? Login'}
+                  {isLogin ? 'Need an account? ' : 'Have an account? Login'}
+                  <span className='font-bold'>Sign up</span>
                 </button>
               </form>
 

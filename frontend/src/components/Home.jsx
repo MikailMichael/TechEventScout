@@ -53,8 +53,20 @@ function Home() {
       setUser(data?.session?.user || null);
     });
 
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user || null);
+    const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
+      switch (event) {
+        case 'SIGNED IN':
+          toast.success('Logged in successfully!', {
+            className: 'toast-success',
+            icon: <img src={successIcon} alt="Success" className="h-5 w-5" />
+          })
+          setShowAuthModal(false);
+          setUser(session.user);
+          break;
+        case 'SIGNED_OUT':
+          setUser(null);
+          break;
+      }
     });
 
     return () => {
