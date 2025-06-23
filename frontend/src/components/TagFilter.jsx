@@ -15,19 +15,20 @@ function TagFilter({ tags, selectedTags, matchAll, onToggleTag, onMatchModeToggl
       <div className="text-xs text-neutral-400 text-left">
         Available:
       </div>
-      <div className="max-h-64 overflow-y-auto grid grid-cols-2 gap-2">
+      <div className="overflow-y-auto gap-2 space-y-1 space-x-1 text-left">
         {tags.map((tag) => {
           const isSel = selectedTags.includes(tag);
-          const base = tagColours[tag] || "bg-gray-700 text-gray-200";
+          const base = tagColours[tag] || "border-[#8B8589] hover:bg-[#8B8589]";
+
           return (
             <motion.button
               key={tag}
               onClick={() => onToggleTag(tag)}
               className={`
-                text-xs px-2 py-1 rounded-full border
+                text-xs px-2 py-1 rounded-lg border border-2 border-[${base}] hover:bg-[${base}]
                 ${isSel
-                  ? `${base.replace("text-", "text-white ")}`
-                  : "border-gray-500 text-gray-300"
+                  ? `font-semibold bg-[${base}]`
+                  : ""
                 }
               `}
               whileTap={{ scale: 0.95 }}
