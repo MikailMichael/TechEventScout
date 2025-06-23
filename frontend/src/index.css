@@ -110,3 +110,7 @@ button {
 .tag-button.selected {
   background-color: var(--tag-colour, #8B8589);
 }
+
+.tag-pill {
+  border: 2px solid var(--tag-colour, #8B8589);
+}
