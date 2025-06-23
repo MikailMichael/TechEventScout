@@ -2,6 +2,9 @@ import TagPill from "./TagPill";
 import BookmarkButton from "./BookmarkButton";
 import calender from "../assets/date-transparent.png";
 import clock from "../assets/clock.png";
+import mapPin from "../assets/map-pin.png";
+import tagDark from "../assets/tag-dark.png";
+import linkIcon from "../assets/link-icon.png";
 
 function EventCard({ id, title, img, description, date, time, location, link, tags, onFavourite, isFavourited }) {
   return (
@@ -16,45 +19,45 @@ function EventCard({ id, title, img, description, date, time, location, link, ta
       )}
 
       {/* Content */}
-      <div className="flex-1 py-4 px-5 flex flex-col justify-between">
-        <div className="space-y-2">
-          <h2 className="text-white text-left">{title}</h2>
-          <p className="text-neutral-400 text-sm line-clamp-2 text-left ">{description}</p>
-          <div className="flex space-x-16">
-            <div className="flex space-x-1 items-center">
-              <img src={calender} alt="Calender icon" className="h-6 w-auto" />
-              <p className="text-sm text-neutral-400">{new Date(date).toLocaleDateString('en-GB', {
-                weekday:  'short',
-                day:      '2-digit',
-                month:    'short'
-              })}</p>
-            </div>
-            <div className="flex space-x-1 items-center">
-              <img src={clock} alt="Time icon" className="h-6 w-auto" />
-              <p className="text-sm text-neutral-400">{time}</p>
-            </div>
-          </div>
-          <p className="text-neutral-400 text-sm mt-1">
-            {new Date(`${date}T${time}`).toLocaleString(undefined, {
+      <div className="flex-1 py-4 px-5 flex flex-col justify-between items-start">
+        <h2 className="text-white text-left">{title}</h2>
+        <p className="text-neutral-400 text-sm line-clamp-2 text-left ">{description}</p>
+
+        <div className="flex space-x-16">
+          <div className="flex space-x-1 items-center">
+            <img src={calender} alt="Calender icon" className="h-6 w-auto" />
+            <p className="text-sm text-neutral-400">{new Date(date).toLocaleDateString('en-GB', {
               weekday: 'short',
-              month: 'short',
-              day: 'numeric',
-              hour: '2-digit',
-              minute: '2-digit'
-            })}{" • "}
-            {location}
-          </p>
-
-        </div>
-
-        <div className="mt-4 flex items-center justify-between">
-          <div className="flex flex-wrap gap-2">
-            {tags.split(",").map((tag) => (
-              <TagPill key={tag} tag={tag} />
-            ))}
+              day: '2-digit',
+              month: 'short'
+            })}</p>
           </div>
-          <a href={link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm font-medium">Go to Event</a>
+          <div className="flex space-x-1 items-center">
+            <img src={clock} alt="Time icon" className="h-6 w-auto" />
+            <p className="text-sm text-neutral-400">{time}</p>
+          </div>
         </div>
+
+        <div className="flex space-x-1 items-center">
+          <img src={mapPin} alt="Map pin icon" className="h-6 w-auto" />
+          <p className="text-sm text-neutral-400">{location}</p>
+        </div>
+
+        <div className="flex space-x-1 items-center">
+          <img src={tagDark} alt="Tag icon" className="h-6 w-auto" />
+          <p className="text-sm text-neutral-400">Tags</p>
+        </div>
+
+        <div className="flex flex-wrap gap-[5px]">
+          {tags.split(",").map((tag) => (
+            <TagPill key={tag} tag={tag} />
+          ))}
+        </div>
+
+        <a href={link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-1 py-1 px-2 rounded-lg text-sm bg-gradient-to-br from-grad-blue-start to-grad-blue-end hover:from-grad-blue-end hover:to-grad-blue-start">
+          <img src={linkIcon} alt="Go to website icon" className="h-5 w-auto" />
+          <span className="font-semibold">Go to Event</span>
+        </a>
       </div>
 
       {/* Favorite Button */}
