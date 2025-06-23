@@ -39,6 +39,7 @@ function Home() {
   const [showExpired, setShowExpired] = useState(false);
   const prevUserIdRef = useRef(null);
   const loaderRef = useRef(null);
+  const hasStarted = useRef(false);
   const navigate = useNavigate();
 
   useHighlight(highlightReady ? searchTerm : '', '.grid');
@@ -53,10 +54,13 @@ function Home() {
       setUser(data?.session?.user || null);
     });
 
-
     const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
       switch (event) {
         case 'SIGNED_IN':
+          if (!hasStarted.current) {
+            hasStarted.current = true;
+            return;
+          }
           toast.success('Logged in successfully!', {
             className: 'toast-success',
             icon: <img src={successIcon} alt="Success" className="h-5 w-5" />

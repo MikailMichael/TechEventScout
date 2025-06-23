@@ -38,8 +38,8 @@ export default function Auth({ onAuthSuccess, onClose }) {
         if (!isLogin && data?.user && !data.session) {
           toast.success("Check your email to confirm your account.", { className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" /> });
         } else {
-          toast.success(isLogin ? "Logged in successfully!" : "Account created!", { className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" /> });
-          onAuthSuccess();
+          //toast.success(isLogin ? "Logged in successfully!" : "Account created!", { className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" /> });
+          //onAuthSuccess();
         }
       }
     } catch (err) {
