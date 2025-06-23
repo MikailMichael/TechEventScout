@@ -7,6 +7,8 @@ import tagDark from "../assets/tag-dark.png";
 import linkIcon from "../assets/link-icon.png";
 
 function EventCard({ id, title, img, description, date, time, location, link, tags, onFavourite, isFavourited }) {
+  const isExpired = new Date(`${date}T${time}`) < new Date();
+
   return (
     <div className='flex bg-background-2 rounded-lg'>
       {/* Image */}
@@ -20,7 +22,10 @@ function EventCard({ id, title, img, description, date, time, location, link, ta
 
       {/* Content */}
       <div className="flex-1 py-4 px-5 flex flex-col justify-between items-start">
-        <h2 className="text-white text-left">{title}</h2>
+        <div className="flex space-x-2">
+          <h2 className="text-white text-left">{title}</h2>
+          {isExpired && (<span className="text-xs font-semibold text-red-100 bg-red-900 px-2 py-1 rounded">Expired</span>)}
+        </div>
         <p className="text-neutral-400 text-sm line-clamp-2 text-left ">{description}</p>
 
         <div className="flex space-x-16">
