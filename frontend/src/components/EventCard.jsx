@@ -54,14 +54,14 @@ function EventCard({ id, title, img, description, date, time, location, link, ta
           ))}
         </div>
 
-        <a href={link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-1 py-1 px-2 rounded-lg text-sm bg-gradient-to-br from-grad-blue-start to-grad-blue-end hover:from-grad-blue-end hover:to-grad-blue-start">
+        <a href={link} target="_blank" rel="noopener noreferrer" className="mt-1 inline-flex items-center space-x-1 py-1 px-2 rounded-lg text-sm bg-gradient-to-br from-grad-blue-start to-grad-blue-end hover:from-grad-blue-end hover:to-grad-blue-start">
           <img src={linkIcon} alt="Go to website icon" className="h-5 w-auto" />
           <span className="font-semibold">Go to Event</span>
         </a>
       </div>
 
       {/* Favorite Button */}
-      <div className="p-2 flex items-start">
+      <div className="pt-3 pr-3 flex items-start">
         <BookmarkButton isFavourited={isFavourited} onClick={() => onFavourite(id, title)} />
       </div>
     </div>
