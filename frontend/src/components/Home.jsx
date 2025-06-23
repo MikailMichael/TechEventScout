@@ -73,13 +73,13 @@ function Home() {
     return () => obs.disconnect();
   }, [loaderRef.current, visibleCount, events.length]);
 
-  /*
+  
   useEffect(() => {
     if (!loadingMore) return;
     const id = setTimeout(() => setLoadingMore(false), 300);
     return () => clearTimeout(id);
   }, [loadingMore]);
-  */
+  
 
   // Fetch only after a user is known
   useEffect(() => {
