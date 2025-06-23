@@ -4,6 +4,8 @@ import { faXmark, faTrash } from '@fortawesome/free-solid-svg-icons';
 import tagColours from '../utils/tagColours';
 import { toast } from 'react-hot-toast';
 import { AnimatePresence, motion } from "framer-motion";
+import successIcon from '../assets/toast-success.png';
+import errorIcon from '../assets/toast-error.png';
 
 function FavouritesModal({ show, onClose, onRemoveFavourite, favouriteEvents = [] }) {
 
@@ -14,10 +16,10 @@ function FavouritesModal({ show, onClose, onRemoveFavourite, favouriteEvents = [
       .eq('event_id', eventId);
 
     if (!error) {
-      toast.success(`Removed "${title}" from favourites`);
+      toast.success(`Removed "${title}" from favourites`, {className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" />});
       onRemoveFavourite?.(eventId);
     } else {
-      toast.error("Failed to remove from favourites")
+      toast.error("Failed to remove from favourites", {className: "toast-error", icon: <img src={errorIcon} alt="Error" className="h-5 w-5" />})
     }
   };
 

@@ -48,7 +48,7 @@
   color: white;
 }
 
-.toast-failed {
+.toast-error {
   border: 1px solid transparent;
   border-radius: 0.5rem;
   background-image:

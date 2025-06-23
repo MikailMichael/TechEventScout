@@ -5,6 +5,8 @@ import { faGoogle, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icon
 import toast from 'react-hot-toast';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { AnimatePresence, motion } from 'framer-motion';
+import successIcon from '../assets/toast-success.png';
+import errorIcon from '../assets/toast-error.png';
 
 export default function Auth({ onAuthSuccess, onClose }) {
   const [email, setEmail] = useState('');
@@ -15,7 +17,7 @@ export default function Auth({ onAuthSuccess, onClose }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const toastId = toast.loading(isLogin ? 'Logging in...' : 'Creating accont...');
+    const toastId = toast.loading(isLogin ? 'Logging in...' : 'Creating accont...', {className: "toast-loading"});
 
     let result;
     try {
@@ -29,39 +31,39 @@ export default function Auth({ onAuthSuccess, onClose }) {
       toast.dismiss(toastId);
 
       if (error) {
-        toast.error(error.message);
+        toast.error(error.message, {className: "toast-error", icon: <img src={errorIcon} alt="Error" className="h-5 w-5" />});
       } else {
         if (!isLogin && data?.user && !data.session) {
-          toast.success("Check your email to confirm your account.");
+          toast.success("Check your email to confirm your account.", {className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" />});
         } else {
-          toast.success(isLogin ? "Logged in successfully!" : "Account created!");
+          toast.success(isLogin ? "Logged in successfully!" : "Account created!", {className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" />});
           onAuthSuccess();
         }
       }
     } catch (err) {
       toast.dismiss(toastId);
-      toast.error("Something went wrong. Please try again.");
+      toast.error("Something went wrong. Please try again.", {className: "toast-error", icon: <img src={errorIcon} alt="Error" className="h-5 w-5" />});
     }
   };
 
   const handlePasswordReset = async (e) => {
     e.preventDefault();
-    const toastId = toast.loading('Sending reset email...');
+    const toastId = toast.loading('Sending reset email...', {className: "toast-loading"});
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
       redirectTo: 'http://localhost:5173/reset-password',
     });
 
     toast.dismiss(toastId);
     if (error) {
-      toast.error(error.message);
+      toast.error(error.message, {className: "toast-error", icon: <img src={errorIcon} alt="Error" className="h-5 w-5" />});
     } else {
-      toast.success('A password reset link has been sent to your email.');
+      toast.success('A password reset link has been sent to your email.', {className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" />});
     }
   };
 
   const handleSocialLogin = async (provider) => {
     const { error } = await supabase.auth.signInWithOAuth({ provider, options: { redirectTo: window.location.origin } });
-    if (error) toast.error(error);
+    if (error) toast.error(error, {className: "toast-error", icon: <img src={errorIcon} alt="Error" className="h-5 w-5" />});
   };
 
   return (

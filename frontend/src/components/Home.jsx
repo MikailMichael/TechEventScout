@@ -14,6 +14,8 @@ import Auth from './Auth';
 import Header from './Header';
 import FavouritesModal from './FavouritesModal';
 import { toast } from 'react-hot-toast';
+import successIcon from '../assets/toast-success.png';
+import errorIcon from '../assets/toast-error.png';
 
 
 function Home() {
@@ -257,7 +259,6 @@ function Home() {
   const handleFavouriteToggle = async (eventId, title) => {
     if (!user) {
       setPendingAction({ type: 'favourite', eventId, title });
-      toast("Login or sign up to save favourites!", { icon: "🔐" });
       setShowAuthModal(true);
       return;
     }
@@ -269,13 +270,13 @@ function Home() {
         .eq('user_id', user.id)
         .eq('event_id', eventId);
       setFavourites(favourites.filter(id => id !== eventId));
-      toast.success(`Removed "${title}" from favourites`);
+      toast.success(`Removed "${title}" from favourites`, {className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" />});
     } else {
       await supabase
         .from('favourites')
         .insert({ user_id: user.id, event_id: eventId });
       setFavourites([...favourites, eventId]);
-      toast.success(`Added "${title}" to favourites`);
+      toast.success(`Added "${title}" to favourites`, {className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" />});
     }
   };
 
@@ -293,7 +294,6 @@ function Home() {
   const handleFavouritesButton = () => {
     if (!user) {
       setPendingAction({ type: 'favourite-modal' });
-      toast("Login or sign up to save favourites!", { icon: "🔐" });
       setShowAuthModal(true);
       return;
     }
@@ -302,16 +302,15 @@ function Home() {
   };
 
   const handleLogOut = async () => {
-    const toastId = toast.loading("Logging out...");
+    const toastId = toast.loading("Logging out...", {className: "toast-loading"});
     await supabase.auth.signOut();
     setUser(null);
     setFavourites([]);
     toast.dismiss(toastId);
-    toast.success("Logged out successfully");
+    toast.success("Logged out successfully", {className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" />});
   };
 
   const handleShowAuth = () => {
-    toast("Create an account to save your favourites!", { icon: "🔐" });
     setShowAuthModal(true);
   };
 
