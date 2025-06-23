@@ -1,10 +1,16 @@
 import { motion } from "framer-motion";
 import tagColours from "../utils/tagColours";
 import MatchModeToggle from "./MatchModeToggle";
+import tag from '../assets/tag.png';
 
 function TagFilter({ tags, selectedTags, matchAll, onToggleTag, onMatchModeToggle }) {
   return (
     <div className="space-y-3 p-4.5 bg-background-2 rounded-lg">
+      <div className='flex space-x-2'>
+        <img src={tag} alt="Bookmark icon" className="h-6 w-auto" />
+        <h3>Tags</h3>
+      </div>
+
       <MatchModeToggle matchAll={matchAll} onToggle={onMatchModeToggle} />
       <div className="text-sm italic text-gray-400">
         {matchAll ? "Must match all tags" : "Match any tag"}
@@ -12,7 +18,7 @@ function TagFilter({ tags, selectedTags, matchAll, onToggleTag, onMatchModeToggl
       <div className="max-h-64 overflow-y-auto grid grid-cols-2 gap-2">
         {tags.map((tag) => {
           const isSel = selectedTags.includes(tag);
-          const base  = tagColours[tag] || "bg-gray-700 text-gray-200";
+          const base = tagColours[tag] || "bg-gray-700 text-gray-200";
           return (
             <motion.button
               key={tag}
