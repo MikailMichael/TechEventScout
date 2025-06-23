@@ -17,20 +17,20 @@ function TagFilter({ tags, selectedTags, matchAll, onToggleTag, onMatchModeToggl
       </div>
       <div className="overflow-y-auto gap-2 space-y-1 space-x-1 text-left">
         {tags.map((tag) => {
+          const hex = tagColours[tag] || "#8B8589";
           const isSel = selectedTags.includes(tag);
-          const base = tagColours[tag] || "border-[#8B8589] hover:bg-[#8B8589]";
 
           return (
             <motion.button
               key={tag}
               onClick={() => onToggleTag(tag)}
+              style={{"--tag-colour": hex }}
               className={`
-                text-xs px-2 py-1 rounded-lg border border-2 border-[${base}] hover:bg-[${base}]
+                text-xs px-2 py-1 rounded-lg tag-button
                 ${isSel
-                  ? `font-semibold bg-[${base}]`
+                  ? `font-semibold selected`
                   : ""
-                }
-              `}
+                }`}
               whileTap={{ scale: 0.95 }}
             >
               {tag}

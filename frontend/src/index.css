@@ -98,3 +98,15 @@ button {
   }
   */
 }
+
+.tag-button {
+  border: 2px solid var(--tag-colour, #8B8589);
+}
+
+.tag-button:hover {
+  background-color: var(--tag-colour, #8B8589);
+}
+
+.tag-button.selected {
+  background-color: var(--tag-colour, #8B8589);
+}
