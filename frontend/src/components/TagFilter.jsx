@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import tagColours from "../utils/tagColours";
+import MatchModeToggle from "./MatchModeToggle";
 
-function TagFilter({ tags, selectedTags, matchAll, onToggleTag }) {
+function TagFilter({ tags, selectedTags, matchAll, onToggleTag, onMatchModeToggle }) {
   return (
-    <div className="space-y-2">
+    <div className="space-y-3 p-4.5 bg-background-2 rounded-lg">
+      <MatchModeToggle matchAll={matchAll} onToggle={onMatchModeToggle} />
       <div className="text-sm italic text-gray-400">
         {matchAll ? "Must match all tags" : "Match any tag"}
       </div>
