@@ -12,8 +12,8 @@ function TagFilter({ tags, selectedTags, matchAll, onToggleTag, onMatchModeToggl
       </div>
 
       <MatchModeToggle matchAll={matchAll} onToggle={onMatchModeToggle} />
-      <div className="text-sm italic text-gray-400">
-        {matchAll ? "Must match all tags" : "Match any tag"}
+      <div className="text-xs text-neutral-400 text-left">
+        Available:
       </div>
       <div className="max-h-64 overflow-y-auto grid grid-cols-2 gap-2">
         {tags.map((tag) => {
