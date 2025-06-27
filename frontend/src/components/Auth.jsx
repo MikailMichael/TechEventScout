@@ -85,9 +85,12 @@ export default function Auth({ onClose }) {
           <button onClick={onClose} className='absolute top-4 right-4 text-gray-300 hover:text-white'>
             <FontAwesomeIcon icon={faXmark} size="lg" />
           </button>
+          {/* Title */}
           <h2 className="text-2xl font-bold text-center">
             {isLogin ? 'Login' : 'Sign Up'}
           </h2>
+
+          {/* Password Reset Form */}
           {isForgetPassword ? (
             <form onSubmit={handlePasswordReset} className='space-y-4'>
               <input
@@ -117,6 +120,8 @@ export default function Auth({ onClose }) {
           ) : (
             <div>
               <form onSubmit={handleSubmit} className="space-y-1">
+
+                {/* Email Input */}
                 <div className='space-y-2'>
                   <p className='text-left text-neutral-400 px-2'>Email</p>
                   <div className={`${isLogin ? 'input-wrapper-login' : 'input-wrapper-signup'}`}>
@@ -132,6 +137,7 @@ export default function Auth({ onClose }) {
                   </div>
                 </div>
 
+                {/* Password Input */}
                 <div className='space-y-2 pt-3'>
                   <p className='text-left text-neutral-400 px-2'>Password</p>
                   <div className={`${isLogin ? 'input-wrapper-login' : 'input-wrapper-signup'}`}>
@@ -147,7 +153,8 @@ export default function Auth({ onClose }) {
                   </div>
                 </div>
 
-                {isLogin && (
+                {/* Forgot password Button */}
+                {isLogin ? (
                   <button
                     type='button'
                     onClick={() => {
@@ -155,49 +162,61 @@ export default function Auth({ onClose }) {
                     }}
                     className='w-full text-sm text-neutral-400 bg-transparent underline text-right'
                   >Forgot password</button>
-                )}
+                ) : (<button
+                  className="w-full text-sm bg-transparent underline text-right invisible"
+                  aria-hidden="true"
+                >
+                  Forgot password
+                </button>)}
 
+                {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full font-bold py-1.5 px-2 mt-4 items-center rounded-lg h-12 bg-gradient-to-br from-grad-purp-start to-grad-purp-end hover:from-grad-purp-end hover:to-grad-purp-start"
+                  className={`w-full font-bold py-1.5 px-2 mt-4 items-center rounded-lg h-12 bg-gradient-to-br ${isLogin 
+                    ? 'from-grad-purp-start to-grad-purp-end hover:from-grad-purp-end hover:to-grad-purp-start'
+                    : 'from-grad-blue-start to-grad-blue-end hover:from-grad-blue-end hover:to-grad-blue-start'
+                   } `}
                 >
                   {isLogin ? 'Login' : 'Create Account'}
                 </button>
 
+                {/* OR Divider */}
                 <div className='flex items-center my-4'>
                   <hr className='flex-grow border-t border-neutral-400' />
                   <span className='mx-4 text-neutral-500 text-sm'>OR</span>
                   <hr className='flex-grow border-t border-neutral-400' />
                 </div>
-
+                
+                {/* Social Logins */}
                 <div className='flex flex-inline gap-3'>
                   <button
                     type='button'
                     onClick={() => handleSocialLogin('discord')}
-                    className='w-full font-bold py-2 px-4 rounded-lg transition social-login'>
+                    className={`w-full font-bold py-2 px-4 rounded-lg transition ${isLogin ? 'social-login' : 'social-signup'}`}>
                     <FontAwesomeIcon className="mx-2" icon={faDiscord} />
                   </button>
                   <button
                     type='button'
                     onClick={() => handleSocialLogin('github')}
-                    className='w-full font-bold py-2 px-4 rounded-lg transition social-login'>
+                    className={`w-full font-bold py-2 px-4 rounded-lg transition ${isLogin ? 'social-login' : 'social-signup'}`}>
                     <FontAwesomeIcon className="mx-2" icon={faGithub} />
                   </button>
                   <button
                     type='button'
                     onClick={() => handleSocialLogin('google')}
-                    className='w-full font-bold py-2 px-4 rounded-lg transition social-login'>
+                    className={`w-full font-bold py-2 px-4 rounded-lg transition ${isLogin ? 'social-login' : 'social-signup'}`}>
                     <FontAwesomeIcon className="mx-2" icon={faGoogle} />
                   </button>
                 </div>
 
+                {/* Toggle Login/Signup Button */}
                 <button
                   type="button"
                   onClick={() => setIsLogin(!isLogin)}
                   className="w-full underline pt-4 text-center"
                 >
-                  {isLogin ? 'Need an account? ' : 'Have an account? Login'}
-                  <span className='font-bold'>Sign up</span>
+                  {isLogin ? 'Need an account? ' : 'Have an account? '}
+                  <span className='font-bold'>{isLogin ? 'Sign up' : 'Login'}</span>
                 </button>
               </form>
 
