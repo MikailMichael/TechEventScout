@@ -100,6 +100,37 @@ input:-webkit-autofill:active {
     background-clip: padding-box, border-box;
 }
 
+.social-signup {
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+
+    background-image:
+      /* inner fill (bg) */
+      linear-gradient(#121212,
+        #121212),
+      /* outer frame (gradient) */
+      linear-gradient(to bottom right,
+        #0098FF,
+        #00C5DC);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+}
+.social-signup:hover {
+  border: 2px solid transparent;
+    border-radius: 0.5rem;
+
+    background-image:
+      /* inner fill (bg) */
+      linear-gradient(#121212,
+        #121212),
+      /* outer frame (gradient) */
+      linear-gradient(to bottom right,
+        #00C5DC,
+        #0098FF);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+}
+
 .input-wrapper-login {
   position: relative;
   width: 100%;
