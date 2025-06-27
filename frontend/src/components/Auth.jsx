@@ -119,7 +119,7 @@ export default function Auth({ onClose }) {
               <form onSubmit={handleSubmit} className="space-y-1">
                 <div className='space-y-2'>
                   <p className='text-left text-neutral-400 px-2'>Email</p>
-                  <div className='input-wrapper'>
+                  <div className={`${isLogin ? 'input-wrapper-login' : 'input-wrapper-signup'}`}>
                     <img src={emailIcon} alt='Email icon' className='absolute left-3 top-1/2 transform -translate-y-1/2 h-6 w-auto' />
                     <input
                       type="email"
@@ -134,7 +134,7 @@ export default function Auth({ onClose }) {
 
                 <div className='space-y-2 pt-3'>
                   <p className='text-left text-neutral-400 px-2'>Password</p>
-                  <div className='input-wrapper'>
+                  <div className={`${isLogin ? 'input-wrapper-login' : 'input-wrapper-signup'}`}>
                     <img src={passwordIcon} alt='Password icon' className='absolute left-3 top-1/2 transform -translate-y-1/2 h-6 w-auto' />
                     <input
                       type="password"
