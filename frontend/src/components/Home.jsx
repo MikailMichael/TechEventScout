@@ -50,6 +50,9 @@ function Home() {
   }, [searchTerm, currentLocation, currentDate, currentTags, activeMatchAll]);
 
   useEffect(() => {
+    const url = new URL(window.location.href);
+    const isSocial = url.searchParams.get('socialLogin') === '1';
+
     supabase.auth.getSession().then(({ data }) => {
       setUser(data?.session?.user || null);
     });
@@ -57,8 +60,10 @@ function Home() {
     const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
       switch (event) {
         case 'SIGNED_IN':
-          if (!hasStarted.current) {
+          if (!hasStarted.current && isSocial) {
             hasStarted.current = true;
+            url.searchParams.delete('socialLogin');
+            window.history.replaceState({}, '', url.toString());
             return;
           }
           toast.success('Logged in successfully!', {
@@ -441,7 +446,7 @@ function Home() {
 
       {/* Auth Modal */}
       {showAuthModal && (
-        <Auth onAuthSuccess={handleAuth} onClose={() => setShowAuthModal(false)} />
+        <Auth onClose={() => setShowAuthModal(false)} />
       )}
 
     </div>

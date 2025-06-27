@@ -10,7 +10,7 @@ import errorIcon from '../assets/toast-error.png';
 import emailIcon from '../assets/mail-icon.png';
 import passwordIcon from '../assets/password-icon.png';
 
-export default function Auth({ onAuthSuccess, onClose }) {
+export default function Auth({ onClose }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLogin, setIsLogin] = useState(true);
@@ -60,7 +60,7 @@ export default function Auth({ onAuthSuccess, onClose }) {
 
   const handleSocialLogin = async (provider) => {
     const toastId = toast.loading(isLogin ? 'Logging in...' : 'Creating accont...', { className: "toast-loading" });
-    const { error } = await supabase.auth.signInWithOAuth({ provider, options: { redirectTo: window.location.origin } });
+    const { error } = await supabase.auth.signInWithOAuth({ provider, options: { redirectTo: `${window.location.origin}/?socialLogin=1` } });
     if (error) toast.error(error, { className: "toast-error", icon: <img src={errorIcon} alt="Error" className="h-5 w-5" /> });
   };
 
