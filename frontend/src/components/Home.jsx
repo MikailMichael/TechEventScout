@@ -50,38 +50,38 @@ function Home() {
   }, [searchTerm, currentLocation, currentDate, currentTags, activeMatchAll]);
 
   useEffect(() => {
-    const url = new URL(window.location.href);
-    const isSocial = url.searchParams.get('socialLogin') === '1';
-
+    /*
     supabase.auth.getSession().then(({ data }) => {
       setUser(data?.session?.user || null);
     });
+    */
 
     const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
+      const newUserId = session?.user?.id ?? null;
       switch (event) {
+        case 'INITIAL_SESSION':
+          prevUserIdRef.current = newUserId;
+          break;
         case 'SIGNED_IN':
-          if (!hasStarted.current && isSocial) {
-            hasStarted.current = true;
-            url.searchParams.delete('socialLogin');
-            window.history.replaceState({}, '', url.toString());
-            return;
+          if (prevUserIdRef.current !== newUserId) {
+            toast.success('Logged in successfully!', {
+              className: 'toast-success',
+              icon: <img src={successIcon} alt="Success" className="h-5 w-5" />,
+            })
+            setShowAuthModal(false)
+            setUser(session.user)
           }
-          toast.success('Logged in successfully!', {
-            className: 'toast-success',
-            icon: <img src={successIcon} alt="Success" className="h-5 w-5" />
-          })
-          setShowAuthModal(false);
-          setUser(session.user);
+          // always update our “previous” pointer
+          prevUserIdRef.current = newUserId;
           break;
         case 'SIGNED_OUT':
+          prevUserIdRef.current = null;
           setUser(null);
           break;
       }
     });
 
-    return () => {
-      listener.subscription.unsubscribe();
-    }
+    return () => listener.subscription.unsubscribe();
   }, []);
 
   useEffect(() => {
@@ -105,11 +105,10 @@ function Home() {
   }, [loadingMore]);
 
 
-  // Fetch only after a user is known
   useEffect(() => {
-    if (user && prevUserIdRef.current === user.id) return;
+    //if (user && prevUserIdRef.current === user.id) return;
 
-    prevUserIdRef.current = user?.id ?? "anonymous";
+    //prevUserIdRef.current = user?.id ?? "anonymous";
 
     const fetchEvents = async () => {
       setLoading(true);
@@ -148,7 +147,7 @@ function Home() {
     };
 
     fetchEvents();
-  }, [user]);
+  }, []);
 
   useEffect(() => {
     if (!user) return;
