@@ -106,10 +106,6 @@ function Home() {
 
 
   useEffect(() => {
-    //if (user && prevUserIdRef.current === user.id) return;
-
-    //prevUserIdRef.current = user?.id ?? "anonymous";
-
     const fetchEvents = async () => {
       setLoading(true);
 
