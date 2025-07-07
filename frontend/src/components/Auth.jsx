@@ -92,30 +92,42 @@ export default function Auth({ onClose }) {
 
           {/* Password Reset Form */}
           {isForgetPassword ? (
-            <form onSubmit={handlePasswordReset} className='space-y-4'>
-              <input
-                type='email'
-                placeholder='Enter your email'
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className='w-full px-4 py-2 border border-neutral-400 rounded-md bg-neutral-700 text-gray-100 placeholder-neutral-400 focus:outline-none focus:ring-gray-100 hover:ring-1 transition'
-              />
+            <form onSubmit={handlePasswordReset} className='space-y-2'>
+              
+              {/* Email Input */}
+                <div className='space-y-2'>
+                  <p className='text-left text-neutral-400 px-2'>Email</p>
+                  <div className={`${isLogin ? 'input-wrapper-login' : 'input-wrapper-signup'}`}>
+                    <img src={emailIcon} alt='Email icon' className='absolute left-3 top-1/2 transform -translate-y-1/2 h-6 w-auto' />
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      required
+                      value={email}
+                      onChange={e => setEmail(e.target.value)}
+                      className="w-full pl-11 pr-3.5 py-3 rounded-lg placeholder-neutral-400 bg-transparent focus:outline-none"
+                    />
+                  </div>
+                </div>
 
-              <button
-                type='submit'
-                className='w-full font-bold py-2 px-4 bg-neutral-800 border border-neutral-400 text-gray-100 rounded-md hover:ring-1 focus:outline-none transition'
-              >Send Reset Link</button>
+              {/* Submit Button */}
+                <button
+                  type="submit"
+                  className='w-full font-bold py-1.5 px-2 mt-4 items-center rounded-lg h-12 bg-gradient-to-br from-grad-purp-start to-grad-purp-end hover:from-grad-purp-end hover:to-grad-purp-start'
+                >Send Reset Link</button>
 
-              <button
-                type='button'
-                onClick={() => {
+              {/* Back to Login Button */}
+                <button
+                  type="button"
+                  onClick={() => {
                   setIsForgetPassword(false);
                   setEmail('');
                   setPassword('');
                 }}
-                className='w-full py-2 px-4 text-sm text-gray-100 border bg-neutral-800 border-neutral-400 underline hover:ring-1 transition mt-2 text-center'
-              >Back to Login</button>
+                  className="w-full underline pt-4 text-center"
+                >
+                  Back to Login
+                </button>
             </form>
           ) : (
             <div>
