@@ -231,10 +231,6 @@ export default function Auth({ onClose }) {
                   <span className='font-bold'>{isLogin ? 'Sign up' : 'Login'}</span>
                 </button>
               </form>
-
-
-
-
             </div>
           )}
         </motion.div>
