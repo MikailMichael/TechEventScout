@@ -323,6 +323,9 @@ function Home() {
     await supabase.auth.signOut();
     setUser(null);
     setFavourites([]);
+    localStorage.removeItem("cachedFavourites");
+    localStorage.removeItem("cachedFavouritesTimestamp");
+    localStorage.removeItem("cachedFavouritesUserId");
     toast.dismiss(toastId);
     toast.success("Logged out successfully", { className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" /> });
   };
@@ -425,11 +428,6 @@ function Home() {
         </div>
       </div>
 
-      {/*
-      <Pagination totalPages={totalPages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      */}
-
-
       {/* Favourites Modal */}
       <FavouritesModal
         show={showFavourites}
@@ -437,6 +435,7 @@ function Home() {
         favouriteEventIds={favourites}
         favouriteEvents={favouriteEventDetails}
         onRemoveFavourite={handleRemoveFavourite}
+        user={user?.id}
       />
 
       {/* Auth Modal */}
