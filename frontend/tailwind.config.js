@@ -19,6 +19,9 @@ module.exports = {
         "grad-blue-start-hover":    "rgba(0, 152, 255, 0.2)",
         "grad-blue-end-hover":      "rgba(0, 197, 220, 0.2)",
       },
+      boxShadow: {
+        'glow-purple': '0 0 117.7px -22px #9747FF',
+      }
     },
   },
   plugins: [],
