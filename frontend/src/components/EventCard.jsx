@@ -24,7 +24,7 @@ function EventCard({ id, title, img, description, date, time, location, link, ta
       <div className="flex-1 py-4 px-5 flex flex-col justify-between items-start sm:gap-0 gap-1 min-w-0">
         <div className="flex space-x-2">
           <h2 className="text-white text-left">{title}</h2>
-          {isExpired && (<span className="text-xs font-semibold text-red-100 bg-red-900 h-6 px-2 py-1 rounded">Expired</span>)}
+          {isExpired && (<span className="text-xs font-semibold text-red-100 bg-red-900 h-6 px-2 py-1 mr-5 rounded">Expired</span>)}
         </div>
         <p className="text-neutral-400 text-sm sm:line-clamp-2 line-clamp-1 text-left">{description}</p>
 
