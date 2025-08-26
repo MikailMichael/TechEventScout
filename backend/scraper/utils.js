@@ -41,7 +41,7 @@ function log(message, type = "info") {
     ? "\x1b[31m" // Red 
     : type === "success"
       ? "\x1b[32m"  // Green
-      : type === "warning"
+      : type === "warn"
         ? "\x1b[33m" // Yellow
         : "\x1b[36m"; // Cyan 
   console.log(`${color}[${timestamp}] [${type.toUpperCase()}] ${message}\x1b[0m`);
