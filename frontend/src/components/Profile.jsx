@@ -33,12 +33,6 @@ function Profile({ user, onLogOut }) {
             <span>{user?.email || "Email"}</span>
           </div>
           <button
-            onClick={() => alert('Password change coming soon')}
-            className='w-full text-left px-4 py-2 mt-2 text-sm text-white flex items-center font-semibold hover:bg-gradient-to-br hover:from-grad-purp-start-hover hover:to-grad-purp-end-hover hover:rounded-lg'
-          >
-            Change Password
-          </button>
-          <button
             onClick={onLogOut}
             className='w-full text-left px-4 py-2 text-sm text-white flex items-center font-semibold hover:bg-gradient-to-br hover:from-grad-purp-start-hover hover:to-grad-purp-end-hover hover:rounded-lg'
           >
@@ -51,3 +45,12 @@ function Profile({ user, onLogOut }) {
 }
 
 export default Profile;
+
+/*
+          <button
+            onClick={() => alert('Password change coming soon')}
+            className='w-full text-left px-4 py-2 mt-2 text-sm text-white flex items-center font-semibold hover:bg-gradient-to-br hover:from-grad-purp-start-hover hover:to-grad-purp-end-hover hover:rounded-lg'
+          >
+            Change Password
+          </button>  
+*/
