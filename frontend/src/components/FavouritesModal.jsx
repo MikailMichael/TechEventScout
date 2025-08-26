@@ -38,7 +38,7 @@ function FavouritesModal({ show, onClose, onRemoveFavourite, favouriteEvents = [
       >
         <motion.div
           onClick={(e) => e.stopPropagation()}
-          className="bg-background-2 text-gray-100 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-[24px] p-6 relative shadow-xl border border-border-gray"
+          className="bg-background-2 text-gray-100 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-[24px] sm:p-6 p-2 relative shadow-xl border border-border-gray"
           initial={{ scale: 0.90, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.95, opacity: 0 }}
