@@ -354,7 +354,7 @@ function Home() {
       <Header user={user} onLogOut={handleLogOut} onShowAuth={handleShowAuth} showFavourites={handleFavouritesButton} />
 
       {/* SearchBar and Menu Button row */}
-      <div className='flex items-center my-4 my-6 px-4 sm:px-14.5 gap-4'>
+      <div className='flex items-center my-6 px-4 sm:px-14.5 gap-4'>
         <button
           className='mid:hidden flex items-center justify-center p-3 rounded-lg border border-border-gray bg-background-2 text-neutral-400 hover:bg-neutral-800'
           onClick={() => setShowMobileFilters(true)}
@@ -385,7 +385,7 @@ function Home() {
         </div>
 
         {/* Event List */}
-        <div className='flex-1'>
+        <div className='flex-1 max-w-full'>
           {loading ? (
             <div className='spinner-container flex justify-center items-center py-10'>
               <div className='spinner animate-spin rounded-full h-10 w-10 border-t-4 border-grad-blue-start' />
@@ -461,7 +461,7 @@ function Home() {
               <h2 className='text-xl font-bold text-white'>Filters</h2>
               <button
                 onClick={() => setShowMobileFilters(false)}
-                className='text-gray-300 hover:text-white'
+                className='mid:hidden flex items-center justify-center p-3 rounded-lg border border-border-gray bg-background-2 text-neutral-400 hover:bg-neutral-800'
               >
                 <img src={menuIcon} className='' />
               </button>
