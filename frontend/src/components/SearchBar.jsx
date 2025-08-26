@@ -11,7 +11,7 @@ function SearchBar({ onSearch }) {
   }
 
   return (
-    <div className='relative my-6 px-14.5'>
+    <div className='relative'>
       <input
         id="searchInp"
         className="form-control pl-12 pr-3 py-3 w-full border border-border-gray bg-background-2 placeholder-neutral-400 rounded-lg focus:outline-none"
@@ -20,9 +20,8 @@ function SearchBar({ onSearch }) {
         onChange={handleChange}
       />
 
-      <img src={searchIcon} alt="Search icon" className='pointer-events-none absolute left-17.5 top-1/2 transform -translate-y-1/2 h-6 w-auto' />
+      <img src={searchIcon} alt="Search icon" className='pointer-events-none absolute left-3 top-1/2 transform -translate-y-1/2 h-6 w-auto' />
     </div>
-
   )
 }
 
