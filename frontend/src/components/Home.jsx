@@ -16,6 +16,9 @@ import FavouritesModal from './FavouritesModal';
 import { toast } from 'react-hot-toast';
 import successIcon from '../assets/toast-success.png';
 import errorIcon from '../assets/toast-error.png';
+import menuIcon from '../assets/menu-icon.png';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { faFilter } from '@fortawesome/free-solid-svg-icons';
 
 
 function Home() {
@@ -37,9 +40,10 @@ function Home() {
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [pendingAction, setPendingAction] = useState(null);
   const [showExpired, setShowExpired] = useState(false);
+  const [showMobileFilters, setShowMobileFilters] = useState(false);
   const prevUserIdRef = useRef(null);
   const loaderRef = useRef(null);
-  const hasStarted = useRef(false);
+  //const hasStarted = useRef(false);
   const navigate = useNavigate();
 
   useHighlight(highlightReady ? searchTerm : '', '.grid');
@@ -348,22 +352,39 @@ function Home() {
   return (
     <div className='bg-background'>
       <Header user={user} onLogOut={handleLogOut} onShowAuth={handleShowAuth} showFavourites={handleFavouritesButton} />
-      <SearchBar onSearch={handleSearch} />
 
+      {/* SearchBar and Menu Button row */}
+      <div className='flex items-center my-4 my-6 px-14.5 gap-4'>
+        <button
+          className='mid:hidden flex items-center justify-center p-3 rounded-lg border border-border-gray bg-background-2 text-neutral-400 hover:bg-neutral-800'
+          onClick={() => setShowMobileFilters(true)}
+        >
+          <img src={menuIcon} className='' />
+        </button>
+        <div className='flex-1'>
+          <SearchBar onSearch={handleSearch} />
+        </div>
+      </div>
+
+      {/* Main Content */}
       <div className='flex gap-6 my-6 px-14.5 bg-background'>
-        <FilterSidebar
-          locations={allLocations}
-          tags={allTags}
-          currentLocation={currentLocation}
-          currentDate={currentDate}
-          currentTags={currentTags}
-          matchAll={activeMatchAll}
-          onLocationChange={setCurrentLocation}
-          onDateChange={setCurrentDate}
-          onTagToggle={(tag) => setCurrentTags((ts) => ts.includes(tag) ? ts.filter((t) => t !== tag) : [...ts, tag])}
-          onMatchModeToggle={() => setActiveMatchAll((m) => !m)}
-        />
+        {/* SideBar */}
+        <div className='hidden mid:block'>
+          <FilterSidebar
+            locations={allLocations}
+            tags={allTags}
+            currentLocation={currentLocation}
+            currentDate={currentDate}
+            currentTags={currentTags}
+            matchAll={activeMatchAll}
+            onLocationChange={setCurrentLocation}
+            onDateChange={setCurrentDate}
+            onTagToggle={(tag) => setCurrentTags((ts) => ts.includes(tag) ? ts.filter((t) => t !== tag) : [...ts, tag])}
+            onMatchModeToggle={() => setActiveMatchAll((m) => !m)}
+          />
+        </div>
 
+        {/* Event List */}
         <div className='flex-1'>
           {loading ? (
             <div className='spinner-container flex justify-center items-center py-10'>
@@ -374,7 +395,6 @@ function Home() {
               <p className='text-md text-left text-gray-400'>Found {events.length} {events.length === 1 ? "event" : "events"}</p>
               <AnimatePresence mode="wait">
                 <motion.div
-
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
@@ -405,7 +425,6 @@ function Home() {
                           user={user?.id}
                         />
                       </motion.div>
-
                     ))
                   ) : (
                     <div className='text-center text-2xl font-bold text-white'>
@@ -427,6 +446,55 @@ function Home() {
           <div ref={loaderRef} />
         </div>
       </div>
+
+      {/* Menu Button */}
+      <AnimatePresence>
+        {showMobileFilters && (
+          <motion.div
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            transition={{ type: 'tween', duration: 0.3 }}
+            className='fixed inset-y-0 left-0 z-50 w-3/4 sm:w-1/2 mid:hidden bg-background-2 p-6 overflow-y-auto'
+          >
+            <div className='flex justify-between items-center mb-6'>
+              <h2 className='text-xl font-bold text-white'>Filters</h2>
+              <button
+                onClick={() => setShowMobileFilters(false)}
+                className='text-gray-300 hover:text-white'
+              >
+                <img src={menuIcon} className='' />
+              </button>
+            </div>
+            <FilterSidebar
+              locations={allLocations}
+              tags={allTags}
+              currentLocation={currentLocation}
+              currentDate={currentDate}
+              currentTags={currentTags}
+              matchAll={activeMatchAll}
+              onLocationChange={setCurrentLocation}
+              onDateChange={setCurrentDate}
+              onTagToggle={(tag) => setCurrentTags((ts) => (ts.includes(tag) ? ts.filter((t) => t !== tag) : [...ts, tag]))}
+              onMatchModeToggle={() => setActiveMatchAll((m) => !m)}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Overlay for Menu Button */}
+      <AnimatePresence>
+        {showMobileFilters && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.75 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className='fixed inset-0 z-40 bg-black mid:hidden'
+            onClick={() => setShowMobileFilters(false)}
+          />
+        )}
+      </AnimatePresence>
 
       {/* Favourites Modal */}
       <FavouritesModal
