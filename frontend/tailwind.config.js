@@ -21,6 +21,9 @@ module.exports = {
       },
       boxShadow: {
         'glow-purple': '0 0 117.7px -22px #9747FF',
+      },
+      screens: {
+        mid: '1100px',
       }
     },
   },
