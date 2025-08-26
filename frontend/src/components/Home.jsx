@@ -354,7 +354,7 @@ function Home() {
       <Header user={user} onLogOut={handleLogOut} onShowAuth={handleShowAuth} showFavourites={handleFavouritesButton} />
 
       {/* SearchBar and Menu Button row */}
-      <div className='flex items-center my-4 my-6 px-14.5 gap-4'>
+      <div className='flex items-center my-4 my-6 px-4 sm:px-14.5 gap-4'>
         <button
           className='mid:hidden flex items-center justify-center p-3 rounded-lg border border-border-gray bg-background-2 text-neutral-400 hover:bg-neutral-800'
           onClick={() => setShowMobileFilters(true)}
@@ -367,7 +367,7 @@ function Home() {
       </div>
 
       {/* Main Content */}
-      <div className='flex gap-6 my-6 px-14.5 bg-background'>
+      <div className='flex gap-6 my-6 px-4 sm:px-14.5 bg-background'>
         {/* SideBar */}
         <div className='hidden mid:block'>
           <FilterSidebar
