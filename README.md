@@ -1,7 +1,6 @@
 # 🏙️ London Tech Events
 
-London Tech Events is a full-stack web application that aggregates, filters, and displays the latest tech-related events 
-happening in London, using automated web scraping, intelligent tagging, and a clean, responsive frontend. Built with a modern tech stack, the platform helps tech enthusiasts discover and bookmark relevant meetups, talks, and networking events in the London area.
+London Tech Events is a full-stack web application that aggregates, filters, and displays the latest tech-related events happening in London. It uses automated web scraping, intelligent tagging, and a clean, responsive frontend built primarily with React. Developed with a modern tech stack, the platform helps tech enthusiasts discover and bookmark relevant meetups, talks, and networking events in the London area.
 
 Visit here: (Add link)
 
