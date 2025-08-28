@@ -38,3 +38,7 @@ London area.
 - **Responsive design** using TailwindCSS breakpoints
 - **Github** for version control
 - **Github**, **Discord**, **Google** for Auth Providers
+
+## 📸 Screenshots
+
+### Desktop View
