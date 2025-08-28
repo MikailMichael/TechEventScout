@@ -64,7 +64,7 @@ As a London-based developer passionate about local tech communities, I wanted to
 
 ## 📬 Contact
 Mikail Deveden
-[Email](mdeveden95@gmail.com)
+Email: mdeveden95@gmail.com
 [Github](https://github.com/MikailMichael)
 [LinkedIn](https://www.linkedin.com/in/mikail-deveden/)
 [Portfolio](https://mikaildeveden.co.uk/)
