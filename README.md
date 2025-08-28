@@ -1,9 +1,9 @@
 # 🏙️ London Tech Events
 
 London Tech Events is a full-stack web application that aggregates, filters, and displays the latest tech-related events 
-happening in London, using automated web scraping, intelligent tagging, and a clean, responsive frontend. Built with a modern 
-tech stack, the platform helps tech enthusiasts discover and bookmark relevant meetups, talks, and networking events in the 
-London area.
+happening in London, using automated web scraping, intelligent tagging, and a clean, responsive frontend. Built with a modern tech stack, the platform helps tech enthusiasts discover and bookmark relevant meetups, talks, and networking events in the London area.
+
+Visit here: (Add link)
 
 ## ✨ Features
 
@@ -53,7 +53,18 @@ London area.
 ### Bookmarked Events
 ![Bookmarked Events](screenshots/bookmarked-events.png)
 
+## 🙋 Why I Built This
 
+As a London-based developer passionate about local tech communities, I wanted to create a tool that makes discovering relevant, high-quality tech events easier and more centralized. I built this app from scratch to showcase my full-stack web development skills, including:
+- Web scraping automation
+- Data tagging and filtering
+- Authentication & user state
+- UI/UX design with responsiveness
+- Integration of multiple modern frameworks and services, with a focus on React & Playwright.
 
-
-
+## 📬 Contact
+Mikail Deveden
+[Email]: mdeveden95@gmail.com
+[Github](https://github.com/MikailMichael)
+[LinkedIn](https://www.linkedin.com/in/mikail-deveden/)
+[Portfolio](https://mikaildeveden.co.uk/)
