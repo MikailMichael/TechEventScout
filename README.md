@@ -42,3 +42,18 @@ London area.
 ## 📸 Screenshots
 
 ### Desktop View
+![Desktop View](screenshots/desktop-view.png)
+
+### Tablet View
+![Tablet View](screenshots/tablet-view.png)
+
+### Phone View
+![Phone View](screenshots/phone-view.png)
+
+### Bookmarked Events
+![Bookmarked Events](screenshots/bookmarked-events.png)
+
+
+
+
+
