@@ -19,6 +19,7 @@ import errorIcon from '../assets/toast-error.png';
 import menuIcon from '../assets/menu-icon.png';
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faFilter } from '@fortawesome/free-solid-svg-icons';
+import { showSuccessToast, showLoadingToast, showErrorToast } from './CustomToast';
 
 
 function Home() {
@@ -68,10 +69,7 @@ function Home() {
           break;
         case 'SIGNED_IN':
           if (prevUserIdRef.current !== newUserId) {
-            toast.success('Logged in successfully!', {
-              className: 'toast-success',
-              icon: <img src={successIcon} alt="Success" className="h-5 w-5" />,
-            })
+            showSuccessToast('Logged in successfully!')
             setShowAuthModal(false)
             setUser(session.user)
           }
@@ -291,13 +289,13 @@ function Home() {
         .eq('user_id', user.id)
         .eq('event_id', eventId);
       setFavourites(favourites.filter(id => id !== eventId));
-      toast.success(`Removed "${title}" from favourites`, { className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" /> });
+      showSuccessToast(`Removed "${title}" from favourites`);
     } else {
       await supabase
         .from('favourites')
         .insert({ user_id: user.id, event_id: eventId });
       setFavourites([...favourites, eventId]);
-      toast.success(`Added "${title}" to favourites`, { className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" /> });
+      showSuccessToast(`Added "${title}" to favourites`);
     }
   };
 
@@ -323,15 +321,15 @@ function Home() {
   };
 
   const handleLogOut = async () => {
-    const toastId = toast.loading("Logging out...", { className: "toast-loading" });
+    const toastId = showLoadingToast("Logging out...");
     await supabase.auth.signOut();
     setUser(null);
     setFavourites([]);
     localStorage.removeItem("cachedFavourites");
     localStorage.removeItem("cachedFavouritesTimestamp");
     localStorage.removeItem("cachedFavouritesUserId");
-    toast.dismiss(toastId);
-    toast.success("Logged out successfully", { className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" /> });
+    toast.remove('toast-loading');
+    showSuccessToast("Logged out successfully");
   };
 
   const handleShowAuth = () => {

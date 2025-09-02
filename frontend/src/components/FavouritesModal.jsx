@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import successIcon from '../assets/toast-success.png';
 import errorIcon from '../assets/toast-error.png';
 import EventCard from "./EventCard";
+import { showSuccessToast, showLoadingToast, showErrorToast } from './CustomToast';
 
 function FavouritesModal({ show, onClose, onRemoveFavourite, favouriteEvents = [], user }) {
 
@@ -16,10 +17,10 @@ function FavouritesModal({ show, onClose, onRemoveFavourite, favouriteEvents = [
       .eq('event_id', eventId);
 
     if (!error) {
-      toast.success(`Removed "${title}" from favourites`, { className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" /> });
+      showSuccessToast(`Removed "${title}" from favourites`);
       onRemoveFavourite?.(eventId);
     } else {
-      toast.error("Failed to remove from favourites", { className: "toast-error", icon: <img src={errorIcon} alt="Error" className="h-5 w-5" /> })
+      showErrorToast("Failed to remove from favourites")
     }
   };
 
