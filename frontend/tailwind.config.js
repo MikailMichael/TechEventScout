@@ -4,6 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx,css}",
     "./public/index.html",
   ],
+  safelist: [
+    'toast-success',
+    'toast-error',
+    'toast-loading',
+  ],
   theme: {
     extend: {
       colors: {
