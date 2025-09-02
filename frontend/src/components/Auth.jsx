@@ -9,6 +9,7 @@ import successIcon from '../assets/toast-success.png';
 import errorIcon from '../assets/toast-error.png';
 import emailIcon from '../assets/mail-icon.png';
 import passwordIcon from '../assets/password-icon.png';
+import { showSuccessToast, showLoadingToast, showErrorToast } from './CustomToast';
 
 export default function Auth({ onClose }) {
   const [email, setEmail] = useState('');
@@ -19,7 +20,7 @@ export default function Auth({ onClose }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const toastId = toast.loading(isLogin ? 'Logging in...' : 'Creating accont...', { className: "toast-loading" });
+    const toastId = showLoadingToast(isLogin ? 'Logging in...' : 'Creating accont...');
 
     let result;
     try {
@@ -30,38 +31,40 @@ export default function Auth({ onClose }) {
       }
 
       const { data, error } = result;
-      toast.dismiss(toastId);
+      toast.remove('toast-loading');
 
       if (error) {
-        toast.error(error.message, { className: "toast-error", icon: <img src={errorIcon} alt="Error" className="h-5 w-5" /> });
+        showErrorToast(error.message);
       } else {
-        if (!isLogin && data?.user && !data.session) toast.success("Check your email to confirm your account.", { className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" /> });
+        if (!isLogin && data?.user && !data.session) showSuccessToast("Check your email to confirm your account.");
       }
     } catch (err) {
-      toast.dismiss(toastId);
-      toast.error("Something went wrong. Please try again.", { className: "toast-error", icon: <img src={errorIcon} alt="Error" className="h-5 w-5" /> });
+      toast.remove('toast-loading');
+      showErrorToast("Something went wrong. Please try again.");
     }
   };
 
   const handlePasswordReset = async (e) => {
     e.preventDefault();
-    const toastId = toast.loading('Sending reset email...', { className: "toast-loading" });
+    const toastId = showLoadingToast('Sending reset email...');
+    const redirectTo = `${window.location.origin}/portfolio/project3/dist/reset-password`;
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: 'http://localhost:5173/reset-password',
+      redirectTo,
     });
 
-    toast.dismiss(toastId);
+    toast.remove('toast-loading');
     if (error) {
-      toast.error(error.message, { className: "toast-error", icon: <img src={errorIcon} alt="Error" className="h-5 w-5" /> });
+      showErrorToast(error.message);
     } else {
-      toast.success('A password reset link has been sent to your email.', { className: "toast-success", icon: <img src={successIcon} alt="Success" className="h-5 w-5" /> });
+      showSuccessToast('A password reset link has been sent to your email.');
     }
   };
 
   const handleSocialLogin = async (provider) => {
-    const toastId = toast.loading(isLogin ? 'Logging in...' : 'Creating account...', { className: "toast-loading" });
-    const { error } = await supabase.auth.signInWithOAuth({ provider, options: { redirectTo: window.location.origin } });
-    if (error) toast.error(error, { className: "toast-error", icon: <img src={errorIcon} alt="Error" className="h-5 w-5" /> });
+    const toastId = showLoadingToast(isLogin ? 'Logging in...' : 'Creating account...');
+    const redirectTo = `${window.location.origin}/portfolio/project3/dist/`;
+    const { error } = await supabase.auth.signInWithOAuth({ provider, options: { redirectTo } });
+    if (error) showErrorToast(error);
   };
 
   return (
