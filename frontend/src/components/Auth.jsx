@@ -21,13 +21,13 @@ export default function Auth({ onClose }) {
     e.preventDefault();
 
     const toastId = showLoadingToast(isLogin ? 'Logging in...' : 'Creating accont...');
-
+    const redirectTo = `${window.location.origin}/portfolio/project3/dist/`;
     let result;
     try {
       if (isLogin) {
         result = await supabase.auth.signInWithPassword({ email, password });
       } else {
-        result = await supabase.auth.signUp({ email, password });
+        result = await supabase.auth.signUp({ email, password, options: { emailRedirectTo: redirectTo } });
       }
 
       const { data, error } = result;
